@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3071260525	Hull_Impact			\Default Work Unit\Hull_Impact	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	192410636	hull_4	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\hull_impacts\hull_4		202652
+	509321733	hull_3	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\hull_impacts\hull_3		201272
+	548323127	hull_2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\hull_impacts\hull_2		180004
+	599990140	hull_5	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\hull_impacts\hull_5		169024
+	974027785	hull_1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\hull_impacts\hull_1		220564
+

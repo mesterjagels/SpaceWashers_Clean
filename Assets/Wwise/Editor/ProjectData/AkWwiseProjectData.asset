@@ -16,9 +16,19 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8494795D-16A9-43E5-A126-C7B71D1914C0}'
-    m_lastTimePsrt1: -217394630
-    m_lastTimePart2: -1999410116
-    List: []
+    m_lastTimePsrt1: -1210506299
+    m_lastTimePart2: -1999410110
+    List:
+    - Name: Hull_Impact
+      Path: Default Work Unit\Hull_Impact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Hull_Impact
+        ObjectType: 3
+      ID: -1223706771
+      Guid: 5ab0b3bf84eda949a340153d7ca6d9bf
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -44,10 +54,22 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{86113125-45C6-436A-9CDF-BAD3EBCFC4F8}'
-    m_lastTimePsrt1: -217344485
-    m_lastTimePart2: -1999410116
-    List: []
-  ExpandedItems: []
+    m_lastTimePsrt1: -1210355478
+    m_lastTimePart2: -1999410110
+    List:
+    - Name: main
+      Path: Default Work Unit\main
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: main
+        ObjectType: 7
+      ID: -1133058374
+      Guid: dfd968f8c0e962499fe331ca2eb239bd
+  ExpandedItems:
+  - /Wwise
+  - /Wwise/Events
+  - /Wwise/Events/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

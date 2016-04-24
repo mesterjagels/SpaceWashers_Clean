@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="10" SoundbankVersion="113">
+	<RootPaths>
+		<ProjectRoot>X:\UnityProjects\SpaceWashersClean\Wwise\</ProjectRoot>
+		<SourceFilesRoot>X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>X:\UnityProjects\SpaceWashersClean\Wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>X:\UnityProjects\SpaceWashersClean\Wwise\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ShortName>main</ShortName>
+			<Path>main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3071260525" Name="Hull_Impact"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="192410636" Language="SFX">
+					<ShortName>hull_4.wav</ShortName>
+					<Path>SFX\hull_4_9E69E797.wem</Path>
+				</File>
+				<File Id="509321733" Language="SFX">
+					<ShortName>hull_3.wav</ShortName>
+					<Path>SFX\hull_3_9E69E797.wem</Path>
+				</File>
+				<File Id="548323127" Language="SFX">
+					<ShortName>hull_2.wav</ShortName>
+					<Path>SFX\hull_2_9E69E797.wem</Path>
+				</File>
+				<File Id="599990140" Language="SFX">
+					<ShortName>hull_5.wav</ShortName>
+					<Path>SFX\hull_5_9E69E797.wem</Path>
+				</File>
+				<File Id="974027785" Language="SFX">
+					<ShortName>hull_1.wav</ShortName>
+					<Path>SFX\hull_1_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
