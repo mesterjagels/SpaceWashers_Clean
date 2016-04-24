@@ -13,8 +13,27 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BOOST = 2389703494U;
         static const AkUniqueID HULL_IMPACT = 3071260525U;
+        static const AkUniqueID SHIELD = 1161967626U;
+        static const AkUniqueID SHIELD_IMPACT = 3802027347U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace HAZARD_TYPE
+        {
+            static const AkUniqueID GROUP = 3044858104U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID METEORITE = 13339075U;
+                static const AkUniqueID PIZZA = 1488423865U;
+                static const AkUniqueID TOXIC_WASTE = 3678222337U;
+            } // namespace SWITCH
+        } // namespace HAZARD_TYPE
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {

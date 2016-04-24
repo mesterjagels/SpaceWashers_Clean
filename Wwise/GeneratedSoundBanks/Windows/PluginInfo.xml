@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Project="Wwise" Platform="Windows" Motion="false">
-	<Plugins/>
+	<Plugins>
+		<Plugin Name="Wwise Guitar Distortion" ID="8257539"/>
+	</Plugins>
 </PluginInfo>

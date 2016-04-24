@@ -16,18 +16,48 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8494795D-16A9-43E5-A126-C7B71D1914C0}'
-    m_lastTimePsrt1: -1210506299
-    m_lastTimePart2: -1999410110
+    m_lastTimePsrt1: 444668534
+    m_lastTimePart2: -1999410101
     List:
-    - Name: Hull_Impact
-      Path: Default Work Unit\Hull_Impact
+    - Name: boost
+      Path: Default Work Unit\boost
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Hull_Impact
+      - ElementName: boost
+        ObjectType: 3
+      ID: -1905263802
+      Guid: 4d6b92f45f2c1a4f9ce5da1270adc652
+      maxAttenuation: 0
+    - Name: hull_impact
+      Path: Default Work Unit\hull_impact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: hull_impact
         ObjectType: 3
       ID: -1223706771
       Guid: 5ab0b3bf84eda949a340153d7ca6d9bf
+      maxAttenuation: 0
+    - Name: shield
+      Path: Default Work Unit\shield
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: shield
+        ObjectType: 3
+      ID: 1161967626
+      Guid: 1cb00c35858ccf448e480d7f620d5a59
+      maxAttenuation: 0
+    - Name: shield_impact
+      Path: Default Work Unit\shield_impact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: shield_impact
+        ObjectType: 3
+      ID: -492939949
+      Guid: ee1e32686aa4a348a481c6b3ecd6af44
       maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -47,15 +77,40 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{64C7BD84-D9DC-4923-867E-BE8406656701}'
-    m_lastTimePsrt1: -217334470
-    m_lastTimePart2: -1999410116
-    List: []
+    m_lastTimePsrt1: -1302333864
+    m_lastTimePart2: -1999410103
+    List:
+    - Name: Hazard_type
+      Path: Default Work Unit\Hazard_type
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Hazard_type
+        ObjectType: 11
+      ID: -1250109192
+      Guid: 251d952c6e85984e88e877af6bcb0ab3
+      values:
+      - Meteorite
+      - Pizza
+      - Toxic_waste
+      ValueIcons:
+      - ElementName: Meteorite
+        ObjectType: 10
+      - ElementName: Pizza
+        ObjectType: 10
+      - ElementName: Toxic_waste
+        ObjectType: 10
+      valueIDs: c389cb00b98bb75801383ddb
+      ValueGuids:
+      - bytes: 567d8aecfd4c9745858970ec561f92c3
+      - bytes: 3258da989c46314abc1f34ef3cadcff1
+      - bytes: 6c30c10e1093224e8991b8acd5ab9fcc
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{86113125-45C6-436A-9CDF-BAD3EBCFC4F8}'
-    m_lastTimePsrt1: -1210355478
-    m_lastTimePart2: -1999410110
+    m_lastTimePsrt1: -1302389012
+    m_lastTimePart2: -1999410103
     List:
     - Name: main
       Path: Default Work Unit\main
