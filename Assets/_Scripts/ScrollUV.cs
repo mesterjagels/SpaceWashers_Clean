@@ -23,7 +23,6 @@ public class ScrollUV : MonoBehaviour {
     void Update () {
         offset.x += spaceship.horizontalSpeed/ uvMoveSpeed / parralax;
         offset.y += spaceship.verticalSpeed / uvMoveSpeed / parralax;
-        Debug.Log(offset.y);
             
         
         mat.mainTextureOffset = offset;

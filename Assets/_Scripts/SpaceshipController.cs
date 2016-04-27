@@ -5,6 +5,13 @@ using Uniduino;
 
 public class SpaceshipController : MonoBehaviour
 {
+    //Control scheme
+    public KeyCode 
+        throttleUp = KeyCode.UpArrow,
+        throttleDown = KeyCode.DownArrow, 
+        left = KeyCode.LeftArrow, 
+        right = KeyCode.RightArrow, 
+        shield, boost;
 
     //Variables to make the custom controller to work
     private Arduino arduino;
@@ -26,23 +33,33 @@ public class SpaceshipController : MonoBehaviour
     //Varibles to tweak for spaceship speed
     [Header("Spaceship speed settings")]
     public float turnSpeed;
-    public float throttle1 = 10,
-                 throttle2 = 20,
-                 throttle3 = 30,
-                 throttle4 = 40,
-                 throttle5 = 50,
-                 horizontalTurnAcc,
-                 horizontalTurnDec,
-                 throttleAcc;
+    public float[] throttleSpeeds;
+    public int currentGear = 0;
+    [Header("Should be between 0 - 7")]
+    public float throttle1;
+    public float throttle2,
+                 throttle3,
+                 throttle4,
+                 throttle5;
+    [Header("Turn acceleration and deceleration")]
+    public float horizontalTurnAcc;
+    public float horizontalTurnDec;
+    
 
-    [HideInInspector]
+    //[HideInInspector]
     //Accessed by other scripts to determine movement
-    public float horizontalSpeed,
-                 verticalSpeed = 5f;
+    public float horizontalSpeed;
+    public float verticalSpeed;
 
 
     void Start()
     {
+        throttleSpeeds = new float[5];
+        throttleSpeeds[0] = throttle1;
+        throttleSpeeds[1] = throttle2;
+        throttleSpeeds[2] = throttle3;
+        throttleSpeeds[3] = throttle4;
+        throttleSpeeds[4] = throttle5;
         arduino = Arduino.global;
         arduino.Setup(ConfigurePins);
     }
@@ -51,17 +68,17 @@ public class SpaceshipController : MonoBehaviour
     {
         Controls();
     }
-
     void Controls()
     {
-        if (Input.GetMouseButton(0) | arduino.digitalRead(pinLeft) == 1)
+        
+        if (Input.GetKey(left) | arduino.digitalRead(pinLeft) == 1)
         {
             //Go left
             Debug.Log("Left Mouse clicked");
             horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed * -1, horizontalTurnAcc * Time.deltaTime);
             pinLeftLast = 1;
         }
-        else if (Input.GetMouseButton(1) | arduino.digitalRead(pinRight) == 1)
+        else if (Input.GetKey(right) | arduino.digitalRead(pinRight) == 1)
         {
             //Go right
             horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed, horizontalTurnAcc * Time.deltaTime);
@@ -69,6 +86,26 @@ public class SpaceshipController : MonoBehaviour
         } else
         {
             horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, 0, horizontalTurnDec * Time.deltaTime);
+        }
+        if (Input.GetKeyDown(throttleUp))
+        {
+            //Speed up
+            Debug.Log("Up clicked");
+            if (currentGear < throttleSpeeds.Length - 1)
+            {
+                currentGear++;
+            }
+            verticalSpeed = throttleSpeeds[currentGear];
+//            verticalSpeed = Mathf.MoveTowards(verticalSpeed, throttleSpeeds[currentGear], throttleAcc * Time.deltaTime);
+        }
+        if (Input.GetKeyDown(throttleDown))
+        {
+            if (currentGear > 0)
+            {
+                currentGear--;
+            }
+            verticalSpeed = throttleSpeeds[currentGear];
+           // verticalSpeed = Mathf.MoveTowards(verticalSpeed, throttleSpeeds[currentGear], throttleAcc * Time.deltaTime);
         }
         //if (Input.GetMouseButtonUp(0) | arduino.digitalRead(pinLeft) == 0 && horizontalSpeed > 0 && pinLeftLast == 1)
         //{
