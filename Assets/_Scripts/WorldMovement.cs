@@ -3,8 +3,8 @@ using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class WorldMovement : MonoBehaviour {
-    Rigidbody2D rb;
-    SpaceshipController spaceship;
+    private Rigidbody2D rb;
+    private SpaceshipController spaceship;
     [Header("Tweak to adjust object speed")]
     [Range(0f, 10f)]
     public float speedmultiplier;
