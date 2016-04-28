@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RagdollTest : MonoBehaviour {
+public class CleanerController : MonoBehaviour {
 
 
 	private Rigidbody2D rb;
@@ -12,11 +12,6 @@ public class RagdollTest : MonoBehaviour {
 
 		rb = GetComponent<Rigidbody2D>();
 
-	}
-
-	// Use this for initialization
-	void Start () {
-	
 	}
 	
 	// Update is called once per frame
