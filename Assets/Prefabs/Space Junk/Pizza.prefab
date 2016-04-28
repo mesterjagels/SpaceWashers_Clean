@@ -11,9 +11,10 @@ GameObject:
   - 212: {fileID: 21299336}
   - 50: {fileID: 5072748}
   - 60: {fileID: 6014976}
+  - 114: {fileID: 11484430}
   m_Layer: 0
   m_Name: Pizza - Tray
-  m_TagString: Untagged
+  m_TagString: Pizza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,9 +30,10 @@ GameObject:
   - 212: {fileID: 21292558}
   - 50: {fileID: 5039190}
   - 60: {fileID: 6077332}
+  - 114: {fileID: 11457060}
   m_Layer: 0
   m_Name: Pizza - Slice 1
-  m_TagString: Untagged
+  m_TagString: Pizza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,9 +65,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 419044}
-  - 61: {fileID: 6104614}
   m_Layer: 0
-  m_Name: Pizza 1
+  m_Name: Pizza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,9 +83,10 @@ GameObject:
   - 212: {fileID: 21256236}
   - 50: {fileID: 5082092}
   - 60: {fileID: 6008570}
+  - 114: {fileID: 11463596}
   m_Layer: 0
   m_Name: Pizza - Slice 3
-  m_TagString: Untagged
+  m_TagString: Pizza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,9 +102,10 @@ GameObject:
   - 212: {fileID: 21253890}
   - 50: {fileID: 5026020}
   - 60: {fileID: 6050850}
+  - 114: {fileID: 11494954}
   m_Layer: 0
   m_Name: Pizza - Slice 2
-  m_TagString: Untagged
+  m_TagString: Pizza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,9 +139,10 @@ GameObject:
   - 212: {fileID: 21298358}
   - 50: {fileID: 5089166}
   - 60: {fileID: 6042728}
+  - 114: {fileID: 11478492}
   m_Layer: 0
   m_Name: Pizza - Slice 4
-  m_TagString: Untagged
+  m_TagString: Pizza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -469,20 +473,6 @@ PolygonCollider2D:
       - {x: 0.12689826, y: 0.004484728}
       - {x: 0.06992412, y: 0.07086918}
       - {x: 0.0017123297, y: 0.13334541}
---- !u!61 &6104614
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 168366}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
 --- !u!95 &9554946
 Animator:
   serializedVersion: 3
@@ -514,6 +504,66 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11457060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedmultiplier: 0
+--- !u!114 &11463596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedmultiplier: 0
+--- !u!114 &11478492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedmultiplier: 0
+--- !u!114 &11484430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedmultiplier: 0
+--- !u!114 &11494954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedmultiplier: 0
 --- !u!212 &21212054
 SpriteRenderer:
   m_ObjectHideFlags: 1
