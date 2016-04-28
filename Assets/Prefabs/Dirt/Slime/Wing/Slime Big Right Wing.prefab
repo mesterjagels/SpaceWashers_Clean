@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21277810}
   - 60: {fileID: 6025890}
   - 114: {fileID: 11400524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime Big Right Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

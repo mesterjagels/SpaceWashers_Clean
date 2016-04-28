@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21224836}
   - 60: {fileID: 6043022}
   - 114: {fileID: 11466024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pizza_splat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21208834}
   - 60: {fileID: 6042344}
   - 114: {fileID: 11415638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime - Small Smudge Right Body 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

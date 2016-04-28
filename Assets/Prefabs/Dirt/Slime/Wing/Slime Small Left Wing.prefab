@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21219364}
   - 60: {fileID: 6023200}
   - 114: {fileID: 11444316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime Small Left Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

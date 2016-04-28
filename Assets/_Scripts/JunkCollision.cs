@@ -5,10 +5,13 @@ using System.Collections;
 public class JunkCollision : MonoBehaviour {
 
     [Header("Drag in the appropiate dirt gameobjects")]
+    [Header("Pizza")]
     public GameObject[] pizzaDirt;
     public GameObject pizzaParticle;
+    [Header("Slime")]
     public GameObject[] slimeDirt;
     public GameObject slimeParticle;
+    [Header("Dust?")]
     public GameObject[] dustDirt;
     public GameObject dustParticle;
 

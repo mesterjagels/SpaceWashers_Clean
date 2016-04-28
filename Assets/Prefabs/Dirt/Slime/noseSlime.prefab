@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21254788}
   - 60: {fileID: 6031340}
   - 114: {fileID: 11484754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: noseSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
