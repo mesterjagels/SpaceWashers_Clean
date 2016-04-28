@@ -10,6 +10,7 @@ public class DirtController : MonoBehaviour {
         //scoreboard = Gameobject.findObjectOfType<Scoreboard>();
     }
 
+    //The OnDisable method could also be OnDestroy() depending on how we remove dirt.
     void OnDisable()
     {
         //add points to scoreController

@@ -263,11 +263,11 @@ MonoBehaviour:
   turnSpeed: 5
   throttleSpeeds: []
   currentGear: 0
-  throttle1: 1
-  throttle2: 2
-  throttle3: 3
-  throttle4: 4
-  throttle5: 5
+  throttle1: 10
+  throttle2: 20
+  throttle3: 30
+  throttle4: 40
+  throttle5: 50
   horizontalTurnAcc: 2
   horizontalTurnDec: 8
   horizontalSpeed: 0
@@ -656,6 +656,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11425254, guid: 30c93f36454e7bf4593a3553e2d8c087, type: 2}
+      propertyPath: parralax
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417580, guid: 30c93f36454e7bf4593a3553e2d8c087, type: 2}
+      propertyPath: parralax
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445562, guid: 30c93f36454e7bf4593a3553e2d8c087, type: 2}
+      propertyPath: parralax
+      value: 400
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30c93f36454e7bf4593a3553e2d8c087, type: 2}
   m_IsPrefabParent: 0
@@ -869,7 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 1
 --- !u!50 &2046197647
 Rigidbody2D:
   serializedVersion: 2

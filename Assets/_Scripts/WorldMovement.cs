@@ -6,7 +6,7 @@ public class WorldMovement : MonoBehaviour {
     private Rigidbody2D rb;
     private SpaceshipController spaceship;
     [Header("Tweak to adjust object speed")]
-    [Range(0f, 10f)]
+    [Range(0f, 1f)]
     public float speedmultiplier;
 
 	// Use this for initialization
