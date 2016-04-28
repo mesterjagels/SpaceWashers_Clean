@@ -24,8 +24,8 @@ public class JunkCollision : MonoBehaviour {
                 Debug.Log("Pizza hit");
                 foreach (ContactPoint2D pizzaHit in col.contacts)
                 {
-                    Vector2 hitpoint = pizzaHit.point;
-                    Instantiate(pizzaDirt[Random.Range(0, pizzaDirt.Length)], hitpoint, Quaternion.identity);
+                    Vector3 hitpoint = new Vector3(pizzaHit.point.x, pizzaHit.point.y, -10);
+                    Instantiate(pizzaDirt[Random.Range(0, pizzaDirt.Length - 1)], hitpoint, Quaternion.identity);
                     Instantiate(pizzaParticle, hitpoint, Quaternion.identity);
                 }
                 break;
@@ -34,8 +34,8 @@ public class JunkCollision : MonoBehaviour {
                 Debug.Log("Slime hit");
                 foreach (ContactPoint2D slimeHit in col.contacts)
                 {
-                    Vector2 hitpoint = slimeHit.point;
-                    Instantiate(slimeDirt[Random.Range(0, pizzaDirt.Length)], hitpoint, Quaternion.identity);
+                    Vector3 hitpoint = new Vector3(slimeHit.point.x, slimeHit.point.y, -10);
+                    Instantiate(slimeDirt[Random.Range(0, slimeDirt.Length - 1)], hitpoint, Quaternion.identity);
                     Instantiate(slimeParticle, hitpoint, Quaternion.identity);
 
                 }
