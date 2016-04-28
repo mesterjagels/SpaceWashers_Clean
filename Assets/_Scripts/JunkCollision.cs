@@ -21,6 +21,10 @@ public class JunkCollision : MonoBehaviour {
     }
     void OnCollisionEnter2D(Collision2D col)
     {
+        Vector3 velocityBeforeHit = col.gameObject.GetComponent<Rigidbody2D>().velocity;
+        col.gameObject.GetComponent<WorldMovement>().enabled = false;
+        col.gameObject.GetComponent<Rigidbody2D>().velocity = velocityBeforeHit;
+
         switch (col.gameObject.tag)
         {
             case "Pizza":
@@ -39,7 +43,7 @@ public class JunkCollision : MonoBehaviour {
                 {
                     Vector3 hitpoint = new Vector3(slimeHit.point.x, slimeHit.point.y, -10);
                     Instantiate(slimeDirt[Random.Range(0, slimeDirt.Length - 1)], hitpoint, Quaternion.identity);
-                    Instantiate(slimeParticle, hitpoint, Quaternion.identity);
+                    Instantiate(slimeParticle, hitpoint, Quaternion.Euler(new Vector3(0, 0, 180)));
 
                 }
                 break;
