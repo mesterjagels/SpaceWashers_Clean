@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="70">
-	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2183421440" DateHigh="30515485"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3579958528" DateHigh="30515532"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="2183421440" DateHigh="30515485"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="2183421440" DateHigh="30515485"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Attenuations\Default Work Unit.wwu" DateLow="2183421440" DateHigh="30515485"/>
@@ -19,8 +19,8 @@
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="2183421440" DateHigh="30515485"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="2183421440" DateHigh="30515485"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Effects\Factory McDSP Effects.wwu" DateLow="2183421440" DateHigh="30515485"/>
-	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Events\Default Work Unit.wwu" DateLow="2183421440" DateHigh="30515485"/>
-	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="2183421440" DateHigh="30515485"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Events\Default Work Unit.wwu" DateLow="3579958528" DateHigh="30515532"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="3579958528" DateHigh="30515532"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="2183421440" DateHigh="30515485"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="2183421440" DateHigh="30515485"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2183421440" DateHigh="30515485"/>
@@ -32,7 +32,8 @@
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="2193421440" DateHigh="30515485"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="2193421440" DateHigh="30515485"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\States\Default Work Unit.wwu" DateLow="2193421440" DateHigh="30515485"/>
-	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Switches\Default Work Unit.wwu" DateLow="2193421440" DateHigh="30515485"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Switches\Default Work Unit.wwu" DateLow="3579958528" DateHigh="30515532"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Triggers\Default Work Unit.wwu" DateLow="2193421440" DateHigh="30515485"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Wwise.AndreasLagerstedt.wsettings" DateLow="3599958528" DateHigh="30515532"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Unity Projekter\Space Washers Clean\Wwise\Wwise.wproj" DateLow="2193421440" DateHigh="30515485"/>
 </ValidationCache>

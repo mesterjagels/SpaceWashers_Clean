@@ -68,6 +68,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="junk_impact" ID="{BC1BD453-C45E-44D7-B3EC-863DF1D4848A}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

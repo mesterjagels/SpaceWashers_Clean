@@ -8,6 +8,16 @@
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
 						</Reference>
+						<Reference Name="Effect0">
+							<Custom>
+								<Effect Name="Wwise Guitar Distortion (Custom)" ID="{8D93CEC0-32FC-4EFE-9DD9-1AAEC9184B15}" ShortID="185784117" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+									<PropertyList>
+										<Property Name="DistortionType" Type="int32" Value="1"/>
+										<Property Name="OutputLevel" Type="Real32" Value="-2.5"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
 						</Reference>
@@ -149,6 +159,9 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<SwitchContainer Name="hazard_sounds" ID="{B27FECE5-0C48-4B17-B2F5-235937183CCD}" ShortID="553338184">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
@@ -158,7 +171,32 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="meteorite_sounds" ID="{A848E28E-8742-47EC-9FC1-8CE5DA097FED}" ShortID="121034290">
+								<Sound Name="junk_toxic" ID="{C15AA188-58B8-4DA4-95F6-3A39D7D2D1C8}" ShortID="735030027" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>43</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{7DBCD82F-3E39-4CEF-A45A-5AE630C5CCFE}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="783"/>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
@@ -167,42 +205,33 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
 										</Reference>
 									</ReferenceList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="pizza_sounds" ID="{EEB78721-45C6-436B-8B61-BB0BA59B8198}" ShortID="838412671">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
-										</Reference>
-									</ReferenceList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="toxic_sounds" ID="{31551B4D-7AD2-4CF9-86C5-FEA9FD549276}" ShortID="1008221710">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
-										</Reference>
-									</ReferenceList>
-								</RandomSequenceContainer>
+									<ChildrenList>
+										<AudioFileSource Name="junk_toxic" ID="{8F5AB69B-B5DC-408A-9015-17A10F230025}" ShortID="817375743">
+											<Language>SFX</Language>
+											<AudioFile>junk_toxic.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="junk_toxic" ID="{8F5AB69B-B5DC-408A-9015-17A10F230025}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<GroupingInfo>
-								<GroupRef Name="Hazard_type" ID="{2C951D25-856E-4E98-88E8-77AF6BCB0AB3}"/>
-								<DefaultSwitchRef Name="Meteorite" ID="{EC8A7D56-4CFD-4597-8589-70EC561F92C3}"/>
+								<GroupRef Name="Junk_type" ID="{2C951D25-856E-4E98-88E8-77AF6BCB0AB3}"/>
+								<DefaultSwitchRef Name="Toxic_waste" ID="{0EC1306C-9310-4E22-8991-B8ACD5AB9FCC}"/>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
-										<ItemRef Name="pizza_sounds" ID="{EEB78721-45C6-436B-8B61-BB0BA59B8198}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="toxic_sounds" ID="{31551B4D-7AD2-4CF9-86C5-FEA9FD549276}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="meteorite_sounds" ID="{A848E28E-8742-47EC-9FC1-8CE5DA097FED}"/>
+										<ItemRef Name="junk_toxic" ID="{C15AA188-58B8-4DA4-95F6-3A39D7D2D1C8}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Toxic_waste" ID="{0EC1306C-9310-4E22-8991-B8ACD5AB9FCC}"/>
+										<ItemList>
+											<ItemRef Name="junk_toxic" ID="{C15AA188-58B8-4DA4-95F6-3A39D7D2D1C8}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
 					</ChildrenList>
@@ -576,6 +605,81 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="boost_full" ID="{44323E63-0C38-432A-82DF-59B93BD9984A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="thrusters" ID="{DBDB5485-9EF5-42D4-8B19-274323BB59DC}" ShortID="162401674" Type="SoundFX">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="thrusters" ID="{F36109F6-30D6-493C-8C5D-44AAC6CE0366}" ShortID="802347035">
+									<Language>SFX</Language>
+									<AudioFile>thrusters.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="thrusters" ID="{F36109F6-30D6-493C-8C5D-44AAC6CE0366}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="thrustersynth" ID="{5B89B20F-A09C-4252-A9A2-9857E229A8D7}" ShortID="144471991" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Synth One" ID="{0FB64B83-0124-4292-A850-E88E64F75EEF}" ShortID="7741754" PluginName="Wwise Synth One" CompanyID="0" PluginID="148">
+									<PropertyList>
+										<Property Name="NoiseLevel" Type="Real32" Value="7"/>
+										<Property Name="Osc1Level" Type="Real32" Value="-96"/>
+										<Property Name="Osc2Level" Type="Real32" Value="-96"/>
+										<Property Name="OutputLevel" Type="Real32">
+											<RTPCList>
+												<RTPC Name="" ID="{DB7245DD-2FD5-47AB-A07F-F60620F10AA6}" ShortID="375318473">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<Custom>
+																<ModulatorEnvelope Name="Modulator Envelope (Custom)" ID="{1B781A33-9AC4-47E4-B474-E555BB5ECF8C}" ShortID="70998913"/>
+															</Custom>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{D677C306-99EE-4D47-ABBF-C83E54FC1662}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-96</YPos>
+																<Flags>21</Flags>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>53</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Synth One" ID="{0FB64B83-0124-4292-A850-E88E64F75EEF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
