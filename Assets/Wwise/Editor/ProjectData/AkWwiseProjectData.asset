@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8494795D-16A9-43E5-A126-C7B71D1914C0}'
-    m_lastTimePsrt1: -114669401
-    m_lastTimePart2: -1999410094
+    m_lastTimePsrt1: -914789053
+    m_lastTimePart2: -1999409357
     List:
     - Name: boost
       Path: Default Work Unit\boost
@@ -63,22 +63,22 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}'
-    m_lastTimePsrt1: 1000450741
-    m_lastTimePart2: -1999410109
+    m_lastTimePsrt1: -914418805
+    m_lastTimePart2: -1999409357
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{F57D6E10-2623-484D-826A-FE19CA4B9D43}'
-    m_lastTimePsrt1: 1001565532
-    m_lastTimePart2: -1999410109
+    m_lastTimePsrt1: -909689866
+    m_lastTimePart2: -1999409357
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{64C7BD84-D9DC-4923-867E-BE8406656701}'
-    m_lastTimePsrt1: -110896817
-    m_lastTimePart2: -1999410094
+    m_lastTimePsrt1: -909684862
+    m_lastTimePart2: -1999409357
     List:
     - Name: Hazard_type
       Path: Default Work Unit\Hazard_type
@@ -109,8 +109,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{86113125-45C6-436A-9CDF-BAD3EBCFC4F8}'
-    m_lastTimePsrt1: -110916824
-    m_lastTimePart2: -1999410094
+    m_lastTimePsrt1: -909699870
+    m_lastTimePart2: -1999409357
     List:
     - Name: main
       Path: Default Work Unit\main
@@ -121,10 +121,7 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1133058374
       Guid: dfd968f8c0e962499fe331ca2eb239bd
-  ExpandedItems:
-  - /Wwise
-  - /Wwise/Events
-  - /Wwise/Events/Default Work Unit
+  ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
