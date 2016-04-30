@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8494795D-16A9-43E5-A126-C7B71D1914C0}'
-    m_lastTimePsrt1: -914789053
-    m_lastTimePart2: -1999409357
+    m_lastTimePsrt1: 1508313951
+    m_lastTimePart2: -1999408935
     List:
     - Name: boost
       Path: Default Work Unit\boost
@@ -38,6 +38,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1223706771
       Guid: 5ab0b3bf84eda949a340153d7ca6d9bf
+      maxAttenuation: 0
+    - Name: junk_impact
+      Path: Default Work Unit\junk_impact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: junk_impact
+        ObjectType: 3
+      ID: -515804288
+      Guid: 53d41bbc5ec4d744b3ec863df1d4848a
       maxAttenuation: 0
     - Name: shield
       Path: Default Work Unit\shield
@@ -77,32 +87,28 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{64C7BD84-D9DC-4923-867E-BE8406656701}'
-    m_lastTimePsrt1: -909684862
-    m_lastTimePart2: -1999409357
+    m_lastTimePsrt1: 1508962704
+    m_lastTimePart2: -1999408935
     List:
-    - Name: Hazard_type
-      Path: Default Work Unit\Hazard_type
+    - Name: Junk_type
+      Path: Default Work Unit\Junk_type
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Hazard_type
+      - ElementName: Junk_type
         ObjectType: 11
-      ID: -1250109192
+      ID: 713377294
       Guid: 251d952c6e85984e88e877af6bcb0ab3
       values:
-      - Meteorite
       - Pizza
       - Toxic_waste
       ValueIcons:
-      - ElementName: Meteorite
-        ObjectType: 10
       - ElementName: Pizza
         ObjectType: 10
       - ElementName: Toxic_waste
         ObjectType: 10
-      valueIDs: c389cb00b98bb75801383ddb
+      valueIDs: b98bb75801383ddb
       ValueGuids:
-      - bytes: 567d8aecfd4c9745858970ec561f92c3
       - bytes: 3258da989c46314abc1f34ef3cadcff1
       - bytes: 6c30c10e1093224e8991b8acd5ab9fcc
   BankWwu:
@@ -121,7 +127,8 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1133058374
       Guid: dfd968f8c0e962499fe331ca2eb239bd
-  ExpandedItems: []
+  ExpandedItems:
+  - /Wwise
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

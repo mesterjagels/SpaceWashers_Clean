@@ -31,7 +31,7 @@ GameObject:
   - 114: {fileID: 11437864}
   - 61: {fileID: 6189492}
   m_Layer: 10
-  m_Name: Barrel 1
+  m_Name: Barrel
   m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedmultiplier: 0
 --- !u!212 &21204650
 SpriteRenderer:
   m_ObjectHideFlags: 1

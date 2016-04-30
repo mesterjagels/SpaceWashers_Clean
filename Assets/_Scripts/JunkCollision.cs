@@ -39,6 +39,7 @@ public class JunkCollision : MonoBehaviour {
 
             case "Slime":
                 Debug.Log("Slime hit");
+                AkSoundEngine.PostEvent("hull_impact", gameObject);
                 foreach (ContactPoint2D slimeHit in col.contacts)
                 {
                     Vector3 hitpoint = new Vector3(slimeHit.point.x, slimeHit.point.y, -10);

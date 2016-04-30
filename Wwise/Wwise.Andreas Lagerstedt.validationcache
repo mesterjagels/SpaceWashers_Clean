@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="70">
-	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="4191222208" DateHigh="30514743"/>
+	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="930079898" DateHigh="30515906"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="3168936192" DateHigh="30449148"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="3168936192" DateHigh="30449148"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Attenuations\Default Work Unit.wwu" DateLow="3499298405" DateHigh="30514725"/>
@@ -19,8 +19,8 @@
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="3128936192" DateHigh="30449148"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="3128936192" DateHigh="30449148"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Effects\Factory McDSP Effects.wwu" DateLow="3168936192" DateHigh="30449148"/>
-	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Events\Default Work Unit.wwu" DateLow="4191227222" DateHigh="30514743"/>
-	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="3499418746" DateHigh="30514725"/>
+	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Events\Default Work Unit.wwu" DateLow="930089823" DateHigh="30515906"/>
+	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="930089823" DateHigh="30515906"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="3168936192" DateHigh="30449148"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3499250741" DateHigh="30514725"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3499378618" DateHigh="30514725"/>
@@ -32,8 +32,8 @@
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="4193011772" DateHigh="30514743"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3499373606" DateHigh="30514725"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\States\Default Work Unit.wwu" DateLow="3499413722" DateHigh="30514725"/>
-	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Switches\Default Work Unit.wwu" DateLow="4193021859" DateHigh="30514743"/>
+	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Switches\Default Work Unit.wwu" DateLow="930738576" DateHigh="30515906"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Triggers\Default Work Unit.wwu" DateLow="3499280767" DateHigh="30514725"/>
-	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Wwise.Andreas Lagerstedt.wsettings" DateLow="3598826397" DateHigh="30514757"/>
+	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Wwise.Andreas Lagerstedt.wsettings" DateLow="3683849672" DateHigh="30514757"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Wwise.wproj" DateLow="20602874" DateHigh="30514726"/>
 </ValidationCache>

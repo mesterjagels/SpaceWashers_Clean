@@ -19,31 +19,34 @@
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2389703494" Name="boost"/>
+				<Event Id="3164020227" Name="dirt_cleaned"/>
 				<Event Id="3071260525" Name="hull_impact"/>
-				<Event Id="1161967626" Name="shield"/>
-				<Event Id="3802027347" Name="shield_impact"/>
+				<Event Id="1944582317" Name="thrusters"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="20995278" Language="SFX">
-					<ShortName>boost_end.wav</ShortName>
-					<Path>SFX\boost_end_9E69E797.wem</Path>
-				</File>
-				<File Id="90977210" Language="SFX">
-					<ShortName>shield_on.wav</ShortName>
-					<Path>SFX\shield_on_9E69E797.wem</Path>
-				</File>
-				<File Id="168564473" Language="SFX">
-					<ShortName>boost_start.wav</ShortName>
-					<Path>SFX\boost_start_9E69E797.wem</Path>
+				<File Id="147310084" Language="SFX">
+					<ShortName>washing_5.wav</ShortName>
+					<Path>SFX\washing_5_7A10814A.wem</Path>
 				</File>
 				<File Id="192410636" Language="SFX">
 					<ShortName>hull_4.wav</ShortName>
 					<Path>SFX\hull_4_9E69E797.wem</Path>
 				</File>
-				<File Id="423809210" Language="SFX">
-					<ShortName>boost_loop.wav</ShortName>
-					<Path>SFX\boost_loop_12F9BD65.wem</Path>
+				<File Id="194476618" Language="SFX">
+					<ShortName>washing_3.wav</ShortName>
+					<Path>SFX\washing_3_82CAB112.wem</Path>
+				</File>
+				<File Id="267089118" Language="SFX">
+					<ShortName>washing_2.wav</ShortName>
+					<Path>SFX\washing_2_A27D6CC4.wem</Path>
+				</File>
+				<File Id="343534256" Language="SFX">
+					<ShortName>washing_1.wav</ShortName>
+					<Path>SFX\washing_1_33902ECC.wem</Path>
+				</File>
+				<File Id="374476862" Language="SFX">
+					<ShortName>washing_4.wav</ShortName>
+					<Path>SFX\washing_4_52365ABE.wem</Path>
 				</File>
 				<File Id="509321733" Language="SFX">
 					<ShortName>hull_3.wav</ShortName>
@@ -57,21 +60,21 @@
 					<ShortName>hull_5.wav</ShortName>
 					<Path>SFX\hull_5_9E69E797.wem</Path>
 				</File>
-				<File Id="683262076" Language="SFX">
-					<ShortName>shield_loop.wav</ShortName>
-					<Path>SFX\shield_loop_4B8CC0C5.wem</Path>
+				<File Id="802347035" Language="SFX">
+					<ShortName>thrusters.wav</ShortName>
+					<Path>SFX\thrusters_4B8CC0C5.wem</Path>
 				</File>
-				<File Id="726897434" Language="SFX">
-					<ShortName>shield_impact.wav</ShortName>
-					<Path>SFX\shield_impact_9E69E797.wem</Path>
-				</File>
-				<File Id="779591091" Language="SFX">
-					<ShortName>shield_off.wav</ShortName>
-					<Path>SFX\shield_off_9E69E797.wem</Path>
+				<File Id="817375743" Language="SFX">
+					<ShortName>junk_toxic.wav</ShortName>
+					<Path>SFX\junk_toxic_9E69E797.wem</Path>
 				</File>
 				<File Id="974027785" Language="SFX">
 					<ShortName>hull_1.wav</ShortName>
 					<Path>SFX\hull_1_9E69E797.wem</Path>
+				</File>
+				<File Id="1005801401" Language="SFX">
+					<ShortName>washing_3.wav</ShortName>
+					<Path>SFX\washing_3_92649C55.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

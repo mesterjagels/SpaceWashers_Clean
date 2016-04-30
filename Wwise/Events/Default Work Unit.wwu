@@ -69,6 +69,28 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="junk_impact" ID="{BC1BD453-C45E-44D7-B3EC-863DF1D4848A}"/>
+				<Event Name="dirt_cleaned" ID="{24A47D4C-C235-4C78-9BD1-016B4DDDE331}">
+					<ChildrenList>
+						<Action Name="Play" ID="{91EB2ACD-B42A-4F21-B2FC-70C75E09D3FD}" ShortID="19848057" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{D3FD5C4A-9DA1-41F0-9217-78C8BE98C544}" Global="false">
+									<ObjectRef Name="cleaning_sounds" ID="{F967DC97-35DD-46D4-8044-0C40BD9EA8C6}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="thrusters" ID="{4D5E242C-22ED-43C9-B0C1-6F9538D9B30D}">
+					<ChildrenList>
+						<Action Name="Play" ID="{D764A4FE-066B-41B0-9443-E0F106E8E86E}" ShortID="443851313" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{45CF43AA-901D-4244-B928-6383DAC37B5D}" Global="false">
+									<ObjectRef Name="thruster_sounds" ID="{4A9D88B3-A60D-4562-8B29-433B4D449263}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
