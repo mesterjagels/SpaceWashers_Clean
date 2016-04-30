@@ -25,7 +25,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 467390}
-  - 114: {fileID: 11400986}
+  - 114: {fileID: 11426044}
   m_Layer: 0
   m_Name: PlanetSpawner
   m_TagString: Untagged
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -28.2, z: 0}
+  m_LocalPosition: {x: 0, y: -12.99, z: 0}
   m_LocalScale: {x: 2214.932, y: 3.04233, z: 9.361047}
   m_Children: []
   m_Father: {fileID: 467390}
@@ -72,7 +72,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &11400986
+--- !u!114 &11426044
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -80,12 +80,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 161264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3ae2417419c942ea8a59ded3ba46faf, type: 3}
+  m_Script: {fileID: 11500000, guid: 56368ae9c044946499793bb8c6cdc5b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planets: {fileID: 166546, guid: caaa76fc0052e4948b4b8d68ef8af6e2, type: 2}
-  interval: 5
-  distanceFromCam: -100
+  planets: {fileID: 186418, guid: 8bdfa94e5c364544a9a29890ba0107fd, type: 2}
+  interval: 2
+  distanceFromCam: -20
 --- !u!114 &11498382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 101348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf025a2f2d607f543a6ba80b6ac3f4b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 88ded95824c61524f8f83b3ed28e3a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &100100000

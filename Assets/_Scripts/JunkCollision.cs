@@ -8,9 +8,11 @@ public class JunkCollision : MonoBehaviour {
     [Header("Pizza")]
     public GameObject[] pizzaDirt;
     public GameObject pizzaParticle;
+    
     [Header("Slime")]
     public GameObject[] slimeDirt;
     public GameObject slimeParticle;
+
     [Header("Dust?")]
     public GameObject[] dustDirt;
     public GameObject dustParticle;
@@ -24,6 +26,7 @@ public class JunkCollision : MonoBehaviour {
         Vector3 velocityBeforeHit = col.gameObject.GetComponent<Rigidbody2D>().velocity;
         col.gameObject.GetComponent<WorldMovement>().enabled = false;
         col.gameObject.GetComponent<Rigidbody2D>().velocity = velocityBeforeHit;
+        Destroy(col.gameObject, 5f);
 
         switch (col.gameObject.tag)
         {

@@ -29,6 +29,8 @@ GameObject:
   - 4: {fileID: 494312}
   - 212: {fileID: 21292558}
   - 60: {fileID: 6077332}
+  - 50: {fileID: 5000406}
+  - 114: {fileID: 11462662}
   m_Layer: 10
   m_Name: Pizza - Slice 1
   m_TagString: Pizza
@@ -63,8 +65,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 419044}
-  - 50: {fileID: 5070196}
-  - 114: {fileID: 11439694}
   m_Layer: 10
   m_Name: Pizza
   m_TagString: Pizza
@@ -82,6 +82,8 @@ GameObject:
   - 4: {fileID: 467094}
   - 212: {fileID: 21256236}
   - 60: {fileID: 6008570}
+  - 50: {fileID: 5054530}
+  - 114: {fileID: 11433906}
   m_Layer: 10
   m_Name: Pizza - Slice 3
   m_TagString: Pizza
@@ -99,6 +101,8 @@ GameObject:
   - 4: {fileID: 450516}
   - 212: {fileID: 21253890}
   - 60: {fileID: 6050850}
+  - 50: {fileID: 5026794}
+  - 114: {fileID: 11436240}
   m_Layer: 10
   m_Name: Pizza - Slice 2
   m_TagString: Pizza
@@ -134,6 +138,8 @@ GameObject:
   - 4: {fileID: 449978}
   - 212: {fileID: 21298358}
   - 60: {fileID: 6042728}
+  - 50: {fileID: 5090850}
+  - 114: {fileID: 11495084}
   m_Layer: 10
   m_Name: Pizza - Slice 4
   m_TagString: Pizza
@@ -244,13 +250,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 419044}
   m_RootOrder: 3
---- !u!50 &5070196
+--- !u!50 &5000406
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 168366}
+  m_GameObject: {fileID: 137578}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!50 &5026794
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181934}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!50 &5054530
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181294}
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -292,6 +332,23 @@ Rigidbody2D:
   m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!50 &5090850
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199976}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -447,18 +504,30 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11439694
+--- !u!114 &11433906
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 168366}
+  m_GameObject: {fileID: 181294}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
+--- !u!114 &11436240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedmultiplier: 0.3
 --- !u!114 &11459342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -471,6 +540,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedmultiplier: 0.25
+--- !u!114 &11462662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedmultiplier: 0.3
+--- !u!114 &11495084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedmultiplier: 0.3
 --- !u!212 &21212054
 SpriteRenderer:
   m_ObjectHideFlags: 1

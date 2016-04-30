@@ -7,11 +7,11 @@ public class CleanerController : MonoBehaviour {
 	private Rigidbody2D rb;
 	public float force = 1;
     public KeyCode up, down, left, right;
-    private InputDevice device;
-    private InputControl control;
     private int playerNumber;
 
     void Awake () {
+        rb = GetComponent<Rigidbody2D>();
+
         switch (gameObject.tag)
         {
             case "Player1":
@@ -25,17 +25,10 @@ public class CleanerController : MonoBehaviour {
             case "Player3":
                 playerNumber = 2;
                 break;
-
-
         }
-		rb = GetComponent<Rigidbody2D>();
-
-
 	}
 	
-	// Update is called once per frame
 	void Update () {
-	
 
 		if (Input.GetKey (up) || InputManager.Devices[playerNumber].LeftStickUp) {
 			rb.velocity = new Vector2(rb.velocity.x, force);

@@ -11,6 +11,7 @@ TagManager:
   - Player1
   - Player2
   - Player3
+  - Planet
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - SpaceJunk
   - Cleaners
   - CleaningHand
-  - 
+  - Planet
   - 
   - 
   - 
