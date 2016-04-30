@@ -44,16 +44,16 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0.089999996, y: 0.97999996}
-      - {x: -0.35, y: 0.48}
-      - {x: -0.35, y: 0.26}
-      - {x: -0.25, y: -0.16}
-      - {x: -0.25, y: -0.9}
-      - {x: -0.17, y: -0.97999996}
-      - {x: -0.01, y: -0.97999996}
-      - {x: 0.25, y: -0.26}
-      - {x: 0.35, y: 0.14}
-      - {x: 0.35, y: 0.97999996}
+    - - {x: 0.089999996, y: 0}
+      - {x: -0.35, y: -0.5}
+      - {x: -0.35, y: -0.71999997}
+      - {x: -0.25, y: -1.14}
+      - {x: -0.25, y: -1.88}
+      - {x: -0.17, y: -1.9599999}
+      - {x: -0.01, y: -1.9599999}
+      - {x: 0.25, y: -1.24}
+      - {x: 0.35, y: -0.84}
+      - {x: 0.35, y: 0}
 --- !u!114 &11492210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: cef7bb40981274f499ded9eccb7bc59c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

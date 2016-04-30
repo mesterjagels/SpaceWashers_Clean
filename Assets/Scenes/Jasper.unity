@@ -218,7 +218,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &273841652
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ MonoBehaviour:
   - {fileID: 188888, guid: 9c931e8aca8fa1842a6dfb33a1ec7ad8, type: 2}
   - {fileID: 128394, guid: d950a393cbedf124792f61cd29eaf29d, type: 2}
   - {fileID: 150210, guid: aad2f0c163526d54bad361ed30878e30, type: 2}
-  slimeParticle: {fileID: 0}
+  slimeParticle: {fileID: 117904, guid: b49857c21daace64da55392cd0e9bb21, type: 2}
   dustDirt: []
   dustParticle: {fileID: 0}
 --- !u!1 &438489236
@@ -367,7 +367,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f161f8493093cd34789ff906f709e570, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -506,7 +506,7 @@ Transform:
   m_Children:
   - {fileID: 1539644435}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &604720809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,10 +520,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirt:
   - {fileID: 168366, guid: 962a272403ed54a9888e3c88e3d419e4, type: 2}
+  - {fileID: 198556, guid: c20e622db4c4b48c5a8ab0df506ff7e7, type: 2}
   interval: 1
   distanceFromCam: -10
-  dirtSpawnerWidth: 1
+  dirtSpawnerWidth: 5
   dirtPoolSize: 10
+--- !u!1001 &739980892
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 483152, guid: f1573df110bf0324da0d8eb61c7c2195, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 483152, guid: f1573df110bf0324da0d8eb61c7c2195, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 483152, guid: f1573df110bf0324da0d8eb61c7c2195, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -13.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 483152, guid: f1573df110bf0324da0d8eb61c7c2195, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 483152, guid: f1573df110bf0324da0d8eb61c7c2195, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 483152, guid: f1573df110bf0324da0d8eb61c7c2195, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 483152, guid: f1573df110bf0324da0d8eb61c7c2195, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 483152, guid: f1573df110bf0324da0d8eb61c7c2195, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19891484, guid: f1573df110bf0324da0d8eb61c7c2195, type: 2}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f1573df110bf0324da0d8eb61c7c2195, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &947549918
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +657,7 @@ RectTransform:
   m_Children:
   - {fileID: 193126171}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -685,7 +732,7 @@ MonoBehaviour:
   - {fileID: 101098, guid: f2a339aa96ae796498702677822bd219, type: 2}
   - {fileID: 105962, guid: 58e6684165b98b04b9fdbf2c9e7181e6, type: 2}
   - {fileID: 140044, guid: afd17111913be8b45b74c164162dc1f7, type: 2}
-  slimeParticle: {fileID: 0}
+  slimeParticle: {fileID: 117904, guid: b49857c21daace64da55392cd0e9bb21, type: 2}
   dustDirt: []
   dustParticle: {fileID: 0}
 --- !u!1001 &1062569595
@@ -725,7 +772,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431676, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5086024, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
       propertyPath: m_LinearDrag
@@ -862,7 +909,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!114 &1165243002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,7 +996,7 @@ MonoBehaviour:
   - {fileID: 153748, guid: 8abf0722013e57e4da0b35b179f2e778, type: 2}
   - {fileID: 112948, guid: f75d276102994a340acb840f207ad689, type: 2}
   - {fileID: 171734, guid: e201b0506c3229b4db0bfa60670a773c, type: 2}
-  slimeParticle: {fileID: 0}
+  slimeParticle: {fileID: 117904, guid: b49857c21daace64da55392cd0e9bb21, type: 2}
   dustDirt: []
   dustParticle: {fileID: 0}
 --- !u!1 &1535896372
@@ -1021,7 +1068,7 @@ MonoBehaviour:
   - {fileID: 144400, guid: 137f8fdc04b8b504789095a67716a781, type: 2}
   - {fileID: 111980, guid: c6ce9f6c55f737840b4901eda4c1d37a, type: 2}
   - {fileID: 176466, guid: 0f19d223cc0b80441b4f3fab57ab1408, type: 2}
-  slimeParticle: {fileID: 0}
+  slimeParticle: {fileID: 117904, guid: b49857c21daace64da55392cd0e9bb21, type: 2}
   dustDirt: []
   dustParticle: {fileID: 0}
 --- !u!1001 &1539644434
@@ -1129,7 +1176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1001 &1795941993
 Prefab:
   m_ObjectHideFlags: 0
@@ -1167,7 +1214,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f79e7ab35c4d4ab4b6ccd9f24ecc815, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f79e7ab35c4d4ab4b6ccd9f24ecc815, type: 2}
@@ -1209,7 +1256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431676, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5086024, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
       propertyPath: m_LinearDrag
@@ -1357,7 +1404,7 @@ MonoBehaviour:
   - {fileID: 153748, guid: 8abf0722013e57e4da0b35b179f2e778, type: 2}
   - {fileID: 112948, guid: f75d276102994a340acb840f207ad689, type: 2}
   - {fileID: 171734, guid: e201b0506c3229b4db0bfa60670a773c, type: 2}
-  slimeParticle: {fileID: 0}
+  slimeParticle: {fileID: 117904, guid: b49857c21daace64da55392cd0e9bb21, type: 2}
   dustDirt: []
   dustParticle: {fileID: 0}
 --- !u!1 &1979676763
@@ -1411,7 +1458,7 @@ MonoBehaviour:
   - {fileID: 188888, guid: 9c931e8aca8fa1842a6dfb33a1ec7ad8, type: 2}
   - {fileID: 128394, guid: d950a393cbedf124792f61cd29eaf29d, type: 2}
   - {fileID: 150210, guid: aad2f0c163526d54bad361ed30878e30, type: 2}
-  slimeParticle: {fileID: 0}
+  slimeParticle: {fileID: 117904, guid: b49857c21daace64da55392cd0e9bb21, type: 2}
   dustDirt: []
   dustParticle: {fileID: 0}
 --- !u!60 &1979676766
@@ -1470,7 +1517,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431676, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5086024, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
       propertyPath: m_LinearDrag

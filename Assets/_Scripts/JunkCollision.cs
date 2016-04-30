@@ -33,7 +33,7 @@ public class JunkCollision : MonoBehaviour {
                 {
                     Vector3 hitpoint = new Vector3(pizzaHit.point.x, pizzaHit.point.y, -10);
                     Instantiate(pizzaDirt[Random.Range(0, pizzaDirt.Length - 1)], hitpoint, Quaternion.identity);
-                    Instantiate(pizzaParticle, hitpoint, Quaternion.identity);
+                    Instantiate(pizzaParticle, hitpoint, Quaternion.Euler(new Vector3(0, 0, 180)));
                 }
                 break;
 
@@ -44,7 +44,7 @@ public class JunkCollision : MonoBehaviour {
                 {
                     Vector3 hitpoint = new Vector3(slimeHit.point.x, slimeHit.point.y, -10);
                     Instantiate(slimeDirt[Random.Range(0, slimeDirt.Length - 1)], hitpoint, Quaternion.identity);
-                    Instantiate(slimeParticle, hitpoint, Quaternion.Euler(new Vector3(0, 0, 180)));
+                    Instantiate(slimeParticle, hitpoint, Quaternion.Euler(new Vector3(90, 0, 180)));
 
                 }
                 break;
