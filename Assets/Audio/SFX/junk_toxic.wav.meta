@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 45b9884b110b3e948853ba9b94994f5c
 timeCreated: 1462008542
+=======
+guid: 6f3d05e2611c49645a42487e20fffc1f
+timeCreated: 1462008240
+>>>>>>> Toxic slime particle prefab
 licenseType: Free
 AudioImporter:
   serializedVersion: 6

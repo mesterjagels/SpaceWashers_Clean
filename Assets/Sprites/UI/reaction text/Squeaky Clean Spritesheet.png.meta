@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 42ce1483913a7a84bbfd9fbde46a79f2
 timeCreated: 1462008526
+=======
+guid: c82039c26531e254daa4369df066aa10
+timeCreated: 1462008238
+>>>>>>> Toxic slime particle prefab
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
