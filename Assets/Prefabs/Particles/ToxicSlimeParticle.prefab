@@ -1,40 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &153368
+--- !u!1 &117904
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 495678}
-  - 198: {fileID: 19811248}
-  - 199: {fileID: 19975680}
+  - 4: {fileID: 462952}
+  - 198: {fileID: 19868962}
+  - 199: {fileID: 19988182}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: ToxicSlimeParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &495678
+--- !u!4 &462952
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153368}
+  m_GameObject: {fileID: 117904}
   m_LocalRotation: {x: 0.0034936056, y: -0.7070981, z: 0.70709825, w: -0.0034936036}
   m_LocalPosition: {x: 1.97, y: 2.38, z: -0}
   m_LocalScale: {x: 0.037188943, y: 0.03718895, z: 0.03718895}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!198 &19811248
+--- !u!198 &19868962
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153368}
+  m_GameObject: {fileID: 117904}
   serializedVersion: 2
   lengthInSec: 1
   startDelay:
@@ -1468,12 +1468,12 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!199 &19975680
+--- !u!199 &19988182
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153368}
+  m_GameObject: {fileID: 117904}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1518,5 +1518,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 153368}
+  m_RootGameObject: {fileID: 117904}
   m_IsPrefabParent: 1
