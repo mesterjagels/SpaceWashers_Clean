@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8494795D-16A9-43E5-A126-C7B71D1914C0}'
-    m_lastTimePsrt1: 1508313951
-    m_lastTimePart2: -1999408935
+    m_lastTimePsrt1: -1094677574
+    m_lastTimePart2: -1999408929
     List:
     - Name: boost
       Path: Default Work Unit\boost
@@ -28,6 +28,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1905263802
       Guid: 4d6b92f45f2c1a4f9ce5da1270adc652
+      maxAttenuation: 0
+    - Name: dirt_cleaned
+      Path: Default Work Unit\dirt_cleaned
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: dirt_cleaned
+        ObjectType: 3
+      ID: -1130947069
+      Guid: 4c7da42435c2784c9bd1016b4ddde331
       maxAttenuation: 0
     - Name: hull_impact
       Path: Default Work Unit\hull_impact
@@ -69,6 +79,16 @@ MonoBehaviour:
       ID: -492939949
       Guid: ee1e32686aa4a348a481c6b3ecd6af44
       maxAttenuation: 0
+    - Name: thrusters
+      Path: Default Work Unit\thrusters
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: thrusters
+        ObjectType: 3
+      ID: 1944582317
+      Guid: 2c245e4ded22c943b0c16f9538d9b30d
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -87,8 +107,8 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{64C7BD84-D9DC-4923-867E-BE8406656701}'
-    m_lastTimePsrt1: 1508962704
-    m_lastTimePart2: -1999408935
+    m_lastTimePsrt1: 748770146
+    m_lastTimePart2: -1999408932
     List:
     - Name: Junk_type
       Path: Default Work Unit\Junk_type
@@ -115,8 +135,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{86113125-45C6-436A-9CDF-BAD3EBCFC4F8}'
-    m_lastTimePsrt1: -909699870
-    m_lastTimePart2: -1999409357
+    m_lastTimePsrt1: -1092858218
+    m_lastTimePart2: -1999408929
     List:
     - Name: main
       Path: Default Work Unit\main

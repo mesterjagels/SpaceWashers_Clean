@@ -8,6 +8,9 @@ TagManager:
   - Slime
   - Pizza
   - Dirt
+  - Player1
+  - Player2
+  - Player3
   layers:
   - Default
   - TransparentFX
