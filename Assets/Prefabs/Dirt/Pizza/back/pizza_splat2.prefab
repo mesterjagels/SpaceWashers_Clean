@@ -7,6 +7,7 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
+<<<<<<< HEAD:Assets/Prefabs/Dirt/Pizza/back/pizza_splat2.prefab
   - 4: {fileID: 438900}
   - 212: {fileID: 21208830}
   - 60: {fileID: 6093318}
@@ -14,6 +15,16 @@ GameObject:
   m_Layer: 8
   m_Name: pizza_splat2
   m_TagString: Untagged
+=======
+  - 4: {fileID: 429910}
+  - 212: {fileID: 21216632}
+  - 50: {fileID: 5082488}
+  - 114: {fileID: 11479794}
+  - 61: {fileID: 6156734}
+  m_Layer: 10
+  m_Name: Barrel (1)
+  m_TagString: Slime
+>>>>>>> Lots of stuff:Assets/Prefabs/Space Junk/Barrel (1).prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

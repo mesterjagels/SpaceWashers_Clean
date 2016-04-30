@@ -3,19 +3,29 @@ using System;
 
 namespace InControl
 {
-	// TODO: This should be renamed to InputControlTarget.
+	/// <summary>
+	/// An enumeration of input controls.
+	/// This includes both the standardized set of controls and a variety 
+	/// of non-standard and generic unnamed controls.
+	/// </summary>
 	public enum InputControlType : int
 	{
-		None = 0,
+		None,
 
-		// Standardized.
+		// Standardized controls.
 		//
-		LeftStickX,
-		LeftStickY,
+		LeftStickUp,
+		LeftStickDown,
+		LeftStickLeft,
+		LeftStickRight,
+
 		LeftStickButton,
 
-		RightStickX,
-		RightStickY,
+		RightStickUp,
+		RightStickDown,
+		RightStickLeft,
+		RightStickRight,
+
 		RightStickButton,
 
 		DPadUp,
@@ -34,18 +44,25 @@ namespace InControl
 		LeftBumper,
 		RightBumper,
 
-
-		// Not standardized, but provided for convenience.
+		// This standardized control is an alias that maps onto all command buttons.
 		//
+		Command,
+
+		// Command buttons.
 		Back,
 		Start,
 		Select,
 		System,
+		Options,
 		Pause,
 		Menu,
 		Share,
+		Home,
 		View,
-		Options,
+		Power,
+
+		// Unusual controls.
+		//
 		TiltX,
 		TiltY,
 		TiltZ,
@@ -55,7 +72,7 @@ namespace InControl
 		TouchPadYAxis,
 
 
-		// Not standardized.
+		// Generic controls (usually assigned to unknown devices).
 		//
 		Analog0,
 		Analog1,

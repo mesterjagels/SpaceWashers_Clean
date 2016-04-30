@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
 using InControl;
 
@@ -16,6 +18,8 @@ using InControl;
  * It can also be used for create new device profiles as it will
  * show the default Unity mappings for unknown devices.
  **/
+
+
 namespace InControl
 {
 	public class TestInputManager : MonoBehaviour
@@ -40,13 +44,13 @@ namespace InControl
 			InputManager.OnDeviceDetached += inputDevice => Debug.Log( "Detached: " + inputDevice.Name );
 			InputManager.OnActiveDeviceChanged += inputDevice => Debug.Log( "Active device changed to: " + inputDevice.Name );
 
-			TestInputMappings();
+			InputManager.OnUpdate += HandleInputUpdate;
 
-//			Debug.Log( "Unity Version: " + InputManager.UnityVersion );
+//			UnityInputDeviceManager.DumpSystemDeviceProfiles();
 		}
 
 
-		void FixedUpdate()
+		void HandleInputUpdate( ulong updateTick, float deltaTime )
 		{
 			CheckForPauseButton();
 
@@ -59,15 +63,38 @@ namespace InControl
 //			{
 //				Debug.Log( "Left.WasReleased" );
 //			}
+//			if (inputDevice.Action1.WasPressed)
+//			{
+//				Debug.Log( "Action1.WasPressed" );
+//			}
+
+//			var inputDevice = InputManager.ActiveDevice;
+//			var control = inputDevice.Action1;
+//			if (control.WasReleased)
+//			{
+//				InputManager.ClearInputState();
+//				Debug.Log( "WasPressed = " + control.WasPressed );
+//				Debug.Log( "WasReleased = " + control.WasReleased );
+//			}
+		}
+
+
+		void Start()
+		{
+//			var unityDeviceManager = InputManager.GetDeviceManager<UnityInputDeviceManager>();
+//			unityDeviceManager.ReloadDevices();
+
+//			Debug.Log( "IntPtr.Size = " + IntPtr.Size );
+
+			#if UNITY_IOS
+			ICadeDeviceManager.Active = true;
+			#endif
 		}
 
 
 		void Update()
 		{
-			if (isPaused)
-			{
-				CheckForPauseButton();
-			}
+//			Thread.Sleep( 250 );
 
 			if (Input.GetKeyDown( KeyCode.R ))
 			{
@@ -136,6 +163,12 @@ namespace InControl
 				GUI.Label( new Rect( x, y, x + w, y + 10 ), inputDevice.Name, style );
 				y += lineHeight;
 
+				if (inputDevice.IsUnknown)
+				{
+					GUI.Label( new Rect( x, y, x + w, y + 10 ), inputDevice.Meta, style );
+					y += lineHeight;
+				}
+
 				GUI.Label( new Rect( x, y, x + w, y + 10 ), "SortOrder: " + inputDevice.SortOrder, style );
 				y += lineHeight;
 
@@ -164,6 +197,58 @@ namespace InControl
 					}
 				}
 
+				y += lineHeight;
+
+				color = active ? new Color( 1.0f, 0.7f, 0.2f ) : Color.white;
+				if (inputDevice.IsKnown)
+				{
+					var control = inputDevice.LeftStickX;
+					SetColor( control.State ? Color.green : color );
+					var label = string.Format( "{0} {1}", "Left Stick X", control.State ? "= " + control.Value : "" );
+					GUI.Label( new Rect( x, y, x + w, y + 10 ), label, style );
+					y += lineHeight;
+
+					control = inputDevice.LeftStickY;
+					SetColor( control.State ? Color.green : color );
+					label = string.Format( "{0} {1}", "Left Stick Y", control.State ? "= " + control.Value : "" );
+					GUI.Label( new Rect( x, y, x + w, y + 10 ), label, style );
+					y += lineHeight;
+
+					SetColor( inputDevice.LeftStick.State ? Color.green : color );
+					label = string.Format( "{0} {1}", "Left Stick A", inputDevice.LeftStick.State ? "= " + inputDevice.LeftStick.Angle : "" );
+					GUI.Label( new Rect( x, y, x + w, y + 10 ), label, style );
+					y += lineHeight;
+
+					control = inputDevice.RightStickX;
+					SetColor( control.State ? Color.green : color );
+					label = string.Format( "{0} {1}", "Right Stick X", control.State ? "= " + control.Value : "" );
+					GUI.Label( new Rect( x, y, x + w, y + 10 ), label, style );
+					y += lineHeight;
+
+					control = inputDevice.RightStickY;
+					SetColor( control.State ? Color.green : color );
+					label = string.Format( "{0} {1}", "Right Stick Y", control.State ? "= " + control.Value : "" );
+					GUI.Label( new Rect( x, y, x + w, y + 10 ), label, style );
+					y += lineHeight;
+
+					SetColor( inputDevice.RightStick.State ? Color.green : color );
+					label = string.Format( "{0} {1}", "Right Stick A", inputDevice.RightStick.State ? "= " + inputDevice.RightStick.Angle : "" );
+					GUI.Label( new Rect( x, y, x + w, y + 10 ), label, style );
+					y += lineHeight;
+
+					control = inputDevice.DPadX;
+					SetColor( control.State ? Color.green : color );
+					label = string.Format( "{0} {1}", "DPad X", control.State ? "= " + control.Value : "" );
+					GUI.Label( new Rect( x, y, x + w, y + 10 ), label, style );
+					y += lineHeight;
+
+					control = inputDevice.DPadY;
+					SetColor( control.State ? Color.green : color );
+					label = string.Format( "{0} {1}", "DPad Y", control.State ? "= " + control.Value : "" );
+					GUI.Label( new Rect( x, y, x + w, y + 10 ), label, style );
+					y += lineHeight;
+				}
+
 				SetColor( Color.cyan );
 				var anyButton = inputDevice.AnyButton;
 				if (anyButton)
@@ -189,97 +274,83 @@ namespace InControl
 					y -= lineHeight;
 				}
 			}
+
+
+//			DrawUnityInputDebugger();
+		}
+
+
+		void DrawUnityInputDebugger()
+		{
+			var w = 300;
+			var x = Screen.width / 2;
+			var y = 10;
+			var lineHeight = 20;
+			SetColor( Color.white );
+
+			var joystickNames = Input.GetJoystickNames();
+			var numJoysticks = joystickNames.Length;
+			for (var i = 0; i < numJoysticks; i++)
+			{
+				var joystickName = joystickNames[i];
+				var joystickId = i + 1;
+
+				GUI.Label( new Rect( x, y, x + w, y + 10 ), "Joystick " + joystickId + ": \"" + joystickName + "\"", style );
+				y += lineHeight;
+
+				var buttonInfo = "Buttons: ";
+				for (int button = 0; button < 20; button++)
+				{
+					var buttonQuery = "joystick " + joystickId + " button " + button;
+					var buttonState = Input.GetKey( buttonQuery );
+					if (buttonState)
+					{
+						buttonInfo += "B" + button + "  ";
+					}
+				}
+
+				GUI.Label( new Rect( x, y, x + w, y + 10 ), buttonInfo, style );
+				y += lineHeight;
+
+				var analogInfo = "Analogs: ";
+				for (int analog = 0; analog < 20; analog++)
+				{
+					var analogQuery = "joystick " + joystickId + " analog " + analog;
+					var analogValue = Input.GetAxisRaw( analogQuery );
+
+					if (Utility.AbsoluteIsOverThreshold( analogValue, 0.2f ))
+					{
+						analogInfo += "A" + analog + ": " + analogValue.ToString( "0.00" ) + "  ";
+					}
+				}
+
+				GUI.Label( new Rect( x, y, x + w, y + 10 ), analogInfo, style );
+				y += lineHeight;
+
+				y += 25;
+			}
 		}
 
 
 		void OnDrawGizmos()
 		{
-			Vector3 delta = InputManager.ActiveDevice.Direction.Vector * 4.0f;
-			Gizmos.color = Color.yellow;
-			Gizmos.DrawSphere( delta, 1 );
-		}
+			var inputDevice = InputManager.ActiveDevice;
+			var vector = new Vector2( inputDevice.LeftStickX, inputDevice.LeftStickY );
+//			var vector = inputDevice.LeftStick.Vector;
 
+			Gizmos.color = Color.blue;
+			var lz = new Vector2( -3.0f, -1.0f );
+			var lp = lz + (vector * 2.0f);
+			Gizmos.DrawSphere( lz, 0.1f );
+			Gizmos.DrawLine( lz, lp );
+			Gizmos.DrawSphere( lp, 1.0f );
 
-		void TestInputMappings()
-		{
-			var complete = InputControlMapping.Range.Complete;
-			var positive = InputControlMapping.Range.Positive;
-			var negative = InputControlMapping.Range.Negative;
-			var noInvert = false;
-			var doInvert = true;
-
-			TestInputMapping( complete, complete, noInvert, -1.0f, 0.0f, 1.0f );
-			TestInputMapping( complete, negative, noInvert, -1.0f, -0.5f, 0.0f );
-			TestInputMapping( complete, positive, noInvert, 0.0f, 0.5f, 1.0f );
-
-			TestInputMapping( negative, complete, noInvert, -1.0f, 1.0f, 0.0f );
-			TestInputMapping( negative, negative, noInvert, -1.0f, 0.0f, 0.0f );
-			TestInputMapping( negative, positive, noInvert, 0.0f, 1.0f, 0.0f );
-
-			TestInputMapping( positive, complete, noInvert, 0.0f, -1.0f, 1.0f );
-			TestInputMapping( positive, negative, noInvert, 0.0f, -1.0f, 0.0f );
-			TestInputMapping( positive, positive, noInvert, 0.0f, 0.0f, 1.0f );
-
-			TestInputMapping( complete, complete, doInvert, 1.0f, 0.0f, -1.0f );
-			TestInputMapping( complete, negative, doInvert, 1.0f, 0.5f, 0.0f );
-			TestInputMapping( complete, positive, doInvert, 0.0f, -0.5f, -1.0f );
-
-			TestInputMapping( negative, complete, doInvert, 1.0f, -1.0f, 0.0f );
-			TestInputMapping( negative, negative, doInvert, 1.0f, 0.0f, 0.0f );
-			TestInputMapping( negative, positive, doInvert, 0.0f, -1.0f, 0.0f );
-
-			TestInputMapping( positive, complete, doInvert, 0.0f, 1.0f, -1.0f );
-			TestInputMapping( positive, negative, doInvert, 0.0f, 1.0f, 0.0f );
-			TestInputMapping( positive, positive, doInvert, 0.0f, 0.0f, -1.0f );
-		}
-
-
-		void TestInputMapping( InputControlMapping.Range sourceRange, InputControlMapping.Range targetRange, bool invert, float expectA, float expectB, float expectC )
-		{
-			var mapping = new InputControlMapping() {
-				SourceRange = sourceRange,
-				TargetRange = targetRange,
-				Invert = invert
-			};
-
-			float input;
-			float value;
-
-			string sr = "Complete";
-			if (sourceRange == InputControlMapping.Range.Negative)
-				sr = "Negative";
-			else
-			if (sourceRange == InputControlMapping.Range.Positive)
-				sr = "Positive";
-
-			string tr = "Complete";
-			if (targetRange == InputControlMapping.Range.Negative)
-				tr = "Negative";
-			else
-			if (targetRange == InputControlMapping.Range.Positive)
-				tr = "Positive";
-
-
-			input = -1.0f;
-			value = mapping.MapValue( input );
-			if (Mathf.Abs( value - expectA ) > Single.Epsilon)
-			{
-				Debug.LogError( "Input of " + input + " got value of " + value + " instead of " + expectA + " (SR = " + sr + ", TR = " + tr + ")" );
-			}
-
-			input = 0.0f;
-			value = mapping.MapValue( input );
-			if (Mathf.Abs( value - expectB ) > Single.Epsilon)
-			{
-				Debug.LogError( "Input of " + input + " got value of " + value + " instead of " + expectB + " (SR = " + sr + ", TR = " + tr + ")" );
-			}
-
-			input = 1.0f;
-			value = mapping.MapValue( input );
-			if (Mathf.Abs( value - expectC ) > Single.Epsilon)
-			{
-				Debug.LogError( "Input of " + input + " got value of " + value + " instead of " + expectC + " (SR = " + sr + ", TR = " + tr + ")" );
-			}
+			Gizmos.color = Color.red;
+			var rz = new Vector2( +3.0f, -1.0f );
+			var rp = rz + (inputDevice.RightStick.Vector * 2.0f);
+			Gizmos.DrawSphere( rz, 0.1f );
+			Gizmos.DrawLine( rz, rp );
+			Gizmos.DrawSphere( rp, 1.0f );
 		}
 	}
 }

@@ -4,90 +4,29 @@ using UnityEngine;
 
 namespace InControl
 {
-	public class OneAxisInputControl
+	public class OneAxisInputControl : InputControlBase
 	{
-		public ulong UpdateTick { get; private set; }
-
-		InputControlState thisState;
-		InputControlState lastState;
-
-
-		public void UpdateWithValue( float value, ulong updateTick, float stateThreshold )
+		internal void CommitWithSides( InputControl negativeSide, InputControl positiveSide, ulong updateTick, float deltaTime )
 		{
-			if (UpdateTick > updateTick)
-			{
-				throw new InvalidOperationException( "A control cannot be updated with an earlier tick." );
-			}
-
-			lastState = thisState;
-
-			thisState.Set( value, stateThreshold );
-
-			if (thisState != lastState)
-			{
-				UpdateTick = updateTick;
-			}
+			LowerDeadZone = Mathf.Max( negativeSide.LowerDeadZone, positiveSide.LowerDeadZone );
+			UpperDeadZone = Mathf.Min( negativeSide.UpperDeadZone, positiveSide.UpperDeadZone );
+			Raw = negativeSide.Raw || positiveSide.Raw;
+			var value = Utility.ValueFromSides( negativeSide.RawValue, positiveSide.RawValue );
+			CommitWithValue( value, updateTick, deltaTime );
 		}
 
 
-		public bool State
-		{
-			get { return thisState.State; }
-		}
-
-
-		public bool LastState
-		{
-			get { return lastState.State; }
-		}
-
-
-		public float Value
-		{
-			get { return thisState.Value; }
-		}
-
-
-		public float LastValue
-		{
-			get { return lastState.Value; }
-		}
-
-
-		public bool HasChanged
-		{
-			get { return thisState != lastState; }
-		}
-
-
-		public bool IsPressed
-		{
-			get { return thisState.State; }
-		}
-
-
-		public bool WasPressed
-		{
-			get { return thisState && !lastState; }
-		}
-
-
-		public bool WasReleased
-		{
-			get { return !thisState && lastState; }
-		}
-
-
-		public static implicit operator bool( OneAxisInputControl control )
-		{
-			return control.State;
-		}
-
-
-		public static implicit operator float( OneAxisInputControl control )
-		{
-			return control.Value;
-		}
+		//		internal void CommitWithSides( InputControl negativeSide, InputControl positiveSide, ulong updateTick, float deltaTime, bool invertSides )
+		//		{
+		//			if (invertSides)
+		//			{
+		//				CommitWithSides( positiveSide, negativeSide, updateTick, deltaTime );
+		//			}
+		//			else
+		//			{
+		//				CommitWithSides( negativeSide, positiveSide, updateTick, deltaTime );
+		//			}
+		//		}
 	}
 }
 

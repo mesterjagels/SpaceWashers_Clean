@@ -1,11 +1,22 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
+using System.IO;
+using UnityEngine;
+
+#if NETFX_CORE
+using Windows.Storage;
+using Windows.Storage.Streams;
+using System.Threading.Tasks;
+#endif
 
 
 namespace InControl
 {
 	public static class Utility
 	{
+		public const float Epsilon = 1.0e-7f;
+
+
 		private static Vector2[] circleVertexList = {
 			new Vector2( +0.0000f, +1.0000f ),
 			new Vector2( +0.2588f, +0.9659f ),
@@ -132,21 +143,296 @@ namespace InControl
 
 		public static float ApplyDeadZone( float value, float lowerDeadZone, float upperDeadZone )
 		{
-			return Mathf.InverseLerp( lowerDeadZone, upperDeadZone, Mathf.Abs( value ) ) * Mathf.Sign( value );
+			if (value < 0.0f)
+			{
+				if (value > -lowerDeadZone)
+				{
+					return 0.0f;
+				}
+
+				if (value < -upperDeadZone)
+				{
+					return -1.0f;
+				}
+					
+				return (value + lowerDeadZone) / (upperDeadZone - lowerDeadZone);
+			}
+			else
+			{
+				if (value < lowerDeadZone)
+				{
+					return 0.0f;
+				}
+
+				if (value > upperDeadZone)
+				{
+					return 1.0f;
+				}
+
+				return (value - lowerDeadZone) / (upperDeadZone - lowerDeadZone);
+			}
 		}
 
 
-		public static Vector2 ApplyCircularDeadZone( Vector2 axisVector, float lowerDeadZone, float upperDeadZone )
+		public static Vector2 ApplyCircularDeadZone( Vector2 v, float lowerDeadZone, float upperDeadZone )
 		{
-			var magnitude = Mathf.InverseLerp( lowerDeadZone, upperDeadZone, axisVector.magnitude );
-			return axisVector.normalized * magnitude;
+			var magnitude = Mathf.InverseLerp( lowerDeadZone, upperDeadZone, v.magnitude );
+			return v.normalized * magnitude;
 		}
 
 
-		public static Vector2 ApplyCircularDeadZone( float axisX, float axisY, float lowerDeadZone, float upperDeadZone )
+		public static Vector2 ApplyCircularDeadZone( float x, float y, float lowerDeadZone, float upperDeadZone )
 		{
-			return ApplyCircularDeadZone( new Vector2( axisX, axisY ), lowerDeadZone, upperDeadZone );
+			return ApplyCircularDeadZone( new Vector2( x, y ), lowerDeadZone, upperDeadZone );
 		}
+
+
+		public static float ApplySmoothing( float thisValue, float lastValue, float deltaTime, float sensitivity )
+		{
+			// 1.0f and above is instant (no smoothing).
+			if (Utility.Approximately( sensitivity, 1.0f ))
+			{
+				return thisValue;
+			}
+
+			// Apply sensitivity (how quickly the value adapts to changes).
+			var maxDelta = deltaTime * sensitivity * 100.0f;
+
+			// Snap to zero when changing direction quickly.
+			if (Mathf.Sign( lastValue ) != Mathf.Sign( thisValue ))
+			{
+				lastValue = 0.0f;
+			}
+
+			return Mathf.MoveTowards( lastValue, thisValue, maxDelta );
+		}
+
+
+		public static float ApplySnapping( float value, float threshold )
+		{
+			if (value < -threshold)
+			{
+				return -1.0f;
+			}
+
+			if (value > threshold)
+			{
+				return 1.0f;
+			}
+
+			return 0.0f;
+		}
+
+
+		internal static bool TargetIsButton( InputControlType target )
+		{
+			return (target >= InputControlType.Action1 && target <= InputControlType.Action4) || (target >= InputControlType.Button0 && target <= InputControlType.Button19);
+		}
+
+
+		internal static bool TargetIsStandard( InputControlType target )
+		{
+			return target >= InputControlType.LeftStickUp && target <= InputControlType.RightBumper;
+		}
+
+
+		#if NETFX_CORE
+		public static async Task<string> Async_ReadFromFile( string path )
+		{
+			string name = Path.GetFileName( path );
+			string folderPath = Path.GetDirectoryName( path );
+			StorageFolder folder = await StorageFolder.GetFolderFromPathAsync( folderPath );
+			StorageFile file = await folder.GetFileAsync( name );
+			return await FileIO.ReadTextAsync( file );
+		}
+
+		public static async Task Async_WriteToFile( string path, string data )
+		{
+			string name = Path.GetFileName( path );
+			string folderPath = Path.GetDirectoryName( path );
+			StorageFolder folder = await StorageFolder.GetFolderFromPathAsync( folderPath );
+			StorageFile file = await folder.CreateFileAsync( name, CreationCollisionOption.ReplaceExisting );
+		    await FileIO.WriteTextAsync( file, data );
+		}
+		#endif
+
+
+		public static string ReadFromFile( string path )
+		{
+			#if NETFX_CORE
+			return Async_ReadFromFile( path ).Result;
+			#else
+			var streamReader = new StreamReader( path );
+			var data = streamReader.ReadToEnd();
+			streamReader.Close();
+			return data;
+			#endif
+		}
+
+
+		public static void WriteToFile( string path, string data )
+		{
+			#if NETFX_CORE
+			Async_WriteToFile( path, data ).Wait();
+			#else
+			var streamWriter = new StreamWriter( path );
+			streamWriter.Write( data );
+			streamWriter.Flush();
+			streamWriter.Close();
+			#endif
+		}
+
+
+		public static float Abs( float value )
+		{
+			return value < 0.0f ? -value : value;
+		}
+
+
+		public static bool Approximately( float value1, float value2 )
+		{
+			var delta = value1 - value2;
+			return (delta >= -Epsilon) && (delta <= Epsilon);
+		}
+
+
+		public static bool IsNotZero( float value )
+		{
+			return (value < -Epsilon) || (value > Epsilon);
+		}
+
+
+		public static bool IsZero( float value )
+		{
+			return (value >= -Epsilon) && (value <= Epsilon);
+		}
+
+
+		public static bool AbsoluteIsOverThreshold( float value, float threshold )
+		{
+			return (value < -threshold) || (value > threshold);
+		}
+
+
+		public static float NormalizeAngle( float angle )
+		{
+			while (angle < 0.0f)
+			{
+				angle += 360.0f;
+			}
+
+			while (angle > 360.0f)
+			{
+				angle -= 360.0f;
+			}
+
+			return angle;
+		}
+
+
+		public static float VectorToAngle( Vector2 vector )
+		{
+			if (Utility.IsZero( vector.x ) && Utility.IsZero( vector.y ))
+			{
+				return 0.0f;
+			}
+			return Utility.NormalizeAngle( Mathf.Atan2( vector.x, vector.y ) * Mathf.Rad2Deg );
+		}
+
+
+		public static float Min( float v0, float v1, float v2, float v3 )
+		{
+			var r0 = (v0 >= v1) ? v1 : v0;
+			var r1 = (v2 >= v3) ? v3 : v2;
+			return (r0 >= r1) ? r1 : r0;
+		}
+
+
+		public static float Max( float v0, float v1, float v2, float v3 )
+		{
+			var r0 = (v0 <= v1) ? v1 : v0;
+			var r1 = (v2 <= v3) ? v3 : v2;
+			return (r0 <= r1) ? r1 : r0;
+		}
+
+
+		internal static float ValueFromSides( float negativeSide, float positiveSide )
+		{
+			var nsv = Utility.Abs( negativeSide );
+			var psv = Utility.Abs( positiveSide );
+
+			if (Utility.Approximately( nsv, psv ))
+			{
+				return 0.0f;
+			}
+
+			return nsv > psv ? -nsv : psv;
+		}
+
+
+		internal static float ValueFromSides( float negativeSide, float positiveSide, bool invertSides )
+		{
+			if (invertSides)
+			{
+				return ValueFromSides( positiveSide, negativeSide );
+			}
+			else
+			{
+				return ValueFromSides( negativeSide, positiveSide );
+			}
+		}
+
+
+		internal static bool Is32Bit
+		{
+			get
+			{
+				return IntPtr.Size == 4;
+			}
+		}
+
+	
+		internal static bool Is64Bit
+		{
+			get
+			{
+				return IntPtr.Size == 8;
+			}
+		}
+
+
+		#if !NETFX_CORE && !UNITY_WEBPLAYER && !UNITY_EDITOR_OSX && (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
+		public static string HKLM_GetString( string path, string key )
+		{
+			try
+			{
+				var rk = Microsoft.Win32.Registry.LocalMachine.OpenSubKey( path );
+				if (rk == null)
+				{
+					return "";
+				}
+				return (string) rk.GetValue( key );
+			}
+			catch
+			{
+				return null;
+			}
+		}
+		
+		public static string GetWindowsVersion()
+		{
+			var product = HKLM_GetString( @"SOFTWARE\Microsoft\Windows NT\CurrentVersion", "ProductName" );
+			if (product != null)
+			{
+				var version = HKLM_GetString( @"SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CSDVersion" );
+				var bitSize = Is32Bit ? "32Bit" : "64Bit";
+				return product + (version != null ? " " + version : "") + " " + bitSize; 
+			}
+			return SystemInfo.operatingSystem;
+		}
+		#endif
 	}
 }
+
+
 

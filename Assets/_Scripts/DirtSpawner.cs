@@ -7,7 +7,7 @@ public class DirtSpawner : MonoBehaviour
 {
 
     public GameObject[] dirt;
-    public float interval = 0;
+    public float interval;
     public int distanceFromCam;
     private GameObject cam;
     public int dirtSpawnerWidth = 50;
@@ -34,22 +34,31 @@ public class DirtSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Spawn();
+        
     }
 
-    void Spawn()
-    
+    void Start()
+    {
+        StartCoroutine(Spawn());
+    }
+
+    IEnumerator Spawn()
         {
-            i = j % (dirtPoolSize-1);
+        while (true) {
+            i = j % (dirtPoolSize);
 
             if (!dirtPool[i].activeInHierarchy)
             {
-                //Debug.Log("Dirt spawned from pool");
+                Debug.Log("Dirt spawned from pool");
                 dirtPool[i].transform.position = new Vector3(Random.Range(cam.transform.position.x - dirtSpawnerWidth, cam.transform.position.x + dirtSpawnerWidth),
             cam.transform.position.y - distanceFromCam, 10);
                 dirtPool[i].SetActive(true);
+                Debug.Log("i in dirtspawner is now" + i);
+                j++;
+                
             }
-            //Debug.Log(i);
-            j++;
+            yield return new WaitForSeconds(interval);
+        }
+        
     }
 }

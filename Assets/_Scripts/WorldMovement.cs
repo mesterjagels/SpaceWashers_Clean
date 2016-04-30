@@ -16,7 +16,7 @@ public class WorldMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         rb.velocity = new Vector2(spaceship.horizontalSpeed * speedmultiplier * -1, spaceship.verticalSpeed * speedmultiplier * -1);
 	}
 }

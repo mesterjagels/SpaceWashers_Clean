@@ -3,9 +3,6 @@
 
 namespace InControl
 {
-	// Tested with ADT-1
-	// Profile by Artūras 'arturaz' Šlajus <arturas@tinylabproductions.com>
-	//
 	// @cond nodoc
 	[AutoDiscover]
 	public class AndroidTVRemoteProfile : UnityInputDeviceProfile
@@ -13,14 +10,15 @@ namespace InControl
 		public AndroidTVRemoteProfile()
 		{
 			Name = "Android TV Remote";
-			Meta = "Android TV Remotet on Android TV";
+			Meta = "Android TV Remote on Android TV";
 
-			SupportedPlatforms = new[] { 
+			SupportedPlatforms = new[] {
 				"Android"
 			};
 
-			JoystickNames = new[] { 
-				"touch-input", 
+			JoystickNames = new[] {
+				"",
+				"touch-input",
 				"navigation-input"
 			};
 
@@ -29,41 +27,21 @@ namespace InControl
 					Handle = "A",
 					Target = InputControlType.Action1,
 					Source = Button0
-				}
+				},
+				new InputControlMapping {
+					Handle = "Back",
+					Target = InputControlType.Back,
+					Source = EscapeKey
+				},
 			};
 
 			AnalogMappings = new[] {
-				new InputControlMapping {
-					Handle = "DPad Left",
-					Target = InputControlType.DPadLeft,
-					Source = Analog4,
-					SourceRange = InputControlMapping.Range.Negative,
-					TargetRange = InputControlMapping.Range.Negative,
-					Invert = true
-				},
-				new InputControlMapping {
-					Handle = "DPad Right",
-					Target = InputControlType.DPadRight,
-					Source = Analog4,
-					SourceRange = InputControlMapping.Range.Positive,
-					TargetRange = InputControlMapping.Range.Positive
-				},
-				new InputControlMapping {
-					Handle = "DPad Up",
-					Target = InputControlType.DPadUp,
-					Source = Analog5,
-					SourceRange = InputControlMapping.Range.Negative,
-					TargetRange = InputControlMapping.Range.Negative
-				},
-				new InputControlMapping {
-					Handle = "DPad Down",
-					Target = InputControlType.DPadDown,
-					Source = Analog5,
-					SourceRange = InputControlMapping.Range.Positive,
-					TargetRange = InputControlMapping.Range.Positive,
-					Invert = true
-				},
+				DPadLeftMapping( Analog4 ),
+				DPadRightMapping( Analog4 ),
+				DPadUpMapping( Analog5 ),
+				DPadDownMapping( Analog5 ),
 			};
 		}
 	}
+	// @endcond
 }
