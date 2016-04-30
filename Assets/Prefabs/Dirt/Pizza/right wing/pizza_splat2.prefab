@@ -12,7 +12,7 @@ GameObject:
   - 60: {fileID: 6054980}
   - 114: {fileID: 11403040}
   m_Layer: 8
-  m_Name: pizza_splat2
+  m_Name: pizza_splat2_rightwing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
