@@ -16,7 +16,11 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8494795D-16A9-43E5-A126-C7B71D1914C0}'
+<<<<<<< HEAD
     m_lastTimePsrt1: -1094677574
+=======
+    m_lastTimePsrt1: 1083162192
+>>>>>>> Cleaner Prefabs All have the appropriate scripts and settings.
     m_lastTimePart2: -1999408929
     List:
     - Name: boost
@@ -135,7 +139,11 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{86113125-45C6-436A-9CDF-BAD3EBCFC4F8}'
+<<<<<<< HEAD
     m_lastTimePsrt1: -1092858218
+=======
+    m_lastTimePsrt1: 1083521908
+>>>>>>> Cleaner Prefabs All have the appropriate scripts and settings.
     m_lastTimePart2: -1999408929
     List:
     - Name: main

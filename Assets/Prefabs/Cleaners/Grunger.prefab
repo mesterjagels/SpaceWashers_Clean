@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 495704}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grunger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   - 212: {fileID: 21222242}
   - 50: {fileID: 5041752}
   - 233: {fileID: 23342712}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 'Grunger Thigh '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 212: {fileID: 21220656}
   - 50: {fileID: 5076814}
   - 233: {fileID: 23360368}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grunger Arm 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - 212: {fileID: 21284070}
   - 50: {fileID: 5016420}
   - 233: {fileID: 23396458}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grunger Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - 212: {fileID: 21253438}
   - 50: {fileID: 5002938}
   - 233: {fileID: 23363802}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grunger SecArm 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,10 @@ GameObject:
   - 212: {fileID: 21237588}
   - 50: {fileID: 5022036}
   - 233: {fileID: 23310226}
-  m_Layer: 0
+  - 58: {fileID: 5840162}
+  - 114: {fileID: 11460740}
+  - 114: {fileID: 11456954}
+  m_Layer: 12
   m_Name: Grunge Cleaning Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +119,7 @@ GameObject:
   - 212: {fileID: 21260004}
   - 50: {fileID: 5005628}
   - 233: {fileID: 23323168}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grunger Arm 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +137,7 @@ GameObject:
   - 212: {fileID: 21219796}
   - 50: {fileID: 5083810}
   - 233: {fileID: 23359658}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grunger SecArm 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +155,7 @@ GameObject:
   - 212: {fileID: 21288898}
   - 50: {fileID: 5009162}
   - 233: {fileID: 23378570}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 'Grunger Leg '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +173,7 @@ GameObject:
   - 212: {fileID: 21262948}
   - 50: {fileID: 5056264}
   - 233: {fileID: 23351726}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grunger Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +191,7 @@ GameObject:
   - 212: {fileID: 21232794}
   - 50: {fileID: 5032942}
   - 60: {fileID: 6040888}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grunger Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +211,7 @@ GameObject:
   - 233: {fileID: 23360174}
   - 60: {fileID: 6017806}
   - 114: {fileID: 11443726}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grunger Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,8 +345,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9381759, y: 0.32061538, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.03, y: 0.54, z: -10}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 403874}
   - {fileID: 428394}
@@ -378,8 +381,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155214}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -395,8 +398,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163680}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -412,8 +415,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175584}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -429,8 +432,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138038}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -463,8 +466,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195424}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -480,8 +483,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137306}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -497,8 +500,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191262}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -514,8 +517,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199816}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -531,8 +534,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137340}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -548,8 +551,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172630}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -557,6 +560,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &5840162
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159452}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.055
 --- !u!60 &6017806
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -609,6 +626,33 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11456954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c66325a8995149fa93a0d89a6c01cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 2
+  up: 0
+  down: 0
+  left: 0
+  right: 0
+--- !u!114 &11460740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33aeeeb04e7b4514990f424007dd9fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21219796
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -634,7 +678,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e509d1e0cac07194ca43b65c0c0da1c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -814,7 +858,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3703575ea79e5c44b97915c0ad4a367d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -953,7 +997,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.031499982, y: -0.09990001}
+  m_ConnectedAnchor: {x: 0.031499863, y: -0.09990001}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

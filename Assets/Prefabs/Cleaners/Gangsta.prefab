@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406396}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gangsta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   - 212: {fileID: 21287304}
   - 50: {fileID: 5053550}
   - 233: {fileID: 23391260}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gangsta Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - 233: {fileID: 23307356}
   - 60: {fileID: 6074906}
   - 114: {fileID: 11402940}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gangsta Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - 212: {fileID: 21294240}
   - 50: {fileID: 5029988}
   - 233: {fileID: 23327576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 'Gangsta Leg '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   - 212: {fileID: 21271910}
   - 50: {fileID: 5004868}
   - 233: {fileID: 23316474}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gangsta SecArm 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - 212: {fileID: 21296336}
   - 50: {fileID: 5088482}
   - 233: {fileID: 23300834}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 'Gangsta Thigh '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - 212: {fileID: 21216108}
   - 50: {fileID: 5064462}
   - 233: {fileID: 23345488}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gangsta Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,10 @@ GameObject:
   - 212: {fileID: 21263976}
   - 50: {fileID: 5071058}
   - 233: {fileID: 23332360}
-  m_Layer: 0
+  - 58: {fileID: 5829860}
+  - 114: {fileID: 11451046}
+  - 114: {fileID: 11414662}
+  m_Layer: 12
   m_Name: Gangsta Cleaning Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +157,7 @@ GameObject:
   - 212: {fileID: 21244454}
   - 50: {fileID: 5066586}
   - 233: {fileID: 23382568}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gangsta SecArm 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +175,7 @@ GameObject:
   - 212: {fileID: 21265162}
   - 50: {fileID: 5071496}
   - 233: {fileID: 23365424}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gangsta Arm 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +193,7 @@ GameObject:
   - 212: {fileID: 21248194}
   - 50: {fileID: 5023676}
   - 60: {fileID: 6020040}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gangsta Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +211,7 @@ GameObject:
   - 212: {fileID: 21285022}
   - 50: {fileID: 5068282}
   - 233: {fileID: 23317718}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gangsta Arm 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,8 +249,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6289165, y: 0.2935753, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.7729242, y: 0.5068788, z: -10}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 411100}
   - {fileID: 425724}
@@ -378,8 +381,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135100}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -395,8 +398,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117296}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -412,8 +415,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195308}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -429,8 +432,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123974}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -446,8 +449,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111508}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -463,8 +466,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159110}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -480,8 +483,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168284}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -497,8 +500,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197758}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -531,8 +534,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184242}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -548,8 +551,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150942}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.01
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -557,6 +560,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &5829860
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165900}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.04
 --- !u!60 &6020040
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -609,6 +626,33 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11414662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33aeeeb04e7b4514990f424007dd9fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11451046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c66325a8995149fa93a0d89a6c01cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 2
+  up: 105
+  down: 107
+  left: 106
+  right: 108
 --- !u!212 &21216108
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -694,7 +738,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d9f5f2b97bd3e5b4f9b80c578ccaf040, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -814,7 +858,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: af733f2fed247184c9581b339d8e43a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1119,7 +1163,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -10.32
     m_UpperAngle: -108.8
