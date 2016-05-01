@@ -10,10 +10,13 @@ public class CleanerController : MonoBehaviour
     public float force = 1;
     public KeyCode up, down, left, right;
     private int playerNumber;
+    private Destructible2D.D2dRepeatStamp stamp;
+    public GameObject soap;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        stamp = GetComponent<Destructible2D.D2dRepeatStamp>();
 
         switch (gameObject.tag)
         {
@@ -50,8 +53,16 @@ public class CleanerController : MonoBehaviour
         }
         if (InputManager.Devices[playerNumber].Action1)
         {
-           
-        } 
+            stamp.enabled = true;
+            soap.GetComponent<ParticleSystem>().enableEmission = true;
+         //   soap.SetActive(true);
+        }
+        else
+        {
+            stamp.enabled = false;
+            soap.GetComponent<ParticleSystem>().enableEmission = false;
+           // soap.SetActive(false);
+        }
         
     }
 }
