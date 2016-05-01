@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class GameManager : MonoBehaviour
     private string HighscoreListAsOneString;
     private string[] HighscoreListAsArrayOfStrings;
     private int[] HighscoreListAsArrayOfInts;
-    private string[] Disconnector = new string[10];
+    private string[] Disconnector;
+    
     
 
     public static int PlayerNumber = 3;
@@ -22,6 +24,10 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
+        HighscoreListAsArrayOfInts = new int[10];
+        HighscoreListAsArrayOfStrings = new string[10];
+        Disconnector = new string[10];
+
         //Check if instance already exists
         if (instance == null)
         {
@@ -50,6 +56,9 @@ public class GameManager : MonoBehaviour
         {
             EndGame();
         }
+        if (Input.GetKeyDown(KeyCode.P)) { TotalScore = TotalScore + 9999; Debug.Log(TotalScore); }
+
+        if (Input.GetKeyDown(KeyCode.E)) { EndGame(); }
     }
     //Initializes the game
     void InitGame()
@@ -69,7 +78,7 @@ public class GameManager : MonoBehaviour
         PlayerScore[0/*Active Player*/] = PlayerScore[0/*Active Player*/] + 100;
     }
 
-    //Compare the TotalScore at the end of the game with the values in the Highscore list and update the list if appropriate
+    //Compare the TotalScore with the values in the Highscore.txt and update the file if appropriate
     void UpdateHighscore()
     {
         //Convert txt file to string
@@ -77,41 +86,50 @@ public class GameManager : MonoBehaviour
 
 
         //Assign values to the disconnectors used to separate the Highscore string
-        for (int i = 0; i <= 9; i++)
+        for (int i = 0; i < Disconnector.Length; i++)
         {
-            Disconnector[i] = (i+1)+". ";
+        Disconnector[i] = ", ";
         }
 
         //Split string into an array of strings
-        HighscoreListAsArrayOfStrings = HighscoreListAsOneString.Split(Disconnector, 10, System.StringSplitOptions.None);
+        HighscoreListAsArrayOfStrings = HighscoreListAsOneString.Split(Disconnector, StringSplitOptions.RemoveEmptyEntries);
 
         //Convert every element into an int
-        for (int i = 0; i <= 9; i++)
+        for (int i = 0; i < HighscoreListAsArrayOfInts.Length; i++)
         {
-            HighscoreListAsArrayOfInts[i] = System.Int32.Parse(HighscoreListAsArrayOfStrings[i]);
+            HighscoreListAsArrayOfInts[i] = Int32.Parse(HighscoreListAsArrayOfStrings[i]);
         }
 
         //Compare and update the values
-        for (int i = 0; i <= 9; i++)
+        for (int i = 0; i < HighscoreListAsArrayOfInts.Length; i++)
         {
-            if (TotalScore > HighscoreListAsArrayOfInts[i])
+            if (TotalScore > HighscoreListAsArrayOfInts[i] )
             {
-                for (int o = 0; o <= 9-i; o++)
+                for (int p = 0; p < HighscoreListAsArrayOfInts.Length - (i+1); p++)
                 {
-                    HighscoreListAsArrayOfInts[9 - o] = HighscoreListAsArrayOfInts[9 - (o + 1)];
+                    HighscoreListAsArrayOfInts[(9 - p)] = HighscoreListAsArrayOfInts[(9 - (p + 1))];
                 }
 
                 HighscoreListAsArrayOfInts[i] = TotalScore;
+                i = HighscoreListAsArrayOfInts.Length;
             }
         }
 
         //Convert elements to strings
-        for (int i = 0; i <= 9; i++)
+        for (int i = 0; i < HighscoreListAsArrayOfInts.Length; i++)
         {
-            HighscoreListAsArrayOfStrings[i] = (i + 1) + ". " + HighscoreListAsArrayOfInts[i].ToString();
+            HighscoreListAsArrayOfStrings[i] = HighscoreListAsArrayOfInts[i].ToString() + ", ";
+        }
+
+        //Merge strings
+        HighscoreListAsOneString = "";
+
+        for (int i = 0; i < HighscoreListAsArrayOfStrings.Length; i++)
+        {
+            HighscoreListAsOneString = HighscoreListAsOneString + HighscoreListAsArrayOfStrings[i];
         }
 
         //Rewrite the textfile
-        File.WriteAllText(@"C:\Users\Nespitt\Documents\SpaceWashers_Clean\Assets\Persistent Data\Highscore.txt", (HighscoreListAsArrayOfStrings[0] + HighscoreListAsArrayOfStrings[1] + HighscoreListAsArrayOfStrings[2] + HighscoreListAsArrayOfStrings[3] + HighscoreListAsArrayOfStrings[4] + HighscoreListAsArrayOfStrings[5] + HighscoreListAsArrayOfStrings[6] + HighscoreListAsArrayOfStrings[7] + HighscoreListAsArrayOfStrings[8] + HighscoreListAsArrayOfStrings[9]));
+        File.WriteAllText(Application.dataPath+ @"\Persistent Data\Highscore.txt", HighscoreListAsOneString);
     } 
 }
