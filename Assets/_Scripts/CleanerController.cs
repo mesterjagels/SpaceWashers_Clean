@@ -4,6 +4,7 @@ using InControl;
 
 public class CleanerController : MonoBehaviour {
 
+    
 	private Rigidbody2D rb;
 	public float force = 1;
     public KeyCode up, down, left, right;
@@ -11,6 +12,8 @@ public class CleanerController : MonoBehaviour {
 
     void Awake () {
         rb = GetComponent<Rigidbody2D>();
+     
+
 
         switch (gameObject.tag)
         {
@@ -30,6 +33,7 @@ public class CleanerController : MonoBehaviour {
 	
 	void Update () {
 
+        //Control-inputs for the cleaners
 		if (Input.GetKey (up) || InputManager.Devices[playerNumber].LeftStickUp) {
 			rb.velocity = new Vector2(rb.velocity.x, force);
 		}

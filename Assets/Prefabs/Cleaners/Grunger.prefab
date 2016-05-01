@@ -191,6 +191,7 @@ GameObject:
   - 212: {fileID: 21232794}
   - 50: {fileID: 5032942}
   - 60: {fileID: 6040888}
+  - 114: {fileID: 11423126}
   m_Layer: 11
   m_Name: Grunger Body
   m_TagString: Untagged
@@ -345,7 +346,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.03, y: 0.54, z: -10}
+  m_LocalPosition: {x: 7.2907257, y: -0.28984347, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 403874}
@@ -615,6 +616,18 @@ PolygonCollider2D:
       - {x: 0.085, y: -0.225}
       - {x: 0.095, y: -0.215}
       - {x: 0.095, y: 0.225}
+--- !u!114 &11423126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c30029e2d0a5964291aba8ac10744de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 0.2
 --- !u!114 &11443726
 MonoBehaviour:
   m_ObjectHideFlags: 1

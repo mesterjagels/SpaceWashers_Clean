@@ -58,7 +58,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-13</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -231,7 +231,7 @@
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>7</Value>
+												<Value>12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -834,12 +834,12 @@
 														<PointList>
 															<Point>
 																<XPos>0</XPos>
-																<YPos>-1030</YPos>
+																<YPos>-2070</YPos>
 																<Flags>5</Flags>
 															</Point>
 															<Point>
 																<XPos>50</XPos>
-																<YPos>706</YPos>
+																<YPos>-1047</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>

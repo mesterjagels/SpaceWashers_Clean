@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21257354}
   - 50: {fileID: 5007822}
   - 60: {fileID: 6079354}
+  - 114: {fileID: 11471134}
   m_Layer: 11
   m_Name: Emo Body
   m_TagString: Untagged
@@ -626,6 +627,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33aeeeb04e7b4514990f424007dd9fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11471134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c30029e2d0a5964291aba8ac10744de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 0.2
 --- !u!114 &11473778
 MonoBehaviour:
   m_ObjectHideFlags: 1
