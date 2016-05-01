@@ -31,7 +31,7 @@ public class JunkCollision : MonoBehaviour {
         switch (col.gameObject.tag)
         {
             case "Pizza":
-                Debug.Log("Pizza hit");
+              
                 foreach (ContactPoint2D pizzaHit in col.contacts)
                 {
                     Vector3 hitpoint = new Vector3(pizzaHit.point.x, pizzaHit.point.y, -10);
@@ -41,7 +41,7 @@ public class JunkCollision : MonoBehaviour {
                 break;
 
             case "Slime":
-                Debug.Log("Slime hit");
+              
                 AkSoundEngine.PostEvent("hull_impact", gameObject);
                 foreach (ContactPoint2D slimeHit in col.contacts)
                 {

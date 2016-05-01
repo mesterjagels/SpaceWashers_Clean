@@ -4,8 +4,8 @@ using System.Collections;
 public class ScrollUV : MonoBehaviour {
 
     MeshRenderer mr;
-    Material mat;
-    Vector2 offset;
+    public Material mat;
+    public Vector2 offset;
     SpaceshipController spaceship;
     int uvMoveSpeed = 20;
     [Header("Change parallax effect. Higher means slower background movement")]
@@ -26,5 +26,6 @@ public class ScrollUV : MonoBehaviour {
             
         
         mat.mainTextureOffset = offset;
+
 	}
 }

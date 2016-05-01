@@ -31,12 +31,6 @@ public class DirtSpawner : MonoBehaviour
         cam = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void Start()
     {
         StartCoroutine(Spawn());
@@ -49,11 +43,9 @@ public class DirtSpawner : MonoBehaviour
 
             if (!dirtPool[i].activeInHierarchy)
             {
-                Debug.Log("Dirt spawned from pool");
                 dirtPool[i].transform.position = new Vector3(Random.Range(cam.transform.position.x - dirtSpawnerWidth, cam.transform.position.x + dirtSpawnerWidth),
             cam.transform.position.y - distanceFromCam, 10);
                 dirtPool[i].SetActive(true);
-                Debug.Log("i in dirtspawner is now" + i);
                 j++;
                 
             }
