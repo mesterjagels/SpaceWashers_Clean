@@ -15,11 +15,16 @@ public class GameManager : MonoBehaviour
 
     public static int playerCount = 3;
     private int activePlayer=0;
-    public static int[] playerScore;
-    private int[] points;
-    private int[] scoreMultiplier;
-    private float[] timeCheck;
+    public static int[] cleanerScore;
+    public static int captainScore;
+    private int[] cleanerPoints;
+    private int captainPoints;
+    private int[] cleanerMultiplier;
+    private int captainMultiplier;
+    private float[] cleanerTimeCheck;
+    private float captainTimeCheck;
     public static int totalScore;
+    private int scoreBuffer;
 
     public static bool gameActive;
 
@@ -30,10 +35,14 @@ public class GameManager : MonoBehaviour
         highscoreListAsArrayOfStrings = new string[10];
         disconnector = new string[10];
 
-        playerScore = new int[playerCount];
-        points = new int[playerCount];
-        scoreMultiplier = new int[playerCount];
-        timeCheck = new float[playerCount];
+        cleanerScore = new int[playerCount];
+        captainScore = 0;
+        cleanerPoints = new int[playerCount];
+        captainPoints = 0;
+        cleanerMultiplier = new int[playerCount];
+        captainMultiplier = 1;
+        cleanerTimeCheck = new float[playerCount];
+        captainTimeCheck = Time.time;
 
         //Check if instance already exists.
         if (instance == null)
@@ -41,7 +50,6 @@ public class GameManager : MonoBehaviour
             //If not, set instance to this.
             instance = this;
         }
-
         //If instance already exists and it's not this:
         else if (instance != this)
         {
@@ -59,11 +67,35 @@ public class GameManager : MonoBehaviour
     //Is called every frame and keeps track of the game state.
     void Update()
     {
-        totalScore = playerScore[0] + playerScore[1] + playerScore[2];
+        //Update the totalScore.
+        for (int i = 0; i < playerCount; i++)
+        {
+            scoreBuffer = scoreBuffer + cleanerScore[i];
+        }
+
+        totalScore = scoreBuffer + captainScore;
+        scoreBuffer = 0;
         
+        //Add captain points
+        if (captainTimeCheck < Time.time-30)
+        {
+            if (captainPoints > 0)
+            {
+                captainMultiplier = captainMultiplier + 1;
+            }
+            else
+            {
+                ResetCaptainMultiplier();
+            }
+
+            AddCaptainScore();
+            captainPoints = 5000;
+            captainTimeCheck = Time.time;
+        }
+
         //Just for testing purposes.
-        if (Input.GetKeyDown(KeyCode.P)) { AddScore(activePlayer); Debug.Log(playerScore[0]);}
-        if (Input.GetKeyDown(KeyCode.O)) { AddScore(activePlayer+1); Debug.Log(playerScore[1]); }
+        if (Input.GetKeyDown(KeyCode.P)) { AddCleanerScore(activePlayer); Debug.Log(cleanerScore[0]);}
+        if (Input.GetKeyDown(KeyCode.O)) { AddCleanerScore(activePlayer+1); Debug.Log(cleanerScore[1]); }
         if (Input.GetKeyDown(KeyCode.Q)) { Debug.Log(totalScore); }
         if (Input.GetKeyDown(KeyCode.E)) { EndGame(); }
 
@@ -72,8 +104,8 @@ public class GameManager : MonoBehaviour
         {
             EndGame();
         }
-        
     }
+
     //Initializes the game.
     void InitGame()
     {
@@ -87,22 +119,43 @@ public class GameManager : MonoBehaviour
     }
 
     //Add points to the PlayerScore of the player that cleaned dirt.
-    void AddScore(int activePlayer)
+    void AddCleanerScore(int activePlayer)
     {
         //Check for multiplier condition and change multiplier accordingly.
-        if (timeCheck[activePlayer] > Time.time-5)
+        if (cleanerTimeCheck[activePlayer] > Time.time-5)
         {
-            scoreMultiplier[activePlayer] = scoreMultiplier[activePlayer] + 1; 
+            cleanerMultiplier[activePlayer] = cleanerMultiplier[activePlayer] + 1; 
         }
-
         else
         {
-            scoreMultiplier[activePlayer] = 1;
+            ResetCleanerMultiplier(activePlayer);
         }
 
-        points[activePlayer] = 100 * scoreMultiplier[activePlayer];
-        playerScore[activePlayer] = playerScore[activePlayer] + points[activePlayer];
-        timeCheck[activePlayer] = Time.time;
+        cleanerPoints[activePlayer] = 100 * cleanerMultiplier[activePlayer];
+        cleanerScore[activePlayer] = cleanerScore[activePlayer] + cleanerPoints[activePlayer];
+        cleanerTimeCheck[activePlayer] = Time.time;
+    }
+
+    //Add points to the CaptainScore.
+    void AddCaptainScore()
+    {
+        captainScore = captainScore + (captainPoints * captainMultiplier);
+    }
+
+    void DecreaseCaptainPoints()
+    {
+        captainPoints = captainPoints - 250;
+    }
+
+    //Reset the cleaner multiplier for a specific cleaner.
+    void ResetCleanerMultiplier(int activePlayer)
+    {
+        cleanerMultiplier[activePlayer] = 1;
+    }
+
+    void ResetCaptainMultiplier()
+    {
+        captainMultiplier = 1;
     }
 
     //Get the Highscore values of the Highscore.txt - Assigns values to HighscoreListAsArrayOfStrings[].
