@@ -11,7 +11,6 @@ GameObject:
   - 212: {fileID: 21257354}
   - 50: {fileID: 5007822}
   - 60: {fileID: 6079354}
-  - 114: {fileID: 11471134}
   m_Layer: 11
   m_Name: Emo Body
   m_TagString: Untagged
@@ -211,7 +210,7 @@ GameObject:
   - 233: {fileID: 23323292}
   - 58: {fileID: 5820976}
   - 114: {fileID: 11473778}
-  - 114: {fileID: 11461614}
+  - 114: {fileID: 11402602}
   m_Layer: 12
   m_Name: Emo Cleaning Hand
   m_TagString: Player3
@@ -322,8 +321,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.196581, y: 1.8387753, z: -10}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0.2037096, y: 2.0703876, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 477194}
   - {fileID: 407808}
@@ -616,7 +615,7 @@ PolygonCollider2D:
       - {x: 0.085, y: -0.225}
       - {x: 0.095, y: -0.215}
       - {x: 0.095, y: 0.225}
---- !u!114 &11461614
+--- !u!114 &11402602
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -624,21 +623,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 199832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33aeeeb04e7b4514990f424007dd9fbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 67e23d7049c291f4ba1f13c6c70f33aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11471134
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c30029e2d0a5964291aba8ac10744de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amount: 0.2
+  Layers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  StampTex: {fileID: 2800000, guid: 82dfc9d665bafe84c9d37dc5c1f85a0d, type: 3}
+  Size: {x: 0.2, y: 0.2}
+  Hardness: 1
+  Delay: 0
 --- !u!114 &11473778
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -136,7 +136,7 @@ GameObject:
   - 50: {fileID: 5014774}
   - 233: {fileID: 23375106}
   - 58: {fileID: 5831400}
-  - 114: {fileID: 11450688}
+  - 114: {fileID: 11458808}
   m_Layer: 12
   m_Name: Babe Cleaning Hand
   m_TagString: Player1
@@ -155,7 +155,6 @@ GameObject:
   - 212: {fileID: 21278322}
   - 50: {fileID: 5024084}
   - 60: {fileID: 6023342}
-  - 114: {fileID: 11443370}
   m_Layer: 11
   m_Name: Babe Body
   m_TagString: Untagged
@@ -261,8 +260,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.63, y: -2.1, z: -10}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -0.013000011, y: 0.10099995, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 463452}
   - {fileID: 464208}
@@ -627,23 +626,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 2
-  up: 0
-  down: 0
-  left: 0
-  right: 0
---- !u!114 &11443370
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 172726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c30029e2d0a5964291aba8ac10744de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amount: 0.2
---- !u!114 &11450688
+  up: 119
+  down: 115
+  left: 97
+  right: 100
+--- !u!114 &11458808
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -651,9 +638,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 162850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33aeeeb04e7b4514990f424007dd9fbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 67e23d7049c291f4ba1f13c6c70f33aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Layers:
+    serializedVersion: 2
+    m_Bits: 256
+  StampTex: {fileID: 2800000, guid: 82dfc9d665bafe84c9d37dc5c1f85a0d, type: 3}
+  Size: {x: 0.2, y: 0.2}
+  Hardness: 1
+  Delay: 0
 --- !u!212 &21207218
 SpriteRenderer:
   m_ObjectHideFlags: 1

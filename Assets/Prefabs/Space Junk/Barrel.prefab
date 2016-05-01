@@ -11,7 +11,7 @@ GameObject:
   - 95: {fileID: 9510294}
   - 111: {fileID: 11135048}
   - 212: {fileID: 21204650}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Minimap Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

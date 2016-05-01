@@ -17,7 +17,7 @@ namespace Destructible2D
 		
 		protected virtual void Update()
 		{
-			if (Input.GetMouseButtonDown(0) == true && Camera.main != null)
+			if (Input.GetMouseButton(0) && Camera.main != null)
 			{
 				var ray      = Camera.main.ScreenPointToRay(Input.mousePosition);
 				var distance = D2dHelper.Divide(ray.origin.z, ray.direction.z);
