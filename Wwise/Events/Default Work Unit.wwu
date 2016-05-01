@@ -61,7 +61,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="junk_impact" ID="{BC1BD453-C45E-44D7-B3EC-863DF1D4848A}"/>
 				<Event Name="dirt_cleaned" ID="{24A47D4C-C235-4C78-9BD1-016B4DDDE331}">
 					<ChildrenList>
 						<Action Name="Play" ID="{91EB2ACD-B42A-4F21-B2FC-70C75E09D3FD}" ShortID="19848057" Type="Play" Scope="One" Global="false">

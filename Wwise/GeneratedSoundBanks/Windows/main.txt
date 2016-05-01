@@ -29,6 +29,7 @@ Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	70998913	Modulator Envelope (Custom)				
 
 Effect plug-ins	ID	Name	Type				Notes
+	60230516	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	185784117	Wwise Guitar Distortion (Custom)	Wwise Guitar Distortion			
 	985656988	Wwise Guitar Distortion (Custom)	Wwise Guitar Distortion			
 
