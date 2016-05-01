@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 406396}
   m_Layer: 11
   m_Name: Gangsta
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ GameObject:
   - 114: {fileID: 11414662}
   m_Layer: 12
   m_Name: Gangsta Cleaning Hand
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,7 +249,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7729242, y: 0.5068788, z: -10}
+  m_LocalPosition: {x: -4.4938507, y: -0.9439475, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 411100}
@@ -569,7 +569,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -1112,7 +1112,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.026910663, y: 0.039638028}
-  m_ConnectedAnchor: {x: 0.017820477, y: -0.04531637}
+  m_ConnectedAnchor: {x: 0.01782012, y: -0.04531637}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

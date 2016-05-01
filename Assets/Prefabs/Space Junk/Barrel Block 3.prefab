@@ -1663,7 +1663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11410114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1675,7 +1675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11416102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1687,7 +1687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11427672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1699,7 +1699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11452222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1711,7 +1711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11472600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1723,7 +1723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11473178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1735,7 +1735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11473450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1747,7 +1747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11476754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1759,7 +1759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11486612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1771,7 +1771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11490456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11491486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1795,7 +1795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!114 &11497768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedmultiplier: 0
+  speedmultiplier: 0.3
 --- !u!212 &21201560
 SpriteRenderer:
   m_ObjectHideFlags: 1

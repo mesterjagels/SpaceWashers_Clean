@@ -102,7 +102,7 @@ GameObject:
   - 4: {fileID: 478384}
   m_Layer: 11
   m_Name: Emo
-  m_TagString: Untagged
+  m_TagString: Player3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ GameObject:
   - 114: {fileID: 11461614}
   m_Layer: 12
   m_Name: Emo Cleaning Hand
-  m_TagString: Untagged
+  m_TagString: Player3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,7 +321,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.53, y: 0.46, z: -10}
+  m_LocalPosition: {x: 3.196581, y: 1.8387753, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 477194}
@@ -569,7 +569,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -1043,7 +1043,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.054594606, y: 0.06135778}
-  m_ConnectedAnchor: {x: 0.013705492, y: -0.040642217}
+  m_ConnectedAnchor: {x: 0.013705373, y: -0.040642202}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

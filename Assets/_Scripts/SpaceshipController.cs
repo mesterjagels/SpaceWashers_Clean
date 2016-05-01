@@ -17,6 +17,7 @@ public class SpaceshipController : MonoBehaviour
     public bool isBoosting;
     public float boostFuel = 0;
     private float currentSpeed;
+    public int boostSpeed = 100;
 
     //Variables to make the custom controller to work
     private Arduino arduino;
@@ -134,8 +135,7 @@ public class SpaceshipController : MonoBehaviour
            
             if (boostFuel > 0)
             {
-                
-                verticalSpeed = 100;
+                verticalSpeed = Mathf.MoveTowards(verticalSpeed, boostSpeed, 50 * Time.deltaTime);
                 boostFuel = boostFuel - 2.50f;
                 isBoosting = true;
             }
