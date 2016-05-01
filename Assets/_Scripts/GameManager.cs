@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         totalScore = scoreBuffer + captainScore;
         scoreBuffer = 0;
         
-        //Add captain points
+        //Add captain score
         if (captainTimeCheck < Time.time-30)
         {
             if (captainPoints > 0)
