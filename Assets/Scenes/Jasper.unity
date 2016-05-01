@@ -173,6 +173,7 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 193126172}
   distanceLeft: {fileID: 1300024053}
+  distanceToTravel: 30
 --- !u!1 &205415682
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,12 +536,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirt:
-  - {fileID: 168366, guid: 962a272403ed54a9888e3c88e3d419e4, type: 2}
-  - {fileID: 198556, guid: c20e622db4c4b48c5a8ab0df506ff7e7, type: 2}
+  - {fileID: 199128, guid: 85dbfe0d4581a4ee3a5e94add1e8ff99, type: 2}
+  - {fileID: 168890, guid: 1a9229ee39750834b96b9203e5891b81, type: 2}
+  - {fileID: 162344, guid: bdff3170c42b9a442b35b9606524ee36, type: 2}
+  - {fileID: 119524, guid: ac7b5173386057245836f9d42b56c5f5, type: 2}
+  - {fileID: 144818, guid: 434101fc1a13c91428e6daca996359ee, type: 2}
   interval: 1
   distanceFromCam: -10
   dirtSpawnerWidth: 5
-  dirtPoolSize: 10
+  dirtPoolSize: 1000
 --- !u!1 &947549918
 GameObject:
   m_ObjectHideFlags: 0

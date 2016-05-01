@@ -10,7 +10,7 @@ public class ScoreAlpha : MonoBehaviour {
     public Text distanceLeft;
     private float distanceMath;
     string scoreString;
-    public static float distanceToTravel = 100;
+    public float distanceToTravel = 100;
 
     void Start()
     {
