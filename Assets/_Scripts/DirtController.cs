@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(PolygonCollider2D))]
 public class DirtController : MonoBehaviour {
@@ -9,14 +7,14 @@ public class DirtController : MonoBehaviour {
     private ScoreAlpha score;
     private Destructible2D.D2dDestructible d2d;
     private float startAlpha, currentAlpha;
-    public float thresholdAlpha;
+    public float thresholdAlpha = 50;
     public float alphaPct;
 
     void Start()
     {
         d2d = GetComponent<Destructible2D.D2dDestructible>();
-       // score = GameObject.Find("Scoreboard").GetComponent<ScoreAlpha>();
-        //scoreboard = Gameobject.findObjectOfType<Scoreboard>();
+      score = GameObject.Find("Scoreboard").GetComponent<ScoreAlpha>();
+   
         startAlpha = d2d.OriginalAlphaCount;
     }
 
@@ -33,8 +31,7 @@ public class DirtController : MonoBehaviour {
     //The OnDisable method could also be OnDestroy() depending on how we remove dirt.
     void OnDisable()
     {
-      //  score.score = score.score + 1000;
-        //score = score + "100";
-        //add points to scoreController
+       score.score = score.score + 1000;
+     
     }
 }

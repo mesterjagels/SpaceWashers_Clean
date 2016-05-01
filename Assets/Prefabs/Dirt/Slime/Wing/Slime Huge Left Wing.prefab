@@ -8,13 +8,15 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 409902}
-  - 212: {fileID: 21223004}
   - 60: {fileID: 6085746}
   - 114: {fileID: 11492210}
   - 114: {fileID: 11440612}
+  - 33: {fileID: 3386144}
+  - 23: {fileID: 2373594}
+  - 114: {fileID: 11468646}
   m_Layer: 8
   m_Name: Slime Huge Left Wing
-  m_TagString: Untagged
+  m_TagString: Dirt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,11 +28,44 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.163604, y: -12.612314, z: -10}
+  m_LocalPosition: {x: 6.328771, y: 1.7151821, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!23 &2373594
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144400}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4f935b17ca3c4d84fbcb73997407334c, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+--- !u!33 &3386144
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144400}
+  m_Mesh: {fileID: 0}
 --- !u!60 &6085746
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -97,7 +132,7 @@ MonoBehaviour:
     m_TypeName: Destructible2D.D2dDestructibleListEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnStartSplitting: 0
-  MainTex: {fileID: 0}
+  MainTex: {fileID: 2800000, guid: cef7bb40981274f499ded9eccb7bc59c, type: 3}
   DensityTex: {fileID: 0}
   Indestructible: 0
   RecordAlphaCount: 1
@@ -111,28 +146,39 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
+    width: 1
+    height: 1
   originalRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: -0.35
+    y: -1.9599999
+    width: 0.7
+    height: 1.9599999
   damage: 0
   alphaRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  alphaWidth: 0
-  alphaHeight: 0
-  alphaCount: 0
-  originalAlphaCount: -1
-  alphaData: 
-  alphaScale: {x: 0, y: 0}
+    x: -0.35
+    y: -1.9599999
+    width: 0.7
+    height: 1.9599999
+  alphaWidth: 35
+  alphaHeight: 98
+  alphaCount: 1709
+  originalAlphaCount: 1709
+  alphaData: 00000000000000000000000000ffff000000000000000000000000000000000000000000000000000000000000000000ffff0000000000000000000000000000000000000000000000000000000000000000ffffff0000000000000000000000000000000000000000000000000000000000ffffffffffff000000000000000000000000000000000000000000000000000000000000ffffffffff000000000000000000000000000000000000000000000000000000000000ffffffffff000000000000000000000000000000000000000000000000000000000000ffffffffff000000000000000000000000000000000000000000000000000000000000ffffffffff000000000000000000000000000000000000000000000000000000000000ffffffffff000000000000000000000000000000000000000000000000000000000000ffffffffffff0000000000000000000000000000000000000000000000000000000000ffffffffffff00000000000000000000000000000000000000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffffff0000000000000000000000000000000000000000000000000000ffffffffffffffffff00000000000000000000000000000000000000000000000000000000ffffffffffffff00000000000000000000000000000000000000000000000000000000ffffffffffffff00000000000000000000000000000000000000000000000000000000ffffffffffffff00000000000000000000000000000000000000000000000000000000ffffffffffffffff0000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff0000000000000000000000000000000000000000000000ffffffffffffffffffffffffff00000000000000000000000000000000000000000000ffffffffffffffffffffffffff0000000000000000000000000000000000000000000000ffffffffffffffffffffffff0000000000000000000000000000000000000000000000ffffffffffffffffffffffffff00000000000000000000000000000000000000000000ffffffffffffffffffffffffff00000000000000000000000000000000000000000000ffffffffffffffffffffffffffff000000000000000000000000000000000000000000ffffffffffffffffffffffffffff000000000000000000000000000000000000000000ffffffffffffffffffffffffffffff0000000000000000000000000000000000000000ffffffffffffffffffffffffffffff0000000000000000000000000000000000000000ffffffffffffffffffffffffffffffff000000000000000000000000000000000000ffffffffffffffffffffffffffffffffff0000000000000000000000000000000000ffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000ffffffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000ffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffff000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffff00000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffff000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000ffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000ffffffffffffffffffffffffffffffffff00000000000000000000000000000000000000ffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000ffffffffffffffffffffffffffffff000000000000000000000000000000000000000000ffffffffffffffffffffffffff0000000000000000000000000000000000000000000000ffffffffffffffffffffff00000000000000000000000000000000000000000000000000ffffffffffffffffffff0000000000000000000000000000000000000000000000000000ffffffffffffffffff000000000000000000000000000000000000000000000000000000ffffffffffffff0000000000000000000000000000000000000000000000000000000000ffffffffff00000000000000000000000000000000000000000000000000000000000000ffffff0000000000
+  alphaScale: {x: 1, y: 1}
   alphaOffset: {x: 0, y: 0}
+--- !u!114 &11468646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee68f30327e7b8c49b456ba022e81845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11492210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,36 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thresholdAlpha: 0
   alphaPct: 0
---- !u!212 &21223004
-SpriteRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144400}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: cef7bb40981274f499ded9eccb7bc59c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

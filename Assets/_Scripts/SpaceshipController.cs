@@ -18,6 +18,8 @@ public class SpaceshipController : MonoBehaviour
     public float boostFuel = 0;
     private float currentSpeed;
     public int boostSpeed = 100;
+    public GameObject leftWind, rightWind;
+
 
     //Variables to make the custom controller to work
     private Arduino arduino;
@@ -57,7 +59,6 @@ public class SpaceshipController : MonoBehaviour
     public float horizontalSpeed;
     public float verticalSpeed;
 
-
     void Start()
     {
         AkSoundEngine.PostEvent("thrusters", gameObject);
@@ -69,6 +70,7 @@ public class SpaceshipController : MonoBehaviour
         throttleSpeeds[4] = throttle5;
         arduino = Arduino.global;
         arduino.Setup(ConfigurePins);
+
     }
 
     void Update()
@@ -76,6 +78,7 @@ public class SpaceshipController : MonoBehaviour
         AkSoundEngine.SetRTPCValue("vertical_speed", verticalSpeed);
         Controls();
     }
+
     void Controls()
     {
         if (!isBoosting)
@@ -89,16 +92,30 @@ public class SpaceshipController : MonoBehaviour
                 Debug.Log("Left Mouse clicked");
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed * -1, horizontalTurnAcc * Time.deltaTime);
                 pinLeftLast = 1;
+                Mathf.MoveTowardsAngle(gameObject.transform.rotation.z, 30, 10);
+                if (!rightWind.active)
+                {
+                    rightWind.SetActive(true);
+                }
+
             }
             else if (Input.GetKey(right) | arduino.digitalRead(pinRight) == 1)
             {
                 //Go right
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed, horizontalTurnAcc * Time.deltaTime);
                 pinRightLast = 1;
+                gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x, gameObject.transform.eulerAngles.y, gameObject.transform.eulerAngles.z - 30);
+                if (!leftWind.active)
+                {
+                    leftWind.SetActive(true);
+                }
             }
             else
             {
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, 0, horizontalTurnDec * Time.deltaTime);
+                leftWind.SetActive(false);
+                rightWind.SetActive(false);
+                Mathf.MoveTowardsAngle(gameObject.transform.rotation.z, 0, 10);
             }
             if (Input.GetKeyDown(throttleUp))
             {

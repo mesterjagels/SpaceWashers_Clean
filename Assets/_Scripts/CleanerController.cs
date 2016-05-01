@@ -2,18 +2,17 @@
 using System.Collections;
 using InControl;
 
-public class CleanerController : MonoBehaviour {
+public class CleanerController : MonoBehaviour
+{
 
-    
-	private Rigidbody2D rb;
-	public float force = 1;
+    private Rigidbody2D rb;
+    public float force = 1;
     public KeyCode up, down, left, right;
     private int playerNumber;
 
-    void Awake () {
+    void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
-     
-
 
         switch (gameObject.tag)
         {
@@ -29,29 +28,24 @@ public class CleanerController : MonoBehaviour {
                 playerNumber = 2;
                 break;
         }
-	}
-	
-	void Update () {
+    }
 
-        //Control-inputs for the cleaners
-		if (Input.GetKey (up) || InputManager.Devices[playerNumber].LeftStickUp) {
-			rb.velocity = new Vector2(rb.velocity.x, force);
-		}
-
-		if (Input.GetKey (left) || InputManager.Devices[playerNumber].LeftStickLeft) {
-			rb.velocity = new Vector2(-force, rb.velocity.y);
-		}
-
-		if (Input.GetKey (right) || InputManager.Devices[playerNumber].LeftStickRight) {
-			rb.velocity = new Vector2(force, rb.velocity.y);
-		}
-
-		if (Input.GetKey (down) || InputManager.Devices[playerNumber].LeftStickDown) {
-			rb.velocity = new Vector2(rb.velocity.x, -force);
-
-		}
-
-		
-	}
-
+    void FixedUpdate()  {
+        if (Input.GetKey(up) || InputManager.Devices[playerNumber].LeftStickUp) {
+            Debug.Log("Up");
+            rb.velocity = new Vector2(rb.velocity.x, force);
+        }
+        if (Input.GetKey(down) || InputManager.Devices[playerNumber].LeftStickDown) {
+            Debug.Log("down");
+            rb.velocity = new Vector2(rb.velocity.x, -force);
+        }
+        if (Input.GetKey(left) || InputManager.Devices[playerNumber].LeftStickLeft){
+            Debug.Log("left");
+            rb.velocity = new Vector2(-force, rb.velocity.y);
+        }
+        if (Input.GetKey(right) || InputManager.Devices[playerNumber].LeftStickRight) {
+            Debug.Log("right");
+            rb.velocity = new Vector2(force, rb.velocity.y);
+        }
+    }
 }
