@@ -17,10 +17,7 @@ public class JunkCollision : MonoBehaviour {
     public GameObject[] dustDirt;
     public GameObject dustParticle;
 
-    void Start()
-    {
-        
-    }
+    
     void OnCollisionEnter2D(Collision2D col)
     {
         Vector3 velocityBeforeHit = col.gameObject.GetComponent<Rigidbody2D>().velocity;
@@ -36,7 +33,8 @@ public class JunkCollision : MonoBehaviour {
                 foreach (ContactPoint2D pizzaHit in col.contacts)
                 {
                     Vector3 hitpoint = new Vector3(pizzaHit.point.x, pizzaHit.point.y, -10);
-                    Instantiate(pizzaDirt[Random.Range(0, pizzaDirt.Length - 1)], hitpoint, Quaternion.identity);
+                    var dirt = Instantiate(pizzaDirt[Random.Range(0, pizzaDirt.Length - 1)], hitpoint, Quaternion.identity) as GameObject;
+                    dirt.transform.parent = gameObject.transform;
                     Instantiate(pizzaParticle, hitpoint, Quaternion.Euler(new Vector3(0, 0, 180)));
                 }
                 break;
@@ -47,7 +45,9 @@ public class JunkCollision : MonoBehaviour {
                 foreach (ContactPoint2D slimeHit in col.contacts)
                 {
                     Vector3 hitpoint = new Vector3(slimeHit.point.x, slimeHit.point.y, -10);
-                    Instantiate(slimeDirt[Random.Range(0, slimeDirt.Length - 1)], hitpoint, Quaternion.identity);
+                    var dirt = Instantiate(slimeDirt[Random.Range(0, slimeDirt.Length - 1)], hitpoint, Quaternion.identity) as GameObject;
+                    dirt.transform.parent = gameObject.transform;
+
                     Instantiate(slimeParticle, hitpoint, Quaternion.Euler(new Vector3(90, 0, 180)));
 
                 }

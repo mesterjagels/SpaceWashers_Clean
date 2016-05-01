@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using InControl;
+using DG.Tweening;
 
 public class CleanerController : MonoBehaviour
 {
@@ -47,5 +48,10 @@ public class CleanerController : MonoBehaviour
             Debug.Log("right");
             rb.velocity = new Vector2(force, rb.velocity.y);
         }
+        if (InputManager.Devices[playerNumber].Action1)
+        {
+           
+        } 
+        
     }
 }

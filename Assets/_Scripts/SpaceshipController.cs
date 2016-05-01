@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Uniduino;
-
+using DG.Tweening;
 
 public class SpaceshipController : MonoBehaviour
 {
@@ -91,8 +91,8 @@ public class SpaceshipController : MonoBehaviour
                 //Go left
                 Debug.Log("Left Mouse clicked");
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed * -1, horizontalTurnAcc * Time.deltaTime);
-                pinLeftLast = 1;
-                Mathf.MoveTowardsAngle(gameObject.transform.rotation.z, 30, 10);
+                pinLeftLast = 1;        
+                gameObject.transform.DORotate(new Vector3(0, 0, 30), 2);
                 if (!rightWind.active)
                 {
                     rightWind.SetActive(true);
@@ -104,7 +104,8 @@ public class SpaceshipController : MonoBehaviour
                 //Go right
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed, horizontalTurnAcc * Time.deltaTime);
                 pinRightLast = 1;
-                gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x, gameObject.transform.eulerAngles.y, gameObject.transform.eulerAngles.z - 30);
+                gameObject.transform.DORotate(new Vector3(0, 0, -30), 2);
+
                 if (!leftWind.active)
                 {
                     leftWind.SetActive(true);
@@ -115,7 +116,9 @@ public class SpaceshipController : MonoBehaviour
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, 0, horizontalTurnDec * Time.deltaTime);
                 leftWind.SetActive(false);
                 rightWind.SetActive(false);
-                Mathf.MoveTowardsAngle(gameObject.transform.rotation.z, 0, 10);
+                if (gameObject.transform.rotation.z != 0) { 
+                gameObject.transform.DORotate(new Vector3(0, 0, 0), 1);
+                }
             }
             if (Input.GetKeyDown(throttleUp))
             {
@@ -125,8 +128,7 @@ public class SpaceshipController : MonoBehaviour
                 {
                     currentGear++;
                 }
-                verticalSpeed = throttleSpeeds[currentGear];
-                //            verticalSpeed = Mathf.MoveTowards(verticalSpeed, throttleSpeeds[currentGear], throttleAcc * Time.deltaTime);
+                verticalSpeed = throttleSpeeds[currentGear];          
             }
             if (Input.GetKeyDown(throttleDown))
             {

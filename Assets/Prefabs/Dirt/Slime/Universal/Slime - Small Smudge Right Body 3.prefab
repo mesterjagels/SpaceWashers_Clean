@@ -8,7 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451638}
-  - 60: {fileID: 6092192}
   - 114: {fileID: 11471212}
   - 114: {fileID: 11465822}
   - 33: {fileID: 3316116}
@@ -66,29 +65,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158604}
   m_Mesh: {fileID: 0}
---- !u!60 &6092192
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 158604}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: -0.06, y: 0}
-      - {x: -0.16, y: -0.04}
-      - {x: -0.16, y: -0.099999994}
-      - {x: -0.14, y: -0.29999998}
-      - {x: -0.099999994, y: -0.32}
-      - {x: 0.099999994, y: -0.32}
-      - {x: 0.16, y: -0.26}
-      - {x: 0.16, y: -0.17999999}
-      - {x: 0.02, y: 0}
 --- !u!114 &11465822
 MonoBehaviour:
   m_ObjectHideFlags: 1

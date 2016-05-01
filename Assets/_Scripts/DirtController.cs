@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(PolygonCollider2D))]
 public class DirtController : MonoBehaviour {
     //private Scoreboard scoreboard;
 
