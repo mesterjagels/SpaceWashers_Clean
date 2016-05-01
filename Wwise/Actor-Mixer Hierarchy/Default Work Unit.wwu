@@ -731,6 +731,23 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="isBoosting" ID="{07447D78-261B-4154-8DB9-CB45F9C96E09}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="boosting" ID="{FD71EA49-55EB-40C2-8A2B-E77EAE2AF371}"/>
+										<State Name="Custom State" ID="{5EF706D7-34AC-4F6A-B9F3-DB6B2ABE8701}" ShortID="980593583">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-96"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<Playlist>
 								<ItemRef Name="shield_engage" ID="{BF5D9A9A-7931-4BB0-B15E-74818D43C25F}"/>
 								<ItemRef Name="shield_off" ID="{8639E5AA-39BC-43F8-9E0D-5C3E77EBC402}"/>
@@ -925,6 +942,23 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="isBoosting" ID="{07447D78-261B-4154-8DB9-CB45F9C96E09}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="boosting" ID="{FD71EA49-55EB-40C2-8A2B-E77EAE2AF371}"/>
+										<State Name="Custom State" ID="{7B6B48A0-80EB-4514-B952-A8CBBFC5BD95}" ShortID="1048793204">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-96"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>

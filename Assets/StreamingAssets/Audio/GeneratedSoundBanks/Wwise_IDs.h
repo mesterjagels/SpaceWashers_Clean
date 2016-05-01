@@ -13,10 +13,26 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BOOST = 2389703494U;
         static const AkUniqueID DIRT_CLEANED = 3164020227U;
         static const AkUniqueID HULL_IMPACT = 3071260525U;
         static const AkUniqueID THRUSTERS = 1944582317U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace ISBOOSTING
+        {
+            static const AkUniqueID GROUP = 303137326U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BOOSTING = 3234467226U;
+                static const AkUniqueID NOTBOOSTING = 4234859743U;
+            } // namespace STATE
+        } // namespace ISBOOSTING
+
+    } // namespace STATES
 
     namespace SWITCHES
     {

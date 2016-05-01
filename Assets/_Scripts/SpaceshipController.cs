@@ -13,6 +13,11 @@ public class SpaceshipController : MonoBehaviour
         right = KeyCode.RightArrow, 
         shield, boost;
 
+    //Boost
+    public bool isBoosting;
+    public float boostFuel = 0;
+    private float currentSpeed;
+
     //Variables to make the custom controller to work
     private Arduino arduino;
     private int pinUp = 2,
@@ -72,43 +77,78 @@ public class SpaceshipController : MonoBehaviour
     }
     void Controls()
     {
-        
-        if (Input.GetKey(left) | arduino.digitalRead(pinLeft) == 1)
+        if (!isBoosting)
         {
-            //Go left
-            Debug.Log("Left Mouse clicked");
-            horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed * -1, horizontalTurnAcc * Time.deltaTime);
-            pinLeftLast = 1;
-        }
-        else if (Input.GetKey(right) | arduino.digitalRead(pinRight) == 1)
-        {
-            //Go right
-            horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed, horizontalTurnAcc * Time.deltaTime);
-            pinRightLast = 1;
-        } else
-        {
-            horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, 0, horizontalTurnDec * Time.deltaTime);
-        }
-        if (Input.GetKeyDown(throttleUp))
-        {
-            //Speed up
-            Debug.Log("Up clicked");
-            if (currentGear < throttleSpeeds.Length - 1)
-            {
-                currentGear++;
+            if (boostFuel < 500) { 
+            boostFuel++;
             }
-            verticalSpeed = throttleSpeeds[currentGear];
-//            verticalSpeed = Mathf.MoveTowards(verticalSpeed, throttleSpeeds[currentGear], throttleAcc * Time.deltaTime);
-        }
-        if (Input.GetKeyDown(throttleDown))
-        {
-            if (currentGear > 0)
+            if (Input.GetKey(left) | arduino.digitalRead(pinLeft) == 1)
             {
-                currentGear--;
+                //Go left
+                Debug.Log("Left Mouse clicked");
+                horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed * -1, horizontalTurnAcc * Time.deltaTime);
+                pinLeftLast = 1;
             }
-            verticalSpeed = throttleSpeeds[currentGear];
-           // verticalSpeed = Mathf.MoveTowards(verticalSpeed, throttleSpeeds[currentGear], throttleAcc * Time.deltaTime);
+            else if (Input.GetKey(right) | arduino.digitalRead(pinRight) == 1)
+            {
+                //Go right
+                horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed, horizontalTurnAcc * Time.deltaTime);
+                pinRightLast = 1;
+            }
+            else
+            {
+                horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, 0, horizontalTurnDec * Time.deltaTime);
+            }
+            if (Input.GetKeyDown(throttleUp))
+            {
+                //Speed up
+                Debug.Log("Up clicked");
+                if (currentGear < throttleSpeeds.Length - 1)
+                {
+                    currentGear++;
+                }
+                verticalSpeed = throttleSpeeds[currentGear];
+                //            verticalSpeed = Mathf.MoveTowards(verticalSpeed, throttleSpeeds[currentGear], throttleAcc * Time.deltaTime);
+            }
+            if (Input.GetKeyDown(throttleDown))
+            {
+                if (currentGear > 0)
+                {
+                    currentGear--;
+                }
+                verticalSpeed = throttleSpeeds[currentGear];
+                // verticalSpeed = Mathf.MoveTowards(verticalSpeed, throttleSpeeds[currentGear], throttleAcc * Time.deltaTime);
+            }
+            if (Input.GetKeyDown(boost))
+            {
+                if (boostFuel > 100)
+                {
+                AkSoundEngine.SetState("isBoosting", "boosting");
+                AkSoundEngine.PostEvent("boost", gameObject);
+                currentSpeed = verticalSpeed;
+                isBoosting = true;
+                }
+            }
         }
+        if (isBoosting) {
+           
+            if (boostFuel > 0)
+            {
+                
+                verticalSpeed = 100;
+                boostFuel = boostFuel - 2.50f;
+                isBoosting = true;
+            }
+            if (boostFuel <= 0)
+            {
+                AkSoundEngine.PostEvent("boost", gameObject);
+                AkSoundEngine.SetState("isBoosting", "notBoosting");
+                verticalSpeed = currentSpeed;
+                isBoosting = false;
+            }
+        }
+       
+
         //if (Input.GetMouseButtonUp(0) | arduino.digitalRead(pinLeft) == 0 && horizontalSpeed > 0 && pinLeftLast == 1)
         //{
         //    Debug.Log("Left Mouse clicked");

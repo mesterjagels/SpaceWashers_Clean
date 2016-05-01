@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1944582317	thrusters			\Default Work Unit\thrusters	
+	2389703494	boost			\Default Work Unit\boost	
 	3071260525	hull_impact			\Default Work Unit\hull_impact	
 	3164020227	dirt_cleaned			\Default Work Unit\dirt_cleaned	
 
@@ -9,6 +10,17 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 Switch	ID	Name	Switch Group			Notes
 	1488423865	Pizza	Junk_type			
 	3678222337	Toxic_waste	Junk_type			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	303137326	isBoosting			\Default Work Unit\isBoosting	
+
+State	ID	Name	State Group			Notes
+	748895195	None	isBoosting			
+	3234467226	boosting	isBoosting			
+	4234859743	notBoosting	isBoosting			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	1048793204	boosting	isBoosting	\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\thruster_sounds		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	805906735	vertical_speed			\Default Work Unit\vertical_speed	
@@ -24,12 +36,15 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	7741754	Wwise Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\thruster_sounds\thrustersynth\Wwise Synth One	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	20995278	boost_end	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\boost_end_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\boost\boost_end		363892
 	147310084	washing_5	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_5_F7585AB1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_up\washing_5		49872
+	168564473	boost_start	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\boost_start_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\boost\Ignition\boost_start		132364
 	192410636	hull_4	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_4		202652
 	194476618	squeakdown2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_3_370EBA0A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_down\squeakdown2		49848
 	267089118	washing_2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_2_88175B61.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_up\washing_2		63260
 	343534256	washing_1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_1_6D689A9F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_up\washing_1		26888
 	374476862	washing_4	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_4_495DEE4E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_up\washing_4		45420
+	423809210	boost_loop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\boost_loop_12F9BD65.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\boost\Ignition\boost_loop		474140
 	461218233	pizza_1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\pizza_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\pizzaslice\pizza_1		241576
 	509321733	hull_3	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_3		201272
 	548323127	hull_2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_2		180004
