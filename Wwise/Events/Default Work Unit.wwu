@@ -5,13 +5,6 @@
 			<ChildrenList>
 				<Event Name="hull_impact" ID="{BFB3B05A-ED84-49A9-A340-153D7CA6D9BF}">
 					<ChildrenList>
-						<Action Name="Play" ID="{10BB7089-E250-4FB9-AB94-26329CA852D8}" ShortID="75566657" Type="Play" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{4B0C6239-45C7-4968-8AD2-BD12C35D3E28}" Global="false">
-									<ObjectRef Name="hull_sounds" ID="{D0A848C0-4AA3-46E9-9EF1-9B0541B0DD3A}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
-								</Element>
-							</ElementList>
-						</Action>
 						<Action Name="Play" ID="{783B7563-94E1-4348-97D0-00CE45A2E920}" ShortID="792143837" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{F110818A-1B4A-453F-B06D-23A5B3F02741}" Global="false">

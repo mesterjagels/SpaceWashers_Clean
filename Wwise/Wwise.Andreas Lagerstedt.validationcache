@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="70">
-	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="504932977" DateHigh="30515912"/>
+	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1389952635" DateHigh="30515951"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="3168936192" DateHigh="30449148"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="3168936192" DateHigh="30449148"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Attenuations\Default Work Unit.wwu" DateLow="3499298405" DateHigh="30514725"/>
@@ -34,6 +34,6 @@
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\States\Default Work Unit.wwu" DateLow="3499413722" DateHigh="30514725"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Switches\Default Work Unit.wwu" DateLow="930738576" DateHigh="30515906"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Triggers\Default Work Unit.wwu" DateLow="3499280767" DateHigh="30514725"/>
-	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Wwise.Andreas Lagerstedt.wsettings" DateLow="2671731822" DateHigh="30515911"/>
+	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Wwise.Andreas Lagerstedt.wsettings" DateLow="1727037284" DateHigh="30515951"/>
 	<ValidationCacheItem File="X:\UnityProjects\SpaceWashersClean\Wwise\Wwise.wproj" DateLow="20602874" DateHigh="30514726"/>
 </ValidationCache>

@@ -23,141 +23,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="hull_sounds" ID="{D0A848C0-4AA3-46E9-9EF1-9B0541B0DD3A}" ShortID="348650953">
-							<PropertyList>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{6DADBAF5-CB62-46BE-BF5E-CB9B69F41424}">
-												<PropertyList>
-													<Property Name="Max" Type="Real64" Value="202"/>
-													<Property Name="Min" Type="Real64" Value="-253"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>7</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="hull_1" ID="{10F9BF82-2AD8-48E7-A199-0D376F4EBBAB}" ShortID="265033663" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="hull_1" ID="{7BB9D1D4-4949-49C2-B1C9-F4AF5229E145}" ShortID="974027785">
-											<Language>SFX</Language>
-											<AudioFile>hull_1.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="hull_1" ID="{7BB9D1D4-4949-49C2-B1C9-F4AF5229E145}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="hull_2" ID="{77B8084E-ECE2-44F5-8535-4EDDC7812C81}" ShortID="702095893" Type="SoundFX">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="hull_2" ID="{1FAEA761-D4E9-4A64-8F87-11FFB072E923}" ShortID="548323127">
-											<Language>SFX</Language>
-											<AudioFile>hull_2.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="hull_2" ID="{1FAEA761-D4E9-4A64-8F87-11FFB072E923}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="hull_3" ID="{6BF0A94B-E476-4924-87CE-A0AC7DEE42B1}" ShortID="605645231" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="hull_3" ID="{8B445F27-0D48-4EB3-94C5-7F8AE7038CE6}" ShortID="509321733">
-											<Language>SFX</Language>
-											<AudioFile>hull_3.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="hull_3" ID="{8B445F27-0D48-4EB3-94C5-7F8AE7038CE6}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="hull_4" ID="{78819222-EC9C-4D11-9F66-30583E3EB2CF}" ShortID="957642166" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="hull_4" ID="{D7D8E490-1B5B-4AE9-A7FD-17F1085A6E86}" ShortID="192410636">
-											<Language>SFX</Language>
-											<AudioFile>hull_4.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="hull_4" ID="{D7D8E490-1B5B-4AE9-A7FD-17F1085A6E86}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="hull_5" ID="{85923392-2742-4B9E-8CB6-EA746D56F394}" ShortID="689735748" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="hull_5" ID="{AECFE6A4-4B2C-400F-AA7C-BCB3FC112E22}" ShortID="599990140">
-											<Language>SFX</Language>
-											<AudioFile>hull_5.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="hull_5" ID="{AECFE6A4-4B2C-400F-AA7C-BCB3FC112E22}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<SwitchContainer Name="hazard_sounds" ID="{B27FECE5-0C48-4B17-B2F5-235937183CCD}" ShortID="553338184">
 							<PropertyList>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -215,20 +80,310 @@
 										<ActiveSource Name="junk_toxic" ID="{8F5AB69B-B5DC-408A-9015-17A10F230025}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<RandomSequenceContainer Name="pizzaslice" ID="{354A5910-505F-479E-B620-C3B3BE9054B6}" ShortID="243681922">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DD12F721-30CB-4FFC-9F45-84DC8066A250}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-152"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="pizza_1" ID="{315BA525-1309-4A16-9C08-648F7324E0D6}" ShortID="467659093" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pizza_1" ID="{DB8B620D-264D-4D19-A34A-29DEF0148D66}" ShortID="461218233">
+													<Language>SFX</Language>
+													<AudioFile>pizza_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pizza_1" ID="{DB8B620D-264D-4D19-A34A-29DEF0148D66}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="pizza_2" ID="{CA2AF070-7A37-4FBE-8C00-BE61CAD28C7F}" ShortID="837515498" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pizza_2" ID="{1006A2D8-8116-4596-9CA7-441908C753B2}" ShortID="1052182307">
+													<Language>SFX</Language>
+													<AudioFile>pizza_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pizza_2" ID="{1006A2D8-8116-4596-9CA7-441908C753B2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="pizza_3" ID="{170F1AF7-2491-4922-8353-E4F04FDD003F}" ShortID="2790637" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="pizza_3" ID="{8A73C5C8-91C5-4C95-AB92-5ECAEC5A2852}" ShortID="845341949">
+													<Language>SFX</Language>
+													<AudioFile>pizza_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="pizza_3" ID="{8A73C5C8-91C5-4C95-AB92-5ECAEC5A2852}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="hull_small" ID="{1BD8C065-777F-4B04-AD31-9AC80548E9F3}" ShortID="396148900" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{291CEBC9-8967-40D8-962A-B49B0CA38C5A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="328"/>
+															<Property Name="Min" Type="Real64" Value="-606"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Wwise Guitar Distortion (Custom)" ID="{4F027556-1E86-404D-ABFE-188F7E9C2897}" ShortID="438409297" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+													<PropertyList>
+														<Property Name="DistortionType" Type="int32" Value="1"/>
+														<Property Name="OutputLevel" Type="Real32" Value="-2.5"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hull_small" ID="{147CFC1D-5E22-455A-991F-DE9E71D95EB1}" ShortID="663919939">
+											<Language>SFX</Language>
+											<AudioFile>hull_small.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hull_small" ID="{147CFC1D-5E22-455A-991F-DE9E71D95EB1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="hull_sounds" ID="{D0A848C0-4AA3-46E9-9EF1-9B0541B0DD3A}" ShortID="348650953">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6DADBAF5-CB62-46BE-BF5E-CB9B69F41424}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="202"/>
+															<Property Name="Min" Type="Real64" Value="-253"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Wwise Guitar Distortion (Custom)" ID="{11EC1E7D-2B67-4200-9FC7-241E199948C1}" ShortID="606612092" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+													<PropertyList>
+														<Property Name="DistortionType" Type="int32" Value="1"/>
+														<Property Name="OutputLevel" Type="Real32" Value="-2.5"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="hull_1" ID="{10F9BF82-2AD8-48E7-A199-0D376F4EBBAB}" ShortID="265033663" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hull_1" ID="{7BB9D1D4-4949-49C2-B1C9-F4AF5229E145}" ShortID="974027785">
+													<Language>SFX</Language>
+													<AudioFile>hull_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hull_1" ID="{7BB9D1D4-4949-49C2-B1C9-F4AF5229E145}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hull_2" ID="{77B8084E-ECE2-44F5-8535-4EDDC7812C81}" ShortID="702095893" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hull_2" ID="{1FAEA761-D4E9-4A64-8F87-11FFB072E923}" ShortID="548323127">
+													<Language>SFX</Language>
+													<AudioFile>hull_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hull_2" ID="{1FAEA761-D4E9-4A64-8F87-11FFB072E923}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hull_3" ID="{6BF0A94B-E476-4924-87CE-A0AC7DEE42B1}" ShortID="605645231" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hull_3" ID="{8B445F27-0D48-4EB3-94C5-7F8AE7038CE6}" ShortID="509321733">
+													<Language>SFX</Language>
+													<AudioFile>hull_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hull_3" ID="{8B445F27-0D48-4EB3-94C5-7F8AE7038CE6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hull_4" ID="{78819222-EC9C-4D11-9F66-30583E3EB2CF}" ShortID="957642166" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hull_4" ID="{D7D8E490-1B5B-4AE9-A7FD-17F1085A6E86}" ShortID="192410636">
+													<Language>SFX</Language>
+													<AudioFile>hull_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hull_4" ID="{D7D8E490-1B5B-4AE9-A7FD-17F1085A6E86}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hull_5" ID="{85923392-2742-4B9E-8CB6-EA746D56F394}" ShortID="689735748" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hull_5" ID="{AECFE6A4-4B2C-400F-AA7C-BCB3FC112E22}" ShortID="599990140">
+													<Language>SFX</Language>
+													<AudioFile>hull_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="hull_5" ID="{AECFE6A4-4B2C-400F-AA7C-BCB3FC112E22}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupRef Name="Junk_type" ID="{2C951D25-856E-4E98-88E8-77AF6BCB0AB3}"/>
 								<DefaultSwitchRef Name="Toxic_waste" ID="{0EC1306C-9310-4E22-8991-B8ACD5AB9FCC}"/>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
+										<ItemRef Name="pizzaslice" ID="{354A5910-505F-479E-B620-C3B3BE9054B6}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="hull_small" ID="{1BD8C065-777F-4B04-AD31-9AC80548E9F3}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
 										<ItemRef Name="junk_toxic" ID="{C15AA188-58B8-4DA4-95F6-3A39D7D2D1C8}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="hull_sounds" ID="{D0A848C0-4AA3-46E9-9EF1-9B0541B0DD3A}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
+										<SwitchRef Name="Pizza" ID="{98DA5832-469C-4A31-BC1F-34EF3CADCFF1}"/>
+										<ItemList>
+											<ItemRef Name="pizzaslice" ID="{354A5910-505F-479E-B620-C3B3BE9054B6}"/>
+											<ItemRef Name="hull_small" ID="{1BD8C065-777F-4B04-AD31-9AC80548E9F3}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
 										<SwitchRef Name="Toxic_waste" ID="{0EC1306C-9310-4E22-8991-B8ACD5AB9FCC}"/>
 										<ItemList>
 											<ItemRef Name="junk_toxic" ID="{C15AA188-58B8-4DA4-95F6-3A39D7D2D1C8}"/>
+											<ItemRef Name="hull_sounds" ID="{D0A848C0-4AA3-46E9-9EF1-9B0541B0DD3A}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>
