@@ -7,31 +7,38 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
-    public TextAsset HighscoreList;
-    private string HighscoreListAsOneString;
-    private string[] HighscoreListAsArrayOfStrings;
-    private int[] HighscoreListAsArrayOfInts;
-    private string[] Disconnector;
-    
-    
+    public TextAsset highscoreList;
+    private string highscoreListAsOneString;
+    private string[] highscoreListAsArrayOfStrings;
+    private string[] disconnector;
+    private int[] highscoreListAsArrayOfInts;
 
-    public static int PlayerNumber = 3;
-    public static int[] PlayerScore = new int[PlayerNumber];
-    public static int TotalScore = PlayerScore[0] + PlayerScore[1] + PlayerScore[2];
+    public static int playerCount = 3;
+    private int activePlayer=0;
+    public static int[] playerScore;
+    private int[] points;
+    private int[] scoreMultiplier;
+    private float[] timeCheck;
+    public static int totalScore;
 
-    public static bool GameActive;
+    public static bool gameActive;
 
-    // Use this for initialization
+    // Use this for initialization.
     void Awake()
     {
-        HighscoreListAsArrayOfInts = new int[10];
-        HighscoreListAsArrayOfStrings = new string[10];
-        Disconnector = new string[10];
+        highscoreListAsArrayOfInts = new int[10];
+        highscoreListAsArrayOfStrings = new string[10];
+        disconnector = new string[10];
 
-        //Check if instance already exists
+        playerScore = new int[playerCount];
+        points = new int[playerCount];
+        scoreMultiplier = new int[playerCount];
+        timeCheck = new float[playerCount];
+
+        //Check if instance already exists.
         if (instance == null)
         {
-            //if not, set instance to this
+            //If not, set instance to this.
             instance = this;
         }
 
@@ -42,94 +49,119 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //Sets this to not be destroyed when reloading scene
+        //Sets this to not be destroyed when reloading scene.
         DontDestroyOnLoad(gameObject);
 
-        //Call the InitGame function to initialize the game
+        //Call the InitGame function to initialize the game.
         InitGame();
     }
 
-    //Is called every frame and keeps track of the game state
+    //Is called every frame and keeps track of the game state.
     void Update()
     {
-        if (GameActive == false)
+        totalScore = playerScore[0] + playerScore[1] + playerScore[2];
+        
+        //Just for testing purposes.
+        if (Input.GetKeyDown(KeyCode.P)) { AddScore(activePlayer); Debug.Log(playerScore[0]);}
+        if (Input.GetKeyDown(KeyCode.O)) { AddScore(activePlayer+1); Debug.Log(playerScore[1]); }
+        if (Input.GetKeyDown(KeyCode.Q)) { Debug.Log(totalScore); }
+        if (Input.GetKeyDown(KeyCode.E)) { EndGame(); }
+
+        //End the game.
+        if (gameActive == false)
         {
             EndGame();
         }
-        if (Input.GetKeyDown(KeyCode.P)) { TotalScore = TotalScore + 9999; Debug.Log(TotalScore); }
-
-        if (Input.GetKeyDown(KeyCode.E)) { EndGame(); }
+        
     }
-    //Initializes the game
+    //Initializes the game.
     void InitGame()
     {
-        GameActive = true;
+        gameActive = true;
     }
 
-    //End the game
+    //End the game.
     void EndGame()
     {
         UpdateHighscore();
     }
 
     //Add points to the PlayerScore of the player that cleaned dirt.
-    void AddScore(/*Active Player*/)
+    void AddScore(int activePlayer)
     {
-        PlayerScore[0/*Active Player*/] = PlayerScore[0/*Active Player*/] + 100;
+        //Check for multiplier condition and change multiplier accordingly.
+        if (timeCheck[activePlayer] > Time.time-5)
+        {
+            scoreMultiplier[activePlayer] = scoreMultiplier[activePlayer] + 1; 
+        }
+
+        else
+        {
+            scoreMultiplier[activePlayer] = 1;
+        }
+
+        points[activePlayer] = 100 * scoreMultiplier[activePlayer];
+        playerScore[activePlayer] = playerScore[activePlayer] + points[activePlayer];
+        timeCheck[activePlayer] = Time.time;
     }
 
-    //Compare the TotalScore with the values in the Highscore.txt and update the file if appropriate
+    //Get the Highscore values of the Highscore.txt - Assigns values to HighscoreListAsArrayOfStrings[].
+    void GetHighscore()
+    {
+        //Convert txt file to string.
+        highscoreListAsOneString = highscoreList.text;
+
+        //Assign values to the disconnectors used to separate the Highscore string.
+        for (int i = 0; i < disconnector.Length; i++)
+        {
+            disconnector[i] = ", ";
+        }
+
+        //Split string into an array of strings.
+        highscoreListAsArrayOfStrings = highscoreListAsOneString.Split(disconnector, StringSplitOptions.RemoveEmptyEntries);
+    }
+
+    //Compare the TotalScore with the values in the Highscore.txt and update the file if appropriate.
     void UpdateHighscore()
     {
-        //Convert txt file to string
-        HighscoreListAsOneString = HighscoreList.text;
+        GetHighscore();
 
-
-        //Assign values to the disconnectors used to separate the Highscore string
-        for (int i = 0; i < Disconnector.Length; i++)
+        //Convert every element into an int.
+        for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
         {
-        Disconnector[i] = ", ";
+            highscoreListAsArrayOfInts[i] = Int32.Parse(highscoreListAsArrayOfStrings[i]);
         }
 
-        //Split string into an array of strings
-        HighscoreListAsArrayOfStrings = HighscoreListAsOneString.Split(Disconnector, StringSplitOptions.RemoveEmptyEntries);
-
-        //Convert every element into an int
-        for (int i = 0; i < HighscoreListAsArrayOfInts.Length; i++)
+        //Compare and update the values.
+        for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
         {
-            HighscoreListAsArrayOfInts[i] = Int32.Parse(HighscoreListAsArrayOfStrings[i]);
-        }
-
-        //Compare and update the values
-        for (int i = 0; i < HighscoreListAsArrayOfInts.Length; i++)
-        {
-            if (TotalScore > HighscoreListAsArrayOfInts[i] )
+            if (totalScore > highscoreListAsArrayOfInts[i])
             {
-                for (int p = 0; p < HighscoreListAsArrayOfInts.Length - (i+1); p++)
+                for (int p = 0; p < highscoreListAsArrayOfInts.Length - (i+1); p++)
                 {
-                    HighscoreListAsArrayOfInts[(9 - p)] = HighscoreListAsArrayOfInts[(9 - (p + 1))];
+                    highscoreListAsArrayOfInts[(9 - p)] = highscoreListAsArrayOfInts[(9 - (p + 1))];
                 }
 
-                HighscoreListAsArrayOfInts[i] = TotalScore;
-                i = HighscoreListAsArrayOfInts.Length;
+                highscoreListAsArrayOfInts[i] = totalScore;
+                i = highscoreListAsArrayOfInts.Length;
             }
         }
 
-        //Convert elements to strings
-        for (int i = 0; i < HighscoreListAsArrayOfInts.Length; i++)
+        //Convert elements to strings.
+        for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
         {
-            HighscoreListAsArrayOfStrings[i] = HighscoreListAsArrayOfInts[i].ToString() + ", ";
+            highscoreListAsArrayOfStrings[i] = highscoreListAsArrayOfInts[i].ToString() + ", ";
         }
 
-        //Merge strings
-        HighscoreListAsOneString = "";
+        //Merge strings.
+        highscoreListAsOneString = "";
 
-        for (int i = 0; i < HighscoreListAsArrayOfStrings.Length; i++)
+        for (int i = 0; i < highscoreListAsArrayOfStrings.Length; i++)
         {
-            HighscoreListAsOneString = HighscoreListAsOneString + HighscoreListAsArrayOfStrings[i];
+            highscoreListAsOneString = highscoreListAsOneString + highscoreListAsArrayOfStrings[i];
         }
 
-        //Rewrite the textfile
-        File.WriteAllText(Application.dataPath+ @"\Persistent Data\Highscore.txt", HighscoreListAsOneString);
+        //Rewrite the textfile.
+        File.WriteAllText(Application.dataPath+ @"\Persistent Data\Highscore.txt", highscoreListAsOneString);
     } 
 }
