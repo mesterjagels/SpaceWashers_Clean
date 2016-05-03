@@ -1,16 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-guid: 45b9884b110b3e948853ba9b94994f5c
-timeCreated: 1462008542
-=======
-guid: 6f3d05e2611c49645a42487e20fffc1f
-timeCreated: 1462008240
->>>>>>> Toxic slime particle prefab
-=======
-guid: add45232689b2754b8ebe9a86616be77
-timeCreated: 1462008092
->>>>>>> Persistent Highscore list.
+guid: 02abf204df2f543679951a32af35acfa
+timeCreated: 1461850550
 licenseType: Free
 AudioImporter:
   serializedVersion: 6

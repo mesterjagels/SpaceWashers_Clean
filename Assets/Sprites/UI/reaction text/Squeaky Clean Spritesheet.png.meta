@@ -1,16 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-guid: 42ce1483913a7a84bbfd9fbde46a79f2
-timeCreated: 1462008526
-=======
-guid: c82039c26531e254daa4369df066aa10
-timeCreated: 1462008238
->>>>>>> Toxic slime particle prefab
-=======
-guid: e6d76cfc4bee32b4c99b795898352027
-timeCreated: 1462008088
->>>>>>> Persistent Highscore list.
+guid: f70f716b69afe488eae1dfc20d5265ca
+timeCreated: 1461850549
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
