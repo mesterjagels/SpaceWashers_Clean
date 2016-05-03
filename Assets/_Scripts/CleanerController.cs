@@ -8,7 +8,7 @@ public class CleanerController : MonoBehaviour
 
     private Rigidbody2D rb;
     public float force = 1;
-    public KeyCode up, down, left, right;
+    public KeyCode up, down, left, right, clean;
     private int playerNumber;
     private Destructible2D.D2dRepeatStamp stamp;
     public GameObject soap;
@@ -51,7 +51,7 @@ public class CleanerController : MonoBehaviour
             Debug.Log("right");
             rb.velocity = new Vector2(force, rb.velocity.y);
         }
-        if (InputManager.Devices[playerNumber].Action1)
+        if (Input.GetKey(clean) || InputManager.Devices[playerNumber].Action1)
         {
             stamp.enabled = true;
             soap.GetComponent<ParticleSystem>().enableEmission = true;
