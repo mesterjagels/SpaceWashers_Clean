@@ -5,6 +5,10 @@ using DG.Tweening;
 
 public class SpaceshipController : MonoBehaviour
 {
+    //Scoreboard
+    public GameObject scoreboard;
+    public bool levelEnded = false;
+
     //Control scheme
     public KeyCode 
         throttleUp = KeyCode.UpArrow,
@@ -77,6 +81,13 @@ public class SpaceshipController : MonoBehaviour
     {
         AkSoundEngine.SetRTPCValue("vertical_speed", verticalSpeed);
         Controls();
+
+        //Temp endlevel shit
+        if(scoreboard.GetComponent<ScoreAlpha>().distanceMath <= 0 && !levelEnded)
+        {
+            levelEnded = true;
+            gameObject.transform.DOScale(0, 5);
+        }
     }
 
     void Controls()
@@ -128,7 +139,8 @@ public class SpaceshipController : MonoBehaviour
                 {
                     currentGear++;
                 }
-                verticalSpeed = throttleSpeeds[currentGear];          
+                DOTween.To(() => verticalSpeed, x=> verticalSpeed = x, throttleSpeeds[currentGear], 1);
+               // verticalSpeed = throttleSpeeds[currentGear];          
             }
             if (Input.GetKeyDown(throttleDown))
             {
@@ -136,7 +148,9 @@ public class SpaceshipController : MonoBehaviour
                 {
                     currentGear--;
                 }
-                verticalSpeed = throttleSpeeds[currentGear];
+                DOTween.To(() => verticalSpeed, x => verticalSpeed = x, throttleSpeeds[currentGear], 1);
+
+                //verticalSpeed = throttleSpeeds[currentGear];
                 // verticalSpeed = Mathf.MoveTowards(verticalSpeed, throttleSpeeds[currentGear], throttleAcc * Time.deltaTime);
             }
             if (Input.GetKeyDown(boost))
@@ -166,76 +180,6 @@ public class SpaceshipController : MonoBehaviour
                 isBoosting = false;
             }
         }
-       
-
-        //if (Input.GetMouseButtonUp(0) | arduino.digitalRead(pinLeft) == 0 && horizontalSpeed > 0 && pinLeftLast == 1)
-        //{
-        //    Debug.Log("Left Mouse clicked");
-        //    //Stop going left
-        //    horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, 0, horizontalTurnDec * Time.deltaTime);
-        //    pinLeftLast = 0;
-        //}
-
-        //if (Input.GetMouseButtonUp(1) | arduino.digitalRead(pinRight) == 0 && horizontalSpeed < 0 && pinRightLast == 1)
-        //{
-        //    //Stop going right
-        //    horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, 0, horizontalTurnDec * Time.deltaTime);
-        //    pinRightLast = 0;
-        //}
-
-        //if (Input.GetAxis("Mouse ScrollWheel") > 0 | arduino.digitalRead(pinUp) == 1 && moveSpeed < maxSpeed)
-        //{
-        //    //Throttle up
-
-
-        //    if (curSpeed < speeds.Count - 1 && moveSpeed == speeds[curSpeed])
-        //    {
-        //        curSpeed += 1;
-        //    }
-        //}
-        //else if (Input.GetAxis("Mouse ScrollWheel") < 0 | arduino.digitalRead(pinDown) == 1 && moveSpeed > minSpeed)
-        //{
-        //    //Throttle down
-
-        //    //moveSpeed -= speedPerAcceleration;
-        //    if (curSpeed + 1 >= 0 && moveSpeed == speeds[curSpeed])
-        //    {
-        //        curSpeed -= 1;
-        //    }
-        //}
-        //if (moveSpeed > maxSpeed)
-        //{
-        //    moveSpeed = maxSpeed;
-        //}
-        //if (moveSpeed < minSpeed)
-        //{
-        //    moveSpeed = minSpeed;
-        //}
-
-        //if ((Input.GetKey(shieldButton) | arduino.digitalRead(pinBtn1) == 1) && shieldActivatable && curShield > 0)
-        //{
-        //    //Shield activated if shield energy is over threshold
-        //    shieldActive = true;
-        //    pinBtn1Last = 1;
-        //}
-        //else {
-        //    shieldActive = false;
-        //}
-
-        //if (curShield <= 0 && shieldActive)
-        //{
-        //    shieldActive = false;
-        //}
-
-        //if (Input.GetKeyDown(boostButton) | arduino.digitalRead(pinBtn2) == 1 && boostActivatable)
-        //{
-        //    //Boost activated if boost energy is over threshold 
-        //    boostActive = true;
-        //}
-        //if (boostActive && curBoost <= 0)
-        //{
-        //    boostActive = false;
-        //}
     }
 
     void ConfigurePins()

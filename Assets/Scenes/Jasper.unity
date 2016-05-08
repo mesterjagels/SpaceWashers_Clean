@@ -85,6 +85,61 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11586907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 101348, guid: 30760dcd7dcd5ee47998cd04e1cde3f7, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 11586908}
+  - 61: {fileID: 11586910}
+  - 114: {fileID: 11586909}
+  m_Layer: 9
+  m_Name: JunkShredder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &11586908
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 484350, guid: 30760dcd7dcd5ee47998cd04e1cde3f7, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11586907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -12.99, z: 0}
+  m_LocalScale: {x: 2214.932, y: 3.04233, z: 9.361047}
+  m_Children: []
+  m_Father: {fileID: 1795211031}
+  m_RootOrder: 1
+--- !u!114 &11586909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11586907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26a97b80ebbd494fb9122a19e6fbe04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &11586910
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6176672, guid: 30760dcd7dcd5ee47998cd04e1cde3f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11586907}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 1.22}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1001 &34816740
 Prefab:
   m_ObjectHideFlags: 0
@@ -2131,6 +2186,7 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 193126172}
   distanceLeft: {fileID: 1300024053}
+  distanceMath: 0
   distanceToTravel: 30
 --- !u!4 &198083735 stripped
 Transform:
@@ -2606,6 +2662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06dff31b03930204a943b530b9341a62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreboard: {fileID: 193126170}
+  levelEnded: 0
   throttleUp: 273
   throttleDown: 274
   left: 276
@@ -2966,7 +3024,10 @@ MonoBehaviour:
   spawnPos4: {x: -14, y: 29.9, z: 0}
   spawnPos5: {x: 14, y: 29.9, z: 0}
   dirt:
+  - {fileID: 124012, guid: 441e09ffb9f67e24db3453e5b4a26d6f, type: 2}
   - {fileID: 198556, guid: c20e622db4c4b48c5a8ab0df506ff7e7, type: 2}
+  - {fileID: 192082, guid: 1a9229ee39750834b96b9203e5891b81, type: 2}
+  - {fileID: 129922, guid: 1e5d8022197769342a9d686d4e1f0deb, type: 2}
   intervalMin: 2
   intervalMax: 5
   distanceFromCam: -10

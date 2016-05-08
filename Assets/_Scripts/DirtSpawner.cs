@@ -71,6 +71,7 @@ public class DirtSpawner : MonoBehaviour
             {
                 dirtPool[i].transform.position = spawnPos1;
                 dirtPool[i].SetActive(true);
+                spawnPos1 = Quaternion.AngleAxis(-45, Vector3.up) * spawnPos1;
                 j++;
             }
             yield return new WaitForSeconds(Random.Range(intervalMin, intervalMax));
@@ -84,6 +85,7 @@ public class DirtSpawner : MonoBehaviour
             {
                 dirtPool[i].transform.position = spawnPos2;
                 dirtPool[i].SetActive(true);
+                spawnPos2 = Quaternion.AngleAxis(-45, Vector3.up) * spawnPos2;
                 j++;
             }
             yield return new WaitForSeconds(Random.Range(intervalMin, intervalMax));
@@ -97,6 +99,7 @@ public class DirtSpawner : MonoBehaviour
             {
                 dirtPool[i].transform.position = spawnPos3;
                 dirtPool[i].SetActive(true);
+                spawnPos3 = Quaternion.AngleAxis(-45, Vector3.up) * spawnPos3;
                 j++;
             }
             yield return new WaitForSeconds(Random.Range(intervalMin, intervalMax));
@@ -110,6 +113,7 @@ public class DirtSpawner : MonoBehaviour
             {
                 dirtPool[i].transform.position = spawnPos4;
                 dirtPool[i].SetActive(true);
+                spawnPos4 = Quaternion.AngleAxis(-45, Vector3.up) * spawnPos4;
                 j++;
             }
             yield return new WaitForSeconds(Random.Range(intervalMin, intervalMax));
@@ -123,6 +127,7 @@ public class DirtSpawner : MonoBehaviour
             {
                 dirtPool[i].transform.position = spawnPos5;
                 dirtPool[i].SetActive(true);
+                spawnPos5 = Quaternion.AngleAxis(-45, Vector3.up) * spawnPos5;
                 j++;
             }
             yield return new WaitForSeconds(Random.Range(intervalMin, intervalMax));
