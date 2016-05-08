@@ -112,11 +112,11 @@ public class GameManager : MonoBehaviour
     }
 
     //End the game.
-    void EndGame()
+    public void EndGame()
     {
         gameActive = false;
         UpdateHighscore();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("HighScore");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Highscore");
     }
 
     //Add points to the PlayerScore of the player that cleaned dirt.

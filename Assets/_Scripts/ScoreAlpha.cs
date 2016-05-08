@@ -4,7 +4,7 @@ using System.Collections;
 
 public class ScoreAlpha : MonoBehaviour
 {
-    private GameManager gm;
+    private GameManager gameManager;
     private ScrollUV uvOffset;
     public int score = 0;
     public Text scoreText;
@@ -15,16 +15,22 @@ public class ScoreAlpha : MonoBehaviour
 
     void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         uvOffset = GameObject.Find("StarFieldFG").GetComponent<ScrollUV>();
     }
 
-	void Update () {
-
-        scoreString = gm.totalScore.ToString();
+	void Update ()
+    {
+        scoreString = gameManager.totalScore.ToString();
         scoreText.text = "SCORE: " + scoreString;
 
         distanceMath = distanceToTravel - uvOffset.offset.y;
         distanceLeft.text = "DISTANCE LEFT: " + distanceMath.ToString();
+
+        if (distanceMath <= 0)
+        {
+            Debug.Log("Distance <= 0");
+            gameManager.EndGame();
+        }
 	}
 }
