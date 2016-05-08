@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="10" SoundbankVersion="113">
+	<RootPaths>
+		<ProjectRoot>X:\UnityProjects\SpaceWashersClean\Wwise\</ProjectRoot>
+		<SourceFilesRoot>X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>X:\UnityProjects\SpaceWashersClean\Wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>X:\UnityProjects\SpaceWashersClean\Wwise\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ShortName>main</ShortName>
+			<Path>main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2389703494" Name="boost"/>
+				<Event Id="3164020227" Name="dirt_cleaned"/>
+				<Event Id="3071260525" Name="hull_impact"/>
+				<Event Id="1944582317" Name="thrusters"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="20995278" Language="SFX">
+					<ShortName>boost_end.wav</ShortName>
+					<Path>SFX\boost_end_9E69E797.wem</Path>
+				</File>
+				<File Id="147310084" Language="SFX">
+					<ShortName>washing_5.wav</ShortName>
+					<Path>SFX\washing_5_F7585AB1.wem</Path>
+				</File>
+				<File Id="168564473" Language="SFX">
+					<ShortName>boost_start.wav</ShortName>
+					<Path>SFX\boost_start_9E69E797.wem</Path>
+				</File>
+				<File Id="192410636" Language="SFX">
+					<ShortName>hull_4.wav</ShortName>
+					<Path>SFX\hull_4_9E69E797.wem</Path>
+				</File>
+				<File Id="194476618" Language="SFX">
+					<ShortName>washing_3.wav</ShortName>
+					<Path>SFX\washing_3_370EBA0A.wem</Path>
+				</File>
+				<File Id="267089118" Language="SFX">
+					<ShortName>washing_2.wav</ShortName>
+					<Path>SFX\washing_2_88175B61.wem</Path>
+				</File>
+				<File Id="343534256" Language="SFX">
+					<ShortName>washing_1.wav</ShortName>
+					<Path>SFX\washing_1_6D689A9F.wem</Path>
+				</File>
+				<File Id="374476862" Language="SFX">
+					<ShortName>washing_4.wav</ShortName>
+					<Path>SFX\washing_4_495DEE4E.wem</Path>
+				</File>
+				<File Id="423809210" Language="SFX">
+					<ShortName>boost_loop.wav</ShortName>
+					<Path>SFX\boost_loop_12F9BD65.wem</Path>
+				</File>
+				<File Id="461218233" Language="SFX">
+					<ShortName>pizza_1.wav</ShortName>
+					<Path>SFX\pizza_1_9E69E797.wem</Path>
+				</File>
+				<File Id="509321733" Language="SFX">
+					<ShortName>hull_3.wav</ShortName>
+					<Path>SFX\hull_3_9E69E797.wem</Path>
+				</File>
+				<File Id="548323127" Language="SFX">
+					<ShortName>hull_2.wav</ShortName>
+					<Path>SFX\hull_2_9E69E797.wem</Path>
+				</File>
+				<File Id="599990140" Language="SFX">
+					<ShortName>hull_5.wav</ShortName>
+					<Path>SFX\hull_5_9E69E797.wem</Path>
+				</File>
+				<File Id="663919939" Language="SFX">
+					<ShortName>hull_small.wav</ShortName>
+					<Path>SFX\hull_small_9E69E797.wem</Path>
+				</File>
+				<File Id="802347035" Language="SFX">
+					<ShortName>thrusters.wav</ShortName>
+					<Path>SFX\thrusters_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="817375743" Language="SFX">
+					<ShortName>junk_toxic.wav</ShortName>
+					<Path>SFX\junk_toxic_9E69E797.wem</Path>
+				</File>
+				<File Id="845341949" Language="SFX">
+					<ShortName>pizza_3.wav</ShortName>
+					<Path>SFX\pizza_3_9E69E797.wem</Path>
+				</File>
+				<File Id="974027785" Language="SFX">
+					<ShortName>hull_1.wav</ShortName>
+					<Path>SFX\hull_1_9E69E797.wem</Path>
+				</File>
+				<File Id="1005801401" Language="SFX">
+					<ShortName>washing_3.wav</ShortName>
+					<Path>SFX\washing_3_1B4D8946.wem</Path>
+				</File>
+				<File Id="1052182307" Language="SFX">
+					<ShortName>pizza_2.wav</ShortName>
+					<Path>SFX\pizza_2_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

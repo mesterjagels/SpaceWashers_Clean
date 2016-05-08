@@ -131,7 +131,7 @@ public class SpaceshipController : MonoBehaviour
                 gameObject.transform.DORotate(new Vector3(0, 0, 0), 1);
                 }
             }
-            if (Input.GetKeyDown(throttleUp))
+            if (Input.GetKeyDown(throttleUp) || arduino.digitalRead(pinUp) ==1 )
             {
                 //Speed up
                 Debug.Log("Up clicked");
@@ -142,7 +142,7 @@ public class SpaceshipController : MonoBehaviour
                 DOTween.To(() => verticalSpeed, x=> verticalSpeed = x, throttleSpeeds[currentGear], 1);
                // verticalSpeed = throttleSpeeds[currentGear];          
             }
-            if (Input.GetKeyDown(throttleDown))
+            if (Input.GetKeyDown(throttleDown) || arduino.digitalRead(pinDown)==1 )
             {
                 if (currentGear > 0)
                 {
@@ -153,7 +153,7 @@ public class SpaceshipController : MonoBehaviour
                 //verticalSpeed = throttleSpeeds[currentGear];
                 // verticalSpeed = Mathf.MoveTowards(verticalSpeed, throttleSpeeds[currentGear], throttleAcc * Time.deltaTime);
             }
-            if (Input.GetKeyDown(boost))
+            if (Input.GetKeyDown(boost) || arduino.digitalRead(pinBtn1)==1)
             {
                 if (boostFuel > 100)
                 {
