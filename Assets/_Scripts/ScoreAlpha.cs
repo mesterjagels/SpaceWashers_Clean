@@ -2,8 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class ScoreAlpha : MonoBehaviour {
-
+public class ScoreAlpha : MonoBehaviour
+{
     private GameManager gm;
     private ScrollUV uvOffset;
     public int score = 0;

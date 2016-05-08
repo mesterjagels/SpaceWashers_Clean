@@ -32,7 +32,7 @@ public class DirtController : MonoBehaviour {
     //The OnDisable method could also be OnDestroy() depending on how we remove dirt.
     void OnDisable()
     {
-        int cleaningplayer = 0;
+        int cleaningPlayer = 0;
         int i = 0;
         CleanerController[] cleanerControllers = FindObjectsOfType(typeof (CleanerController)) as CleanerController[];
 
@@ -51,20 +51,25 @@ public class DirtController : MonoBehaviour {
        if (shortestDistance == distance[0])
         {
             //Debug.Log("Player1 should get points because it have the shortest distance of: " + distance[0]);
-            cleaningplayer = 0;
+            cleaningPlayer = 0;
         }
         else if (cleanerControllers.Length > 1 && shortestDistance == distance[1])
         {
            // Debug.Log("Player2 should get points  because it have the shortest distance of: " + distance[1]);
-            cleaningplayer = 1;
+            cleaningPlayer = 1;
         }
         else if(cleanerControllers.Length > 2 && shortestDistance == distance[2])
         {
            //Debug.Log("Player3 should get points because it have the shortest distance of: " + distance[2])
-            cleaningplayer = 2;
+            cleaningPlayer = 2;
         }
+<<<<<<< HEAD
 
         gameManager.AddCleanerScore(cleaningplayer);
+=======
+        
+        gameManager.AddCleanerScore(cleaningPlayer);
+>>>>>>> Scorescreen
        // score.score = score.score + 1000;
     }
 }

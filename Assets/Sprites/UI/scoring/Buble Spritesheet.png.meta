@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 041dea32d810022479fa2cd4d74fd2cb
 timeCreated: 1462291336
+=======
+guid: 9beebafdf315a814fa7d68c981de54ca
+timeCreated: 1462348007
+>>>>>>> Scorescreen
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}

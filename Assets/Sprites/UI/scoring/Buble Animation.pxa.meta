@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c43de9b888de1fe48b6ad8f2ba7ed196
 folderAsset: yes
 timeCreated: 1462291335
+=======
+guid: 3d7ed910527033a4bab88f23150b5be5
+folderAsset: yes
+timeCreated: 1462347999
+>>>>>>> Scorescreen
 licenseType: Free
 DefaultImporter:
   userData: 

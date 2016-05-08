@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 54b6dac13a807b944aeebb15c0cd7cd9
 timeCreated: 1462291335
+=======
+guid: c23c2555422be5a4fba0b1487d9faf85
+timeCreated: 1462348000
+>>>>>>> Scorescreen
 licenseType: Free
 DefaultImporter:
   userData: 

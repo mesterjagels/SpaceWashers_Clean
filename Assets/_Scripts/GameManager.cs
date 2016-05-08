@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 using System.IO;
 using System;
 
@@ -8,8 +9,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     public TextAsset highscoreList;
+    public Text[] highscore;
     private string highscoreListAsOneString;
-    private string[] highscoreListAsArrayOfStrings;
+    public string[] highscoreListAsArrayOfStrings;
     private string[] disconnector;
     private int[] highscoreListAsArrayOfInts;
 
@@ -26,18 +28,19 @@ public class GameManager : MonoBehaviour
     public int totalScore;
     private int scoreBuffer;
 
-    public static bool gameActive;
+    public bool gameActive;
 
-    void Awake()
+    void Start()
     {
         highscoreListAsArrayOfInts = new int[10];
         highscoreListAsArrayOfStrings = new string[10];
+        highscore = new Text[10];
         disconnector = new string[10];
 
         cleanerScore = new int[playerCount];
         captainScore = 0;
         cleanerPoints = new int[playerCount];
-        captainPoints = 0;
+        captainPoints = 1000;
         cleanerMultiplier = new int[playerCount];
         captainMultiplier = 1;
         cleanerTimeCheck = new float[playerCount];
@@ -65,49 +68,40 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //Update the totalScore.
-        for (int i = 0; i < playerCount; i++)
-        {
-            scoreBuffer = scoreBuffer + cleanerScore[i];
-        }
+        if (gameActive == true)
+        { 
+            //Update the totalScore.
+            for (int i = 0; i < playerCount; i++)
+            {
+                scoreBuffer = scoreBuffer + cleanerScore[i];
+            }
 
-        totalScore = scoreBuffer + captainScore;
-        scoreBuffer = 0;
+            totalScore = scoreBuffer + captainScore;
+            scoreBuffer = 0;
         
-        //Add captain score
-        if (captainTimeCheck < Time.time-30)
-        {
-            if (captainPoints > 0)
+            //Add captain score
+            if (captainTimeCheck < Time.time-10)
             {
-                captainMultiplier = captainMultiplier + 1;
-            }
-            else
-            {
-                ResetCaptainMultiplier();
+                if (captainPoints > 0)
+                {
+                    captainMultiplier = captainMultiplier + 1;
+                }
+                else
+                {
+                    ResetCaptainMultiplier();
+                }
+
+                AddCaptainScore();
+                captainPoints = 1000;
+                captainTimeCheck = Time.time;
             }
 
-            AddCaptainScore();
-            captainPoints = 5000;
-            captainTimeCheck = Time.time;
-        }
-/*
-        //Just for testing purposes.
-        if (Input.GetKeyDown(KeyCode.P)) {
-            AddCleanerScore(activePlayer);
-            Debug.Log(cleanerScore[0]);
-        }
-        if (Input.GetKeyDown(KeyCode.O)) { AddCleanerScore(activePlayer+1); Debug.Log(cleanerScore[1]); }
-        */
-        if (Input.GetKeyDown(KeyCode.Q)) {
-            Debug.Log("Player1 score: " + cleanerScore[0]);
-            Debug.Log("Player2 score: " + cleanerScore[1]);
-            Debug.Log("Total score: " + totalScore); }
-        if (Input.GetKeyDown(KeyCode.E)) { EndGame(); }
-
-        //End the game.
-        if (gameActive == false)
-        {
-            EndGame();
+            //Testing
+            if (Input.GetKeyDown(KeyCode.Q)) {
+                Debug.Log("Player1 score: " + cleanerScore[0]);
+                Debug.Log("Player2 score: " + cleanerScore[1]);
+                Debug.Log("Total score: " + totalScore); }
+            if (Input.GetKeyDown(KeyCode.E)) { EndGame(); }
         }
     }
 
@@ -120,25 +114,27 @@ public class GameManager : MonoBehaviour
     //End the game.
     void EndGame()
     {
+        gameActive = false;
         UpdateHighscore();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("HighScore");
     }
 
     //Add points to the PlayerScore of the player that cleaned dirt.
-    public void AddCleanerScore(int activePlayer)
+    public void AddCleanerScore(int cleaningPlayer)
     {
         //Check for multiplier condition and change multiplier accordingly.
-        if (cleanerTimeCheck[activePlayer] > Time.time-5)
+        if (cleanerTimeCheck[cleaningPlayer] > Time.time-5)
         {
-            cleanerMultiplier[activePlayer] = cleanerMultiplier[activePlayer] + 1; 
+            cleanerMultiplier[cleaningPlayer] = cleanerMultiplier[cleaningPlayer] + 1; 
         }
         else
         {
-            ResetCleanerMultiplier(activePlayer);
+            ResetCleanerMultiplier(cleaningPlayer);
         }
-        Debug.Log("Gamecontroller says: I have given player " + activePlayer + " points");
-        cleanerPoints[activePlayer] = 100 * cleanerMultiplier[activePlayer];
-        cleanerScore[activePlayer] = cleanerScore[activePlayer] + cleanerPoints[activePlayer];
-        cleanerTimeCheck[activePlayer] = Time.time;
+        Debug.Log("Gamecontroller says: I have given player " + cleaningPlayer + " points");
+        cleanerPoints[cleaningPlayer] = 100 * cleanerMultiplier[cleaningPlayer];
+        cleanerScore[cleaningPlayer] = cleanerScore[cleaningPlayer] + cleanerPoints[cleaningPlayer];
+        cleanerTimeCheck[cleaningPlayer] = Time.time;
     }
 
     //Add points to the CaptainScore.
@@ -149,7 +145,7 @@ public class GameManager : MonoBehaviour
 
     public void DecreaseCaptainPoints()
     {
-        captainPoints = captainPoints - 250;
+        captainPoints = captainPoints - 100;
     }
 
     //Reset the cleaner multiplier for a specific cleaner.
