@@ -14,7 +14,7 @@ public class DirtController : MonoBehaviour {
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         d2d = GetComponent<Destructible2D.D2dDestructible>();
-      score = GameObject.Find("Scoreboard").GetComponent<ScoreAlpha>();
+        score = GameObject.Find("Scoreboard").GetComponent<ScoreAlpha>();
    
         startAlpha = d2d.OriginalAlphaCount;
     }
@@ -63,7 +63,6 @@ public class DirtController : MonoBehaviour {
            //Debug.Log("Player3 should get points because it have the shortest distance of: " + distance[2])
             cleaningplayer = 2;
         }
-        
 
         gameManager.AddCleanerScore(cleaningplayer);
        // score.score = score.score + 1000;
