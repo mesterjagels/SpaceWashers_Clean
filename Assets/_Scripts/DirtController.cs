@@ -63,7 +63,7 @@ public class DirtController : MonoBehaviour {
            //Debug.Log("Player3 should get points because it have the shortest distance of: " + distance[2])
             cleaningPlayer = 2;
         }
-        
+
         gameManager.AddCleanerScore(cleaningPlayer);
        // score.score = score.score + 1000;
     }

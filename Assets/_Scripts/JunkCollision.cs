@@ -25,7 +25,6 @@ public class JunkCollision : MonoBehaviour {
         Vector3 velocityBeforeHit = col.gameObject.GetComponent<Rigidbody2D>().velocity;
         col.gameObject.GetComponent<WorldMovement>().enabled = false;
         col.gameObject.GetComponent<Rigidbody2D>().velocity = velocityBeforeHit;
-        Destroy(col.gameObject, 5f);
 
         switch (col.gameObject.tag)
         {
@@ -55,5 +54,7 @@ public class JunkCollision : MonoBehaviour {
                 }
                 break;
         }
+
+        Destroy(col.gameObject, 5f);
     }
 }
