@@ -8,6 +8,7 @@ public class CleanerController : MonoBehaviour
 
     private Rigidbody2D rb;
     public float force = 1;
+    public float handVel = 3;
     public KeyCode up, down, left, right, clean;
     private int playerNumber;
     private Destructible2D.D2dRepeatStamp stamp;
@@ -15,6 +16,7 @@ public class CleanerController : MonoBehaviour
 
     void Awake()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         stamp = GetComponent<Destructible2D.D2dRepeatStamp>();
 
@@ -32,6 +34,11 @@ public class CleanerController : MonoBehaviour
                 playerNumber = 2;
                 break;
         }
+    }
+
+    void Start()
+    {
+        AkSoundEngine.PostEvent("cleaningSqueak", gameObject);
     }
 
     void FixedUpdate()  {
@@ -53,14 +60,17 @@ public class CleanerController : MonoBehaviour
         }
         if (Input.GetKey(clean) || InputManager.Devices[playerNumber].Action1)
         {
+            handVel = rb.velocity.magnitude;
             stamp.enabled = true;
             soap.GetComponent<ParticleSystem>().enableEmission = true;
         }
         else
         {
+            handVel = 0;
             stamp.enabled = false;
             soap.GetComponent<ParticleSystem>().enableEmission = false;
         }
-        
+
+        AkSoundEngine.SetRTPCValue("cleanerSwipe", handVel);
     }
 }

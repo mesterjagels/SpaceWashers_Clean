@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BOOST = 2389703494U;
+        static const AkUniqueID CLEANINGSQUEAK = 50661466U;
         static const AkUniqueID DIRT_CLEANED = 3164020227U;
         static const AkUniqueID HULL_IMPACT = 3071260525U;
         static const AkUniqueID THRUSTERS = 1944582317U;
@@ -51,6 +52,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID CLEANERSWIPE = 819984649U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;

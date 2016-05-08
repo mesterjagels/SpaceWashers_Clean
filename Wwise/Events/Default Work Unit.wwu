@@ -83,6 +83,29 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="cleaningSqueak" ID="{9755680B-678F-4A23-8356-EFEF435A134B}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{1B1FE2D9-3248-4258-B97B-262155DBAA74}" ShortID="297981359" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{6E7C4B24-D437-464A-8B0E-4567BF8A380C}" Global="false">
+									<ObjectRef Name="squeakyLoop" ID="{56086292-9CE4-4AD4-8063-0E4F6535E830}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{3ECC7A3F-D736-4A42-BA6F-DAA5B10235D1}" ShortID="918613226" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{87D39B1D-A835-498A-9779-BF5F57B919CB}" Global="false">
+									<ObjectRef Name="squeakyLoop" ID="{56086292-9CE4-4AD4-8063-0E4F6535E830}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="muteAll" ID="{171485D2-E61C-49ED-81E2-44B764820076}">
+					<ChildrenList>
+						<Action Name="Stop All" ID="{266811A1-E7DA-4471-AF89-B4C46A9967E2}" ShortID="339522209" Type="Stop" Scope="All" Global="true"/>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

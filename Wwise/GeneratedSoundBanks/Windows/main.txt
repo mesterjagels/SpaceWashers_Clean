@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	50661466	cleaningSqueak			\Default Work Unit\cleaningSqueak	
 	1944582317	thrusters			\Default Work Unit\thrusters	
 	2389703494	boost			\Default Work Unit\boost	
 	3071260525	hull_impact			\Default Work Unit\hull_impact	
@@ -24,6 +25,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	805906735	vertical_speed			\Default Work Unit\vertical_speed	
+	819984649	cleanerSwipe			\Default Work Unit\cleanerSwipe	
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	70998913	Modulator Envelope (Custom)				
@@ -45,6 +47,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	267089118	washing_2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_2_88175B61.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_up\washing_2		63260
 	343534256	washing_1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_1_6D689A9F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_up\washing_1		26888
 	374476862	washing_4	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_4_495DEE4E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_up\washing_4		45420
+	409440082	squeakyLoop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\squeakLoop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\squeakyLoop		2050716
 	423809210	boost_loop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\boost_loop_12F9BD65.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\boost\Ignition\boost_loop		474140
 	461218233	pizza_1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\pizza_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\pizzaslice\pizza_1		241576
 	509321733	hull_3	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_3		201272

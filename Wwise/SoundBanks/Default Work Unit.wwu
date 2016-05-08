@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="main" ID="{F868D9DF-E9C0-4962-9FE3-31CA2EB239BD}">
 					<ObjectInclusionList>
+						<ObjectRef Name="cleaningSqueak" ID="{9755680B-678F-4A23-8356-EFEF435A134B}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="thrusters" ID="{4D5E242C-22ED-43C9-B0C1-6F9538D9B30D}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="dirt_cleaned" ID="{24A47D4C-C235-4C78-9BD1-016B4DDDE331}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="boost" ID="{F4926B4D-2C5F-4F1A-9CE5-DA1270ADC652}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>

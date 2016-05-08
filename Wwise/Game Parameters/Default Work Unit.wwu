@@ -9,6 +9,12 @@
 						<Property Name="Max" Type="Real64" Value="50"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="cleanerSwipe" ID="{C489E24F-B5E1-4077-885F-B104C703F76E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="3"/>
+						<Property Name="Max" Type="Real64" Value="3"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

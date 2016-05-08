@@ -20,6 +20,7 @@
 			<Path>main.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2389703494" Name="boost"/>
+				<Event Id="50661466" Name="cleaningSqueak"/>
 				<Event Id="3164020227" Name="dirt_cleaned"/>
 				<Event Id="3071260525" Name="hull_impact"/>
 				<Event Id="1944582317" Name="thrusters"/>
@@ -56,6 +57,10 @@
 				<File Id="374476862" Language="SFX">
 					<ShortName>washing_4.wav</ShortName>
 					<Path>SFX\washing_4_495DEE4E.wem</Path>
+				</File>
+				<File Id="409440082" Language="SFX">
+					<ShortName>squeakLoop.wav</ShortName>
+					<Path>SFX\squeakLoop_4B8CC0C5.wem</Path>
 				</File>
 				<File Id="423809210" Language="SFX">
 					<ShortName>boost_loop.wav</ShortName>

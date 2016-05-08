@@ -412,7 +412,7 @@
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>7</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -424,7 +424,7 @@
 									<Custom>
 										<Effect Name="Wwise Parametric EQ (Custom)" ID="{0FFFF459-C0E5-491F-9E7F-AABDC918A624}" ShortID="60230516" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 											<PropertyList>
-												<Property Name="GainBand1" Type="Real32" Value="3.5"/>
+												<Property Name="GainBand1" Type="Real32" Value="24"/>
 											</PropertyList>
 										</Effect>
 									</Custom>
@@ -1035,6 +1035,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="cleaning_sounds" ID="{F967DC97-35DD-46D4-8044-0C40BD9EA8C6}" ShortID="127419045">
 							<PropertyList>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
@@ -1228,6 +1229,100 @@
 								<ItemRef Name="clean_down" ID="{7E4159FD-AFE7-4152-9AF8-B5BE0E9589A0}"/>
 							</Playlist>
 						</RandomSequenceContainer>
+						<Sound Name="squeakyLoop" ID="{56086292-9CE4-4AD4-8063-0E4F6535E830}" ShortID="497085953" Type="SoundFX">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{36CB53B4-B682-45A1-9EEE-9C13B4FF4EC8}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+									<RTPCList>
+										<RTPC Name="" ID="{D3D00448-4407-44E4-918C-FFC7B61E1675}" ShortID="513478131">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="cleanerSwipe" ID="{C489E24F-B5E1-4077-885F-B104C703F76E}" WorkUnitID="{EE17B648-868B-4D52-8C53-F5087A1AACD9}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{0A00069A-86E7-48C6-A145-EDB774959DB9}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>3</XPos>
+														<YPos>1575</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{7C89F973-3854-410B-9EFE-C4B998BE4127}" ShortID="404201939">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="cleanerSwipe" ID="{C489E24F-B5E1-4077-885F-B104C703F76E}" WorkUnitID="{EE17B648-868B-4D52-8C53-F5087A1AACD9}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{C09D9BED-0F72-4D9C-B895-5066E945F8A2}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>0.61042</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>3</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="squeakLoop" ID="{428A7FA2-18BE-404E-AD18-92D9EBC4BA57}" ShortID="409440082">
+									<Language>SFX</Language>
+									<AudioFile>squeakLoop.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="squeakLoop" ID="{428A7FA2-18BE-404E-AD18-92D9EBC4BA57}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
