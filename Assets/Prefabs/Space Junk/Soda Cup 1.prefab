@@ -9,8 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400628}
   - 212: {fileID: 21277548}
-  - 50: {fileID: 5013510}
-  - 60: {fileID: 6037806}
   m_Layer: 0
   m_Name: Soda - Cup 1
   m_TagString: Untagged
@@ -26,7 +24,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 433580}
-  - 61: {fileID: 6123394}
+  - 50: {fileID: 5038164}
+  - 114: {fileID: 11436298}
+  - 60: {fileID: 6035858}
   m_Layer: 0
   m_Name: Soda Cup 1
   m_TagString: Untagged
@@ -43,8 +43,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 483666}
   - 212: {fileID: 21204160}
-  - 50: {fileID: 5013716}
-  - 60: {fileID: 6035958}
   m_Layer: 0
   m_Name: 'Soda - Straw '
   m_TagString: Untagged
@@ -71,8 +69,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.71618456, y: -0.1490233, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.133, y: 0.77805495, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400628}
   - {fileID: 483666}
@@ -90,13 +88,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 433580}
   m_RootOrder: 1
---- !u!50 &5013510
+--- !u!50 &5038164
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118884}
+  m_GameObject: {fileID: 136854}
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -107,67 +105,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!50 &5013716
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 171252}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!60 &6035958
+--- !u!60 &6035858
 PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 171252}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: -0.04049563, y: 0.051446162}
-      - {x: -0.05, y: -0.06}
-      - {x: -0.007029052, y: -0.050157644}
-      - {x: 0.020454817, y: -0.040040866}
-      - {x: 0.041446056, y: -0.03004084}
-      - {x: 0.05, y: 0.06}
---- !u!60 &6037806
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118884}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: -0.02, y: 0.085}
-      - {x: -0.09, y: 0.015}
-      - {x: -0.09, y: -0.065}
-      - {x: -0.07, y: -0.085}
-      - {x: 0.01, y: -0.085}
-      - {x: 0.09, y: -0.005}
-      - {x: 0.09, y: 0.065}
-      - {x: 0.07, y: 0.085}
---- !u!61 &6123394
-BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -175,11 +114,28 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Points:
+    m_Paths:
+    - - {x: -0.16827297, y: 0.05045992}
+      - {x: -0.14271712, y: 0.024555564}
+      - {x: -0.20149517, y: -0.03976953}
+      - {x: -0.27127218, y: -0.06781483}
+      - {x: -0.23389316, y: 0.004523337}
+--- !u!114 &11436298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b84c914140d7564ea8aa8a7f707abb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedmultiplier: 0.3
 --- !u!212 &21204160
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -236,7 +192,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9b9f4e09d15b8c543af5865a743bb510, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1ed4d0fe22f47b468a5f722ca0135a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
