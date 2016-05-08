@@ -1508,7 +1508,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 454fab3cab3d7c24089fe37fce8d9e4c, type: 2}
+  - {fileID: 2100000, guid: ba05d881ae8fee54bacd3989d4f15cec, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1522,7 +1522,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 827126687
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0

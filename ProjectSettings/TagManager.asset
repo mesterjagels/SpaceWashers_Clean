@@ -29,7 +29,7 @@ TagManager:
   - CleaningHand
   - Planet
   - Minimap
-  - 
+  - PlayerColliders
   - 
   - 
   - 
@@ -47,9 +47,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Dirt
+    uniqueID: 2079654751
+    locked: 0
   - name: Particles
     uniqueID: 827126687
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Players
+    uniqueID: 3968502245
     locked: 0

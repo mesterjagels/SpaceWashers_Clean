@@ -55,13 +55,11 @@ public class CleanerController : MonoBehaviour
         {
             stamp.enabled = true;
             soap.GetComponent<ParticleSystem>().enableEmission = true;
-         //   soap.SetActive(true);
         }
         else
         {
             stamp.enabled = false;
             soap.GetComponent<ParticleSystem>().enableEmission = false;
-           // soap.SetActive(false);
         }
         
     }
