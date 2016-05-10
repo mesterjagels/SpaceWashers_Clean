@@ -8,9 +8,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 442530}
-  - 212: {fileID: 21243104}
-  - 60: {fileID: 6054980}
   - 114: {fileID: 11403040}
+  - 114: {fileID: 11470708}
+  - 33: {fileID: 3320030}
+  - 23: {fileID: 2353214}
+  - 114: {fileID: 11454900}
   m_Layer: 8
   m_Name: pizza_splat2
   m_TagString: Untagged
@@ -25,75 +27,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.2104497, y: -2.0934508, z: 0}
+  m_LocalPosition: {x: 4.395269, y: 4.2102685, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!60 &6054980
-PolygonCollider2D:
+--- !u!23 &2353214
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129026}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: 0.024999999, y: -0.65}
-      - {x: -0.005, y: -0.65999997}
-      - {x: 0.005, y: -0.65999997}
-      - {x: 0.024999999, y: -0.64}
-      - {x: 0.065, y: -0.64}
-      - {x: 0.125, y: -0.59}
-      - {x: 0.175, y: -0.41}
-      - {x: 0.175, y: 0}
-      - {x: 0.024999999, y: 0}
-      - {x: -0.13499999, y: -0.07}
-      - {x: -0.155, y: -0.19999999}
-      - {x: -0.155, y: -0.74}
-      - {x: -0.125, y: -0.76}
-      - {x: -0.095, y: -0.78999996}
-      - {x: -0.035, y: -0.78999996}
-      - {x: -0.005, y: -0.78}
-      - {x: 0.055, y: -0.7}
-      - {x: 0.055, y: -0.65999997}
-    - - {x: -0.105, y: -0.35}
-      - {x: -0.114999995, y: -0.35999998}
-      - {x: -0.105, y: -0.39}
-      - {x: -0.095, y: -0.38}
---- !u!114 &11403040
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d524e10064e3fb043a9ca8b1541729f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thresholdAlpha: 50
-  alphaPct: 0
---- !u!212 &21243104
-SpriteRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129026}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4f935b17ca3c4d84fbcb73997407334c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
@@ -105,10 +58,115 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2079654751
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31f134e7ebc44964db5057969d28ffc0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
+--- !u!33 &3320030
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129026}
+  m_Mesh: {fileID: 0}
+--- !u!114 &11403040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d524e10064e3fb043a9ca8b1541729f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thresholdAlpha: 30
+  alphaPct: 0
+--- !u!114 &11454900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee68f30327e7b8c49b456ba022e81845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11470708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee430af1422046f4c8f35812bff0e6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAlphaDataReplaced:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnAlphaDataModified:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dD2dRectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnAlphaDataSubset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dD2dVector2D2dVector2Event, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDamageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dFloatFloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnStartSplit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnEndSplit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dDestructibleListEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnStartSplitting: 0
+  MainTex: {fileID: 2800000, guid: 31f134e7ebc44964db5057969d28ffc0, type: 3}
+  DensityTex: {fileID: 0}
+  Indestructible: 0
+  RecordAlphaCount: 1
+  AutoSharpen: 1
+  Splittable: 0
+  MinSplitPixels: 5
+  FeatherSplit: 1
+  Sharpness: 1
+  color: {r: 1, g: 1, b: 1, a: 1}
+  textureRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  originalRect:
+    serializedVersion: 2
+    x: -0.175
+    y: -0.78999996
+    width: 0.35
+    height: 0.78999996
+  damage: 0
+  alphaRect:
+    serializedVersion: 2
+    x: -0.175
+    y: -0.78999996
+    width: 0.35
+    height: 0.78999996
+  alphaWidth: 35
+  alphaHeight: 79
+  alphaCount: 1230
+  originalAlphaCount: 1230
+  alphaData: 0000000000000001113212010000000000000000000000000000000000000000000000000000000000001fc3ff9712000001000000000000000000000000000000000000000000000000000017a6ffffd5030002831d0000000000000000000000000000000000000000000000000f3dfffffff7000000ffd3070000000000000000000000000000000000000000000000001ef7edb498000007c3f16c05000000000000000000000000000000000000000000050d2be9951d0e0000000763f54901000000000000000000000000000000000000000010208cff3f0000010b230730f5d526000000000000000000000000000000000000000117238bff64220122d38b1e91ffffaf17000000000000000000000000000000000000021a40aaffffff4545ff4c0589f9ffff89050000000000000000000000000000000000021b5bc8ed9ea6e2b24400011850a5fff37000000000000000000000000000000000000321385e77087ffff7150000000189ffffed3300000000000000000000000000000000072633744d0035568e0500000023829158ce4901000000000000000000000000000000102a89ffff000c1c0b0000000027233407242e010000000000000000000000000000001639d5ffed1eceaa882b15120e2c262024200200000000000000000000000000000000034de9ffffffffffffdcd9c7b07c6d624e1e02000000000000000000000000000000000030e6ffffffffffffffffffffffff80092919000000000000000000000000000000000024fdffffffffffffffffffffffff9126511a000100000000000000000000000000071e66fffffffffffffffffffffffffff5cfdee4dc4700000000000000000000000003233e3d63c3fffffffffffffffffffffffffffffff9920f020000000000000000000010302e2a2392ffffffffffffffffffffffffffffffffe8ba1a000000000000000000000d2c2d2d1ec8ffffffffffffffffffffffffffffffffffff823f02000000000000000001292d2d23d3ffffffffffffffffedf5ffffffffffffffffffff1500000000000000000b2c2f1a24c5ffffffffffffffaa55adffffffffffffffffffff5701000000000000001b2a3d80b0e2ffffffffffffffe25991ffffffffffffffffbc737c0c00000000000001182343c7fdffffffffffffffffffffffffffffebd9ffffff7806f94f000000000000021f2747e8ffffffffffffffffffffffffffffffb908ffffff9e013c1300000000000002253354fbffffffffffffffffffffffffffc86f6301ffeffd9d000022040000000000042f2b4dcafffffffffffffffffffffffffdb742390e0042f9bc387fe41e0000000000072b0521e4ffffffffffffffffffffffffffffc7beccc3aff3ffffa36f1700000000000d04001536c7ffffffffffffffffffffffffffffffffffffffffff2c020000000000000b010d386dedfffffffffffffffffffffffffffffffffffdfdffff27000000000000000012374eccfffffffffffffffffffffffffffffbf9ffe6bccfffe0160000000000000009302f4fd5fffffffffffffffffffffffffffbe6e2f7f98850efd95e230a00000000000b2a2650f1fffffffffffffffffffffffffff9e6e2fbbc1423cfffffd3a6050000000006362d50fffffffffffffffffffffffffffffffbf9fff3ad94fffffffff70c000000000782647effffffffe2a59aceffffffffffffffffffffffffffffffffffe81f000000000a856fafffffffff6b000235e8ffffffffffffffffffffffffffffffffe42c0000000004320c80599effef33040634e4fffffff7ffffffffffffffffffffffffe92a000000000001000d0030a86d0156b2e4ffff4513a2ffffffffffffffffffffffffe62600000000000000120c000d1b2cadf9a8799db2216cffffffffffffffffffffffffe92d000000000000017ba30d000e437f82260655fbf5fffffffffffffffffffffffffbcc35000000000001158eef19001d2708687564c8fffff1beb7f1ffffffffffffffffef5415010000000001269ef90600232a3cc7fffffffffb8b5d10e0fff757e2fffffffff7622204000000000003321400002f2dffffffffffff7725ff00dcfffb00e0f9fdffffffdc04090000000000000b3a26001e47fdffffffda4a17227e00c5ffffa2ce88dcffffffffba0800000000000134ffd5382cded3baf3ffef9786550521ceffffffb53e98e6c5ccffff5f02000000000254deffe2ebff384bd7fffff7f7fffffff9ffffffcc9aa8c1aab7c5fb820400000000001198fffffffff3c8e6ffffffffffffffffcfd7cc8bffffffffedb22002100000000000005bffffffffffffffffffffffffffffff850b4df5fffdfbeff1ebb7ba2a0000000000004cffa67be6f1fbffffffffffffffffffc06cccfdf1f1ebe4ebfdfff15000000000000051681707469deffffffffffffffffffffffffffff1e9ebf7fdfbfffd9e04000000000000192167c7dcf3fffffffffffffffffffffffffff9ffffffffffffffff13000000000000009bd3efe6fdffffffffffffffffffffffffffffffffffffffffffff210000000000000000f3ebe8fbfffffffffffffffffffffffffffffffffffffffffff333000000000000000000fffffffffffffffffffffffffffffffffffffffffffffffffb5701000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffff8b0100000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffab000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffc10900000000000000000000000000ffffffffffffffffffffffffffffffffffffffffc81e00000000000000000000000000ffffffffffffffffffffffffffa09bfdffffffffd31700000000000000000000000000000077e2ffffffffffffffffff080064c3f3ffffd91300000000000000000000000000000000c8ffffffffffffffffff360d343d31415fb51a00000000000000000000000000000000fbffffffffffffffffffffffce56231b030d090000000000000000000000000000000000ffffffffffffffffffffffffe2bcc7730300000000000000000000000000000000000000ffffffffffd385ffffffffffffffab020300000000000000000000000000000000000000ffffffffe8a6f1ffffffffffffeb631a0000000000000000000000000000000000000000fffffffdf7ffffffffffffffffff29000000000000000000000000000000000000000000ffffffffffffffffffffffffe62a00000000000000000000000000000000000000000000ffffffffffffffffffffffe4280000000000000000000000000000000000000000000000ffffffffffffffffffffff26000000000000000000000000000000000000000000000000fffff9c7b5ffffffffff2e0000000000000000000000000000000000000000000000000000d91e2cffffffffda240000000000000000000000000000000000000000000000000000c32e54fffffffda811000000000000000000000000000000000000000000000000000000fff1fffffffba00600000000000000000000000000000000000000000000000000000000ffffffffff7c03000000000000000000000000000000000000000000000000000000000000fffffb3400000000000000000000000000000000000000000000000000000000000000ffffc8320400000000000000000000000000000000000000000000000000000000000000ff9e3e1a00000000000000000000000000000000000000000000000000000000000000009a311c
+  alphaScale: {x: 1, y: 1}
+  alphaOffset: {x: 0, y: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

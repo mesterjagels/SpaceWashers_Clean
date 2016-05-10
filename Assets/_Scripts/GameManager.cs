@@ -15,10 +15,10 @@ public class GameManager : MonoBehaviour
     private string[] disconnector;
     private int[] highscoreListAsArrayOfInts;
 
-    public static int playerCount = 3;
+    public int playerCount = 3;
    // private int activePlayer = 0;
-    public static int[] cleanerScore;
-    public static int captainScore;
+    public int[] cleanerScore;
+    public int captainScore;
     private int[] cleanerPoints;
     private int captainPoints;
     private int[] cleanerMultiplier;
