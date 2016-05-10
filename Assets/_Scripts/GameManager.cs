@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private string[] disconnector;
     private int[] highscoreListAsArrayOfInts;
 
-    public int playerCount = 3;
+    public int playerCount;
     public int[] cleanerScore;
     public int captainScore;
     public int[] cleanerPoints;
@@ -34,25 +34,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        highscoreListAsArrayOfInts = new int[10];
-        highscoreListAsArrayOfStrings = new string[10];
-        highscore = new Text[10];
-        disconnector = new string[10];
-
-        cleanerScore = new int[playerCount];
-
-        for(int i = 0; i < playerCount; i++)
-        {
-            cleanerScore[i] = 0;
-        }
-
-        captainScore = 0;
-        cleanerPoints = new int[playerCount];
-        captainPoints = 1000;
-        cleanerMultiplier = new int[playerCount];
-        captainMultiplier = 1;
-        cleanerTimeCheck = new float[playerCount];
-        captainTimeCheck = Time.time;
+        
 
         //Check if instance already exists.
         if (instance == null)
@@ -71,7 +53,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         //Call the InitGame function to initialize the game.
-        InitGame();
     }
 
     void Update()
@@ -110,7 +91,7 @@ public class GameManager : MonoBehaviour
             totalScore = scoreBuffer + captainScore;
 
             scoreBuffer = 0;                      
-
+            /*
             //Testing
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -123,13 +104,33 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                EndGame();
-            }
+            } */
         }
     }
 
     //Initializes the game.
     void InitGame()
     {
+        highscoreListAsArrayOfInts = new int[10];
+        highscoreListAsArrayOfStrings = new string[10];
+        highscore = new Text[10];
+        disconnector = new string[10];
+
+        cleanerScore = new int[playerCount];
+
+        for (int i = 0; i < playerCount; i++)
+        {
+            cleanerScore[i] = 0;
+        }
+
+        captainScore = 0;
+        cleanerPoints = new int[playerCount];
+        captainPoints = 1000;
+        cleanerMultiplier = new int[playerCount];
+        captainMultiplier = 1;
+        cleanerTimeCheck = new float[playerCount];
+        captainTimeCheck = Time.time;
+
         gameActive = true;
     }
 
@@ -262,6 +263,10 @@ public class GameManager : MonoBehaviour
 
         if(Application.loadedLevelName == "Jasper")
         {
+            if (!gameActive)
+            {
+                InitGame();
+            }
             if (!player1Active) { 
                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
             }
@@ -316,6 +321,11 @@ public class GameManager : MonoBehaviour
             else
             {
                 GameObject.FindGameObjectWithTag("Player3").SetActive(true);
+            }
+
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                Application.LoadLevel(0);
             }
         }
 

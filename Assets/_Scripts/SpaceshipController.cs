@@ -75,9 +75,10 @@ public class SpaceshipController : MonoBehaviour
         Controls();
 
         //Temp endlevel shit
-        if(scoreboard.GetComponent<ScoreAlpha>().distanceMath <= 0 && !levelEnded)
+        if(scoreboard.GetComponent<ScoreAlpha>().distanceMath <= 1 && !levelEnded)
         {
             levelEnded = true;
+            GameObject.Find("Earth").GetComponent<WorldMovement>().speedmultiplier = 0.2f;
             gameObject.transform.DOScale(0, 5);
         }
     }

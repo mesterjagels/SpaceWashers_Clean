@@ -43,12 +43,15 @@ public class TitleScreen : MonoBehaviour {
             p1txt.text = "Player 1 joined";
             player1joined = true;
             playerCountInTitle++;
+            Debug.Log(playerCountInTitle);
         }
         if (InputManager.Devices[1].Action1 | InputManager.Devices[1].Action2 | InputManager.Devices[1].Action3 | InputManager.Devices[1].Action4 && !player2joined)
         {
             p2txt.text = "Player 2 joined";
             player2joined = true;
             playerCountInTitle++;
+            Debug.Log(playerCountInTitle);
+
 
         }
         if (InputManager.Devices[2].Action1 | InputManager.Devices[1].Action2 | InputManager.Devices[2].Action3 | InputManager.Devices[2].Action4 && !player3joined)
@@ -56,9 +59,11 @@ public class TitleScreen : MonoBehaviour {
             p3txt.text = "Player 3 joined";
             player3joined = true;
             playerCountInTitle++;
+            Debug.Log(playerCountInTitle);
+
         }
 
-        
+
     }
 
     void ConfigurePins()
