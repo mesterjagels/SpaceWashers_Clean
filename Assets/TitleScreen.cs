@@ -46,6 +46,9 @@ public class TitleScreen : MonoBehaviour {
         {
             p1txt.text = "Player 1 joined";
             player1joined = true;
+            p1.transform.localScale = new Vector3(0, 0, 0);
+            p1.transform.DOScale(2, 2);
+            p1.transform.DORotate(new Vector3(0, 0, 540), 2, RotateMode.FastBeyond360);
             p1.SetActive(true);
             playerCountInTitle++;
         }
@@ -54,12 +57,18 @@ public class TitleScreen : MonoBehaviour {
             p2txt.text = "Player 2 joined";
             player2joined = true;
             p2.SetActive(true);
+            p2.transform.localScale = new Vector3(0, 0, 0);
+            p2.transform.DOScale(2, 2);
+            p2.transform.DORotate(new Vector3(0, 0, 540), 2, RotateMode.FastBeyond360);
             playerCountInTitle++;
         }
         if (InputManager.Devices[2].Action1 | InputManager.Devices[1].Action2 | InputManager.Devices[2].Action3 | InputManager.Devices[2].Action4 && !player3joined)
         {
             p3txt.text = "Player 3 joined";
             player3joined = true;
+            p3.transform.localScale = new Vector3(0, 0, 0);
+            p3.transform.DOScale(2, 2);
+            p3.transform.DORotate(new Vector3(0, 0, 540), 2, RotateMode.FastBeyond360);
             p3.SetActive(true);
             playerCountInTitle++;
         }
