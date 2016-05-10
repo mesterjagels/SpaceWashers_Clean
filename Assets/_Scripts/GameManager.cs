@@ -296,6 +296,11 @@ public class GameManager : MonoBehaviour
 
         if (Application.loadedLevelName == "Teamscore")
         {
+            i   f (Input.GetKey(KeyCode.LeftArrow))
+            {
+                Application.LoadLevel(0);
+            }
+
             if (!player1Active)
             {
                 GameObject.FindGameObjectWithTag("Player1").SetActive(false);
@@ -321,11 +326,6 @@ public class GameManager : MonoBehaviour
             else
             {
                 GameObject.FindGameObjectWithTag("Player3").SetActive(true);
-            }
-
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                Application.LoadLevel(0);
             }
         }
 

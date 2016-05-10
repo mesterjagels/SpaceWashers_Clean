@@ -210,7 +210,6 @@ GameObject:
   - 212: {fileID: 21248194}
   - 50: {fileID: 5023676}
   - 60: {fileID: 6020040}
-  - 114: {fileID: 11487006}
   m_Layer: 11
   m_Name: Gangsta Body
   m_TagString: Untagged
@@ -687,24 +686,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 2
+  handVel: 3
   up: 105
   down: 107
   left: 106
   right: 108
   clean: 110
   soap: {fileID: 161120}
---- !u!114 &11487006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 195308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c30029e2d0a5964291aba8ac10744de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amount: 0.2
 --- !u!198 &19820472
 ParticleSystem:
   m_ObjectHideFlags: 1
