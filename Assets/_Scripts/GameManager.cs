@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     public int totalScore;
     private int scoreBuffer = 0;
 
+    [HideInInspector]
+    public bool player1Active = false, player2Active = false, player3Active = false;
     public bool gameActive;
 
     void Start()
@@ -74,6 +76,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        GetPlayers();
         if (gameActive == true)
         { 
             //Update the totalScore.
@@ -249,13 +252,72 @@ public class GameManager : MonoBehaviour
     //Check player count
     void GetPlayers()
     {
-        if (Application.loadedLevelName == "Title")
+        if (Application.loadedLevelName == "TitleScreen")
         {
-           playerCount = FindObjectOfType<TitleScreen>().playerCountInTitle;
+             playerCount = FindObjectOfType<TitleScreen>().playerCountInTitle;
+             player1Active = FindObjectOfType<TitleScreen>().player1joined;
+             player2Active = FindObjectOfType<TitleScreen>().player2joined;
+             player3Active = FindObjectOfType<TitleScreen>().player3joined;
         }
+
         if(Application.loadedLevelName == "Jasper")
         {
+            if (!player1Active) { 
+               GameObject.FindGameObjectWithTag("Player1").SetActive(false);
+            }
+            else
+            {
+               GameObject.FindGameObjectWithTag("Player1").SetActive(true);
+            }
 
+            if (!player2Active)
+            {
+               GameObject.FindGameObjectWithTag("Player2").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
+            }
+
+            if (!player3Active)
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
+            }
         }
+
+        if (Application.loadedLevelName == "Teamscore")
+        {
+            if (!player1Active)
+            {
+                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player1").SetActive(true);
+            }
+
+            if (!player2Active)
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
+            }
+
+            if (!player3Active)
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
+            }
+        }
+
     }
 }
