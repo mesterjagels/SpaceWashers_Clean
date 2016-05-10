@@ -48,7 +48,7 @@ public class DirtController : MonoBehaviour {
 
         float shortestDistance = Mathf.Min(distance);
 
-       if (shortestDistance == distance[0])
+        if (shortestDistance == distance[0])
         {
             //Debug.Log("Player1 should get points because it have the shortest distance of: " + distance[0]);
             cleaningPlayer = 0;

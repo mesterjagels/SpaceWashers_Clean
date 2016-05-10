@@ -32,15 +32,7 @@ public class SpaceshipController : MonoBehaviour
                 pinLeft = 4,
                 pinRight = 5,
                 pinBtn1 = 6,
-                pinBtn2 = 7,
-                pinBtn1Light = 8,
-                pinBtn2Light = 9,
-                pinLeftLast = 0,
-                pinRightLast = 0,
-                pinUpLast = 0,
-                pinDownLast = 0,
-                pinBtn1Last = 0,
-                pinBtn2Last = 0;
+                pinBtn2 = 7;
 
     //Varibles to tweak for spaceship speed
     [Header("Spaceship speed settings")]
@@ -72,9 +64,9 @@ public class SpaceshipController : MonoBehaviour
         throttleSpeeds[2] = throttle3;
         throttleSpeeds[3] = throttle4;
         throttleSpeeds[4] = throttle5;
+
         arduino = Arduino.global;
         arduino.Setup(ConfigurePins);
-
     }
 
     void Update()
@@ -102,7 +94,6 @@ public class SpaceshipController : MonoBehaviour
                 //Go left
                 Debug.Log("Left Mouse clicked");
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed * -1, horizontalTurnAcc * Time.deltaTime);
-                pinLeftLast = 1;        
                 gameObject.transform.DORotate(new Vector3(0, 0, 30), 2);
                 if (!rightWind.active)
                 {
@@ -114,7 +105,6 @@ public class SpaceshipController : MonoBehaviour
             {
                 //Go right
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed, horizontalTurnAcc * Time.deltaTime);
-                pinRightLast = 1;
                 gameObject.transform.DORotate(new Vector3(0, 0, -30), 2);
 
                 if (!leftWind.active)
@@ -190,8 +180,6 @@ public class SpaceshipController : MonoBehaviour
         arduino.pinMode(pinRight, PinMode.INPUT);
         arduino.pinMode(pinBtn1, PinMode.INPUT);
         arduino.pinMode(pinBtn2, PinMode.INPUT);
-        arduino.pinMode(pinBtn1Light, PinMode.OUTPUT);
-        arduino.pinMode(pinBtn2Light, PinMode.OUTPUT);
 
         //Only need to activate once for one pin, becuase all pins are on the same Port
         arduino.reportDigital((byte)(pinUp / 8), 1);

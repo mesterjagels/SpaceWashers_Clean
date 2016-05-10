@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.IO;
 using System;
+using InControl;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     private string[] disconnector;
     private int[] highscoreListAsArrayOfInts;
 
-    public int playerCount = 3;
+    public int playerCount = 1;
    // private int activePlayer = 0;
     public int[] cleanerScore;
     public int captainScore;
@@ -116,7 +117,7 @@ public class GameManager : MonoBehaviour
     {
         gameActive = false;
         UpdateHighscore();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Highscore");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Teamscore");
     }
 
     //Add points to the PlayerScore of the player that cleaned dirt.
@@ -218,4 +219,17 @@ public class GameManager : MonoBehaviour
         //Rewrite the textfile.
         File.WriteAllText(Application.dataPath+ @"\Persistent Data\Highscore.txt", highscoreListAsOneString);
     } 
+
+    //Check player count
+    void GetPlayers()
+    {
+        if (Application.loadedLevelName == "Title")
+        {
+           playerCount = FindObjectOfType<TitleScreen>().playerCountInTitle;
+        }
+        if(Application.loadedLevelName == "Jasper")
+        {
+
+        }
+    }
 }
