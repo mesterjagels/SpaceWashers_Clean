@@ -17,16 +17,23 @@ public class GameManager : MonoBehaviour
     private int[] highscoreListAsArrayOfInts;
 
     public int playerCount;
-    public int[] cleanerScore;
-    public int captainScore;
-    public int[] cleanerPoints;
-    public int captainPoints;
-    private int[] cleanerMultiplier;
-    public int captainMultiplier;
-    private float[] cleanerTimeCheck;
+    public int cleanerScore0 = 0;
+    public int cleanerScore1 = 0;
+    public int cleanerScore2 = 0;
+    public int captainScore = 0;
+    public int cleanerPoints0 = 0;
+    public int cleanerPoints1 = 0;
+    public int cleanerPoints2 = 0;
+    public int captainPoints = 1000;
+    private int cleanerMultiplier0 = 1;
+    private int cleanerMultiplier1 = 1;
+    private int cleanerMultiplier2 = 1;
+    public int captainMultiplier = 1;
+    private float cleanerTimeCheck0;
+    private float cleanerTimeCheck1;
+    private float cleanerTimeCheck2;
     private float captainTimeCheck;
-    public int totalScore;
-    private int scoreBuffer = 0;
+    public int totalScore = 0;
 
     [HideInInspector]
     public bool player1Active = false, player2Active = false, player3Active = false;
@@ -34,7 +41,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        highscoreListAsArrayOfInts = new int[10];
+        highscoreListAsArrayOfStrings = new string[10];
+        highscore = new Text[10];
+        disconnector = new string[10];
 
         //Check if instance already exists.
         if (instance == null)
@@ -58,14 +68,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         GetPlayers();
+
         if (gameActive == true)
         { 
-            //Update the totalScore.
-            for (int i = 0; i < playerCount; i++)
-            {
-                scoreBuffer = scoreBuffer + cleanerScore[i];
-            }
-        
             //Add captain score
             if (captainTimeCheck < Time.time-10)
             {
@@ -74,9 +79,10 @@ public class GameManager : MonoBehaviour
                     if (captainMultiplier < 6)
                     {
                         captainMultiplier = captainMultiplier + 1;
-                        AddCaptainScore();
-                        captainPoints = 1000;
                     }
+
+                    AddCaptainScore();
+                    captainPoints = 1000;
                 }
                 else
                 {
@@ -87,10 +93,7 @@ public class GameManager : MonoBehaviour
 
                 captainTimeCheck = Time.time;
             }
-
-            totalScore = scoreBuffer + captainScore;
-
-            scoreBuffer = 0;                      
+                     
             /*
             //Testing
             if (Input.GetKeyDown(KeyCode.Q))
@@ -106,31 +109,37 @@ public class GameManager : MonoBehaviour
                EndGame();
             } */
         }
+
+        totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            AddCaptainScore();
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            totalScore = totalScore + 100;
+        }
     }
 
     //Initializes the game.
     void InitGame()
     {
-        highscoreListAsArrayOfInts = new int[10];
-        highscoreListAsArrayOfStrings = new string[10];
-        highscore = new Text[10];
-        disconnector = new string[10];
-
-        cleanerScore = new int[playerCount];
-
-        for (int i = 0; i < playerCount; i++)
-        {
-            cleanerScore[i] = 0;
-        }
-
+        cleanerScore0 = 0;
+        cleanerScore1 = 0;
+        cleanerScore2 = 0;
         captainScore = 0;
-        cleanerPoints = new int[playerCount];
+        cleanerPoints0 = 0;
+        cleanerPoints1 = 0;
+        cleanerPoints2 = 0;
         captainPoints = 1000;
-        cleanerMultiplier = new int[playerCount];
+        cleanerMultiplier0 = 1;
+        cleanerMultiplier1 = 1;
+        cleanerMultiplier2 = 1;
         captainMultiplier = 1;
-        cleanerTimeCheck = new float[playerCount];
+        totalScore = 0;
         captainTimeCheck = Time.time;
-
         gameActive = true;
     }
 
@@ -148,23 +157,66 @@ public class GameManager : MonoBehaviour
         if (gameActive == true)
         {
             //Check for multiplier condition and change multiplier accordingly.
-            if (cleanerTimeCheck[cleaningPlayer] > Time.time - 5)
+            if (cleaningPlayer == 0)
             {
-               if (cleanerMultiplier[cleaningPlayer] < 6)
-               {
-                   cleanerMultiplier[cleaningPlayer] = cleanerMultiplier[cleaningPlayer] + 1;
-               }
+                if (cleanerTimeCheck0 > Time.time - 5)
+                {
+                    if (cleanerMultiplier0 < 6)
+                    {
+                        cleanerMultiplier0 = cleanerMultiplier0 + 1;
+                    }
+                }
+                else
+                {
+                    ResetCleanerMultiplier(cleaningPlayer);
+                }
+
+                cleanerPoints0 = 100 * cleanerMultiplier0;
+                cleanerScore0 = cleanerScore0 + cleanerPoints0;
+
+                cleanerPoints0 = 0;
+                cleanerTimeCheck0 = Time.time;
             }
-            else
+            else if (cleaningPlayer == 1)
             {
-                ResetCleanerMultiplier(cleaningPlayer);
+                if (cleanerTimeCheck1 > Time.time - 5)
+                {
+                    if (cleanerMultiplier1 < 6)
+                    {
+                        cleanerMultiplier1 = cleanerMultiplier1 + 1;
+                    }
+                }
+                else
+                {
+                    ResetCleanerMultiplier(cleaningPlayer);
+                }
+
+                cleanerPoints1 = 100 * cleanerMultiplier1;
+                cleanerScore1 = cleanerScore1 + cleanerPoints1;
+
+                cleanerPoints1 = 0;
+                cleanerTimeCheck1 = Time.time;
             }
+            else if (cleaningPlayer == 2)
+            {
+                if (cleanerTimeCheck2 > Time.time - 5)
+                {
+                    if (cleanerMultiplier2 < 6)
+                    {
+                        cleanerMultiplier2 = cleanerMultiplier2 + 1;
+                    }
+                }
+                else
+                {
+                    ResetCleanerMultiplier(cleaningPlayer);
+                }
 
-            cleanerPoints[cleaningPlayer] = 100 * cleanerMultiplier[cleaningPlayer];
-            cleanerScore[cleaningPlayer] = cleanerScore[cleaningPlayer] + cleanerPoints[cleaningPlayer];
+                cleanerPoints2 = 100 * cleanerMultiplier2;
+                cleanerScore2 = cleanerScore2 + cleanerPoints2;
 
-            cleanerPoints[cleaningPlayer] = 0;
-            cleanerTimeCheck[cleaningPlayer] = Time.time;
+                cleanerPoints2 = 0;
+                cleanerTimeCheck2 = Time.time;
+            }
         }
     }
 
@@ -182,7 +234,19 @@ public class GameManager : MonoBehaviour
     //Reset the cleaner multiplier for a specific cleaner.
     public void ResetCleanerMultiplier(int cleaningPlayer)
     {
-        cleanerMultiplier[cleaningPlayer] = 1;
+        if (cleaningPlayer == 0)
+        {
+            cleanerMultiplier0 = 1;
+        }
+        else if (cleaningPlayer == 1)
+        {
+            cleanerMultiplier1 = 1;
+        }
+        else if (cleaningPlayer == 2)
+        {
+            cleanerMultiplier2 = 1;
+        }
+
     }
 
     void ResetCaptainMultiplier()

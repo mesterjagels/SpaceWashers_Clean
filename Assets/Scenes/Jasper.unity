@@ -611,7 +611,7 @@ MonoBehaviour:
   scoreText: {fileID: 193126172}
   distanceLeft: {fileID: 1300024053}
   distanceMath: 0
-  distanceToTravel: 2
+  distanceToTravel: 5
 --- !u!4 &198083735 stripped
 Transform:
   m_PrefabParentObject: {fileID: 406396, guid: 5eef8c0b80e3a4787ad01c2498fa98b0, type: 2}

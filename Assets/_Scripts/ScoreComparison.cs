@@ -21,9 +21,9 @@ public class ScoreComparison : MonoBehaviour {
         //UI Elements
         scoreText0.text = gameManager.totalScore.ToString();
         scoreText1.text = gameManager.captainScore.ToString();
-        scoreText2.text = gameManager.cleanerScore[0].ToString();
-        scoreText3.text = gameManager.cleanerScore[1].ToString();
-        scoreText4.text = gameManager.cleanerScore[2].ToString();
+        scoreText2.text = gameManager.cleanerScore0.ToString();
+        scoreText3.text = gameManager.cleanerScore1.ToString();
+        scoreText4.text = gameManager.cleanerScore2.ToString();
     }
 
     void Update()
