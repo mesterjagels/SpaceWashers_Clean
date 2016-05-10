@@ -9,6 +9,10 @@ public class TitleScreen : MonoBehaviour {
 
     public GameObject player1, player2, player3;
     private Text p1txt, p2txt, p3txt;
+    public GameObject p1, p2, p3;
+
+
+    [HideInInspector]
     public int playerCountInTitle = 0;
     public bool player1joined = false, player2joined = false, player3joined = false;
 
@@ -42,25 +46,22 @@ public class TitleScreen : MonoBehaviour {
         {
             p1txt.text = "Player 1 joined";
             player1joined = true;
+            p1.SetActive(true);
             playerCountInTitle++;
-            Debug.Log(playerCountInTitle);
         }
         if (InputManager.Devices[1].Action1 | InputManager.Devices[1].Action2 | InputManager.Devices[1].Action3 | InputManager.Devices[1].Action4 && !player2joined)
         {
             p2txt.text = "Player 2 joined";
             player2joined = true;
+            p2.SetActive(true);
             playerCountInTitle++;
-            Debug.Log(playerCountInTitle);
-
-
         }
         if (InputManager.Devices[2].Action1 | InputManager.Devices[1].Action2 | InputManager.Devices[2].Action3 | InputManager.Devices[2].Action4 && !player3joined)
         {
             p3txt.text = "Player 3 joined";
             player3joined = true;
+            p3.SetActive(true);
             playerCountInTitle++;
-            Debug.Log(playerCountInTitle);
-
         }
 
 
