@@ -296,7 +296,7 @@ public class GameManager : MonoBehaviour
 
         if (Application.loadedLevelName == "Teamscore")
         {
-            i   f (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
                 Application.LoadLevel(0);
             }
