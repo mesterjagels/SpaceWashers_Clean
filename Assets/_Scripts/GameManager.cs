@@ -16,12 +16,7 @@ public class GameManager : MonoBehaviour
     private string[] disconnector;
     private int[] highscoreListAsArrayOfInts;
 
-<<<<<<< HEAD
-    public int playerCount = 1;
-   // private int activePlayer = 0;
-=======
     public int playerCount = 3;
->>>>>>> Score fixed, multipliers limited.
     public int[] cleanerScore;
     public int captainScore;
     public int[] cleanerPoints;
