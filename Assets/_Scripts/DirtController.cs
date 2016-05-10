@@ -64,6 +64,10 @@ public class DirtController : MonoBehaviour {
             cleaningPlayer = 2;
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> no message
         gameManager.AddCleanerScore(cleaningPlayer);
         Debug.Log("AddCleanerScore(" + cleaningPlayer + ") has been called.");
        // score.score = score.score + 1000;
