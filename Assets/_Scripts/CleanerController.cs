@@ -7,18 +7,20 @@ public class CleanerController : MonoBehaviour
 {
 
     private Rigidbody2D rb;
-    public float force = 1;
+    public float force;
     public float handVel = 3;
     public KeyCode up, down, left, right, clean;
     private int playerNumber;
     private Destructible2D.D2dRepeatStamp stamp;
     public GameObject soap;
+	private Animator scoringAnim;
 
     void Awake()
     {
         
         rb = GetComponent<Rigidbody2D>();
         stamp = GetComponent<Destructible2D.D2dRepeatStamp>();
+		scoringAnim = GetComponentInChildren<Animator> ();
 
         switch (gameObject.tag)
         {
@@ -42,22 +44,31 @@ public class CleanerController : MonoBehaviour
     }
 
     void FixedUpdate()  {
+
+		force = 2;
+
         if (Input.GetKey(up) || InputManager.Devices[playerNumber].LeftStickUp) {
             Debug.Log("Up");
             rb.velocity = new Vector2(rb.velocity.x, force);
+			Dash ();
         }
         if (Input.GetKey(down) || InputManager.Devices[playerNumber].LeftStickDown) {
             Debug.Log("down");
             rb.velocity = new Vector2(rb.velocity.x, -force);
+			Dash ();
         }
         if (Input.GetKey(left) || InputManager.Devices[playerNumber].LeftStickLeft){
             Debug.Log("left");
             rb.velocity = new Vector2(-force, rb.velocity.y);
+			Dash ();
         }
         if (Input.GetKey(right) || InputManager.Devices[playerNumber].LeftStickRight) {
             Debug.Log("right");
             rb.velocity = new Vector2(force, rb.velocity.y);
+			Dash ();
         }
+
+
         if (Input.GetKey(clean) || InputManager.Devices[playerNumber].Action1)
         {
             handVel = rb.velocity.magnitude;
@@ -69,8 +80,22 @@ public class CleanerController : MonoBehaviour
             handVel = 0;
             stamp.enabled = false;
             soap.GetComponent<ParticleSystem>().enableEmission = false;
-        }
 
+        }
         AkSoundEngine.SetRTPCValue("cleanerSwipe", handVel);
     }
+
+	public void Dash()
+	{
+		if (InputManager.Devices [playerNumber].Action2) 
+		{
+			force = 8;
+		}
+	}
+
+	public void ScoringAnimation()
+	{
+		//animation.Play;
+	}
+
 }
