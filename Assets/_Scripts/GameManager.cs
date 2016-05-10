@@ -11,10 +11,10 @@ public class GameManager : MonoBehaviour
 
     public TextAsset highscoreList;
     public Text[] highscore;
-    private string highscoreListAsOneString;
+    public string highscoreListAsOneString;
     public string[] highscoreListAsArrayOfStrings;
-    private string[] disconnector;
-    private int[] highscoreListAsArrayOfInts;
+    public string[] disconnector;
+    public int[] highscoreListAsArrayOfInts;
 
     public int playerCount;
     public int cleanerScore0 = 0;
@@ -25,19 +25,20 @@ public class GameManager : MonoBehaviour
     public int cleanerPoints1 = 0;
     public int cleanerPoints2 = 0;
     public int captainPoints = 1000;
-    private int cleanerMultiplier0 = 1;
-    private int cleanerMultiplier1 = 1;
-    private int cleanerMultiplier2 = 1;
+    public int cleanerMultiplier0 = 1;
+    public int cleanerMultiplier1 = 1;
+    public int cleanerMultiplier2 = 1;
     public int captainMultiplier = 1;
-    private float cleanerTimeCheck0;
-    private float cleanerTimeCheck1;
-    private float cleanerTimeCheck2;
-    private float captainTimeCheck;
+    public float cleanerTimeCheck0;
+    public float cleanerTimeCheck1;
+    public float cleanerTimeCheck2;
+    public float captainTimeCheck;
     public int totalScore = 0;
 
     [HideInInspector]
     public bool player1Active = false, player2Active = false, player3Active = false;
-    public bool gameActive;
+
+    public bool gameActive = false;
 
     void Start()
     {
@@ -67,12 +68,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        GetPlayers();
-
         if (gameActive == true)
         { 
             //Add captain score
-            if (captainTimeCheck < Time.time-10)
+            if (captainTimeCheck < Time.time-5)
             {
                 if (captainPoints == 1000)
                 {
@@ -93,34 +92,11 @@ public class GameManager : MonoBehaviour
 
                 captainTimeCheck = Time.time;
             }
-                     
-            /*
-            //Testing
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Debug.Log("Captain score: " + captainScore);
-                Debug.Log("Player1 score: " + cleanerScore[0]);
-                Debug.Log("Player2 score: " + cleanerScore[1]);
-                Debug.Log("Player3 score: " + cleanerScore[2]);
-                Debug.Log("Total score: " + totalScore);
-            }
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-               EndGame();
-            } */
+
+            totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
         }
 
-        totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            AddCaptainScore();
-        }
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            totalScore = totalScore + 100;
-        }
+        GetPlayers();        
     }
 
     //Initializes the game.
