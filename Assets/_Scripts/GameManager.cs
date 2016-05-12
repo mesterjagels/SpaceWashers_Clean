@@ -73,9 +73,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (gameActive == true)
-        { 
+        {
             //Add captain score
-            if (captainTimeCheck < Time.time-5)
+            if (captainTimeCheck < Time.time - 5)
             {
                 if (captainPoints == 1000)
                 {
@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
             totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
         }
 
-        GetPlayers();        
+        GetPlayers();
     }
 
     //Initializes the game.
@@ -268,7 +268,7 @@ public class GameManager : MonoBehaviour
         {
             if (totalScore > highscoreListAsArrayOfInts[i])
             {
-                for (int p = 0; p < highscoreListAsArrayOfInts.Length - (i+1); p++)
+                for (int p = 0; p < highscoreListAsArrayOfInts.Length - (i + 1); p++)
                 {
                     highscoreListAsArrayOfInts[(9 - p)] = highscoreListAsArrayOfInts[(9 - (p + 1))];
                 }
@@ -293,41 +293,33 @@ public class GameManager : MonoBehaviour
         }
 
         //Rewrite the textfile.
-        File.WriteAllText(Application.dataPath+ @"\Persistent Data\Highscore.txt", highscoreListAsOneString);
-    } 
+        File.WriteAllText(Application.dataPath + @"\Persistent Data\Highscore.txt", highscoreListAsOneString);
+    }
 
     //Check player count
     void GetPlayers()
     {
-        if (Application.loadedLevelName == "TitleScreen")
+        if (Application.loadedLevel == 0)
         {
-            
-             playerCount = FindObjectOfType<TitleScreen>().playerCountInTitle;
-             player1Active = FindObjectOfType<TitleScreen>().player1joined;
-             player2Active = FindObjectOfType<TitleScreen>().player2joined;
-             player3Active = FindObjectOfType<TitleScreen>().player3joined;
+            playerCount = FindObjectOfType<TitleScreen>().playerCountInTitle;
+            player1Active = FindObjectOfType<TitleScreen>().player1joined;
+            player2Active = FindObjectOfType<TitleScreen>().player2joined;
+            player3Active = FindObjectOfType<TitleScreen>().player3joined;
         }
 
-        if(Application.loadedLevelName == "Jasper")
+        if (Application.loadedLevel == 1)
         {
-            
-           
-
-            if (!gameActive)
+            if (!player1Active)
             {
-                InitGame();
-            }
-            if (!player1Active) { 
-               GameObject.FindGameObjectWithTag("Player1").SetActive(false);
+                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
             }
             else
             {
-               GameObject.FindGameObjectWithTag("Player1").SetActive(true);
+                GameObject.FindGameObjectWithTag("Player1").SetActive(true);
             }
-
             if (!player2Active)
             {
-               GameObject.FindGameObjectWithTag("Player2").SetActive(false);
+                GameObject.FindGameObjectWithTag("Player2").SetActive(false);
             }
             else
             {
@@ -342,13 +334,14 @@ public class GameManager : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player3").SetActive(true);
             }
+            if (!gameActive)
+            {
+                InitGame();
+            }
         }
 
-        if (Application.loadedLevelName == "Teamscore")
+        if (Application.loadedLevel == 2)
         {
-            
-            
-
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 Application.LoadLevel(0);
@@ -356,10 +349,12 @@ public class GameManager : MonoBehaviour
 
             if (!player1Active)
             {
+                Debug.Log("Player1 not active, deactivating babe");
                 GameObject.FindGameObjectWithTag("Player1").SetActive(false);
             }
-            else
+            else if (player1Active)
             {
+                Debug.Log("Player1 active, activating babe");
                 GameObject.FindGameObjectWithTag("Player1").SetActive(true);
             }
 
@@ -380,8 +375,8 @@ public class GameManager : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player3").SetActive(true);
             }
-        }
 
+        }
     }
 
     void OnLevelWasLoaded(int level)
@@ -399,6 +394,5 @@ public class GameManager : MonoBehaviour
             AkSoundEngine.SetState("GameScreen", "Scoreboard");
             AkSoundEngine.SetState("isBoosting", "None");
         }
-
     }
 }

@@ -42,7 +42,6 @@ public class DirtController : MonoBehaviour {
         foreach (CleanerController cleanerController in cleanerControllers)
         {
             distance[i] = Vector2.Distance(cleanerController.transform.position, gameObject.transform.position);
-           // Debug.Log("Player" + (i+ 1) + " distance to dirt is " + distance[i]);
             i++;
         }
 
@@ -65,7 +64,6 @@ public class DirtController : MonoBehaviour {
         }
 
         gameManager.AddCleanerScore(cleaningPlayer);
-        Debug.Log("AddCleanerScore(" + cleaningPlayer + ") has been called.");
        // score.score = score.score + 1000;
     }
 }

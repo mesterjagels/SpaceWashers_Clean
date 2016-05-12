@@ -178,6 +178,10 @@ Prefab:
       propertyPath: m_ConnectedAnchor.y
       value: -0.04531637
       objectReference: {fileID: 0}
+    - target: {fileID: 100618, guid: 5eef8c0b80e3a4787ad01c2498fa98b0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5eef8c0b80e3a4787ad01c2498fa98b0, type: 2}
   m_IsPrefabParent: 0
@@ -926,6 +930,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 147672, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
   m_IsPrefabParent: 0
@@ -1039,6 +1047,7 @@ MonoBehaviour:
   scoreText2: {fileID: 1892364815}
   scoreText3: {fileID: 441598783}
   scoreText4: {fileID: 1516279208}
+  scoreTimer: 5
 --- !u!114 &1171253849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,6 +1212,7 @@ MonoBehaviour:
   scoreText2: {fileID: 1892364815}
   scoreText3: {fileID: 441598783}
   scoreText4: {fileID: 1516279208}
+  scoreTimer: 5
 --- !u!114 &1404781966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,6 +1444,10 @@ Prefab:
     - target: {fileID: 23310226, guid: 7381d9af68e2a4985981d0711bd332a5, type: 2}
       propertyPath: m_ConnectedAnchor.y
       value: -0.09989999
+      objectReference: {fileID: 0}
+    - target: {fileID: 124660, guid: 7381d9af68e2a4985981d0711bd332a5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7381d9af68e2a4985981d0711bd332a5, type: 2}
