@@ -38,8 +38,10 @@ public class TitleScreen : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.O) | arduino.digitalRead(pinBtn1) == 1)
         {
-            Debug.Log("I should load next level");
             Application.LoadLevel(1);
+        }
+        if (player1joined | player2joined | player3joined) { 
+            
         }
 
         if (InputManager.Devices[0].Action1 | InputManager.Devices[0].Action2 | InputManager.Devices[0].Action3 | InputManager.Devices[0].Action4 && !player1joined)

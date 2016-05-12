@@ -14,7 +14,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &137306
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,8 +116,8 @@ GameObject:
   - 50: {fileID: 5022036}
   - 233: {fileID: 23310226}
   - 58: {fileID: 5840162}
-  - 114: {fileID: 11460740}
   - 114: {fileID: 11456954}
+  - 114: {fileID: 11458836}
   m_Layer: 12
   m_Name: Grunge Cleaning Hand
   m_TagString: Player3
@@ -254,8 +254,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.015, y: 0.23478946, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.015, y: 0.27, z: 0}
+  m_LocalScale: {x: 1.393993, y: 1.393993, z: 1}
   m_Children: []
   m_Father: {fileID: 495704}
   m_RootOrder: 1
@@ -278,8 +278,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175584}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0.0598, y: -0.22387818, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0659, y: -0.2407, z: -0}
+  m_LocalScale: {x: 1.18374, y: 1.18374, z: 1}
   m_Children: []
   m_Father: {fileID: 495704}
   m_RootOrder: 9
@@ -337,9 +337,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159452}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.032, y: -0.1122, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7002413, w: -0.7139063}
+  m_LocalPosition: {x: 0.015, y: -0.1732, z: 0}
+  m_LocalScale: {x: 2, y: 1.36, z: 1}
   m_Children:
   - {fileID: 449654}
   m_Father: {fileID: 495704}
@@ -351,8 +351,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.029799998, y: -0.22387818, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0366, y: -0.2407, z: 0}
+  m_LocalScale: {x: 1.18374, y: 1.18374, z: 1}
   m_Children: []
   m_Father: {fileID: 495704}
   m_RootOrder: 8
@@ -375,7 +375,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.38521, y: 3.1901321, z: 0}
+  m_LocalPosition: {x: -0.35908777, y: 1.9062357, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 403874}
@@ -675,7 +675,7 @@ MonoBehaviour:
   right: 0
   clean: 0
   soap: {fileID: 141948}
---- !u!114 &11460740
+--- !u!114 &11458836
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -683,9 +683,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 159452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33aeeeb04e7b4514990f424007dd9fbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 67e23d7049c291f4ba1f13c6c70f33aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Layers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  StampTex: {fileID: 2800000, guid: cd1ac36a17486ba4fa2ee2754a34302a, type: 3}
+  Size: {x: 1, y: 1}
+  Hardness: 1
+  Delay: 0
 --- !u!198 &19890346
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -2342,7 +2349,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5e37dc4ad73fc42558654f68e63fb788, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ecfabe649f4f945a3b72101dc73134ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2540,7 +2547,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.031499863, y: -0.09990001}
+  m_ConnectedAnchor: {x: 0.0785, y: -0.1609}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

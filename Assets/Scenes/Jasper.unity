@@ -611,7 +611,7 @@ MonoBehaviour:
   scoreText: {fileID: 193126172}
   distanceLeft: {fileID: 1300024053}
   distanceMath: 0
-  distanceToTravel: 5
+  distanceToTravel: 20
 --- !u!4 &198083735 stripped
 Transform:
   m_PrefabParentObject: {fileID: 406396, guid: 5eef8c0b80e3a4787ad01c2498fa98b0, type: 2}
@@ -1455,7 +1455,7 @@ MonoBehaviour:
   intervalMax: 5
   distanceFromCam: -10
   dirtSpawnerWidth: 5
-  dirtPoolSize: 2000
+  dirtPoolSize: 1000
 --- !u!4 &769742583 stripped
 Transform:
   m_PrefabParentObject: {fileID: 480348, guid: c20e622db4c4b48c5a8ab0df506ff7e7, type: 2}

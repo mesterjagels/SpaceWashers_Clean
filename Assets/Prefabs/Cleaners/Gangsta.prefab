@@ -242,8 +242,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03506887, y: -0.07055439, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.011, y: -0.11, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 475228}
   m_Father: {fileID: 406396}
@@ -267,7 +267,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.13685, y: 1.2570524, z: 0}
+  m_LocalPosition: {x: 0.32007545, y: 1.775663, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 411100}
@@ -326,8 +326,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.015, y: 0.2377, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.015, y: 0.274, z: 0}
+  m_LocalScale: {x: 1.393993, y: 1.393993, z: 1}
   m_Children: []
   m_Father: {fileID: 406396}
   m_RootOrder: 1
@@ -338,8 +338,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0247, y: -0.231, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.031, y: -0.246, z: 0}
+  m_LocalScale: {x: 1.18374, y: 1.18374, z: 1}
   m_Children: []
   m_Father: {fileID: 406396}
   m_RootOrder: 8
@@ -362,8 +362,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123974}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0.0547, y: -0.2303, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.062, y: -0.246, z: -0}
+  m_LocalScale: {x: 1.18374, y: 1.18374, z: 1}
   m_Children: []
   m_Father: {fileID: 406396}
   m_RootOrder: 9
@@ -671,7 +671,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   StampTex: {fileID: 2800000, guid: 82dfc9d665bafe84c9d37dc5c1f85a0d, type: 3}
-  Size: {x: 0.2, y: 0.2}
+  Size: {x: 0.3, y: 0.3}
   Hardness: 1
   Delay: 0
 --- !u!114 &11451046
@@ -2662,7 +2662,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.026910663, y: 0.039638028}
-  m_ConnectedAnchor: {x: 0.017820597, y: -0.04531634}
+  m_ConnectedAnchor: {x: 0.01497867, y: -0.045123994}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
