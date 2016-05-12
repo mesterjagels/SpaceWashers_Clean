@@ -3974,6 +3974,10 @@ Prefab:
       propertyPath: m_TagString
       value: Player3
       objectReference: {fileID: 0}
+    - target: {fileID: 124660, guid: 7381d9af68e2a4985981d0711bd332a5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7381d9af68e2a4985981d0711bd332a5, type: 2}
   m_IsPrefabParent: 0
@@ -5117,6 +5121,10 @@ Prefab:
     - target: {fileID: 411212, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
       propertyPath: m_LocalPosition.z
       value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 147672, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43fc7710b829d4738ac296755b5c6b00, type: 2}
