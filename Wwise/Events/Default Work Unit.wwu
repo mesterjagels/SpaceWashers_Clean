@@ -61,17 +61,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="dirt_cleaned" ID="{24A47D4C-C235-4C78-9BD1-016B4DDDE331}">
-					<ChildrenList>
-						<Action Name="Play" ID="{91EB2ACD-B42A-4F21-B2FC-70C75E09D3FD}" ShortID="19848057" Type="Play" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{D3FD5C4A-9DA1-41F0-9217-78C8BE98C544}" Global="false">
-									<ObjectRef Name="cleaning_sounds" ID="{F967DC97-35DD-46D4-8044-0C40BD9EA8C6}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
-								</Element>
-							</ElementList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="thrusters" ID="{4D5E242C-22ED-43C9-B0C1-6F9538D9B30D}">
 					<ChildrenList>
 						<Action Name="Play" ID="{D764A4FE-066B-41B0-9443-E0F106E8E86E}" ShortID="443851313" Type="Play" Scope="One" Global="false">
@@ -87,15 +76,15 @@
 					<ChildrenList>
 						<Action Name="Stop" ID="{1B1FE2D9-3248-4258-B97B-262155DBAA74}" ShortID="297981359" Type="Stop" Scope="One" Global="false">
 							<ElementList>
-								<Element ID="{6E7C4B24-D437-464A-8B0E-4567BF8A380C}" Global="false">
-									<ObjectRef Name="squeakyLoop" ID="{56086292-9CE4-4AD4-8063-0E4F6535E830}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
+								<Element ID="{5E709E88-0C66-494D-80FE-64A30E8797A1}" Global="false">
+									<ObjectRef Name="CleaningUtensils" ID="{FF3B3D84-F83D-4388-98F3-3124871258FF}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
 								</Element>
 							</ElementList>
 						</Action>
 						<Action Name="Play" ID="{3ECC7A3F-D736-4A42-BA6F-DAA5B10235D1}" ShortID="918613226" Type="Play" Scope="One" Global="false">
 							<ElementList>
-								<Element ID="{87D39B1D-A835-498A-9779-BF5F57B919CB}" Global="false">
-									<ObjectRef Name="squeakyLoop" ID="{56086292-9CE4-4AD4-8063-0E4F6535E830}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
+								<Element ID="{7DF81B0C-F1C8-4B60-A4E2-A5B3CB1DEBF3}" Global="false">
+									<ObjectRef Name="CleaningUtensils" ID="{FF3B3D84-F83D-4388-98F3-3124871258FF}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -115,6 +104,22 @@
 								</Element>
 							</ElementList>
 						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stopSFX" ID="{D821F487-8F91-4134-8973-7344B61F8245}">
+					<ChildrenList>
+						<Action Name="Stop All Except" ID="{6D011943-DDE8-4BD8-869A-9E7B4F0D7C97}" ShortID="604828314" Type="Stop" Scope="AllExcept" Global="true">
+							<ElementList>
+								<Element ID="{56B80551-B54E-46AA-ABB4-A8A44C94FDBF}" Global="true">
+									<ObjectRef Name="MusicManager" ID="{CBBAA349-3327-434D-869A-C9E68050C372}" WorkUnitID="{BB7424BD-F0A6-44C9-9592-B27D77652ECD}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="muteObject" ID="{EB46A596-DF37-4283-8529-B16DF2B84334}">
+					<ChildrenList>
+						<Action Name="Stop All" ID="{57B7C69C-2291-4539-8CEE-B84BBCC44163}" ShortID="384013667" Type="Stop" Scope="All" Global="false"/>
 					</ChildrenList>
 				</Event>
 			</ChildrenList>

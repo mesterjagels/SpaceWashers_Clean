@@ -15,10 +15,11 @@ namespace AK
     {
         static const AkUniqueID BOOST = 2389703494U;
         static const AkUniqueID CLEANINGSQUEAK = 50661466U;
-        static const AkUniqueID DIRT_CLEANED = 3164020227U;
         static const AkUniqueID GAMEMUSIC = 1533192012U;
         static const AkUniqueID HULL_IMPACT = 3071260525U;
         static const AkUniqueID MUTEALL = 2308878679U;
+        static const AkUniqueID MUTEOBJECT = 1830748535U;
+        static const AkUniqueID STOPSFX = 3189472150U;
         static const AkUniqueID THRUSTERS = 1944582317U;
     } // namespace EVENTS
 
@@ -51,6 +52,18 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace CLEANING_UTENSILS
+        {
+            static const AkUniqueID GROUP = 3198099566U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID BRUSH = 642005199U;
+                static const AkUniqueID SOAP = 553159232U;
+                static const AkUniqueID WINDOWTHING = 3253101199U;
+            } // namespace SWITCH
+        } // namespace CLEANING_UTENSILS
+
         namespace JUNK_TYPE
         {
             static const AkUniqueID GROUP = 713377294U;
@@ -66,7 +79,8 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
-        static const AkUniqueID CLEANERSWIPE = 819984649U;
+        static const AkUniqueID BRUSHSWIPE = 3516840363U;
+        static const AkUniqueID SOAPSWIPE = 2619172126U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;
@@ -78,6 +92,7 @@ namespace AK
         static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
         static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
         static const AkUniqueID VERTICAL_SPEED = 805906735U;
+        static const AkUniqueID WINDOWSWIPE = 494376885U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

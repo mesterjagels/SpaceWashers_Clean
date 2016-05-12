@@ -246,7 +246,28 @@
 									<StateGroupInfo>
 										<StateGroupRef Name="isBoosting" ID="{07447D78-261B-4154-8DB9-CB45F9C96E09}"/>
 									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="GameScreen" ID="{6CF896A4-A9B1-4A83-B5C2-89682B67AE2F}"/>
+									</StateGroupInfo>
 								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Scoreboard" ID="{76369972-482C-48A8-A9FA-BE4AFE0FDBDD}"/>
+										<State Name="Custom State" ID="{1E780D5E-5E30-4411-88F0-A88F5BD2E5EE}" ShortID="425022785">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-96"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="TitleScreen" ID="{241DA5E8-30D1-4B3B-A566-DB25749D5F21}"/>
+										<State Name="Custom State" ID="{467CD1DA-9E7D-4A0B-AEDB-4961EB67585C}" ShortID="580137524">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-96"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
 							</StateInfo>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{2CD45B38-17B9-40D2-8E35-9C6EF88038F6}">
@@ -427,6 +448,11 @@
 							<PropertyList>
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
 								<Property Name="Tempo" Type="Real64" Value="135"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -487,7 +513,11 @@
 										</MusicTrack>
 									</ChildrenList>
 									<CueList>
-										<MusicCue Name="Entry Cue" ID="{4FC49372-B879-4102-8001-4451EA676DE8}"/>
+										<MusicCue Name="Entry Cue" ID="{4FC49372-B879-4102-8001-4451EA676DE8}">
+											<PropertyList>
+												<Property Name="TimeMs" Type="Real64" Value="28444.4444444444"/>
+											</PropertyList>
+										</MusicCue>
 										<MusicCue Name="Exit Cue" ID="{248C8728-1A36-47B7-9207-E5ED820AF7C9}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>

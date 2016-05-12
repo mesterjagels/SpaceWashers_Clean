@@ -21,20 +21,17 @@
 			<IncludedEvents>
 				<Event Id="2389703494" Name="boost"/>
 				<Event Id="50661466" Name="cleaningSqueak"/>
-				<Event Id="3164020227" Name="dirt_cleaned"/>
 				<Event Id="1533192012" Name="GameMusic"/>
 				<Event Id="3071260525" Name="hull_impact"/>
 				<Event Id="2308878679" Name="muteAll" MaxAttenuation="0.000000"/>
+				<Event Id="1830748535" Name="muteObject" MaxAttenuation="0.000000"/>
+				<Event Id="3189472150" Name="stopSFX" MaxAttenuation="0.000000"/>
 				<Event Id="1944582317" Name="thrusters"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="20995278" Language="SFX">
 					<ShortName>boost_end.wav</ShortName>
 					<Path>SFX\boost_end_9E69E797.wem</Path>
-				</File>
-				<File Id="147310084" Language="SFX">
-					<ShortName>washing_5.wav</ShortName>
-					<Path>SFX\washing_5_F7585AB1.wem</Path>
 				</File>
 				<File Id="168564473" Language="SFX">
 					<ShortName>boost_start.wav</ShortName>
@@ -44,29 +41,13 @@
 					<ShortName>hull_4.wav</ShortName>
 					<Path>SFX\hull_4_9E69E797.wem</Path>
 				</File>
-				<File Id="194476618" Language="SFX">
-					<ShortName>washing_3.wav</ShortName>
-					<Path>SFX\washing_3_370EBA0A.wem</Path>
-				</File>
 				<File Id="266433818" Language="SFX">
 					<ShortName>InGameBoostMusic.wav</ShortName>
 					<Path>SFX\InGameBoostMusic_4B8CC0C5.wem</Path>
 				</File>
-				<File Id="267089118" Language="SFX">
-					<ShortName>washing_2.wav</ShortName>
-					<Path>SFX\washing_2_88175B61.wem</Path>
-				</File>
-				<File Id="343534256" Language="SFX">
-					<ShortName>washing_1.wav</ShortName>
-					<Path>SFX\washing_1_6D689A9F.wem</Path>
-				</File>
 				<File Id="344995572" Language="SFX">
 					<ShortName>Fresh_transistion.wav</ShortName>
 					<Path>SFX\Fresh_transistion_4B8CC0C5.wem</Path>
-				</File>
-				<File Id="374476862" Language="SFX">
-					<ShortName>washing_4.wav</ShortName>
-					<Path>SFX\washing_4_495DEE4E.wem</Path>
 				</File>
 				<File Id="409440082" Language="SFX">
 					<ShortName>squeakLoop.wav</ShortName>
@@ -88,6 +69,10 @@
 					<ShortName>hull_2.wav</ShortName>
 					<Path>SFX\hull_2_9E69E797.wem</Path>
 				</File>
+				<File Id="586599280" Language="SFX">
+					<ShortName>brushLoop.wav</ShortName>
+					<Path>SFX\brushLoop_4B8CC0C5.wem</Path>
+				</File>
 				<File Id="586710480" Language="SFX">
 					<ShortName>Scoreboard_music.wav</ShortName>
 					<Path>SFX\Scoreboard_music_4B8CC0C5.wem</Path>
@@ -95,6 +80,10 @@
 				<File Id="599990140" Language="SFX">
 					<ShortName>hull_5.wav</ShortName>
 					<Path>SFX\hull_5_9E69E797.wem</Path>
+				</File>
+				<File Id="655027814" Language="SFX">
+					<ShortName>squishLoop.wav</ShortName>
+					<Path>SFX\squishLoop_4B8CC0C5.wem</Path>
 				</File>
 				<File Id="663919939" Language="SFX">
 					<ShortName>hull_small.wav</ShortName>
@@ -123,10 +112,6 @@
 				<File Id="982517566" Language="SFX">
 					<ShortName>inGameMusic1.wav</ShortName>
 					<Path>SFX\inGameMusic1_4B8CC0C5.wem</Path>
-				</File>
-				<File Id="1005801401" Language="SFX">
-					<ShortName>washing_3.wav</ShortName>
-					<Path>SFX\washing_3_1B4D8946.wem</Path>
 				</File>
 				<File Id="1052182307" Language="SFX">
 					<ShortName>pizza_2.wav</ShortName>

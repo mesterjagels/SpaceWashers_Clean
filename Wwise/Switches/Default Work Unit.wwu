@@ -9,6 +9,13 @@
 						<Switch Name="Pizza" ID="{98DA5832-469C-4A31-BC1F-34EF3CADCFF1}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Cleaning_Utensils" ID="{F338ECBB-7388-4C73-BB79-FA349BDD2EBB}">
+					<ChildrenList>
+						<Switch Name="Soap" ID="{BE4FE383-55D7-4C09-9E8D-02574DAD2216}"/>
+						<Switch Name="WindowThing" ID="{9C27ED10-0282-426F-A915-9F49B560596B}"/>
+						<Switch Name="Brush" ID="{1D6B834B-ECC1-4092-8056-423EC94A64F3}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

@@ -58,6 +58,7 @@ public class SpaceshipController : MonoBehaviour
     void Start()
     {
         AkSoundEngine.PostEvent("thrusters", gameObject);
+        AkSoundEngine.SetState("isBoosting", "notBoosting");
         throttleSpeeds = new float[5];
         throttleSpeeds[0] = throttle1;
         throttleSpeeds[1] = throttle2;

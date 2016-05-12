@@ -42,6 +42,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        AkBankManager.LoadBank("main");
+        AkSoundEngine.PostEvent("GameMusic", gameObject);
+        AkSoundEngine.SetState("GameScreen", "TitleScreen");
+
         highscoreListAsArrayOfInts = new int[10];
         highscoreListAsArrayOfStrings = new string[10];
         highscore = new Text[10];
@@ -125,6 +129,7 @@ public class GameManager : MonoBehaviour
         gameActive = false;
         UpdateHighscore();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Teamscore");
+       
     }
 
     //Add points to the PlayerScore of the player that cleaned dirt.
@@ -295,6 +300,8 @@ public class GameManager : MonoBehaviour
     {
         if (Application.loadedLevelName == "TitleScreen")
         {
+            AkSoundEngine.SetState("GameScreen", "TitleScreen");
+
              playerCount = FindObjectOfType<TitleScreen>().playerCountInTitle;
              player1Active = FindObjectOfType<TitleScreen>().player1joined;
              player2Active = FindObjectOfType<TitleScreen>().player2joined;
@@ -303,6 +310,8 @@ public class GameManager : MonoBehaviour
 
         if(Application.loadedLevelName == "Jasper")
         {
+            AkSoundEngine.SetState("GameScreen", "InGame");
+
             if (!gameActive)
             {
                 InitGame();
@@ -336,6 +345,10 @@ public class GameManager : MonoBehaviour
 
         if (Application.loadedLevelName == "Teamscore")
         {
+            
+            AkSoundEngine.SetState("GameScreen", "Scoreboard");
+            AkSoundEngine.SetState("isBoosting", "None");
+
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 Application.LoadLevel(0);

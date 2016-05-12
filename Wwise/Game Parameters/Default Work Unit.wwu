@@ -9,9 +9,21 @@
 						<Property Name="Max" Type="Real64" Value="50"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="cleanerSwipe" ID="{C489E24F-B5E1-4077-885F-B104C703F76E}">
+				<GameParameter Name="windowSwipe" ID="{C489E24F-B5E1-4077-885F-B104C703F76E}">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="3"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="3"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="soapSwipe" ID="{47708517-0C41-4FCC-BC23-FA374F558078}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="3"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="brushSwipe" ID="{EC9CBF50-6F6C-4978-8FF3-93FA9A38AD44}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
 						<Property Name="Max" Type="Real64" Value="3"/>
 					</PropertyList>
 				</GameParameter>

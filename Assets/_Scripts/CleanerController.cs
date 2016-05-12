@@ -8,7 +8,7 @@ public class CleanerController : MonoBehaviour
 
     private Rigidbody2D rb;
     public float force;
-    public float handVel = 3;
+    public float handVel = 0;
     public KeyCode up, down, left, right, clean;
     private int playerNumber;
     private Destructible2D.D2dRepeatStamp stamp;
@@ -26,14 +26,17 @@ public class CleanerController : MonoBehaviour
         {
             case "Player1":
                 playerNumber = 0;
+                AkSoundEngine.SetSwitch("Cleaning_Utensils", "WindowThing", gameObject);
                 break;
 
             case "Player2":
                 playerNumber = 1;
+                AkSoundEngine.SetSwitch("Cleaning_Utensils", "Soap", gameObject);
                 break;
 
             case "Player3":
                 playerNumber = 2;
+                AkSoundEngine.SetSwitch("Cleaning_Utensils", "Brush", gameObject);
                 break;
         }
     }
@@ -82,7 +85,9 @@ public class CleanerController : MonoBehaviour
             soap.GetComponent<ParticleSystem>().enableEmission = false;
 
         }
-        AkSoundEngine.SetRTPCValue("cleanerSwipe", handVel);
+        AkSoundEngine.SetRTPCValue("windowSwipe", handVel, gameObject);
+        AkSoundEngine.SetRTPCValue("soapSwipe", handVel, gameObject);
+        AkSoundEngine.SetRTPCValue("brushSwipe", handVel, gameObject);
     }
 
 	public void Dash()
@@ -98,4 +103,8 @@ public class CleanerController : MonoBehaviour
 		//animation.Play;
 	}
 
+    void OnDestroy()
+    {
+        AkSoundEngine.PostEvent("muteObject", gameObject);
+    }
 }
