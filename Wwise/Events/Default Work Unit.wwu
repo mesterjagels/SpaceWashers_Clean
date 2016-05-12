@@ -122,6 +122,17 @@
 						<Action Name="Stop All" ID="{57B7C69C-2291-4539-8CEE-B84BBCC44163}" ShortID="384013667" Type="Stop" Scope="All" Global="false"/>
 					</ChildrenList>
 				</Event>
+				<Event Name="ow" ID="{9E16994D-D8BC-4962-97EA-19C235D02104}">
+					<ChildrenList>
+						<Action Name="Play" ID="{04211E5F-0DC2-4DA7-A683-B5983C9035FE}" ShortID="928295718" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{83C75419-F60A-4B6B-9B88-E1027C2D647B}" Global="false">
+									<ObjectRef Name="cleanerOw" ID="{EDF9C90E-9DB1-40AE-B045-9166CFB40D99}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

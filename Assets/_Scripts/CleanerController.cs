@@ -10,10 +10,11 @@ public class CleanerController : MonoBehaviour
     public float force;
     public float handVel = 0;
     public KeyCode up, down, left, right, clean;
-    private int playerNumber;
+    public int playerNumber;
     private Destructible2D.D2dRepeatStamp stamp;
     public GameObject soap;
-	private Animator scoringAnim;
+    
+    private Animator scoringAnim;
 
     void Awake()
     {
@@ -51,26 +52,21 @@ public class CleanerController : MonoBehaviour
 		force = 2;
 
         if (Input.GetKey(up) || InputManager.Devices[playerNumber].LeftStickUp) {
-            Debug.Log("Up");
             rb.velocity = new Vector2(rb.velocity.x, force);
 			Dash ();
         }
         if (Input.GetKey(down) || InputManager.Devices[playerNumber].LeftStickDown) {
-            Debug.Log("down");
             rb.velocity = new Vector2(rb.velocity.x, -force);
 			Dash ();
         }
         if (Input.GetKey(left) || InputManager.Devices[playerNumber].LeftStickLeft){
-            Debug.Log("left");
             rb.velocity = new Vector2(-force, rb.velocity.y);
 			Dash ();
         }
         if (Input.GetKey(right) || InputManager.Devices[playerNumber].LeftStickRight) {
-            Debug.Log("right");
             rb.velocity = new Vector2(force, rb.velocity.y);
 			Dash ();
         }
-
 
         if (Input.GetKey(clean) || InputManager.Devices[playerNumber].Action1)
         {
@@ -107,4 +103,6 @@ public class CleanerController : MonoBehaviour
     {
         AkSoundEngine.PostEvent("muteObject", gameObject);
     }
+
+    
 }

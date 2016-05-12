@@ -72,6 +72,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	599990140	hull_5	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_5		169024
 	655027814	squishLoop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\squishLoop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\CleaningUtensils\squishLoop		1874168
 	663919939	hull_small	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_small_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_small		99240
+	702677291	Scratch_Transition	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Scratch_Transition_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Scratch_Transition\Scratch_Transition		313664
 	802347035	thrusters	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\thrusters_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\thruster_sounds\thrusters		377880
 	805928360	theme_muic	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\theme_muic_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\TitleScreen\theme_music\theme_muic		13677852
 	817375743	junk_toxic	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\junk_toxic_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\junk_toxic		236084

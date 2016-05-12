@@ -89,6 +89,10 @@
 					<ShortName>hull_small.wav</ShortName>
 					<Path>SFX\hull_small_9E69E797.wem</Path>
 				</File>
+				<File Id="702677291" Language="SFX">
+					<ShortName>Scratch_Transition.wav</ShortName>
+					<Path>SFX\Scratch_Transition_4B8CC0C5.wem</Path>
+				</File>
 				<File Id="802347035" Language="SFX">
 					<ShortName>thrusters.wav</ShortName>
 					<Path>SFX\thrusters_4B8CC0C5.wem</Path>

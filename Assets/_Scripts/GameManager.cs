@@ -300,8 +300,7 @@ public class GameManager : MonoBehaviour
     {
         if (Application.loadedLevelName == "TitleScreen")
         {
-            AkSoundEngine.SetState("GameScreen", "TitleScreen");
-
+            
              playerCount = FindObjectOfType<TitleScreen>().playerCountInTitle;
              player1Active = FindObjectOfType<TitleScreen>().player1joined;
              player2Active = FindObjectOfType<TitleScreen>().player2joined;
@@ -310,7 +309,8 @@ public class GameManager : MonoBehaviour
 
         if(Application.loadedLevelName == "Jasper")
         {
-            AkSoundEngine.SetState("GameScreen", "InGame");
+            
+           
 
             if (!gameActive)
             {
@@ -346,8 +346,7 @@ public class GameManager : MonoBehaviour
         if (Application.loadedLevelName == "Teamscore")
         {
             
-            AkSoundEngine.SetState("GameScreen", "Scoreboard");
-            AkSoundEngine.SetState("isBoosting", "None");
+            
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
@@ -380,6 +379,24 @@ public class GameManager : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player3").SetActive(true);
             }
+        }
+
+    }
+
+    void OnLevelWasLoaded(int level)
+    {
+        if (level == 0)
+        {
+            AkSoundEngine.SetState("GameScreen", "TitleScreen");
+        }
+        if (level == 1)
+        {
+            AkSoundEngine.SetState("GameScreen", "InGame");
+        }
+        if (level == 2)
+        {
+            AkSoundEngine.SetState("GameScreen", "Scoreboard");
+            AkSoundEngine.SetState("isBoosting", "None");
         }
 
     }

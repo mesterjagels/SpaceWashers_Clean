@@ -1380,6 +1380,348 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<SwitchContainer Name="cleanerOw" ID="{EDF9C90E-9DB1-40AE-B045-9166CFB40D99}" ShortID="977167355">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Babe" ID="{00ABEC5B-FF28-4A2C-9AE6-89B36DB8A5B9}" ShortID="860815467">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Babe 1" ID="{4310319A-AA77-4387-AAA0-3AE08F03CF13}" ShortID="774308564" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Babe 1" ID="{9E7F4D14-AED5-4082-B643-D532CE34FE4F}" ShortID="257176258">
+													<Language>SFX</Language>
+													<AudioFile>Babe 1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Babe 1" ID="{9E7F4D14-AED5-4082-B643-D532CE34FE4F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Babe 2" ID="{C7596F3E-9BCA-46ED-B340-A64DC6616556}" ShortID="314966796" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Babe 2" ID="{AEA58F02-6571-434D-9481-0C3F2858825A}" ShortID="191463059">
+													<Language>SFX</Language>
+													<AudioFile>Babe 2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Babe 2" ID="{AEA58F02-6571-434D-9481-0C3F2858825A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Babe 3" ID="{87C59250-8A43-4F76-B3FD-F4967EF32F8E}" ShortID="1060842952" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Babe 3" ID="{74385892-A751-4154-B7F7-22FC35A83060}" ShortID="1022684454">
+													<Language>SFX</Language>
+													<AudioFile>Babe 3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Babe 3" ID="{74385892-A751-4154-B7F7-22FC35A83060}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Babe 4" ID="{0A3FAE6B-8A55-4AD6-BDBE-176C9A07515D}" ShortID="950836778" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Babe 4" ID="{CC100F92-CD5B-4C58-810E-4A378D40FF7B}" ShortID="1070488272">
+													<Language>SFX</Language>
+													<AudioFile>Babe 4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Babe 4" ID="{CC100F92-CD5B-4C58-810E-4A378D40FF7B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Babe 5" ID="{9FDDD1E6-76BD-40AE-85A7-68D6F9877B98}" ShortID="919984109" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Babe 5" ID="{0CC904B9-30B3-4F95-A1B0-A4A867C09774}" ShortID="34174431">
+													<Language>SFX</Language>
+													<AudioFile>Babe 5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Babe 5" ID="{0CC904B9-30B3-4F95-A1B0-A4A867C09774}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Gangsta" ID="{0425DBA7-C0F0-443B-A052-A57263B06D0A}" ShortID="713090256">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Gangsta 1" ID="{22B84C9A-419E-4245-9DAE-305E437BB1F6}" ShortID="503722666" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Gangsta 1" ID="{A51A2DC6-4B29-42B5-9E49-2A9D62930933}" ShortID="694283652">
+													<Language>SFX</Language>
+													<AudioFile>Gangsta 1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Gangsta 1" ID="{A51A2DC6-4B29-42B5-9E49-2A9D62930933}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Gangsta 2" ID="{FBE400CB-38E7-44BB-A75F-11CC34541100}" ShortID="542155683" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Gangsta 2" ID="{DF970B07-B9DC-4BA5-8383-36B657003DE1}" ShortID="617735550">
+													<Language>SFX</Language>
+													<AudioFile>Gangsta 2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Gangsta 2" ID="{DF970B07-B9DC-4BA5-8383-36B657003DE1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Gangsta 3" ID="{D62F13F8-69EF-44D6-A5FD-C3E379921A4F}" ShortID="531139950" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Gangsta 3" ID="{98C418D6-0DC5-4E85-94E4-0B2B69DF3BED}" ShortID="37956123">
+													<Language>SFX</Language>
+													<AudioFile>Gangsta 3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Gangsta 3" ID="{98C418D6-0DC5-4E85-94E4-0B2B69DF3BED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Gangsta 4" ID="{E45C75DC-6ECA-4FB1-A08B-FBD780C36C9D}" ShortID="465049690" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Gangsta 4" ID="{6F775B7D-9918-4CDD-BF0D-0D0F97923716}" ShortID="771480117">
+													<Language>SFX</Language>
+													<AudioFile>Gangsta 4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Gangsta 4" ID="{6F775B7D-9918-4CDD-BF0D-0D0F97923716}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Grunger" ID="{C65F26CC-E59E-4080-B20F-BF7AEF66BC89}" ShortID="702716525">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Grunger 1" ID="{7AE4FAD3-BAC1-4D6D-B3A8-200AEB3176D5}" ShortID="664107022" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Grunger 1" ID="{2D94AB6F-F67C-45BF-9278-001EE442114F}" ShortID="384447423">
+													<Language>SFX</Language>
+													<AudioFile>Grunger 1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Grunger 1" ID="{2D94AB6F-F67C-45BF-9278-001EE442114F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Grunger 2" ID="{063DBF98-FA94-4F68-A28C-ED5579770B54}" ShortID="409033293" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Grunger 2" ID="{7EFE6A0A-8CE9-45D9-BBC0-41AF5FF753A8}" ShortID="292796889">
+													<Language>SFX</Language>
+													<AudioFile>Grunger 2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Grunger 2" ID="{7EFE6A0A-8CE9-45D9-BBC0-41AF5FF753A8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Grunger 3" ID="{B96F8123-7C72-4264-9699-7E53E419A68C}" ShortID="474464309" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Grunger 3" ID="{9A6F6D1D-95E2-4161-A277-FDFA2BBA5E56}" ShortID="474234670">
+													<Language>SFX</Language>
+													<AudioFile>Grunger 3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Grunger 3" ID="{9A6F6D1D-95E2-4161-A277-FDFA2BBA5E56}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Grunger 4" ID="{C75B9E54-A81E-48AF-9127-CE2E40D42152}" ShortID="898198374" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Grunger 4" ID="{43824E92-AB71-48AA-A299-A129BA948534}" ShortID="260457471">
+													<Language>SFX</Language>
+													<AudioFile>Grunger 4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Grunger 4" ID="{43824E92-AB71-48AA-A299-A129BA948534}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupRef Name="Cleaner" ID="{54EA7DDE-4759-4089-B895-23299C017C9C}"/>
+								<DefaultSwitchRef Name="Babe" ID="{BBA244BC-3012-4BD8-872C-E2C0E4C5F5AD}"/>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Babe" ID="{00ABEC5B-FF28-4A2C-9AE6-89B36DB8A5B9}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Gangsta" ID="{0425DBA7-C0F0-443B-A052-A57263B06D0A}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Grunger" ID="{C65F26CC-E59E-4080-B20F-BF7AEF66BC89}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Grunger" ID="{02BD8732-7062-443E-BA71-5E3C04A4240C}"/>
+										<ItemList>
+											<ItemRef Name="Grunger" ID="{C65F26CC-E59E-4080-B20F-BF7AEF66BC89}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Gangsta" ID="{B1CBDAB3-64BF-4199-B714-6A27F8C7150C}"/>
+										<ItemList>
+											<ItemRef Name="Gangsta" ID="{0425DBA7-C0F0-443B-A052-A57263B06D0A}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Babe" ID="{BBA244BC-3012-4BD8-872C-E2C0E4C5F5AD}"/>
+										<ItemList>
+											<ItemRef Name="Babe" ID="{00ABEC5B-FF28-4A2C-9AE6-89B36DB8A5B9}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

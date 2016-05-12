@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID HULL_IMPACT = 3071260525U;
         static const AkUniqueID MUTEALL = 2308878679U;
         static const AkUniqueID MUTEOBJECT = 1830748535U;
+        static const AkUniqueID OW = 1651971879U;
         static const AkUniqueID STOPSFX = 3189472150U;
         static const AkUniqueID THRUSTERS = 1944582317U;
     } // namespace EVENTS
@@ -52,6 +53,18 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace CLEANER
+        {
+            static const AkUniqueID GROUP = 1925601025U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID BABE = 1543097845U;
+                static const AkUniqueID GANGSTA = 3488526926U;
+                static const AkUniqueID GRUNGER = 3978721251U;
+            } // namespace SWITCH
+        } // namespace CLEANER
+
         namespace CLEANING_UTENSILS
         {
             static const AkUniqueID GROUP = 3198099566U;

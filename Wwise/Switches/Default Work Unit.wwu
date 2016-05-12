@@ -16,6 +16,13 @@
 						<Switch Name="Brush" ID="{1D6B834B-ECC1-4092-8056-423EC94A64F3}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Cleaner" ID="{54EA7DDE-4759-4089-B895-23299C017C9C}">
+					<ChildrenList>
+						<Switch Name="Babe" ID="{BBA244BC-3012-4BD8-872C-E2C0E4C5F5AD}"/>
+						<Switch Name="Gangsta" ID="{B1CBDAB3-64BF-4199-B714-6A27F8C7150C}"/>
+						<Switch Name="Grunger" ID="{02BD8732-7062-443E-BA71-5E3C04A4240C}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

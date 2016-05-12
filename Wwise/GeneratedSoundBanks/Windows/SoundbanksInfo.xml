@@ -25,6 +25,7 @@
 				<Event Id="3071260525" Name="hull_impact"/>
 				<Event Id="2308878679" Name="muteAll" MaxAttenuation="0.000000"/>
 				<Event Id="1830748535" Name="muteObject" MaxAttenuation="0.000000"/>
+				<Event Id="1651971879" Name="ow"/>
 				<Event Id="3189472150" Name="stopSFX" MaxAttenuation="0.000000"/>
 				<Event Id="1944582317" Name="thrusters"/>
 			</IncludedEvents>
@@ -33,21 +34,49 @@
 					<ShortName>boost_end.wav</ShortName>
 					<Path>SFX\boost_end_9E69E797.wem</Path>
 				</File>
+				<File Id="34174431" Language="SFX">
+					<ShortName>Babe 5.wav</ShortName>
+					<Path>SFX\Babe 5_9E69E797.wem</Path>
+				</File>
+				<File Id="37956123" Language="SFX">
+					<ShortName>Gangsta 3.wav</ShortName>
+					<Path>SFX\Gangsta 3_9E69E797.wem</Path>
+				</File>
 				<File Id="168564473" Language="SFX">
 					<ShortName>boost_start.wav</ShortName>
 					<Path>SFX\boost_start_9E69E797.wem</Path>
+				</File>
+				<File Id="191463059" Language="SFX">
+					<ShortName>Babe 2.wav</ShortName>
+					<Path>SFX\Babe 2_9E69E797.wem</Path>
 				</File>
 				<File Id="192410636" Language="SFX">
 					<ShortName>hull_4.wav</ShortName>
 					<Path>SFX\hull_4_9E69E797.wem</Path>
 				</File>
+				<File Id="257176258" Language="SFX">
+					<ShortName>Babe 1.wav</ShortName>
+					<Path>SFX\Babe 1_9E69E797.wem</Path>
+				</File>
+				<File Id="260457471" Language="SFX">
+					<ShortName>Grunger 4.wav</ShortName>
+					<Path>SFX\Grunger 4_9E69E797.wem</Path>
+				</File>
 				<File Id="266433818" Language="SFX">
 					<ShortName>InGameBoostMusic.wav</ShortName>
 					<Path>SFX\InGameBoostMusic_4B8CC0C5.wem</Path>
 				</File>
+				<File Id="292796889" Language="SFX">
+					<ShortName>Grunger 2.wav</ShortName>
+					<Path>SFX\Grunger 2_9E69E797.wem</Path>
+				</File>
 				<File Id="344995572" Language="SFX">
 					<ShortName>Fresh_transistion.wav</ShortName>
 					<Path>SFX\Fresh_transistion_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="384447423" Language="SFX">
+					<ShortName>Grunger 1.wav</ShortName>
+					<Path>SFX\Grunger 1_9E69E797.wem</Path>
 				</File>
 				<File Id="409440082" Language="SFX">
 					<ShortName>squeakLoop.wav</ShortName>
@@ -60,6 +89,10 @@
 				<File Id="461218233" Language="SFX">
 					<ShortName>pizza_1.wav</ShortName>
 					<Path>SFX\pizza_1_9E69E797.wem</Path>
+				</File>
+				<File Id="474234670" Language="SFX">
+					<ShortName>Grunger 3.wav</ShortName>
+					<Path>SFX\Grunger 3_9E69E797.wem</Path>
 				</File>
 				<File Id="509321733" Language="SFX">
 					<ShortName>hull_3.wav</ShortName>
@@ -81,6 +114,10 @@
 					<ShortName>hull_5.wav</ShortName>
 					<Path>SFX\hull_5_9E69E797.wem</Path>
 				</File>
+				<File Id="617735550" Language="SFX">
+					<ShortName>Gangsta 2.wav</ShortName>
+					<Path>SFX\Gangsta 2_9E69E797.wem</Path>
+				</File>
 				<File Id="655027814" Language="SFX">
 					<ShortName>squishLoop.wav</ShortName>
 					<Path>SFX\squishLoop_4B8CC0C5.wem</Path>
@@ -88,6 +125,18 @@
 				<File Id="663919939" Language="SFX">
 					<ShortName>hull_small.wav</ShortName>
 					<Path>SFX\hull_small_9E69E797.wem</Path>
+				</File>
+				<File Id="694283652" Language="SFX">
+					<ShortName>Gangsta 1.wav</ShortName>
+					<Path>SFX\Gangsta 1_9E69E797.wem</Path>
+				</File>
+				<File Id="702677291" Language="SFX">
+					<ShortName>Scratch_Transition.wav</ShortName>
+					<Path>SFX\Scratch_Transition_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="771480117" Language="SFX">
+					<ShortName>Gangsta 4.wav</ShortName>
+					<Path>SFX\Gangsta 4_9E69E797.wem</Path>
 				</File>
 				<File Id="802347035" Language="SFX">
 					<ShortName>thrusters.wav</ShortName>
@@ -113,9 +162,17 @@
 					<ShortName>inGameMusic1.wav</ShortName>
 					<Path>SFX\inGameMusic1_4B8CC0C5.wem</Path>
 				</File>
+				<File Id="1022684454" Language="SFX">
+					<ShortName>Babe 3.wav</ShortName>
+					<Path>SFX\Babe 3_9E69E797.wem</Path>
+				</File>
 				<File Id="1052182307" Language="SFX">
 					<ShortName>pizza_2.wav</ShortName>
 					<Path>SFX\pizza_2_9E69E797.wem</Path>
+				</File>
+				<File Id="1070488272" Language="SFX">
+					<ShortName>Babe 4.wav</ShortName>
+					<Path>SFX\Babe 4_9E69E797.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
