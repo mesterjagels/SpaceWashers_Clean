@@ -1,6 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
 	50661466	cleaningSqueak			\Default Work Unit\cleaningSqueak	
+	1533192012	GameMusic			\Default Work Unit\GameMusic	
 	1944582317	thrusters			\Default Work Unit\thrusters	
+	2308878679	muteAll			\Default Work Unit\muteAll	
 	2389703494	boost			\Default Work Unit\boost	
 	3071260525	hull_impact			\Default Work Unit\hull_impact	
 	3164020227	dirt_cleaned			\Default Work Unit\dirt_cleaned	
@@ -44,20 +46,25 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	168564473	boost_start	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\boost_start_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\boost\Ignition\boost_start		132364
 	192410636	hull_4	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_4		202652
 	194476618	squeakdown2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_3_370EBA0A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_down\squeakdown2		49848
+	266433818	InGameBoostMusic	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\InGameBoostMusic_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\inGame\Boost\BoostSnare\InGameBoostMusic		384940
 	267089118	washing_2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_2_88175B61.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_up\washing_2		63260
 	343534256	washing_1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_1_6D689A9F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_up\washing_1		26888
+	344995572	Fresh_transistion	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Fresh_transistion_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Fresh_transistion\Fresh_transistion		450864
 	374476862	washing_4	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_4_495DEE4E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_up\washing_4		45420
 	409440082	squeakyLoop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\squeakLoop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\squeakyLoop		2050716
 	423809210	boost_loop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\boost_loop_12F9BD65.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\boost\Ignition\boost_loop		474140
 	461218233	pizza_1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\pizza_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\pizzaslice\pizza_1		241576
 	509321733	hull_3	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_3		201272
 	548323127	hull_2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_2		180004
+	586710480	Scoreboard_music	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Scoreboard_music_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\Scoreboard\Scoreboard_music\Scoreboard_music		12544064
 	599990140	hull_5	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_5		169024
 	663919939	hull_small	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_small_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_small		99240
 	802347035	thrusters	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\thrusters_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\thruster_sounds\thrusters		377880
+	805928360	theme_muic	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\theme_muic_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\TitleScreen\theme_music\theme_muic		13677852
 	817375743	junk_toxic	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\junk_toxic_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\junk_toxic		236084
 	845341949	pizza_3	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\pizza_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\pizzaslice\pizza_3		220304
 	974027785	hull_1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_1		220564
+	982517566	inGameMusic1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\inGameMusic1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\inGame\Breaks\Breaks\inGameMusic1		12315992
 	1005801401	squeakdown1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\washing_3_1B4D8946.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleaning_sounds\clean_down\squeakdown1		46712
 	1052182307	pizza_2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\pizza_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\pizzaslice\pizza_2		179328
 

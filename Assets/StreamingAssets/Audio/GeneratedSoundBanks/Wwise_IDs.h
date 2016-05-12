@@ -16,12 +16,26 @@ namespace AK
         static const AkUniqueID BOOST = 2389703494U;
         static const AkUniqueID CLEANINGSQUEAK = 50661466U;
         static const AkUniqueID DIRT_CLEANED = 3164020227U;
+        static const AkUniqueID GAMEMUSIC = 1533192012U;
         static const AkUniqueID HULL_IMPACT = 3071260525U;
+        static const AkUniqueID MUTEALL = 2308878679U;
         static const AkUniqueID THRUSTERS = 1944582317U;
     } // namespace EVENTS
 
     namespace STATES
     {
+        namespace GAMESCREEN
+        {
+            static const AkUniqueID GROUP = 280258843U;
+
+            namespace STATE
+            {
+                static const AkUniqueID INGAME = 984691642U;
+                static const AkUniqueID SCOREBOARD = 35600435U;
+                static const AkUniqueID TITLESCREEN = 152105657U;
+            } // namespace STATE
+        } // namespace GAMESCREEN
+
         namespace ISBOOSTING
         {
             static const AkUniqueID GROUP = 303137326U;

@@ -106,6 +106,17 @@
 						<Action Name="Stop All" ID="{266811A1-E7DA-4471-AF89-B4C46A9967E2}" ShortID="339522209" Type="Stop" Scope="All" Global="true"/>
 					</ChildrenList>
 				</Event>
+				<Event Name="GameMusic" ID="{84DA2281-EEE7-4F90-8DD4-99FD5B919EAC}">
+					<ChildrenList>
+						<Action Name="Play" ID="{BB695410-02CA-4CE2-8D6D-72A0ABC6E0CC}" ShortID="718667092" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{6020A706-99C5-4947-871C-486C22366B95}" Global="false">
+									<ObjectRef Name="MusicManager" ID="{CBBAA349-3327-434D-869A-C9E68050C372}" WorkUnitID="{BB7424BD-F0A6-44C9-9592-B27D77652ECD}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

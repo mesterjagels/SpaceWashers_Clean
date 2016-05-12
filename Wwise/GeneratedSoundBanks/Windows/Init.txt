@@ -1,7 +1,12 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	280258843	GameScreen			\Default Work Unit\GameScreen	
 	303137326	isBoosting			\Default Work Unit\isBoosting	
 
 State	ID	Name	State Group			Notes
+	35600435	Scoreboard	GameScreen			
+	152105657	TitleScreen	GameScreen			
+	748895195	None	GameScreen			
+	984691642	InGame	GameScreen			
 	748895195	None	isBoosting			
 	3234467226	boosting	isBoosting			
 	4234859743	notBoosting	isBoosting			

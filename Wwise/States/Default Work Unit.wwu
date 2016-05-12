@@ -10,6 +10,14 @@
 						<State Name="notBoosting" ID="{CFBE7E37-DA75-43D1-AE57-863921E2BDB9}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="GameScreen" ID="{6CF896A4-A9B1-4A83-B5C2-89682B67AE2F}">
+					<ChildrenList>
+						<State Name="None" ID="{EB9B3AFA-5125-4AF0-A45A-F4431F96973E}"/>
+						<State Name="TitleScreen" ID="{241DA5E8-30D1-4B3B-A566-DB25749D5F21}"/>
+						<State Name="InGame" ID="{2D3E8B47-2361-41DA-90C1-61BF5716A86D}"/>
+						<State Name="Scoreboard" ID="{76369972-482C-48A8-A9FA-BE4AFE0FDBDD}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
