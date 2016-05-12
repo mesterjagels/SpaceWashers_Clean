@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
+using DG.Tweening;
 
 public class ScoreAlpha : MonoBehaviour
 {
@@ -21,8 +21,13 @@ public class ScoreAlpha : MonoBehaviour
 
 	void Update ()
     {
-        scoreString = gameManager.totalScore.ToString();
-        scoreText.text = "SCORE: " + scoreString;
+        if(scoreString != gameManager.totalScore.ToString())
+        {
+            scoreString = gameManager.totalScore.ToString();
+            scoreText.DOText("SCORE: " + scoreString, 0.5f, true, ScrambleMode.Numerals);
+          //  scoreText.text = "SCORE: " + scoreString;
+        }
+        
 
         distanceMath = distanceToTravel - uvOffset.offset.y;
         distanceLeft.text = "DISTANCE LEFT: " + distanceMath.ToString();

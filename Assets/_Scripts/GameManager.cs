@@ -128,8 +128,13 @@ public class GameManager : MonoBehaviour
     {
         gameActive = false;
         UpdateHighscore();
+<<<<<<< HEAD
         UnityEngine.SceneManagement.SceneManager.LoadScene("Teamscore");
        
+=======
+        Debug.Log("I should load the teamscore");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+>>>>>>> bug fixing
     }
 
     //Add points to the PlayerScore of the player that cleaned dirt.

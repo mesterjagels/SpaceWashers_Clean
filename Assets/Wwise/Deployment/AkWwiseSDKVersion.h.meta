@@ -11,10 +11,13 @@ PluginImporter:
     Any:
       enabled: 0
       settings: {}
+<<<<<<< HEAD:Assets/Wwise/Deployment/AkWwiseSDKVersion.h.meta
     Editor:
       enabled: 0
       settings:
         DefaultValueInitialized: true
+=======
+>>>>>>> bug fixing:Assets/Demigiant/DOTween/DOTween.dll.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

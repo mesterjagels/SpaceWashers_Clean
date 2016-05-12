@@ -9,12 +9,17 @@ PluginImporter:
   isPreloaded: 0
   platformData:
     Any:
+<<<<<<< HEAD:Assets/Wwise/Deployment/Plugins/Windows/x86/Debug/AkSoundEngine.dll.meta
       enabled: 0
       settings: {}
     Editor:
       enabled: 0
       settings:
         DefaultValueInitialized: true
+=======
+      enabled: 1
+      settings: {}
+>>>>>>> bug fixing:Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
