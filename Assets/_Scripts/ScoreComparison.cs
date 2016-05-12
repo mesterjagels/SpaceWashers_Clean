@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class ScoreComparison : MonoBehaviour {
 
-    private GameManager gameManager;
+    public GameManager gameManager;
 
-    private Text scoreText0;
+    public Text scoreText0;
     public Text scoreText1;
     public Text scoreText2;
     public Text scoreText3;
@@ -14,19 +14,25 @@ public class ScoreComparison : MonoBehaviour {
 
     void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-
-        //UI Elements
-        scoreText0.text = gameManager.totalScore.ToString();
-        scoreText1.text = gameManager.captainScore.ToString();
-        scoreText2.text = gameManager.cleanerScore0.ToString();
-        scoreText3.text = gameManager.cleanerScore1.ToString();
-        scoreText4.text = gameManager.cleanerScore2.ToString();
 
     }
 
     void Update()
     {
-  
+        if(gameManager == null)
+        {
+            gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+
+            if (!scoresSet)
+            {
+                scoreText0.text = gameManager.totalScore.ToString();
+                scoreText1.text = gameManager.captainScore.ToString();
+                scoreText2.text = gameManager.cleanerScore0.ToString();
+                scoreText3.text = gameManager.cleanerScore1.ToString();
+                scoreText4.text = gameManager.cleanerScore2.ToString();
+
+                scoresSet = true;
+            }
+        }
     }
 }

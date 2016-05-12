@@ -1029,6 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd314e72c2de0ac46b65e170ffe9f17e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   scoreText0: {fileID: 164626501}
   scoreText1: {fileID: 1404781966}
   scoreText2: {fileID: 1892364815}
@@ -1192,6 +1193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd314e72c2de0ac46b65e170ffe9f17e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   scoreText0: {fileID: 0}
   scoreText1: {fileID: 1404781966}
   scoreText2: {fileID: 1892364815}
