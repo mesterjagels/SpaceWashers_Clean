@@ -13,6 +13,7 @@ public class ScoreBubble : MonoBehaviour
     private Vector2 screenPos;
     private Vector2 canvasPos;
 
+
     void Awake()
     {
         ButtonRect = GetComponent<RectTransform>();
