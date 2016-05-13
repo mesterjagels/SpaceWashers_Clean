@@ -63,7 +63,26 @@ public class DirtController : MonoBehaviour {
             cleaningPlayer = 2;
         }
 
-        gameManager.AddCleanerScore(cleaningPlayer);
-       // score.score = score.score + 1000;
+        int dirtPoints = gameManager.AddCleanerScore(cleaningPlayer);
+        Vector3 offset = new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0);
+        GameObject scoreBubble = (GameObject)GameObject.Instantiate(gameManager.bubblePrefab, this.transform.position+offset, Quaternion.identity);
+        TextMesh scoreBubbleText = scoreBubble.GetComponent<ScoreBubble>().bubbleScore;
+        scoreBubbleText.text = "+"+dirtPoints;
+
+        switch (cleaningPlayer)
+        {
+            case 0:
+                scoreBubbleText.color = gameManager.babe;
+                scoreBubble.GetComponent<Renderer>().material.color = gameManager.babe;
+                break;
+            case 1:
+                scoreBubbleText.color = gameManager.gangsta;
+                scoreBubble.GetComponent<Renderer>().material.color = gameManager.gangsta;
+                break;
+            case 2:
+                scoreBubbleText.color = gameManager.grunger;
+                scoreBubble.GetComponent<Renderer>().material.color = gameManager.grunger;
+                break;
+        }
     }
 }

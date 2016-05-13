@@ -24,8 +24,8 @@ public class ScoreAlpha : MonoBehaviour
         if(scoreString != gameManager.totalScore.ToString())
         {
             scoreString = gameManager.totalScore.ToString();
-            scoreText.DOText("SCORE: " + scoreString, 0.5f, true, ScrambleMode.Numerals);
-          //  scoreText.text = "SCORE: " + scoreString;
+            //    scoreText.DOText("SCORE: " + scoreString, 0.5f, true, ScrambleMode.Numerals);
+            scoreText.text = "SCORE: " + scoreString;
         }
         
 

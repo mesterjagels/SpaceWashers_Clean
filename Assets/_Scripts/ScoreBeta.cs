@@ -23,7 +23,7 @@ public class ScoreBeta : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 
         gameManager.GetHighscore();
-
+        /*
         scoreText1.DOText(" 1.   " + gameManager.highscoreListAsArrayOfStrings[0], 2f, true, ScrambleMode.Numerals);
         scoreText2.DOText(" 2.   " + gameManager.highscoreListAsArrayOfStrings[1], 2f, true, ScrambleMode.Numerals).SetDelay(1.7f).Delay();
         scoreText3.DOText(" 3.   " + gameManager.highscoreListAsArrayOfStrings[2], 2f, true, ScrambleMode.Numerals);
@@ -34,8 +34,8 @@ public class ScoreBeta : MonoBehaviour
         scoreText8.DOText(" 8.   " + gameManager.highscoreListAsArrayOfStrings[7], 2f, true, ScrambleMode.Numerals);
         scoreText9.DOText(" 9.   " + gameManager.highscoreListAsArrayOfStrings[8], 2f, true, ScrambleMode.Numerals);
         scoreText10.DOText("10.   " + gameManager.highscoreListAsArrayOfStrings[9], 2f, true, ScrambleMode.Numerals);
+        */
 
-        /*
         //UI Elements
         scoreText1.text = " 1.   " + gameManager.highscoreListAsArrayOfStrings[0];
         scoreText2.text = " 2.   " + gameManager.highscoreListAsArrayOfStrings[1];
@@ -46,8 +46,7 @@ public class ScoreBeta : MonoBehaviour
         scoreText7.text = " 7.   " + gameManager.highscoreListAsArrayOfStrings[6];
         scoreText8.text = " 8.   " + gameManager.highscoreListAsArrayOfStrings[7];
         scoreText9.text = " 9.   " + gameManager.highscoreListAsArrayOfStrings[8];
-        scoreText10.text = " 10.   " + gameManager.highscoreListAsArrayOfStrings[9];
-    */
+        scoreText10.text = " 10.   " + gameManager.highscoreListAsArrayOfStrings[9];      
     }
 
     void Update()

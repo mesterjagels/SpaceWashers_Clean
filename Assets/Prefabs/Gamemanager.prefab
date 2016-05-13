@@ -39,7 +39,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a652b1b9f7201d4b964a916f2f4afa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  babe: {r: 1, g: 0.9724138, b: 0, a: 1}
+  gangsta: {r: 0.46757546, g: 0.9705882, b: 0.44961074, a: 1}
+  grunger: {r: 0.9485294, g: 0.25108132, b: 0.25108132, a: 1}
+  bubblePrefab: {fileID: 199866, guid: 4ebff2f2cfbafb0428ee5f782c32c9d6, type: 2}
   highscoreList: {fileID: 4900000, guid: b24cc34b7183c1c42bd743b812d3e6ab, type: 3}
+  highscore: []
+  highscoreListAsOneString: 
+  highscoreListAsArrayOfStrings: []
+  disconnector: []
+  highscoreListAsArrayOfInts: 
+  playerCount: 0
+  cleanerScore0: 0
+  cleanerScore1: 0
+  cleanerScore2: 0
+  captainScore: 0
+  cleanerPoints0: 0
+  cleanerPoints1: 0
+  cleanerPoints2: 0
+  captainPoints: 1000
+  cleanerMultiplier0: 1
+  cleanerMultiplier1: 1
+  cleanerMultiplier2: 1
+  captainMultiplier: 1
+  cleanerTimeCheck0: 0
+  cleanerTimeCheck1: 0
+  cleanerTimeCheck2: 0
+  captainTimeCheck: 0
+  totalScore: 0
+  player1Active: 0
+  player2Active: 0
+  player3Active: 0
+  gameActive: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

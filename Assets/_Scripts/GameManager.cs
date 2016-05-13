@@ -7,6 +7,10 @@ using InControl;
 
 public class GameManager : MonoBehaviour
 {
+    public Color babe;
+    public Color gangsta;
+    public Color grunger;
+    public GameObject bubblePrefab;
     public static GameManager instance = null;
 
     public TextAsset highscoreList;
@@ -134,8 +138,10 @@ public class GameManager : MonoBehaviour
     }
 
     //Add points to the PlayerScore of the player that cleaned dirt.
-    public void AddCleanerScore(int cleaningPlayer)
+    public int AddCleanerScore(int cleaningPlayer)
     {
+        int dirtPoints=0;
+
         if (gameActive == true)
         {
             //Check for multiplier condition and change multiplier accordingly.
@@ -154,6 +160,7 @@ public class GameManager : MonoBehaviour
                 }
 
                 cleanerPoints0 = 100 * cleanerMultiplier0;
+                dirtPoints = cleanerPoints0;
                 cleanerScore0 = cleanerScore0 + cleanerPoints0;
 
                 cleanerPoints0 = 0;
@@ -174,6 +181,7 @@ public class GameManager : MonoBehaviour
                 }
 
                 cleanerPoints1 = 100 * cleanerMultiplier1;
+                dirtPoints = cleanerPoints1;
                 cleanerScore1 = cleanerScore1 + cleanerPoints1;
 
                 cleanerPoints1 = 0;
@@ -194,12 +202,14 @@ public class GameManager : MonoBehaviour
                 }
 
                 cleanerPoints2 = 100 * cleanerMultiplier2;
+                dirtPoints = cleanerPoints2;
                 cleanerScore2 = cleanerScore2 + cleanerPoints2;
 
                 cleanerPoints2 = 0;
                 cleanerTimeCheck2 = Time.time;
             }
         }
+        return dirtPoints;
     }
 
     //Add points to the CaptainScore.

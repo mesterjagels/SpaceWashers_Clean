@@ -94,11 +94,6 @@ public class CleanerController : MonoBehaviour
 		}
 	}
 
-	public void ScoringAnimation()
-	{
-		//animation.Play;
-	}
-
     void OnDestroy()
     {
         AkSoundEngine.PostEvent("muteObject", gameObject);
