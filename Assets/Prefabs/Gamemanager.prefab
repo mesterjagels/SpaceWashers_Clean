@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   babe: {r: 1, g: 0.9724138, b: 0, a: 1}
-  gangsta: {r: 0.46757546, g: 0.9705882, b: 0.44961074, a: 1}
-  grunger: {r: 0.9485294, g: 0.25108132, b: 0.25108132, a: 1}
+  gangsta: {r: 0.3686911, g: 0.88235295, b: 0.35034603, a: 1}
+  grunger: {r: 0.9558824, g: 0.30925608, b: 0.30925608, a: 1}
   bubblePrefab: {fileID: 199866, guid: 4ebff2f2cfbafb0428ee5f782c32c9d6, type: 2}
   highscoreList: {fileID: 4900000, guid: b24cc34b7183c1c42bd743b812d3e6ab, type: 3}
   highscore: []

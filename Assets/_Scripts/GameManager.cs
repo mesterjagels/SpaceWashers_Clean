@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
             //Check for multiplier condition and change multiplier accordingly.
             if (cleaningPlayer == 0)
             {
-                if (cleanerTimeCheck0 > Time.time - 5)
+                /*if (cleanerTimeCheck0 > Time.time - 5)
                 {
                     if (cleanerMultiplier0 < 6)
                     {
@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     ResetCleanerMultiplier(cleaningPlayer);
-                }
+                }*/
 
                 cleanerPoints0 = 100 * cleanerMultiplier0;
                 dirtPoints = cleanerPoints0;
