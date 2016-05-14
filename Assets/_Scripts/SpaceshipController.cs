@@ -94,7 +94,7 @@ public class SpaceshipController : MonoBehaviour
             if (Input.GetKey(left) | arduino.digitalRead(pinLeft) == 1)
             {
                 //Go left
-                Debug.Log("Left Mouse clicked");
+
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed * -1, horizontalTurnAcc * Time.deltaTime);
                 gameObject.transform.DORotate(new Vector3(0, 0, 30), 2);
                 if (!rightWind.active)
@@ -126,7 +126,6 @@ public class SpaceshipController : MonoBehaviour
             if (Input.GetKeyDown(throttleUp) || arduino.digitalRead(pinUp) ==1 )
             {
                 //Speed up
-                Debug.Log("Up clicked");
                 if (currentGear < throttleSpeeds.Length - 1)
                 {
                     currentGear++;

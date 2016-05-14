@@ -319,6 +319,10 @@ public class GameManager : MonoBehaviour
 
         if (Application.loadedLevel == 1)
         {
+            if (!gameActive)
+            {
+                InitGame();
+            }
             if (!player1Active)
             {
                 GameObject.FindGameObjectWithTag("Player1").SetActive(false);
@@ -344,10 +348,7 @@ public class GameManager : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player3").SetActive(true);
             }
-            if (!gameActive)
-            {
-                InitGame();
-            }
+            
         }
 
         if (Application.loadedLevel == 2)
