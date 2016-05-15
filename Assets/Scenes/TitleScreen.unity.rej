@@ -1,0 +1,13 @@
+diff a/Assets/Scenes/TitleScreen.unity b/Assets/Scenes/TitleScreen.unity	(rejected hunks)
+@@ -1588,7 +1588,11 @@
+    p1: {fileID: 388997341}
+    p2: {fileID: 1260955846}
+    p3: {fileID: 1527002710}
+++<<<<<<< HEAD
+ +  loading: {fileID: 842664215}
+++=======
++   loading: {fileID: 989034230}
+++>>>>>>> fixed bug in titlescreeen
+    playerCountInTitle: 0
+    player1joined: 0
+    player2joined: 0
