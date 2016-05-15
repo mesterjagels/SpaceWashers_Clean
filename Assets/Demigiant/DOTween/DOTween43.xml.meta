@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< 63c9edc91e8e9d6b40577195970e53c9238d2a9f
 guid: daeae9b25e8cff1479e2050ffcb69694
 timeCreated: 1463311136
+=======
+guid: e9e2a378da163324fadf8a66cad51716
+timeCreated: 1463312935
+>>>>>>> Two mom animations & orb sprite
 licenseType: Free
 TextScriptImporter:
   userData: 

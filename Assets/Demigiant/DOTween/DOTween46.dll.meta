@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< 63c9edc91e8e9d6b40577195970e53c9238d2a9f
 guid: 443911ec8bd355249b6db6166f42f49f
 timeCreated: 1463311135
+=======
+guid: 3ed828b0841a31d48b7fc5d053bc1702
+timeCreated: 1463312933
+>>>>>>> Two mom animations & orb sprite
 licenseType: Free
 PluginImporter:
   serializedVersion: 1
