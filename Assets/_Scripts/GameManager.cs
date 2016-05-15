@@ -349,7 +349,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 if (GameObject.FindGameObjectWithTag("Player2") != null)
-                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
+                    GameObject.FindGameObjectWithTag("Player2").SetActive(true);
             }
 
             if (!player3Active && GameObject.FindGameObjectWithTag("Player3") != null)
@@ -359,12 +359,48 @@ public class GameManager : MonoBehaviour
             else
             {
                 if (GameObject.FindGameObjectWithTag("Player3") != null)
-                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
+                    GameObject.FindGameObjectWithTag("Player3").SetActive(true);
             }
-            
         }
 
         if (Application.loadedLevel == 2)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                Application.LoadLevel(3);
+            }
+
+            if (!player1Active)
+            {
+                Debug.Log("Player1 not active, deactivating babe");
+                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
+            }
+            else if (player1Active)
+            {
+                Debug.Log("Player1 active, activating babe");
+                GameObject.FindGameObjectWithTag("Player1").SetActive(true);
+            }
+
+            if (!player2Active)
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
+            }
+
+            if (!player3Active)
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
+            }
+        }
+
+        if (Application.loadedLevel == 3)
         {
             if (Input.GetKey(KeyCode.LeftArrow))
             {
@@ -399,7 +435,43 @@ public class GameManager : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player3").SetActive(true);
             }
+        }
 
+        if (Application.loadedLevel == 4)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                Application.LoadLevel(0);
+            }
+
+            if (!player1Active)
+            {
+                Debug.Log("Player1 not active, deactivating babe");
+                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
+            }
+            else if (player1Active)
+            {
+                Debug.Log("Player1 active, activating babe");
+                GameObject.FindGameObjectWithTag("Player1").SetActive(true);
+            }
+
+            if (!player2Active)
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
+            }
+
+            if (!player3Active)
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
+            }
         }
     }
 
