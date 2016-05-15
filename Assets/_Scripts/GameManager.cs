@@ -212,6 +212,11 @@ public class GameManager : MonoBehaviour
         return dirtPoints;
     }
 
+    public void CaptainPickup()
+    {
+        captainScore = captainScore + 1000;
+    }
+
     //Add points to the CaptainScore.
     void AddCaptainScore()
     {

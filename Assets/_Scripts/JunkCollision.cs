@@ -38,7 +38,6 @@ public class JunkCollision : MonoBehaviour {
                     dirt.transform.parent = gameObject.transform;
                     Instantiate(pizzaParticle, hitpoint, Quaternion.Euler(new Vector3(0, 0, 180)));
                     gameManager.DecreaseCaptainPoints();
-                    Debug.Log("Captain points: " + gameManager.captainPoints);
                 }
                 break;
 
@@ -52,8 +51,14 @@ public class JunkCollision : MonoBehaviour {
                     dirt.transform.parent = gameObject.transform;
                     Instantiate(slimeParticle, hitpoint, Quaternion.Euler(new Vector3(90, 0, 180)));
                     gameManager.DecreaseCaptainPoints();
-                    Debug.Log("Captain points: " + gameManager.captainPoints);
                 }
+                break;
+
+            case "Pickup":
+
+                //Andreas add pickup sounds here
+                gameManager.CaptainPickup();
+                Destroy(col.gameObject);
                 break;
         }
 
