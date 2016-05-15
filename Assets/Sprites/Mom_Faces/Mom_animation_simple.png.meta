@@ -1,17 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: c7c314c598e43f44fa28b290f41d6e63
-timeCreated: 1463333191
-licenseType: Free
-TextureImporter:
-  fileIDToRecycleName: {}
-  serializedVersion: 2
-  mipmaps:
-    mipMapMode: 0
-    enableMipMap: 1
-=======
-guid: 036af76725f105640b2303750d87c004
-timeCreated: 1463333920
+timeCreated: 1463334532
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -20,8 +9,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
->>>>>>> Animations
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -40,19 +28,11 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-<<<<<<< HEAD
-  textureFormat: -1
-  maxTextureSize: 2048
-  textureSettings:
-    filterMode: -1
-    aniso: -1
-=======
   textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
     filterMode: 0
     aniso: 16
->>>>>>> Animations
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -60,28 +40,17 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> Animations
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
-  spritePixelsToUnits: 100
-=======
   spritePixelsToUnits: 5
->>>>>>> Animations
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-<<<<<<< HEAD
-    sprites: []
-=======
     sprites:
     - name: Mom_animation_simple_0
       rect:
@@ -105,7 +74,6 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
->>>>>>> Animations
     outline: []
   spritePackingTag: 
   userData: 
