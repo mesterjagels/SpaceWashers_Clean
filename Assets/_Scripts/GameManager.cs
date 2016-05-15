@@ -127,6 +127,12 @@ public class GameManager : MonoBehaviour
         gameActive = true;
     }
 
+    //Game is lost
+    public void GameOver()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+    }
+
     //End the game.
     public void EndGame()
     {

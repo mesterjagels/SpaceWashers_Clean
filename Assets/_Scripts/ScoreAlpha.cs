@@ -9,6 +9,8 @@ public class ScoreAlpha : MonoBehaviour
     public int score = 0;
     public Text scoreText;
     public Text distanceLeft;
+    public Text momReturn;
+    public float timeLeft = 60;
     public float distanceMath;
     string scoreString;
     public float distanceToTravel = 100;
@@ -28,7 +30,6 @@ public class ScoreAlpha : MonoBehaviour
             scoreText.text = "SCORE: " + scoreString;
         }
         
-
         distanceMath = distanceToTravel - uvOffset.offset.y;
         distanceLeft.text = "DISTANCE LEFT: " + distanceMath.ToString();
 
@@ -37,5 +38,13 @@ public class ScoreAlpha : MonoBehaviour
             Debug.Log("Distance <= 0");
             gameManager.EndGame();
         }
-	}
+
+        timeLeft -= Time.deltaTime;
+        momReturn.text = "MOM WILL BE HOME IN: " + timeLeft;
+
+        if (timeLeft < 0)
+        {
+            gameManager.GameOver();
+        }
+    }
 }
