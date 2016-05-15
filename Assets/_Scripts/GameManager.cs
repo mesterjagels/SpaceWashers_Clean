@@ -331,21 +331,23 @@ public class GameManager : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player1").SetActive(true);
             }
-            if (!player2Active)
+            if (!player2Active && GameObject.FindGameObjectWithTag("Player2") != null)
             {
                 GameObject.FindGameObjectWithTag("Player2").SetActive(false);
             }
             else
             {
+                if (GameObject.FindGameObjectWithTag("Player2") != null)
                 GameObject.FindGameObjectWithTag("Player2").SetActive(true);
             }
 
-            if (!player3Active)
+            if (!player3Active && GameObject.FindGameObjectWithTag("Player3") != null)
             {
                 GameObject.FindGameObjectWithTag("Player3").SetActive(false);
             }
             else
             {
+                if (GameObject.FindGameObjectWithTag("Player3") != null)
                 GameObject.FindGameObjectWithTag("Player3").SetActive(true);
             }
             

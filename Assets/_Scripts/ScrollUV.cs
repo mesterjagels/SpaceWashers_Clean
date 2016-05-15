@@ -21,10 +21,11 @@ public class ScrollUV : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        offset.x += spaceship.horizontalSpeed/ uvMoveSpeed / parralax;
-        offset.y += spaceship.verticalSpeed / uvMoveSpeed / parralax;
-            
-        
+        if(Application.loadedLevel != 2) { 
+            offset.x += spaceship.horizontalSpeed/ uvMoveSpeed / parralax;
+            offset.y += spaceship.verticalSpeed / uvMoveSpeed / parralax;
+        }
+
         mat.mainTextureOffset = offset;
 
 	}

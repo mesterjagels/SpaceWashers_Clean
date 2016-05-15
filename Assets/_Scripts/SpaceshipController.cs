@@ -75,12 +75,14 @@ public class SpaceshipController : MonoBehaviour
         AkSoundEngine.SetRTPCValue("vertical_speed", verticalSpeed);
         Controls();
 
-        //Temp endlevel shit
-        if(scoreboard.GetComponent<ScoreAlpha>().distanceMath <= 1 && !levelEnded)
+        if (Application.loadedLevel != 0)
         {
-            levelEnded = true;
-            GameObject.Find("Earth").GetComponent<WorldMovement>().speedmultiplier = 0.2f;
-            gameObject.transform.DOScale(0, 5);
+            if (scoreboard.GetComponent<ScoreAlpha>().distanceMath <= 1 && !levelEnded)
+            {
+                levelEnded = true;
+                GameObject.Find("Earth").GetComponent<WorldMovement>().speedmultiplier = 0.2f;
+                gameObject.transform.DOScale(0, 5);
+            }
         }
     }
 
@@ -93,11 +95,10 @@ public class SpaceshipController : MonoBehaviour
             }
             if (Input.GetKey(left) | arduino.digitalRead(pinLeft) == 1)
             {
-                //Go left
-
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed * -1, horizontalTurnAcc * Time.deltaTime);
                 gameObject.transform.DORotate(new Vector3(0, 0, 30), 2);
-                if (!rightWind.active)
+
+                if (!rightWind.active && !rightWind == null)
                 {
                     rightWind.SetActive(true);
                 }
@@ -105,23 +106,29 @@ public class SpaceshipController : MonoBehaviour
             }
             else if (Input.GetKey(right) | arduino.digitalRead(pinRight) == 1)
             {
-                //Go right
                 horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, turnSpeed, horizontalTurnAcc * Time.deltaTime);
                 gameObject.transform.DORotate(new Vector3(0, 0, -30), 2);
 
-                if (!leftWind.active)
+                if (!leftWind.active && !leftWind == null)
                 {
                     leftWind.SetActive(true);
                 }
             }
             else
-            {
-                horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, 0, horizontalTurnDec * Time.deltaTime);
-                leftWind.SetActive(false);
-                rightWind.SetActive(false);
-                if (gameObject.transform.rotation.z != 0) { 
-                gameObject.transform.DORotate(new Vector3(0, 0, 0), 1);
+            {   if(Application.loadedLevel != 0) {
+                    horizontalSpeed = Mathf.MoveTowards(horizontalSpeed, 0, horizontalTurnDec * Time.deltaTime);
+                    if (!leftWind == null && !rightWind == null)
+                    {
+                        leftWind.SetActive(false);
+                        rightWind.SetActive(false);
+                    }
+
+                    if (gameObject.transform.rotation.z != 0)
+                    {
+                        gameObject.transform.DORotate(new Vector3(0, 0, 0), 1);
+                    }
                 }
+                
             }
             if (Input.GetKeyDown(throttleUp) || arduino.digitalRead(pinUp) ==1 )
             {
