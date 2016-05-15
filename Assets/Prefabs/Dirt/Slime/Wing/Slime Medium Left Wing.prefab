@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d524e10064e3fb043a9ca8b1541729f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thresholdAlpha: 0
+  thresholdAlpha: 20
   alphaPct: 0
 --- !u!114 &11499716
 MonoBehaviour:
