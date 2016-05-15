@@ -619,11 +619,14 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -0.095, y: 0.225}
-      - {x: -0.095, y: -0.225}
-      - {x: 0.085, y: -0.225}
-      - {x: 0.095, y: -0.215}
-      - {x: 0.095, y: 0.225}
+    - - {x: -0.06, y: 0.089999996}
+      - {x: -0.099999994, y: 0.049999997}
+      - {x: -0.099999994, y: -0.06}
+      - {x: -0.07, y: -0.089999996}
+      - {x: 0.07, y: -0.089999996}
+      - {x: 0.099999994, y: -0.06}
+      - {x: 0.099999994, y: 0.049999997}
+      - {x: 0.06, y: 0.089999996}
 --- !u!60 &6074906
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -695,7 +698,6 @@ MonoBehaviour:
   clean: 110
   playerNumber: 0
   soap: {fileID: 161120}
-  body: {fileID: 0}
 --- !u!114 &11489598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -708,6 +710,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 165900}
+  normalFace: {fileID: 21300000, guid: be5d63a1f0d707a488052906cf3e9c16, type: 3}
+  owFace: {fileID: 21300000, guid: 220eea4aea4e041e9a90021121ae87de, type: 3}
+  face: {fileID: 117296}
 --- !u!198 &19820472
 ParticleSystem:
   m_ObjectHideFlags: 1

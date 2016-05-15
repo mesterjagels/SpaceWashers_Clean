@@ -43,6 +43,10 @@
 					<ShortName>Gangsta 3.wav</ShortName>
 					<Path>SFX\Gangsta 3_9E69E797.wem</Path>
 				</File>
+				<File Id="95287785" Language="SFX">
+					<ShortName>Scoreboard_music.wav</ShortName>
+					<Path>SFX\Scoreboard_music_4B8CC0C5.wem</Path>
+				</File>
 				<File Id="168564473" Language="SFX">
 					<ShortName>boost_start.wav</ShortName>
 					<Path>SFX\boost_start_9E69E797.wem</Path>
@@ -79,6 +83,10 @@
 					<ShortName>Fresh_transistion.wav</ShortName>
 					<Path>SFX\Fresh_transistion_4B8CC0C5.wem</Path>
 				</File>
+				<File Id="384236896" Language="SFX">
+					<ShortName>Scratch_Transition.wav</ShortName>
+					<Path>SFX\Scratch_Transition_4B8CC0C5.wem</Path>
+				</File>
 				<File Id="384447423" Language="SFX">
 					<ShortName>Grunger 1.wav</ShortName>
 					<Path>SFX\Grunger 1_9E69E797.wem</Path>
@@ -111,10 +119,6 @@
 					<ShortName>brushLoop.wav</ShortName>
 					<Path>SFX\brushLoop_4B8CC0C5.wem</Path>
 				</File>
-				<File Id="586710480" Language="SFX">
-					<ShortName>Scoreboard_music.wav</ShortName>
-					<Path>SFX\Scoreboard_music_4B8CC0C5.wem</Path>
-				</File>
 				<File Id="599990140" Language="SFX">
 					<ShortName>hull_5.wav</ShortName>
 					<Path>SFX\hull_5_9E69E797.wem</Path>
@@ -134,10 +138,6 @@
 				<File Id="694283652" Language="SFX">
 					<ShortName>Gangsta 1.wav</ShortName>
 					<Path>SFX\Gangsta 1_9E69E797.wem</Path>
-				</File>
-				<File Id="702677291" Language="SFX">
-					<ShortName>Scratch_Transition.wav</ShortName>
-					<Path>SFX\Scratch_Transition_4B8CC0C5.wem</Path>
 				</File>
 				<File Id="771480117" Language="SFX">
 					<ShortName>Gangsta 4.wav</ShortName>

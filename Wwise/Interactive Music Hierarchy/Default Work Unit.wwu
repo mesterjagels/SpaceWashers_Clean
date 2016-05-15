@@ -19,6 +19,11 @@
 						<MusicSwitchContainer Name="inGame" ID="{533E8573-8E93-44B1-8319-F34305BF12BB}" ShortID="651094222">
 							<PropertyList>
 								<Property Name="Tempo" Type="Real64" Value="110"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -476,20 +481,20 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Scoreboard_music" ID="{4896B891-D6DA-49F9-B41C-B0B0757565EA}" ShortID="195552017">
+										<MusicTrack Name="Scoreboard_music" ID="{8FC50A8B-7D87-4D98-8F45-D247EC4FB291}" ShortID="833967408">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Scoreboard_music" ID="{4BABD1A5-C1DC-443A-97FC-6F1503087296}" ShortID="586710480">
+												<AudioFileSource Name="Scoreboard_music" ID="{4C3316DB-92FF-41A0-B669-74B243503F0C}" ShortID="95287785">
 													<Language>SFX</Language>
 													<AudioFile>Scoreboard_music.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
-												<MusicTransition Name="Root" ID="{43037F62-E730-443B-8ED2-0D57036ADD6C}">
+												<MusicTransition Name="Root" ID="{BB53B643-D989-4C32-BFD0-DEAE00016BD5}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -497,15 +502,15 @@
 												</MusicTransition>
 											</TransitionList>
 											<SequenceList>
-												<MusicTrackSequence Name="" ID="{53C5ED6F-EC2C-4F76-BEA3-FF3D7F34CB61}">
+												<MusicTrackSequence Name="" ID="{E817724D-4C50-4A80-9FB8-93DDF16A0F57}">
 													<ClipList>
-														<MusicClip Name="Scoreboard_music" ID="{DC2593FA-98A7-46B8-97BD-3187BFC15BA3}">
+														<MusicClip Name="Scoreboard_music" ID="{3D3B5C2C-3BDE-45B8-A6A6-3C457F292BA1}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="71111.1111111111"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
-															<AudioSourceRef Name="Scoreboard_music" ID="{4BABD1A5-C1DC-443A-97FC-6F1503087296}"/>
+															<AudioSourceRef Name="Scoreboard_music" ID="{4C3316DB-92FF-41A0-B669-74B243503F0C}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
@@ -513,11 +518,7 @@
 										</MusicTrack>
 									</ChildrenList>
 									<CueList>
-										<MusicCue Name="Entry Cue" ID="{4FC49372-B879-4102-8001-4451EA676DE8}">
-											<PropertyList>
-												<Property Name="TimeMs" Type="Real64" Value="28444.4444444444"/>
-											</PropertyList>
-										</MusicCue>
+										<MusicCue Name="Entry Cue" ID="{4FC49372-B879-4102-8001-4451EA676DE8}"/>
 										<MusicCue Name="Exit Cue" ID="{248C8728-1A36-47B7-9207-E5ED820AF7C9}">
 											<PropertyList>
 												<Property Name="CueType" Type="int16" Value="1"/>
@@ -594,7 +595,6 @@
 										<Property Name="DestinationContextType" Type="int16" Value="2"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 										<Property Name="SourceContextType" Type="int16" Value="2"/>
-										<Property Name="UseTransitionObject" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DestinationContextObject">
@@ -724,20 +724,20 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicTrack Name="Scratch_Transition" ID="{C0EB6DBB-CEB7-46ED-8C59-5CB6743584A4}" ShortID="789511741">
+						<MusicTrack Name="Scratch_Transition" ID="{38D32900-2F3B-473C-A9BF-7DEE8520DA9F}" ShortID="369757484">
 							<ReferenceList>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Scratch_Transition" ID="{0B3E24E9-E070-4BA6-B465-091FB1A0AEFC}" ShortID="702677291">
+								<AudioFileSource Name="Scratch_Transition" ID="{EDC51E2B-862C-4BA1-8825-D91E7000F417}" ShortID="384236896">
 									<Language>SFX</Language>
 									<AudioFile>Scratch_Transition.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
-								<MusicTransition Name="Root" ID="{E794C26D-22FF-427F-8718-DE4241EF3434}">
+								<MusicTransition Name="Root" ID="{335A3B9A-1BF5-4B85-A6CB-E1F031652EE4}">
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
@@ -745,15 +745,15 @@
 								</MusicTransition>
 							</TransitionList>
 							<SequenceList>
-								<MusicTrackSequence Name="" ID="{80B343DF-C7BE-4D8F-A06B-3236081BA4E3}">
+								<MusicTrackSequence Name="" ID="{943917BD-6F26-4F50-B4A9-08A961811068}">
 									<ClipList>
-										<MusicClip Name="Scratch_Transition" ID="{661BF0C2-B0FC-45B3-B0AC-174926BCC3D5}">
+										<MusicClip Name="Scratch_Transition" ID="{C4DEA79D-C083-4F3F-8F4B-00418C510C0C}">
 											<PropertyList>
-												<Property Name="EndTrimOffset" Type="Real64" Value="1777.77777777778"/>
+												<Property Name="EndTrimOffset" Type="Real64" Value="888.888888888889"/>
 												<Property Name="FadeInMode" Type="int16" Value="0"/>
 												<Property Name="FadeOutMode" Type="int16" Value="0"/>
 											</PropertyList>
-											<AudioSourceRef Name="Scratch_Transition" ID="{0B3E24E9-E070-4BA6-B465-091FB1A0AEFC}"/>
+											<AudioSourceRef Name="Scratch_Transition" ID="{EDC51E2B-862C-4BA1-8825-D91E7000F417}"/>
 										</MusicClip>
 									</ClipList>
 								</MusicTrackSequence>
@@ -765,7 +765,7 @@
 						<MusicCue Name="Exit Cue" ID="{A5A8ED61-63C1-4596-8004-44DDBF5C34EA}">
 							<PropertyList>
 								<Property Name="CueType" Type="int16" Value="1"/>
-								<Property Name="TimeMs" Type="Real64" Value="1777.77777777778"/>
+								<Property Name="TimeMs" Type="Real64" Value="889.661164205042"/>
 							</PropertyList>
 						</MusicCue>
 					</CueList>
