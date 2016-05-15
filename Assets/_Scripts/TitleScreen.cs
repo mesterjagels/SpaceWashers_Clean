@@ -43,10 +43,6 @@ public class TitleScreen : MonoBehaviour {
                 Application.LoadLevel(1);
             }
         }
-        if (InputManager.Devices[0].Command || InputManager.Devices[1].Command || InputManager.Devices[2].Command)
-        {
-            Application.LoadLevel(6);
-        }
 
         if (InputManager.Devices[0].Action1 | InputManager.Devices[0].Action2 | InputManager.Devices[0].Action3 | InputManager.Devices[0].Action4 && !player1joined)
         {
@@ -77,6 +73,11 @@ public class TitleScreen : MonoBehaviour {
             p3.transform.DORotate(new Vector3(0, 0, 540), 2, RotateMode.FastBeyond360);
             p3.SetActive(true);
             playerCountInTitle++;
+        }
+
+        if (InputManager.Devices[0].Command)
+        {
+            Application.LoadLevel(6);
         }
 
 
