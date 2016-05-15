@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: 7d9887da172fa42b8a28ce6be176e256
-timeCreated: 1461850549
+guid: 3f49ce37dfc6fa743922c53fe78196d8
+timeCreated: 1463337096
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Fresh Spritesheet_0
+    21300002: Fresh Spritesheet_1
+    21300004: Fresh Spritesheet_2
+    21300006: Fresh Spritesheet_3
+    21300008: Fresh Spritesheet_4
+    21300010: Fresh Spritesheet_5
+    21300012: Fresh Spritesheet_6
+    21300014: Fresh Spritesheet_7
+    21300016: Fresh Spritesheet_8
+    21300018: Fresh Spritesheet_9
+    21300020: Fresh Spritesheet_10
+    21300022: Fresh Spritesheet_11
+    21300024: Fresh Spritesheet_12
+    21300026: Fresh Spritesheet_13
+    21300028: Fresh Spritesheet_14
+    21300030: Fresh Spritesheet_15
+    21300032: Fresh Spritesheet_16
+    21300034: Fresh Spritesheet_17
+    21300036: Fresh Spritesheet_18
+    21300038: Fresh Spritesheet_19
+    21300040: Fresh Spritesheet_20
+    21300042: Fresh Spritesheet_21
+    21300044: Fresh Spritesheet_22
+    21300046: Fresh Spritesheet_23
+    21300048: Fresh Spritesheet_24
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,11 +51,11 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +63,293 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Fresh Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 53
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 47
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 42
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 42
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 42
+        width: 90
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 39
+        width: 105
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 42
+        width: 103
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 39
+        width: 103
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 2204
+        y: 42
+        width: 106
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2505
+        y: 39
+        width: 105
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 42
+        width: 106
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 42
+        width: 106
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 39
+        width: 105
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 3705
+        y: 32
+        width: 105
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 4005
+        y: 29
+        width: 103
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 4306
+        y: 24
+        width: 84
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 4382
+        y: 29
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 4604
+        y: 21
+        width: 87
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 4904
+        y: 16
+        width: 87
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 5242
+        y: 13
+        width: 47
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 42
+        width: 15
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 4683
+        y: 26
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 4983
+        y: 21
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 5205
+        y: 16
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fresh Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 5284
+        y: 18
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 
