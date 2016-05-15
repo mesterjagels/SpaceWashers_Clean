@@ -133,6 +133,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="pointsScored" ID="{22634AEB-B105-46D0-BF49-C15EAD1076EC}">
+					<ChildrenList>
+						<Action Name="Play" ID="{62EB7A99-C199-4D91-A161-B14DA4EA4C20}" ShortID="623888689" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{80871576-A7F3-402B-AF72-8C4D5149946F}" Global="false">
+									<ObjectRef Name="ScoringBubble" ID="{AFFB158C-3C65-4BBF-B11B-C6386E3AD128}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

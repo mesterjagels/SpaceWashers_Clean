@@ -26,6 +26,7 @@
 				<Event Id="2308878679" Name="muteAll" MaxAttenuation="0.000000"/>
 				<Event Id="1830748535" Name="muteObject" MaxAttenuation="0.000000"/>
 				<Event Id="1651971879" Name="ow"/>
+				<Event Id="651793330" Name="pointsScored"/>
 				<Event Id="3189472150" Name="stopSFX" MaxAttenuation="0.000000"/>
 				<Event Id="1944582317" Name="thrusters"/>
 			</IncludedEvents>
@@ -53,6 +54,10 @@
 				<File Id="192410636" Language="SFX">
 					<ShortName>hull_4.wav</ShortName>
 					<Path>SFX\hull_4_9E69E797.wem</Path>
+				</File>
+				<File Id="205532066" Language="SFX">
+					<ShortName>ScoringBubble.wav</ShortName>
+					<Path>SFX\ScoringBubble_9E69E797.wem</Path>
 				</File>
 				<File Id="257176258" Language="SFX">
 					<ShortName>Babe 1.wav</ShortName>

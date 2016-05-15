@@ -14,6 +14,7 @@
 						<ObjectRef Name="stopSFX" ID="{D821F487-8F91-4134-8973-7344B61F8245}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="muteObject" ID="{EB46A596-DF37-4283-8529-B16DF2B84334}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="muteAll" ID="{171485D2-E61C-49ED-81E2-44B764820076}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="pointsScored" ID="{22634AEB-B105-46D0-BF49-C15EAD1076EC}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

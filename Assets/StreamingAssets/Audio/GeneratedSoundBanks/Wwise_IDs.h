@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID MUTEALL = 2308878679U;
         static const AkUniqueID MUTEOBJECT = 1830748535U;
         static const AkUniqueID OW = 1651971879U;
+        static const AkUniqueID POINTSSCORED = 651793330U;
         static const AkUniqueID STOPSFX = 3189472150U;
         static const AkUniqueID THRUSTERS = 1944582317U;
     } // namespace EVENTS

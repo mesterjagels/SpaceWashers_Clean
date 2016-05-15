@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	50661466	cleaningSqueak			\Default Work Unit\cleaningSqueak	
+	651793330	pointsScored			\Default Work Unit\pointsScored	
 	1533192012	GameMusic			\Default Work Unit\GameMusic	
 	1651971879	ow			\Default Work Unit\ow	
 	1830748535	muteObject			\Default Work Unit\muteObject	
@@ -68,6 +69,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	168564473	boost_start	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\boost_start_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\boost\Ignition\boost_start		132364
 	191463059	Babe 2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Babe 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Babe\Babe 2		57948
 	192410636	hull_4	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_4		202652
+	205532066	ScoringBubble	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\ScoringBubble_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\ScoringBubble		37764
 	257176258	Babe 1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Babe 1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Babe\Babe 1		88264
 	260457471	Grunger 4	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Grunger 4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Grunger\Grunger 4		154416
 	266433818	InGameBoostMusic	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\InGameBoostMusic_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\inGame\Boost\BoostSnare\InGameBoostMusic		384940
