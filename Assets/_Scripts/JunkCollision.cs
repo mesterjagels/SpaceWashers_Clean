@@ -38,6 +38,7 @@ public class JunkCollision : MonoBehaviour {
                     dirt.transform.parent = gameObject.transform;
                     Instantiate(pizzaParticle, hitpoint, Quaternion.Euler(new Vector3(0, 0, 180)));
                     gameManager.DecreaseCaptainPoints();
+                    gameManager.cleanliness = gameManager.cleanliness + 1;
                 }
                 break;
 
@@ -51,6 +52,7 @@ public class JunkCollision : MonoBehaviour {
                     dirt.transform.parent = gameObject.transform;
                     Instantiate(slimeParticle, hitpoint, Quaternion.Euler(new Vector3(90, 0, 180)));
                     gameManager.DecreaseCaptainPoints();
+                    gameManager.cleanliness = gameManager.cleanliness + 1;
                 }
                 break;
 

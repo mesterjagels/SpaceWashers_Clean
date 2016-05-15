@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     public int[] highscoreListAsArrayOfInts;
 
     public int playerCount;
+    public int cleanliness;
+    public int penalty;
     public int cleanerScore0 = 0;
     public int cleanerScore1 = 0;
     public int cleanerScore2 = 0;
@@ -49,6 +51,8 @@ public class GameManager : MonoBehaviour
 
     public bool gameActive = false;
     private bool gameEnded = false;
+
+    private int momState=1;
 
     void Start()
     {
@@ -87,7 +91,7 @@ public class GameManager : MonoBehaviour
         if (gameActive == true)
         {
             //Add captain score
-            if (captainTimeCheck < Time.time - 5)
+            /*if (captainTimeCheck < Time.time - 5)
             {
                 if (captainPoints == 1000)
                 {
@@ -107,7 +111,7 @@ public class GameManager : MonoBehaviour
                 }
 
                 captainTimeCheck = Time.time;
-            }
+            }*/
 
             totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
         }
@@ -133,6 +137,10 @@ public class GameManager : MonoBehaviour
         captainMultiplier = 1;
         totalScore = 0;
         captainTimeCheck = Time.time;
+        timeLeft = 70;
+        momState = 1;
+        penalty = 0;
+        cleanliness = 0;
         gameActive = true;
     }
 
@@ -145,10 +153,58 @@ public class GameManager : MonoBehaviour
     //End the game.
     public void EndGame()
     {
+        captainScore = captainScore + (Mathf.RoundToInt(timeLeft) * 250);
+        totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
+
+        if (cleanliness > 0)
+        {
+            if (cleanliness > 100)
+            {
+                cleanliness = 100;
+            }
+            
+            penalty = ((totalScore / 100) * cleanliness);
+
+            totalScore = totalScore - penalty;
+        }
+        else if (cleanliness < 0)
+        {
+            cleanliness = 0;
+        }
+
+        if (cleanliness < 100 && cleanliness > 74)
+        {
+            momState = 5;//Disappointed
+        }
+        else if (cleanliness < 75 && cleanliness > 49)
+        {
+            momState = 4;//Surprised Mom
+        }
+        else if (cleanliness < 50 && cleanliness > 24)
+        {
+            momState = 3;//Neutral Mom
+        }
+        else if (cleanliness < 25 && cleanliness > 0)
+        {
+            momState = 2;//Chill Mom
+        }
+        else if (cleanliness == 0)
+        {
+            momState = 1; //Happy Mom
+        }  
+
         gameEnded = true;
         gameActive = false;
-        UpdateHighscore();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+
+        if (cleanliness == 100)
+        {
+            Application.LoadLevel(5); //Game Over - Made it home before Mom but the ship looks like shit.
+        }
+        else
+        {
+            UpdateHighscore();
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        }  
     }
 
     //Add points to the PlayerScore of the player that cleaned dirt.
@@ -454,6 +510,13 @@ public class GameManager : MonoBehaviour
                 {
                     Application.LoadLevel(0);
                 }
+                break;
+
+            case "GameOver2":
+                if (Input.GetKey(KeyCode.LeftArrow))
+                    {
+                        Application.LoadLevel(0);
+                    }
                 break;
         }
         

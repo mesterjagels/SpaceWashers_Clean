@@ -36,13 +36,16 @@ public class TitleScreen : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.O) | arduino.digitalRead(pinBtn1) == 1)
-        {
-            loading.SetActive(true);
-            Application.LoadLevel(1);
+        if (player1joined | player2joined | player3joined) {
+            if (Input.GetKey(KeyCode.O) | arduino.digitalRead(pinBtn1) == 1)
+            {
+                loading.SetActive(true);
+                Application.LoadLevel(1);
+            }
         }
-        if (player1joined | player2joined | player3joined) { 
-            
+        if (InputManager.Devices[0].Command || InputManager.Devices[1].Command || InputManager.Devices[2].Command)
+        {
+            Application.LoadLevel(6);
         }
 
         if (InputManager.Devices[0].Action1 | InputManager.Devices[0].Action2 | InputManager.Devices[0].Action3 | InputManager.Devices[0].Action4 && !player1joined)
