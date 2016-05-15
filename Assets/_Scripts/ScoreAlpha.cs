@@ -10,6 +10,7 @@ public class ScoreAlpha : MonoBehaviour
     public Text scoreText;
     public Text distanceLeft;
     public Text momReturn;
+    public Text dirtiness;
     string scoreString;
 
     void Start()
@@ -43,5 +44,7 @@ public class ScoreAlpha : MonoBehaviour
         {
             gameManager.GameOver();
         }
+
+        dirtiness.text = "DIRTINESS: "+gameManager.cleanliness.ToString();
     }
 }

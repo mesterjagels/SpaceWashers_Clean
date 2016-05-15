@@ -11,6 +11,7 @@ public class ScoreComparison : MonoBehaviour
     public Text scoreText2;
     public Text scoreText3;
     public Text scoreText4;
+    public Text scoreText5;
     private bool scoresSet = false;
     public float scoreTimer = 5f;
     private Sequence scoreSequence = DOTween.Sequence();
@@ -37,7 +38,8 @@ public class ScoreComparison : MonoBehaviour
             scoreText2.text = gameManager.cleanerScore0.ToString();
             scoreText3.text = gameManager.cleanerScore1.ToString();
             scoreText4.text = gameManager.cleanerScore2.ToString();
-                
+            scoreText5.text = "YOU LOST "+gameManager.penalty.ToString()+"  POINTS DUE TO THE DIRTINESS OF THE SHIP";    
+
             scoresSet = true;
         }
     }

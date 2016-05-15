@@ -63,26 +63,31 @@ public class DirtController : MonoBehaviour {
             cleaningPlayer = 2;
         }
 
-        int dirtPoints = gameManager.AddCleanerScore(cleaningPlayer);
-        Vector3 offset = new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0);
-        GameObject scoreBubble = (GameObject)GameObject.Instantiate(gameManager.bubblePrefab, this.transform.position+offset, Quaternion.identity);
-        TextMesh scoreBubbleText = scoreBubble.GetComponent<ScoreBubble>().bubbleScore;
-        scoreBubbleText.text = "+"+dirtPoints;
-
-        switch (cleaningPlayer)
+        if (gameManager.gameActive == true)
         {
-            case 0:
-                scoreBubbleText.color = gameManager.babe;
-                scoreBubble.GetComponent<Renderer>().material.color = gameManager.babe;
-                break;
-            case 1:
-                scoreBubbleText.color = gameManager.gangsta;
-                scoreBubble.GetComponent<Renderer>().material.color = gameManager.gangsta;
-                break;
-            case 2: 
-                scoreBubbleText.color = gameManager.grunger;
-                scoreBubble.GetComponent<Renderer>().material.color = gameManager.grunger;
-                break;
+            int dirtPoints = gameManager.AddCleanerScore(cleaningPlayer);
+            Vector3 offset = new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0);
+            GameObject scoreBubble = (GameObject)GameObject.Instantiate(gameManager.bubblePrefab, this.transform.position + offset, Quaternion.identity);
+            TextMesh scoreBubbleText = scoreBubble.GetComponent<ScoreBubble>().bubbleScore;
+            scoreBubbleText.text = "+" + dirtPoints;
+            gameManager.cleanliness = gameManager.cleanliness - 1;
+
+            switch (cleaningPlayer)
+            {
+                case 0:
+                    scoreBubbleText.color = gameManager.babe;
+                    scoreBubble.GetComponent<Renderer>().material.color = gameManager.babe;
+                    break;
+                case 1:
+                    scoreBubbleText.color = gameManager.gangsta;
+                    scoreBubble.GetComponent<Renderer>().material.color = gameManager.gangsta;
+                    break;
+                case 2:
+                    scoreBubbleText.color = gameManager.grunger;
+                    scoreBubble.GetComponent<Renderer>().material.color = gameManager.grunger;
+                    break;
+            }
         }
+        
     }
 }
