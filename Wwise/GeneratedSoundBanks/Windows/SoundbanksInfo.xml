@@ -83,10 +83,6 @@
 					<ShortName>Fresh_transistion.wav</ShortName>
 					<Path>SFX\Fresh_transistion_4B8CC0C5.wem</Path>
 				</File>
-				<File Id="384236896" Language="SFX">
-					<ShortName>Scratch_Transition.wav</ShortName>
-					<Path>SFX\Scratch_Transition_4B8CC0C5.wem</Path>
-				</File>
 				<File Id="384447423" Language="SFX">
 					<ShortName>Grunger 1.wav</ShortName>
 					<Path>SFX\Grunger 1_9E69E797.wem</Path>

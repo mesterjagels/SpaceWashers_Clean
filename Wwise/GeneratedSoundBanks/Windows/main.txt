@@ -76,7 +76,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	266433818	InGameBoostMusic	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\InGameBoostMusic_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\inGame\Boost\BoostSnare\InGameBoostMusic		384940
 	292796889	Grunger 2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Grunger 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Grunger\Grunger 2		110316
 	344995572	Fresh_transistion	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Fresh_transistion_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Fresh_transistion\Fresh_transistion		450864
-	384236896	Scratch_Transition	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Scratch_Transition_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Scratch_Transition\Scratch_Transition		156864
 	384447423	Grunger 1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Grunger 1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Grunger\Grunger 1		133364
 	409440082	squeakyLoop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\squeakLoop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\CleaningUtensils\squeakyLoop		2050716
 	423809210	boost_loop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\boost_loop_12F9BD65.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\boost\Ignition\boost_loop		474140
