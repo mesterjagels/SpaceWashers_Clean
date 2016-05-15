@@ -6,7 +6,7 @@ using DG.Tweening;
 public class SpaceshipController : MonoBehaviour
 {
     //Scoreboard
-    public GameObject scoreboard;
+    GameManager gameManager;
     public bool levelEnded = false;
 
     //Control scheme
@@ -57,6 +57,7 @@ public class SpaceshipController : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         AkSoundEngine.PostEvent("thrusters", gameObject);
         AkSoundEngine.SetState("isBoosting", "notBoosting");
         throttleSpeeds = new float[5];
@@ -77,7 +78,7 @@ public class SpaceshipController : MonoBehaviour
 
         if (Application.loadedLevel != 0)
         {
-            if (scoreboard.GetComponent<ScoreAlpha>().distanceMath <= 1 && !levelEnded)
+            if (gameManager.distanceMath <= 1 && !levelEnded)
             {
                 levelEnded = true;
                 GameObject.Find("Earth").GetComponent<WorldMovement>().speedmultiplier = 0.2f;

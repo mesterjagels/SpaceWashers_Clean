@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
     public float captainTimeCheck;
     public int totalScore = 0;
 
+    public float timeLeft;
+    public float distanceMath;
+    public float distanceToTravel;
+
     [HideInInspector]
     public bool player1Active = false, player2Active = false, player3Active = false;
 
@@ -49,6 +53,8 @@ public class GameManager : MonoBehaviour
         AkBankManager.LoadBank("main");
         AkSoundEngine.PostEvent("GameMusic", gameObject);
         AkSoundEngine.SetState("GameScreen", "TitleScreen");
+
+        gameActive = false;
 
         highscoreListAsArrayOfInts = new int[10];
         highscoreListAsArrayOfStrings = new string[10];
@@ -141,6 +147,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("I should load the teamscore");
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        gameActive = false;
     }
 
     //Add points to the PlayerScore of the player that cleaned dirt.
@@ -249,7 +256,6 @@ public class GameManager : MonoBehaviour
         {
             cleanerMultiplier2 = 1;
         }
-
     }
 
     void ResetCaptainMultiplier()
@@ -328,12 +334,119 @@ public class GameManager : MonoBehaviour
             player3Active = FindObjectOfType<TitleScreen>().player3joined;
         }
 
-        if (Application.loadedLevel == 1)
+       else if (Application.loadedLevel == 2)
         {
-            if (!gameActive)
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
-                InitGame();
+                Application.LoadLevel(3);
             }
+            /*
+            if (!player1Active)
+            {
+                Debug.Log("Player1 not active, deactivating babe");
+                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
+            }
+            else if (player1Active)
+            {
+                Debug.Log("Player1 active, activating babe");
+                GameObject.FindGameObjectWithTag("Player1").SetActive(true);
+            }
+
+            if (!player2Active)
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
+            }
+
+            if (!player3Active)
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
+            }*/
+        }
+
+        else if (Application.loadedLevel == 3)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                Application.LoadLevel(0);
+            }
+
+            if (!player1Active)
+            {
+                Debug.Log("Player1 not active, deactivating babe");
+                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
+            }
+            else if (player1Active)
+            {
+                Debug.Log("Player1 active, activating babe");
+                GameObject.FindGameObjectWithTag("Player1").SetActive(true);
+            }
+
+            if (!player2Active)
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
+            }
+
+            if (!player3Active)
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
+            }
+        }
+
+        else if (Application.loadedLevel == 4)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                Application.LoadLevel(0);
+            }
+
+            if (!player1Active)
+            {
+                Debug.Log("Player1 not active, deactivating babe");
+                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
+            }
+            else if (player1Active)
+            {
+                Debug.Log("Player1 active, activating babe");
+                GameObject.FindGameObjectWithTag("Player1").SetActive(true);
+            }
+
+            if (!player2Active)
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
+            }
+
+            if (!player3Active)
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(false);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
+            }
+        }
+
+        else if (Application.loadedLevel == 1)
+        {
             if (!player1Active)
             {
                 GameObject.FindGameObjectWithTag("Player1").SetActive(false);
@@ -361,116 +474,9 @@ public class GameManager : MonoBehaviour
                 if (GameObject.FindGameObjectWithTag("Player3") != null)
                     GameObject.FindGameObjectWithTag("Player3").SetActive(true);
             }
-        }
-
-        if (Application.loadedLevel == 2)
-        {
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (!gameActive)
             {
-                Application.LoadLevel(3);
-            }
-
-            if (!player1Active)
-            {
-                Debug.Log("Player1 not active, deactivating babe");
-                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
-            }
-            else if (player1Active)
-            {
-                Debug.Log("Player1 active, activating babe");
-                GameObject.FindGameObjectWithTag("Player1").SetActive(true);
-            }
-
-            if (!player2Active)
-            {
-                GameObject.FindGameObjectWithTag("Player2").SetActive(false);
-            }
-            else
-            {
-                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
-            }
-
-            if (!player3Active)
-            {
-                GameObject.FindGameObjectWithTag("Player3").SetActive(false);
-            }
-            else
-            {
-                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
-            }
-        }
-
-        if (Application.loadedLevel == 3)
-        {
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                Application.LoadLevel(0);
-            }
-
-            if (!player1Active)
-            {
-                Debug.Log("Player1 not active, deactivating babe");
-                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
-            }
-            else if (player1Active)
-            {
-                Debug.Log("Player1 active, activating babe");
-                GameObject.FindGameObjectWithTag("Player1").SetActive(true);
-            }
-
-            if (!player2Active)
-            {
-                GameObject.FindGameObjectWithTag("Player2").SetActive(false);
-            }
-            else
-            {
-                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
-            }
-
-            if (!player3Active)
-            {
-                GameObject.FindGameObjectWithTag("Player3").SetActive(false);
-            }
-            else
-            {
-                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
-            }
-        }
-
-        if (Application.loadedLevel == 4)
-        {
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                Application.LoadLevel(0);
-            }
-
-            if (!player1Active)
-            {
-                Debug.Log("Player1 not active, deactivating babe");
-                GameObject.FindGameObjectWithTag("Player1").SetActive(false);
-            }
-            else if (player1Active)
-            {
-                Debug.Log("Player1 active, activating babe");
-                GameObject.FindGameObjectWithTag("Player1").SetActive(true);
-            }
-
-            if (!player2Active)
-            {
-                GameObject.FindGameObjectWithTag("Player2").SetActive(false);
-            }
-            else
-            {
-                GameObject.FindGameObjectWithTag("Player2").SetActive(true);
-            }
-
-            if (!player3Active)
-            {
-                GameObject.FindGameObjectWithTag("Player3").SetActive(false);
-            }
-            else
-            {
-                GameObject.FindGameObjectWithTag("Player3").SetActive(true);
+                InitGame();
             }
         }
     }
