@@ -32,7 +32,6 @@ public class DirtController : MonoBehaviour {
     //The OnDisable method could also be OnDestroy() depending on how we remove dirt.
     void OnDisable()
     {
-        AkSoundEngine.PostEvent("pointsScored", gameObject);
         int cleaningPlayer = 0;
         int i = 0;
         CleanerController[] cleanerControllers = FindObjectsOfType(typeof (CleanerController)) as CleanerController[];
@@ -80,7 +79,7 @@ public class DirtController : MonoBehaviour {
                 scoreBubbleText.color = gameManager.gangsta;
                 scoreBubble.GetComponent<Renderer>().material.color = gameManager.gangsta;
                 break;
-            case 2:
+            case 2: 
                 scoreBubbleText.color = gameManager.grunger;
                 scoreBubble.GetComponent<Renderer>().material.color = gameManager.grunger;
                 break;
