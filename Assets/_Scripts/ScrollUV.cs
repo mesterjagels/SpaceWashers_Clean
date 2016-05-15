@@ -10,9 +10,10 @@ public class ScrollUV : MonoBehaviour {
     int uvMoveSpeed = 20;
     [Header("Change parallax effect. Higher means slower background movement")]
     public float parralax;
+    
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         mr = GetComponent<MeshRenderer>();
         mat = mr.materials[0];
         offset = mat.mainTextureOffset;
@@ -24,7 +25,7 @@ public class ScrollUV : MonoBehaviour {
         if(Application.loadedLevel != 2) { 
             offset.x += spaceship.horizontalSpeed/ uvMoveSpeed / parralax;
             offset.y += spaceship.verticalSpeed / uvMoveSpeed / parralax;
-        }
+        }   
 
         mat.mainTextureOffset = offset;
 

@@ -6,8 +6,9 @@ using System;
 using InControl;
 
 public class GameManager : MonoBehaviour
-{   
-    
+{
+   
+
     public Color babe;
     public Color gangsta;
     public Color grunger;
@@ -112,6 +113,7 @@ public class GameManager : MonoBehaviour
 
                 captainTimeCheck = Time.time;
             }*/
+            
 
             totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
         }
