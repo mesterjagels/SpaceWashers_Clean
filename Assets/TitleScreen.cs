@@ -9,7 +9,7 @@ public class TitleScreen : MonoBehaviour {
 
     public GameObject player1, player2, player3;
     private Text p1txt, p2txt, p3txt;
-    public GameObject p1, p2, p3;
+    public GameObject p1, p2, p3, loading;
 
 
     [HideInInspector]
@@ -38,6 +38,7 @@ public class TitleScreen : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.O) | arduino.digitalRead(pinBtn1) == 1)
         {
+            loading.SetActive(true);
             Application.LoadLevel(1);
         }
         if (player1joined | player2joined | player3joined) { 
