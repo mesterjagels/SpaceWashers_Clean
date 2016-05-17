@@ -60,10 +60,9 @@ public class GameManager : MonoBehaviour
         AkBankManager.LoadBank("main");
         AkSoundEngine.PostEvent("GameMusic", gameObject);
         AkSoundEngine.SetState("GameScreen", "TitleScreen");
-
-        initialTimeLeft = timeLeft;
         gameActive = false;
-
+        initialTimeLeft = timeLeft;
+        Debug.Log("initialTime left =" + initialTimeLeft);
         highscoreListAsArrayOfInts = new int[10];
         highscoreListAsArrayOfStrings = new string[10];
         highscore = new Text[10];
@@ -140,13 +139,14 @@ public class GameManager : MonoBehaviour
         captainMultiplier = 1;
         totalScore = 0;
         captainTimeCheck = Time.time;
-        timeLeft = initialTimeLeft;
         momState = 1;
         penalty = 0;
         cleanliness = 0;
         newHighScore = 11;
         gameActive = true;
-        distanceMath = 0;
+        timeLeft = initialTimeLeft;
+        distanceMath = distanceToTravel;
+
     }
 
     //Game is lost
@@ -201,6 +201,7 @@ public class GameManager : MonoBehaviour
         UpdateHighscore();
         gameEnded = true;
         gameActive = false;
+        timeLeft = initialTimeLeft;
 
         if (cleanliness == 100)
         {
