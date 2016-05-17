@@ -1386,11 +1386,11 @@ Prefab:
       objectReference: {fileID: 199866, guid: 4ebff2f2cfbafb0428ee5f782c32c9d6, type: 2}
     - target: {fileID: 11463524, guid: d1e8a9c1e5e60684294522319208d095, type: 2}
       propertyPath: timeLeft
-      value: 80
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11463524, guid: d1e8a9c1e5e60684294522319208d095, type: 2}
       propertyPath: distanceToTravel
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11463524, guid: d1e8a9c1e5e60684294522319208d095, type: 2}
       propertyPath: soapBubblesGrunger

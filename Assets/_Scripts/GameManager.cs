@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
         captainMultiplier = 1;
         totalScore = 0;
         captainTimeCheck = Time.time;
-        timeLeft = 80;
+        timeLeft = 20;
         momState = 1;
         penalty = 0;
         cleanliness = 0;
