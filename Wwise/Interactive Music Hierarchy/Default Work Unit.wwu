@@ -558,6 +558,124 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
+						<MusicSegment Name="MomHatesYou" ID="{CE9F9C68-8286-4FD3-96C9-0CC4B7112795}" ShortID="230710965">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="29090.9297052154"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="MomHatesYou" ID="{6A2AF877-B557-4A0D-8A65-4C21151A1E5B}" ShortID="546642526">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MomHatesYou" ID="{8E71FC45-3E32-4785-8B02-A4EAD7F38A3C}" ShortID="431497838">
+											<Language>SFX</Language>
+											<AudioFile>MomHatesYou.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{3BC03A8E-AE7C-435D-8D59-34840A64CD3D}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{CEE3560E-256A-4E86-9AA9-BB39B68E95AC}">
+											<ClipList>
+												<MusicClip Name="MomHatesYou" ID="{11C02F2E-D1A4-4C08-AF59-8779FEC2ADDE}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="29090.9297052154"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="MomHatesYou" ID="{8E71FC45-3E32-4785-8B02-A4EAD7F38A3C}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{101C1A2C-0803-4859-8D98-2C513061DA51}"/>
+								<MusicCue Name="Exit Cue" ID="{133CDE46-CAA0-4C1B-B6D6-0BF309446EEC}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="29090.9297052154"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="Breakfast" ID="{B59AE942-E07F-4C4B-8A5F-7D833235DB3F}" ShortID="175055175">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="50149.2743764172"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Breakfast" ID="{A78B1E47-2EA0-4330-8201-77551369AA3C}" ShortID="366048419">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Breakfast" ID="{76473D90-E023-45CF-BF08-56D7592BC6C3}" ShortID="597581726">
+											<Language>SFX</Language>
+											<AudioFile>Breakfast.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{88036980-E59A-4DC8-A42C-D87104D2B9A8}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{57B7BF5F-F960-45C0-BCB7-A9B09DC25F7A}">
+											<ClipList>
+												<MusicClip Name="Breakfast" ID="{99124C32-6329-47D9-8116-055C7DF549B9}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="50149.2743764172"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="Breakfast" ID="{76473D90-E023-45CF-BF08-56D7592BC6C3}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{2CA8C5F7-8654-4FAE-83C3-F5FD7A20BEBC}"/>
+								<MusicCue Name="Exit Cue" ID="{ED82F9E4-D4A4-419F-B742-546774B79BCF}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="50149.2743764172"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{46EFDE4C-EC31-41B9-A751-2CD3BCB05F21}">
@@ -624,6 +742,30 @@
 									</ReferenceList>
 									<TransitionInfo/>
 								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{E610D5A2-2784-42E2-BDC3-3F44A6933140}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="MomHatesYou" ID="{CE9F9C68-8286-4FD3-96C9-0CC4B7112795}" WorkUnitID="{BB7424BD-F0A6-44C9-9592-B27D77652ECD}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo/>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{2CF9E594-547C-47DC-BCAF-DDEF76E0E2C5}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="Breakfast" ID="{B59AE942-E07F-4C4B-8A5F-7D833235DB3F}" WorkUnitID="{BB7424BD-F0A6-44C9-9592-B27D77652ECD}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo/>
+								</MusicTransition>
 							</ChildrenList>
 							<TransitionInfo/>
 						</MusicTransition>
@@ -654,6 +796,22 @@
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="TitleScreen" ID="{F8A266BD-E7C1-4507-8F14-767D71F9B25B}" WorkUnitID="{BB7424BD-F0A6-44C9-9592-B27D77652ECD}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="credits" ID="{838D5D25-9CBF-408E-9985-2934FE671951}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Breakfast" ID="{B59AE942-E07F-4C4B-8A5F-7D833235DB3F}" WorkUnitID="{BB7424BD-F0A6-44C9-9592-B27D77652ECD}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="death" ID="{B7C3515D-5FB8-4203-8C50-508D8E09EF7A}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="MomHatesYou" ID="{CE9F9C68-8286-4FD3-96C9-0CC4B7112795}" WorkUnitID="{BB7424BD-F0A6-44C9-9592-B27D77652ECD}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>

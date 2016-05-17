@@ -16,6 +16,8 @@
 						<State Name="TitleScreen" ID="{241DA5E8-30D1-4B3B-A566-DB25749D5F21}"/>
 						<State Name="InGame" ID="{2D3E8B47-2361-41DA-90C1-61BF5716A86D}"/>
 						<State Name="Scoreboard" ID="{76369972-482C-48A8-A9FA-BE4AFE0FDBDD}"/>
+						<State Name="death" ID="{B7C3515D-5FB8-4203-8C50-508D8E09EF7A}"/>
+						<State Name="credits" ID="{838D5D25-9CBF-408E-9985-2934FE671951}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
