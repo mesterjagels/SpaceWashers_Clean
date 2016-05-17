@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
     //End the game.
     public void EndGame()
     {
-        captainScore = captainScore + (Mathf.RoundToInt(timeLeft) * 250);
+        captainScore = captainScore + (Mathf.RoundToInt(timeLeft) * 400);
         totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
 
         if (cleanliness > 0)
