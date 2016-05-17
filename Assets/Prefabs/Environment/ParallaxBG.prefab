@@ -79,7 +79,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 15.289999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440956}
@@ -159,7 +159,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 2bacc9599d0642341953de681e85ce9c, type: 2}
+  - {fileID: 2100000, guid: e9d5927d39c243842bc44e30df9a89e6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -269,7 +269,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f37bf44e57331f4ca72b5f41ede8183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parralax: 30
+  mat: {fileID: 0}
+  offset: {x: 0, y: 0}
+  parralax: 300
 --- !u!114 &11425254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,7 +283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f37bf44e57331f4ca72b5f41ede8183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parralax: 20
+  mat: {fileID: 0}
+  offset: {x: 0, y: 0}
+  parralax: 150
 --- !u!114 &11445562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -293,7 +297,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f37bf44e57331f4ca72b5f41ede8183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parralax: 40
+  mat: {fileID: 0}
+  offset: {x: 0, y: 0}
+  parralax: 400
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
