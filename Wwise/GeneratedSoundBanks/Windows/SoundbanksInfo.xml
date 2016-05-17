@@ -26,6 +26,7 @@
 				<Event Id="2308878679" Name="muteAll" MaxAttenuation="0.000000"/>
 				<Event Id="1830748535" Name="muteObject" MaxAttenuation="0.000000"/>
 				<Event Id="1651971879" Name="ow"/>
+				<Event Id="4078655385" Name="playerJoined"/>
 				<Event Id="651793330" Name="pointsScored"/>
 				<Event Id="3189472150" Name="stopSFX" MaxAttenuation="0.000000"/>
 				<Event Id="1944582317" Name="thrusters"/>
@@ -34,6 +35,10 @@
 				<File Id="20995278" Language="SFX">
 					<ShortName>boost_end.wav</ShortName>
 					<Path>SFX\boost_end_9E69E797.wem</Path>
+				</File>
+				<File Id="24314877" Language="SFX">
+					<ShortName>Credits_transition.wav</ShortName>
+					<Path>SFX\Credits_transition_4B8CC0C5.wem</Path>
 				</File>
 				<File Id="34174431" Language="SFX">
 					<ShortName>Babe 5.wav</ShortName>
@@ -63,6 +68,10 @@
 					<ShortName>ScoringBubble.wav</ShortName>
 					<Path>SFX\ScoringBubble_9E69E797.wem</Path>
 				</File>
+				<File Id="232048086" Language="SFX">
+					<ShortName>Player Joined.wav</ShortName>
+					<Path>SFX\Player Joined_854F9E52.wem</Path>
+				</File>
 				<File Id="257176258" Language="SFX">
 					<ShortName>Babe 1.wav</ShortName>
 					<Path>SFX\Babe 1_9E69E797.wem</Path>
@@ -75,6 +84,10 @@
 					<ShortName>InGameBoostMusic.wav</ShortName>
 					<Path>SFX\InGameBoostMusic_4B8CC0C5.wem</Path>
 				</File>
+				<File Id="279803303" Language="SFX">
+					<ShortName>MomHatesYou.wav</ShortName>
+					<Path>SFX\MomHatesYou_4B8CC0C5.wem</Path>
+				</File>
 				<File Id="292796889" Language="SFX">
 					<ShortName>Grunger 2.wav</ShortName>
 					<Path>SFX\Grunger 2_9E69E797.wem</Path>
@@ -82,6 +95,10 @@
 				<File Id="344995572" Language="SFX">
 					<ShortName>Fresh_transistion.wav</ShortName>
 					<Path>SFX\Fresh_transistion_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="384236896" Language="SFX">
+					<ShortName>Scratch_Transition.wav</ShortName>
+					<Path>SFX\Scratch_Transition_4B8CC0C5.wem</Path>
 				</File>
 				<File Id="384447423" Language="SFX">
 					<ShortName>Grunger 1.wav</ShortName>
@@ -114,6 +131,10 @@
 				<File Id="586599280" Language="SFX">
 					<ShortName>brushLoop.wav</ShortName>
 					<Path>SFX\brushLoop_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="597581726" Language="SFX">
+					<ShortName>Breakfast.wav</ShortName>
+					<Path>SFX\Breakfast_4B8CC0C5.wem</Path>
 				</File>
 				<File Id="599990140" Language="SFX">
 					<ShortName>hull_5.wav</ShortName>

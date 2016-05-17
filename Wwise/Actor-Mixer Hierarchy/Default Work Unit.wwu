@@ -996,6 +996,22 @@
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
+								<StateRef Name="credits" ID="{838D5D25-9CBF-408E-9985-2934FE671951}"/>
+								<State Name="Custom State" ID="{5C091E9D-5603-4952-928F-E5443A213DBD}" ShortID="670957575">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="death" ID="{B7C3515D-5FB8-4203-8C50-508D8E09EF7A}"/>
+								<State Name="Custom State" ID="{F93D0E24-BF86-4C36-B952-446CE3B90D2B}" ShortID="216324106">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+							<CustomState>
 								<StateRef Name="Scoreboard" ID="{76369972-482C-48A8-A9FA-BE4AFE0FDBDD}"/>
 								<State Name="Custom State" ID="{9B601C0F-261D-4EA8-85DB-6949AA54221F}" ShortID="939291063">
 									<PropertyList>
@@ -1381,6 +1397,13 @@
 							</GroupingInfo>
 						</SwitchContainer>
 						<SwitchContainer Name="cleanerOw" ID="{EDF9C90E-9DB1-40AE-B045-9166CFB40D99}" ShortID="977167355">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
@@ -1785,6 +1808,40 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="ScoringBubble" ID="{4B93A464-90A5-42C1-BCD5-B5620CC08ADB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Player Joined" ID="{F2D9CDA8-B1F7-4DC2-8684-2B18FCD56461}" ShortID="862855371" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>39</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>17</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Player Joined" ID="{9994948B-891E-4F41-808C-98DE2ADE5781}" ShortID="232048086">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.146484375"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Player Joined.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Player Joined" ID="{9994948B-891E-4F41-808C-98DE2ADE5781}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

@@ -9,6 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2389703494	boost			\Default Work Unit\boost	
 	3071260525	hull_impact			\Default Work Unit\hull_impact	
 	3189472150	stopSFX			\Default Work Unit\stopSFX	
+	4078655385	playerJoined			\Default Work Unit\playerJoined	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	713377294	Junk_type			\Default Work Unit\Junk_type	
@@ -33,14 +34,18 @@ State	ID	Name	State Group			Notes
 	35600435	Scoreboard	GameScreen			
 	152105657	TitleScreen	GameScreen			
 	748895195	None	GameScreen			
+	779278001	death	GameScreen			
 	984691642	InGame	GameScreen			
+	2201105581	credits	GameScreen			
 	748895195	None	isBoosting			
 	3234467226	boosting	isBoosting			
 	4234859743	notBoosting	isBoosting			
 
 Custom State	ID	Name	State Group	Owner		Notes
+	216324106	death	GameScreen	\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer		
 	425022785	Scoreboard	GameScreen	\Interactive Music Hierarchy\Default Work Unit\MusicManager\inGame		
 	580137524	TitleScreen	GameScreen	\Interactive Music Hierarchy\Default Work Unit\MusicManager\inGame		
+	670957575	credits	GameScreen	\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer		
 	763281583	TitleScreen	GameScreen	\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer		
 	939291063	Scoreboard	GameScreen	\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer		
 	1048793204	boosting	isBoosting	\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\thruster_sounds		
@@ -64,6 +69,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	20995278	boost_end	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\boost_end_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\boost\boost_end		363892
+	24314877	Credits_transition	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Credits_transition_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Credits_transition\Credits_transition		473572
 	34174431	Babe 5	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Babe 5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Babe\Babe 5		65228
 	37956123	Gangsta 3	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Gangsta 3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Gangsta\Gangsta 3		183204
 	95287785	Scoreboard_music	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Scoreboard_music_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\Scoreboard\Scoreboard_music\Scoreboard_music		12544064
@@ -71,11 +77,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	191463059	Babe 2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Babe 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Babe\Babe 2		57948
 	192410636	hull_4	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_4		202652
 	205532066	ScoringBubble	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\ScoringBubble_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\ScoringBubble		37764
+	232048086	Player Joined	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Player Joined_854F9E52.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\Player Joined		220564
 	257176258	Babe 1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Babe 1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Babe\Babe 1		88264
 	260457471	Grunger 4	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Grunger 4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Grunger\Grunger 4		154416
 	266433818	InGameBoostMusic	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\InGameBoostMusic_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\inGame\Boost\BoostSnare\InGameBoostMusic		384940
+	279803303	MomHatesYou	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\MomHatesYou_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\Death\MomHatesYou\MomHatesYou		5131704
 	292796889	Grunger 2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Grunger 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Grunger\Grunger 2		110316
 	344995572	Fresh_transistion	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Fresh_transistion_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Fresh_transistion\Fresh_transistion		450864
+	384236896	Scratch_Transition	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Scratch_Transition_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Scratch_Transition\Scratch_Transition		156864
 	384447423	Grunger 1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Grunger 1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Grunger\Grunger 1		133364
 	409440082	squeakyLoop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\squeakLoop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\CleaningUtensils\squeakyLoop		2050716
 	423809210	boost_loop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\boost_loop_12F9BD65.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\boost\Ignition\boost_loop		474140
@@ -84,6 +93,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	509321733	hull_3	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_3		201272
 	548323127	hull_2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_2		180004
 	586599280	brushLoop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\brushLoop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\CleaningUtensils\brushLoop		1027220
+	597581726	Breakfast	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Breakfast_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\Credits\Breakfast\Breakfast		8846396
 	599990140	hull_5	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\hull_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hull_Impact_Mixer\hazard_sounds\hull_sounds\hull_5		169024
 	617735550	Gangsta 2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Gangsta 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Gangsta\Gangsta 2		60620
 	655027814	squishLoop	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\squishLoop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\CleaningUtensils\squishLoop		1874168

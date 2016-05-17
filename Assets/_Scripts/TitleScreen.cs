@@ -50,6 +50,7 @@ public class TitleScreen : MonoBehaviour {
 
         if (InputManager.Devices[0].Action1 | InputManager.Devices[0].Action2 | InputManager.Devices[0].Action3 | InputManager.Devices[0].Action4 && !player1joined)
         {
+            AkSoundEngine.PostEvent("playerJoined", gameObject);
             p1txt.text = "Player 1 joined";
             player1joined = true;
             p1.transform.localScale = new Vector3(0, 0, 0);
@@ -60,6 +61,7 @@ public class TitleScreen : MonoBehaviour {
         }
         if (InputManager.Devices[1].Action1 | InputManager.Devices[1].Action2 | InputManager.Devices[1].Action3 | InputManager.Devices[1].Action4 && !player2joined)
         {
+            AkSoundEngine.PostEvent("playerJoined", gameObject);
             p2txt.text = "Player 2 joined";
             player2joined = true;
             p2.SetActive(true);
@@ -70,6 +72,7 @@ public class TitleScreen : MonoBehaviour {
         }
         if (InputManager.Devices[2].Action1 | InputManager.Devices[1].Action2 | InputManager.Devices[2].Action3 | InputManager.Devices[2].Action4 && !player3joined)
         {
+            AkSoundEngine.PostEvent("playerJoined", gameObject);
             p3txt.text = "Player 3 joined";
             player3joined = true;
             p3.transform.localScale = new Vector3(0, 0, 0);

@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID MUTEALL = 2308878679U;
         static const AkUniqueID MUTEOBJECT = 1830748535U;
         static const AkUniqueID OW = 1651971879U;
+        static const AkUniqueID PLAYERJOINED = 4078655385U;
         static const AkUniqueID POINTSSCORED = 651793330U;
         static const AkUniqueID STOPSFX = 3189472150U;
         static const AkUniqueID THRUSTERS = 1944582317U;
@@ -33,6 +34,8 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID CREDITS = 2201105581U;
+                static const AkUniqueID DEATH = 779278001U;
                 static const AkUniqueID INGAME = 984691642U;
                 static const AkUniqueID SCOREBOARD = 35600435U;
                 static const AkUniqueID TITLESCREEN = 152105657U;

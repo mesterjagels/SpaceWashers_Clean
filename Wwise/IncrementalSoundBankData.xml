@@ -3,7 +3,7 @@
 	<Platform GUID="{47D6ACDB-CBE8-4660-A7E5-9D4D131A80A7}">
 		<Language ID="0">
 			<Bank Name="Init" Hash="1852296681" StreamHash="157587662" Timestamp="131075536757458279"/>
-			<Bank Name="main" Hash="2987668247" StreamHash="157587662" Timestamp="131077914431870498"/>
+			<Bank Name="main" Hash="3078091715" StreamHash="157587662" Timestamp="131079545255919149"/>
 		</Language>
 	</Platform>
 </IncrementalBankBuild>
