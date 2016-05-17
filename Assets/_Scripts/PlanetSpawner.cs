@@ -14,11 +14,6 @@ public class PlanetSpawner : MonoBehaviour {
 		StartCoroutine ("Spawn");
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	IEnumerator Spawn(){
 		while(true){
             Debug.Log("Planet spawned");

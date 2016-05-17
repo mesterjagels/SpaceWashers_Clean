@@ -54,6 +54,7 @@ public class SpaceshipController : MonoBehaviour
     //Accessed by other scripts to determine movement
     public float horizontalSpeed;
     public float verticalSpeed;
+    private GameObject player1, player2, player3;
 
     void Start()
     {
@@ -69,6 +70,10 @@ public class SpaceshipController : MonoBehaviour
 
         arduino = Arduino.global;
         arduino.Setup(ConfigurePins);
+
+        player1 = GameObject.Find("Player1");
+        player2 = GameObject.Find("Player2");
+        player3 = GameObject.Find("Player3");
     }
 
     void Update()
@@ -83,6 +88,15 @@ public class SpaceshipController : MonoBehaviour
                 levelEnded = true;
                 GameObject.Find("Earth").GetComponent<WorldMovement>().speedmultiplier = 0.2f;
                 gameObject.transform.DOScale(0, 5);
+
+                player1.transform.DOMove(this.transform.position, 2);
+                player1.transform.DOScale(0,5);
+
+                player2.transform.DOMove(this.transform.position, 2);
+                player2.transform.DOScale(0, 5);
+
+                player3.transform.DOMove(this.transform.position, 2);
+                player3.transform.DOScale(0, 5);
             }
         }
     }
