@@ -19,7 +19,6 @@ public class ScoreComparison : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-
     }
 
     void Update()
@@ -41,12 +40,12 @@ public class ScoreComparison : MonoBehaviour
             */
             if (gameManager.penalty > 0)
             {
-                scoreText5.text = "YOU RETURNED THE SHIP DIRTY! MOM IS NOT HAPPY ABOUT THIS AND SUBTRACTS " + gameManager.penalty.ToString() + " POINTS FROM YOUR SCORE";
+                scoreText5.text = "WELL FUCKING JOB CAPTAIN! YOU ARRIVED " + Mathf.RoundToInt(gameManager.timeLeftBuffer) + " SECONDS EARLY. BUT YOU RETURNED THE SHIP DIRTY! MOM IS NOT HAPPY ABOUT THIS AND SUBTRACTS " + gameManager.penalty.ToString() + " POINTS FROM YOUR TOTAL SCORE.";
             }
             else
-                scoreText5.text = "YOU RETURNED THE SHIP SAFE AND CLEAN! MOM HAS NO IDEA...";
+                scoreText5.text = "WELL FUCKING JOB CAPTAIN! YOU ARRIVED " + Mathf.RoundToInt(gameManager.timeLeftBuffer) + " SECONDS EARLY. YOU RETURNED THE SHIP SAFE AND CLEAN! MOM HAS NO IDEA...";
 
-           scoresSet = true;
+            scoresSet = true;
         }
     }
 }

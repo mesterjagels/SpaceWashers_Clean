@@ -29,31 +29,39 @@ public class JunkCollision : MonoBehaviour {
         switch (col.gameObject.tag)
         {
             case "Pizza":
-                AkSoundEngine.SetSwitch("Junk_type", "Pizza", gameObject);
-                AkSoundEngine.PostEvent("hull_impact", gameObject); 
-                foreach (ContactPoint2D pizzaHit in col.contacts)
+                if (gameManager.outroIsPlaying == false)
                 {
-                    Vector3 hitpoint = new Vector3(pizzaHit.point.x, pizzaHit.point.y, -10);
-                    var dirt = Instantiate(pizzaDirt[Random.Range(0, pizzaDirt.Length - 1)], hitpoint, Quaternion.identity) as GameObject;
-                    dirt.transform.parent = gameObject.transform;
-                    Instantiate(pizzaParticle, hitpoint, Quaternion.Euler(new Vector3(0, 0, 180)));
-                    gameManager.DecreaseCaptainPoints();
-                    gameManager.cleanliness = gameManager.cleanliness + 1;
+                    AkSoundEngine.SetSwitch("Junk_type", "Pizza", gameObject);
+                    AkSoundEngine.PostEvent("hull_impact", gameObject);
+                    foreach (ContactPoint2D pizzaHit in col.contacts)
+                    {
+                        Vector3 hitpoint = new Vector3(pizzaHit.point.x, pizzaHit.point.y, -10);
+                        var dirt = Instantiate(pizzaDirt[Random.Range(0, pizzaDirt.Length - 1)], hitpoint, Quaternion.identity) as GameObject;
+                        dirt.transform.parent = gameObject.transform;
+                        Instantiate(pizzaParticle, hitpoint, Quaternion.Euler(new Vector3(0, 0, 180)));
+                        gameManager.DecreaseCaptainPoints();
+                        gameManager.cleanliness = gameManager.cleanliness + 1;
+                    }
                 }
+                
                 break;
 
             case "Slime":
-                AkSoundEngine.SetSwitch("Junk_type", "Toxic_waste", gameObject);
-                AkSoundEngine.PostEvent("hull_impact", gameObject);
-                foreach (ContactPoint2D slimeHit in col.contacts)
+                if (gameManager.outroIsPlaying == false)
                 {
-                    Vector3 hitpoint = new Vector3(slimeHit.point.x, slimeHit.point.y, -10);
-                    var dirt = Instantiate(slimeDirt[Random.Range(0, slimeDirt.Length - 1)], hitpoint, Quaternion.identity) as GameObject;
-                    dirt.transform.parent = gameObject.transform;
-                    Instantiate(slimeParticle, hitpoint, Quaternion.Euler(new Vector3(90, 0, 180)));
-                    gameManager.DecreaseCaptainPoints();
-                    gameManager.cleanliness = gameManager.cleanliness + 1;
+                    AkSoundEngine.SetSwitch("Junk_type", "Toxic_waste", gameObject);
+                    AkSoundEngine.PostEvent("hull_impact", gameObject);
+                    foreach (ContactPoint2D slimeHit in col.contacts)
+                    {
+                        Vector3 hitpoint = new Vector3(slimeHit.point.x, slimeHit.point.y, -10);
+                        var dirt = Instantiate(slimeDirt[Random.Range(0, slimeDirt.Length - 1)], hitpoint, Quaternion.identity) as GameObject;
+                        dirt.transform.parent = gameObject.transform;
+                        Instantiate(slimeParticle, hitpoint, Quaternion.Euler(new Vector3(90, 0, 180)));
+                        gameManager.DecreaseCaptainPoints();
+                        gameManager.cleanliness = gameManager.cleanliness + 1;
+                    }
                 }
+                   
                 break;
 
             case "Pickup":

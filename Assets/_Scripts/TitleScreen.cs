@@ -29,7 +29,7 @@ public class TitleScreen : MonoBehaviour {
         p1txt = player1.GetComponent<Text>();
         p2txt = player2.GetComponent<Text>();
         p3txt = player3.GetComponent<Text>();
-
+        
         arduino = Arduino.global;
         arduino.Setup(ConfigurePins);
     }

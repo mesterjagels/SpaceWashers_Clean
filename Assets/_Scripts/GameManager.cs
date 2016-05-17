@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public int newHighScore;
 
     public float timeLeft;
+    public float timeLeftBuffer;
     private float initialTimeLeft;
     public float distanceMath;
     public float distanceToTravel;
@@ -120,12 +121,12 @@ public class GameManager : MonoBehaviour
 
         if (!outroIsPlaying)
         {
-            if (distanceMath < 1)
+            if (distanceMath < 0.85f)
             {
                 outroIsPlaying = true;
             }
-        }       
-
+        }
+        
         GetPlayers();
     }
 
@@ -210,6 +211,7 @@ public class GameManager : MonoBehaviour
         gameEnded = true;
         gameActive = false;
         outroIsPlaying = false;
+        timeLeftBuffer = timeLeft;
         timeLeft = initialTimeLeft;
 
         if (cleanliness == 100)
