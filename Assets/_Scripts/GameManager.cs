@@ -146,6 +146,7 @@ public class GameManager : MonoBehaviour
         cleanliness = 0;
         newHighScore = 11;
         gameActive = true;
+        distanceMath = 0;
     }
 
     //Game is lost
