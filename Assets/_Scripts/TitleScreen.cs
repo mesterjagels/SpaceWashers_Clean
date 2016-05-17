@@ -43,6 +43,10 @@ public class TitleScreen : MonoBehaviour {
                 Application.LoadLevel(1);
             }
         }
+        if (InputManager.Devices[0].Command)
+        {
+            Application.LoadLevel(6);
+        }
 
         if (InputManager.Devices[0].Action1 | InputManager.Devices[0].Action2 | InputManager.Devices[0].Action3 | InputManager.Devices[0].Action4 && !player1joined)
         {
@@ -74,13 +78,6 @@ public class TitleScreen : MonoBehaviour {
             p3.SetActive(true);
             playerCountInTitle++;
         }
-
-        if (InputManager.Devices[0].Command)
-        {
-            Application.LoadLevel(6);
-        }
-
-
     }
 
     void ConfigurePins()
