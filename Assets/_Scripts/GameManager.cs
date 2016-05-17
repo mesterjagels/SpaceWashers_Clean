@@ -35,10 +35,10 @@ public class GameManager : MonoBehaviour
     public int cleanerMultiplier1 = 1;
     public int cleanerMultiplier2 = 1;
     public int captainMultiplier = 1;
-    public float cleanerTimeCheck0;
-    public float cleanerTimeCheck1;
-    public float cleanerTimeCheck2;
-    public float captainTimeCheck;
+    //public float cleanerTimeCheck0;
+    //public float cleanerTimeCheck1;
+    //public float cleanerTimeCheck2;
+    //public float captainTimeCheck;
     public int totalScore = 0;
     public int newHighScore;
 
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         AkSoundEngine.SetState("GameScreen", "TitleScreen");
         gameActive = false;
         initialTimeLeft = timeLeft;
-        Debug.Log("initialTime left =" + initialTimeLeft);
+        //Debug.Log("initialTime left =" + initialTimeLeft);
         highscoreListAsArrayOfInts = new int[10];
         highscoreListAsArrayOfStrings = new string[10];
         highscore = new Text[10];
@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour
     //Initializes the game.
     void InitGame()
     {
-        Debug.Log("InitGame() was called in this scene: " + Application.loadedLevelName, this);
+        //Debug.Log("InitGame() was called in this scene: " + Application.loadedLevelName, this);
         cleanerScore0 = 0;
         cleanerScore1 = 0;
         cleanerScore2 = 0;
@@ -146,7 +146,7 @@ public class GameManager : MonoBehaviour
         cleanerMultiplier2 = 1;
         captainMultiplier = 1;
         totalScore = 0;
-        captainTimeCheck = Time.time;
+        //captainTimeCheck = Time.time;
         momState = 1;
         penalty = 0;
         cleanliness = 0;
@@ -249,11 +249,11 @@ public class GameManager : MonoBehaviour
                 cleanerScore0 = cleanerScore0 + cleanerPoints0;
 
                 cleanerPoints0 = 0;
-                cleanerTimeCheck0 = Time.time;
+                //cleanerTimeCheck0 = Time.time;
             }
             else if (cleaningPlayer == 1)
             {
-                if (cleanerTimeCheck1 > Time.time - 5)
+                /*if (cleanerTimeCheck1 > Time.time - 5)
                 {
                     if (cleanerMultiplier1 < 6)
                     {
@@ -263,18 +263,18 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     ResetCleanerMultiplier(cleaningPlayer);
-                }
+                }*/
 
                 cleanerPoints1 = 100 * cleanerMultiplier1;
                 dirtPoints = cleanerPoints1;
                 cleanerScore1 = cleanerScore1 + cleanerPoints1;
 
                 cleanerPoints1 = 0;
-                cleanerTimeCheck1 = Time.time;
+                //cleanerTimeCheck1 = Time.time;
             }
             else if (cleaningPlayer == 2)
             {
-                if (cleanerTimeCheck2 > Time.time - 5)
+                /*if (cleanerTimeCheck2 > Time.time - 5)
                 {
                     if (cleanerMultiplier2 < 6)
                     {
@@ -284,14 +284,14 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     ResetCleanerMultiplier(cleaningPlayer);
-                }
+                }*/
 
                 cleanerPoints2 = 100 * cleanerMultiplier2;
                 dirtPoints = cleanerPoints2;
                 cleanerScore2 = cleanerScore2 + cleanerPoints2;
 
                 cleanerPoints2 = 0;
-                cleanerTimeCheck2 = Time.time;
+                //cleanerTimeCheck2 = Time.time;
             }
         }
         return dirtPoints;
@@ -340,32 +340,32 @@ public class GameManager : MonoBehaviour
     {
         //Convert txt file to string.
         highscoreListAsOneString = highscoreList.text;
-        Debug.Log("Loaded the text file");
+        //Debug.Log("Loaded the text file");
 
         //Assign values to the disconnectors used to separate the Highscore string.
         for (int i = 0; i < disconnector.Length; i++)
         {
             disconnector[i] = ", ";
         }
-        Debug.Log("created disconnector array");
+        //Debug.Log("created disconnector array");
 
         //Split string into an array of strings.
         highscoreListAsArrayOfStrings = highscoreListAsOneString.Split(disconnector, StringSplitOptions.RemoveEmptyEntries);
-        Debug.Log("seperated the string into an array of strings");
+        //Debug.Log("seperated the string into an array of strings");
     }
 
     //Compare the TotalScore with the values in the Highscore.txt and update the file if appropriate.
     void UpdateHighscore()
     {
         GetHighscore();
-        Debug.Log("GetHighscore()");
+        //Debug.Log("GetHighscore()");
 
         //Convert every element into an int.
         for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
         {
             highscoreListAsArrayOfInts[i] = Int32.Parse(highscoreListAsArrayOfStrings[i]);
         }
-        Debug.Log("Converted every element into an int.");
+        //Debug.Log("Converted every element into an int.");
 
         //Compare and update the values.
         for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
@@ -382,14 +382,14 @@ public class GameManager : MonoBehaviour
                 i = highscoreListAsArrayOfInts.Length;
             }
         }
-        Debug.Log("Compared and updated values");
+        //Debug.Log("Compared and updated values");
 
         //Convert elements to strings.
         for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
         {
             highscoreListAsArrayOfStrings[i] = highscoreListAsArrayOfInts[i].ToString() + ", ";
         }
-        Debug.Log("Converted elements to strings.");
+        //Debug.Log("Converted elements to strings.");
 
 
         //Merge strings.
@@ -399,11 +399,11 @@ public class GameManager : MonoBehaviour
         {
             highscoreListAsOneString = highscoreListAsOneString + highscoreListAsArrayOfStrings[i];
         }
-        Debug.Log("Merged strings");
+        //Debug.Log("Merged strings");
 
         //Rewrite the textfile.
         File.WriteAllText(Application.dataPath + @"\Persistent Data\Highscore.txt", highscoreListAsOneString);
-        Debug.Log("Rewritten textfile");
+        //Debug.Log("Rewritten textfile");
     }
 
     //Check player count
@@ -573,7 +573,5 @@ public class GameManager : MonoBehaviour
         {
             AkSoundEngine.SetState("GameScreen", "credits");
         }
-
-
     }
 }
