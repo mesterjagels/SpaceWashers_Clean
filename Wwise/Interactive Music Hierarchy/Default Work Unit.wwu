@@ -571,20 +571,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="MomHatesYou" ID="{6A2AF877-B557-4A0D-8A65-4C21151A1E5B}" ShortID="546642526">
+								<MusicTrack Name="MomHatesYou" ID="{4922B66D-9114-4762-B453-DF748D4A2D9E}" ShortID="861604861">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="MomHatesYou" ID="{8E71FC45-3E32-4785-8B02-A4EAD7F38A3C}" ShortID="431497838">
+										<AudioFileSource Name="MomHatesYou" ID="{BFCFACD9-E3EF-4EFF-A4A2-919927E6F752}" ShortID="279803303">
 											<Language>SFX</Language>
 											<AudioFile>MomHatesYou.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{3BC03A8E-AE7C-435D-8D59-34840A64CD3D}">
+										<MusicTransition Name="Root" ID="{E3589F3A-A9A4-47FC-ACEF-190E7693372F}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -592,15 +592,15 @@
 										</MusicTransition>
 									</TransitionList>
 									<SequenceList>
-										<MusicTrackSequence Name="" ID="{CEE3560E-256A-4E86-9AA9-BB39B68E95AC}">
+										<MusicTrackSequence Name="" ID="{495CD61B-ADFC-40A0-8D17-841D0BD6671B}">
 											<ClipList>
-												<MusicClip Name="MomHatesYou" ID="{11C02F2E-D1A4-4C08-AF59-8779FEC2ADDE}">
+												<MusicClip Name="MomHatesYou" ID="{B4D046B9-D9ED-4981-B50E-F10D45B5CDC4}">
 													<PropertyList>
 														<Property Name="EndTrimOffset" Type="Real64" Value="29090.9297052154"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
-													<AudioSourceRef Name="MomHatesYou" ID="{8E71FC45-3E32-4785-8B02-A4EAD7F38A3C}"/>
+													<AudioSourceRef Name="MomHatesYou" ID="{BFCFACD9-E3EF-4EFF-A4A2-919927E6F752}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>
@@ -713,6 +713,7 @@
 										<Property Name="DestinationContextType" Type="int16" Value="2"/>
 										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 										<Property Name="SourceContextType" Type="int16" Value="2"/>
+										<Property Name="UseTransitionObject" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DestinationContextObject">
