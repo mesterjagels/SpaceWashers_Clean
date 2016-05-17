@@ -508,170 +508,19 @@ public class GameManager : MonoBehaviour
                 break;
 
             case "GameOver":
-                if (Input.GetKey(KeyCode.LeftArrow))
+                if (Input.GetKey(KeyCode.LeftArrow) | InputManager.Devices[0].Command)
                 {
                     Application.LoadLevel(0);
                 }
                 break;
 
             case "GameOver2":
-                if (Input.GetKey(KeyCode.LeftArrow))
+                if (Input.GetKey(KeyCode.LeftArrow) | InputManager.Devices[0].Command)
                     {
                         Application.LoadLevel(0);
                     }
                 break;
-        }
-        
-       // if (Application.loadedLevel == 0)
-       // {
-       //     playerCount = FindObjectOfType<TitleScreen>().playerCountInTitle;
-       //     player1Active = FindObjectOfType<TitleScreen>().player1joined;
-       //     player2Active = FindObjectOfType<TitleScreen>().player2joined;
-       //     player3Active = FindObjectOfType<TitleScreen>().player3joined;
-       // }
-
-       //else if (Application.loadedLevel == 2)
-       // {
-       //     if (Input.GetKey(KeyCode.LeftArrow))
-       //     {
-       //         Application.LoadLevel(3);
-       //     }
-       //     /*
-       //     if (!player1Active)
-       //     {
-       //         Debug.Log("Player1 not active, deactivating babe");
-       //         GameObject.FindGameObjectWithTag("Player1").SetActive(false);
-       //     }
-       //     else if (player1Active)
-       //     {
-       //         Debug.Log("Player1 active, activating babe");
-       //         GameObject.FindGameObjectWithTag("Player1").SetActive(true);
-       //     }
-
-       //     if (!player2Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player2").SetActive(false);
-       //     }
-       //     else
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player2").SetActive(true);
-       //     }
-
-       //     if (!player3Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player3").SetActive(false);
-       //     }
-       //     else
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player3").SetActive(true);
-       //     }*/
-       // }
-
-       // else if (Application.loadedLevel == 3)
-       // {
-       //     if (Input.GetKey(KeyCode.LeftArrow))
-       //     {
-       //         Application.LoadLevel(0);
-       //     }
-
-       //     if (!player1Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player1").SetActive(false);
-       //     }
-       //     else if (player1Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player1").SetActive(true);
-       //     }
-
-       //     if (!player2Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player2").SetActive(false);
-       //     }
-       //     else
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player2").SetActive(true);
-       //     }
-
-       //     if (!player3Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player3").SetActive(false);
-       //     }
-       //     else
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player3").SetActive(true);
-       //     }
-       // }
-
-       // else if (Application.loadedLevel == 4)
-       // {
-       //     if (Input.GetKey(KeyCode.LeftArrow))
-       //     {
-       //         Application.LoadLevel(0);
-       //     }
-       //     /*
-       //     if (!player1Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player1").SetActive(false);
-       //     }
-       //     else if (player1Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player1").SetActive(true);
-       //     }
-
-       //     if (!player2Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player2").SetActive(false);
-       //     }
-       //     else
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player2").SetActive(true);
-       //     }
-
-       //     if (!player3Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player3").SetActive(false);
-       //     }
-       //     else
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player3").SetActive(true);
-       //     }
-       //     */
-       // }
-
-       // else if (Application.loadedLevelName == "Jasper")
-       // {
-       //     if (!gameActive)
-       //     {
-       //         InitGame();
-       //     }
-       //     if (!player1Active)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player1").SetActive(false);
-       //     }
-       //     else
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player1").SetActive(true);
-       //     }
-       //     if (!player2Active && GameObject.FindGameObjectWithTag("Player2") != null)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player2").SetActive(false);
-       //     }
-       //     else
-       //     {
-       //         if (GameObject.FindGameObjectWithTag("Player2") != null)
-       //             GameObject.FindGameObjectWithTag("Player2").SetActive(true);
-       //     }
-
-       //     if (!player3Active && GameObject.FindGameObjectWithTag("Player3") != null)
-       //     {
-       //         GameObject.FindGameObjectWithTag("Player3").SetActive(false);
-       //     }
-       //     else
-       //     {
-       //         if (GameObject.FindGameObjectWithTag("Player3") != null)
-       //             GameObject.FindGameObjectWithTag("Player3").SetActive(true);
-       //     }  
-        
+        }        
     }
 
     void OnLevelWasLoaded(int level)
