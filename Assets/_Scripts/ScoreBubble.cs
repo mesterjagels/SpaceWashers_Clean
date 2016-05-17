@@ -29,7 +29,7 @@ public class ScoreBubble : MonoBehaviour
 
     IEnumerator delayBubbleText()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f);
         bubbleScore.GetComponent<Renderer>().enabled = true;
     }
 

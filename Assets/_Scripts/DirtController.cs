@@ -69,7 +69,7 @@ public class DirtController : MonoBehaviour {
             Vector3 offset = new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0);
             GameObject scoreBubble = (GameObject)GameObject.Instantiate(gameManager.bubblePrefab, this.transform.position + offset, Quaternion.identity);
             TextMesh scoreBubbleText = scoreBubble.GetComponent<ScoreBubble>().bubbleScore;
-            scoreBubbleText.text = "+" + dirtPoints;
+            scoreBubbleText.text = "" + dirtPoints;
             gameManager.cleanliness = gameManager.cleanliness - 1;
 
             switch (cleaningPlayer)
