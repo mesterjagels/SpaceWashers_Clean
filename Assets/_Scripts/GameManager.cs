@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public int totalScore = 0;
 
     public float timeLeft;
+    private float initialTimeLeft;
     public float distanceMath;
     public float distanceToTravel;
 
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour
         AkSoundEngine.PostEvent("GameMusic", gameObject);
         AkSoundEngine.SetState("GameScreen", "TitleScreen");
 
+        initialTimeLeft = timeLeft;
         gameActive = false;
 
         highscoreListAsArrayOfInts = new int[10];
@@ -139,7 +141,7 @@ public class GameManager : MonoBehaviour
         captainMultiplier = 1;
         totalScore = 0;
         captainTimeCheck = Time.time;
-        timeLeft = 20;
+        timeLeft = initialTimeLeft;
         momState = 1;
         penalty = 0;
         cleanliness = 0;

@@ -8,8 +8,8 @@ public class ScoreAlpha : MonoBehaviour
     private ScrollUV uvOffset;
     public int score = 0;
     public Text scoreText;
-    public Text distanceLeft;
-    public Text momReturn;
+    //public Text distanceLeft;
+    //public Text momReturn;
     public Text dirtiness;
     string scoreString;
 
@@ -29,7 +29,7 @@ public class ScoreAlpha : MonoBehaviour
         }
         
         gameManager.distanceMath = gameManager.distanceToTravel - uvOffset.offset.y;
-        distanceLeft.text = "DISTANCE LEFT: " + gameManager.distanceMath.ToString();
+        //distanceLeft.text = "DISTANCE LEFT: " + gameManager.distanceMath.ToString();
 
         if (gameManager.distanceMath <= 0)
         {
@@ -38,13 +38,13 @@ public class ScoreAlpha : MonoBehaviour
         }
 
         gameManager.timeLeft -= Time.deltaTime;
-        momReturn.text = "MOM'S HOME IN: " + gameManager.timeLeft;
+        //momReturn.text = "MOM'S HOME IN: " + gameManager.timeLeft;
 
         if (gameManager.timeLeft < 0)
         {
             gameManager.GameOver();
         }
 
-        dirtiness.text = "DIRTINESS: "+gameManager.cleanliness.ToString();
+        dirtiness.text = "CLEANLINESS: "+ (100-gameManager.cleanliness).ToString();
     }
 }
