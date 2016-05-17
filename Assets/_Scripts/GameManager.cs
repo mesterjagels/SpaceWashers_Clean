@@ -510,17 +510,17 @@ public class GameManager : MonoBehaviour
                 break;
 
             case "GameOver":
-                if (Input.GetKey(KeyCode.LeftArrow) | InputManager.Devices[0].Command)
+                if (Input.GetKey(KeyCode.LeftArrow) || InputManager.Devices[0].Command)
                 {
                     Application.LoadLevel(0);
                 }
                 break;
 
             case "GameOver2":
-                if (Input.GetKey(KeyCode.LeftArrow) | InputManager.Devices[0].Command)
-                    {
-                        Application.LoadLevel(0);
-                    }
+                if (Input.GetKey(KeyCode.LeftArrow) || InputManager.Devices[0].Command)
+                {
+                    Application.LoadLevel(0);
+                }
                 break;
         }        
     }
