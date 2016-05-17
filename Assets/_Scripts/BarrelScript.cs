@@ -18,7 +18,10 @@ public class BarrelScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (!spriteChanged)  { sr.sprite = barrelSprites[Random.Range(0, 2)];}
+        if (!spriteChanged)  {
+            sr.sprite = barrelSprites[Random.Range(0, 2)];
+            spriteChanged = true;
+        }
         if (!ooze.enableEmission){ ooze.enableEmission = true; }
     }
 }
