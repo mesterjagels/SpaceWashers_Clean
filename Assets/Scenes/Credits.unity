@@ -630,7 +630,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Holder of Marcus
 
-    Audio, Game and Art
+    Audio, Game and Art Design
 
     Andreas Lagerstedt'
 --- !u!222 &1734776587
@@ -873,9 +873,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Master of Marmalade
 
-    Game and Art Design
+    Game and Art Design, Programming
 
-    Leon Pickny'
+    Leonhard Pickny'
 --- !u!222 &2137480024
 CanvasRenderer:
   m_ObjectHideFlags: 0

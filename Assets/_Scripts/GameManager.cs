@@ -140,6 +140,7 @@ public class GameManager : MonoBehaviour
         totalScore = 0;
         captainTimeCheck = Time.time;
         timeLeft = 80;
+        distanceMath = 1;
         momState = 1;
         penalty = 0;
         cleanliness = 0;
