@@ -64,7 +64,7 @@ public class DirtController : MonoBehaviour {
             cleaningPlayer = 2;
         }
 
-        if (gameManager.gameActive == true)
+        if (gameManager.gameActive == true && gameManager.outroIsPlaying == false)
         {
             int dirtPoints = gameManager.AddCleanerScore(cleaningPlayer);
             Vector3 offset = new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0);

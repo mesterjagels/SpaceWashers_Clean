@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector]
     public bool player1Active = false, player2Active = false, player3Active = false;
-
+    public bool outroIsPlaying = false;
     public bool gameActive = false;
     private bool gameEnded = false;
 
@@ -118,6 +118,14 @@ public class GameManager : MonoBehaviour
             totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
         }
 
+        if (!outroIsPlaying)
+        {
+            if (distanceMath < 1)
+            {
+                outroIsPlaying = true;
+            }
+        }       
+
         GetPlayers();
     }
 
@@ -144,9 +152,9 @@ public class GameManager : MonoBehaviour
         cleanliness = 0;
         newHighScore = 11;
         gameActive = true;
+        outroIsPlaying = false;
         timeLeft = initialTimeLeft;
         distanceMath = distanceToTravel;
-
     }
 
     //Game is lost
@@ -201,6 +209,7 @@ public class GameManager : MonoBehaviour
         UpdateHighscore();
         gameEnded = true;
         gameActive = false;
+        outroIsPlaying = false;
         timeLeft = initialTimeLeft;
 
         if (cleanliness == 100)
