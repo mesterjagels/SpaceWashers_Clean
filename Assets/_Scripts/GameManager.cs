@@ -439,7 +439,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case "Teamscore":
-                if (Input.GetKey(KeyCode.LeftArrow))
+                if (Input.GetKey(KeyCode.LeftArrow) || InputManager.Devices[0].Command)
                 {
                     Application.LoadLevel(3);
                 }
@@ -476,7 +476,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case "Highscore":
-                if (Input.GetKey(KeyCode.LeftArrow))
+                if (Input.GetKey(KeyCode.LeftArrow) || InputManager.Devices[0].Command)
                 {
                     Application.LoadLevel(0);
                 }
