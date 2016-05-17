@@ -1481,7 +1481,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11463524, guid: d1e8a9c1e5e60684294522319208d095, type: 2}
       propertyPath: distanceToTravel
-      value: 32
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11463524, guid: d1e8a9c1e5e60684294522319208d095, type: 2}
       propertyPath: soapBubblesGrunger

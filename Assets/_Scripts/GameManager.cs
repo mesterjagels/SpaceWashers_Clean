@@ -7,8 +7,6 @@ using InControl;
 
 public class GameManager : MonoBehaviour
 {
-   
-
     public Color babe;
     public Color gangsta;
     public Color grunger;
@@ -42,6 +40,7 @@ public class GameManager : MonoBehaviour
     public float cleanerTimeCheck2;
     public float captainTimeCheck;
     public int totalScore = 0;
+    public int newHighScore;
 
     public float timeLeft;
     private float initialTimeLeft;
@@ -126,7 +125,7 @@ public class GameManager : MonoBehaviour
     //Initializes the game.
     void InitGame()
     {
-        Debug.LogError("InitGame() was called in this scene: " + Application.loadedLevelName, this);
+        Debug.Log("InitGame() was called in this scene: " + Application.loadedLevelName, this);
         cleanerScore0 = 0;
         cleanerScore1 = 0;
         cleanerScore2 = 0;
@@ -145,6 +144,7 @@ public class GameManager : MonoBehaviour
         momState = 1;
         penalty = 0;
         cleanliness = 0;
+        newHighScore = 11;
         gameActive = true;
     }
 
@@ -195,8 +195,9 @@ public class GameManager : MonoBehaviour
         else if (cleanliness == 0)
         {
             momState = 1; //Happy Mom
-        }  
+        }
 
+        UpdateHighscore();
         gameEnded = true;
         gameActive = false;
 
@@ -206,7 +207,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            UpdateHighscore();
             UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         }  
     }
@@ -329,27 +329,32 @@ public class GameManager : MonoBehaviour
     {
         //Convert txt file to string.
         highscoreListAsOneString = highscoreList.text;
+        Debug.Log("Loaded the text file");
 
         //Assign values to the disconnectors used to separate the Highscore string.
         for (int i = 0; i < disconnector.Length; i++)
         {
             disconnector[i] = ", ";
         }
+        Debug.Log("created disconnector array");
 
         //Split string into an array of strings.
         highscoreListAsArrayOfStrings = highscoreListAsOneString.Split(disconnector, StringSplitOptions.RemoveEmptyEntries);
+        Debug.Log("seperated the string into an array of strings");
     }
 
     //Compare the TotalScore with the values in the Highscore.txt and update the file if appropriate.
     void UpdateHighscore()
     {
         GetHighscore();
+        Debug.Log("GetHighscore()");
 
         //Convert every element into an int.
         for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
         {
             highscoreListAsArrayOfInts[i] = Int32.Parse(highscoreListAsArrayOfStrings[i]);
         }
+        Debug.Log("Converted every element into an int.");
 
         //Compare and update the values.
         for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
@@ -361,16 +366,20 @@ public class GameManager : MonoBehaviour
                     highscoreListAsArrayOfInts[(9 - p)] = highscoreListAsArrayOfInts[(9 - (p + 1))];
                 }
 
+                newHighScore = i;
                 highscoreListAsArrayOfInts[i] = totalScore;
                 i = highscoreListAsArrayOfInts.Length;
             }
         }
+        Debug.Log("Compared and updated values");
 
         //Convert elements to strings.
         for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
         {
             highscoreListAsArrayOfStrings[i] = highscoreListAsArrayOfInts[i].ToString() + ", ";
         }
+        Debug.Log("Converted elements to strings.");
+
 
         //Merge strings.
         highscoreListAsOneString = "";
@@ -379,15 +388,16 @@ public class GameManager : MonoBehaviour
         {
             highscoreListAsOneString = highscoreListAsOneString + highscoreListAsArrayOfStrings[i];
         }
+        Debug.Log("Merged strings");
 
         //Rewrite the textfile.
         File.WriteAllText(Application.dataPath + @"\Persistent Data\Highscore.txt", highscoreListAsOneString);
+        Debug.Log("Rewritten textfile");
     }
 
     //Check player count
     void GetPlayers()
     {
-
         switch (Application.loadedLevelName)
         {
             case "TitleScreen":
