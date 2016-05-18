@@ -23,7 +23,7 @@ public class SpaceshipController : MonoBehaviour
     private float currentSpeed;
     public int boostSpeed = 100;
     public GameObject leftWind, rightWind;
-
+    public GameObject pling;
 
     //Variables to make the custom controller to work
     private Arduino arduino;
@@ -55,6 +55,7 @@ public class SpaceshipController : MonoBehaviour
     public float horizontalSpeed;
     public float verticalSpeed;
     private GameObject player1, player2, player3;
+    private bool spaceshipGone = false;
 
     void Start()
     {
@@ -87,7 +88,7 @@ public class SpaceshipController : MonoBehaviour
             {
                 levelEnded = true;
                 GameObject.Find("Earth").GetComponent<WorldMovement>().speedmultiplier = 0.2f;
-                gameObject.transform.DOScale(0, 5);
+                gameObject.transform.DOScale(0, 3);
 
                 player1.transform.DOMove(this.transform.position, 2);
                 player1.transform.DOScale(0,5);
@@ -97,6 +98,14 @@ public class SpaceshipController : MonoBehaviour
 
                 player3.transform.DOMove(this.transform.position, 2);
                 player3.transform.DOScale(0, 5);
+                               
+            }
+
+            if (gameObject.transform.localScale.x == 0 && spaceshipGone == false)
+            {
+                pling.SetActive(true);
+                AkSoundEngine.PostEvent("winPling", gameObject);
+                spaceshipGone = true;
             }
         }
     }

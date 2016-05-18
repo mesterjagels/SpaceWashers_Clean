@@ -63,7 +63,6 @@ public class GameManager : MonoBehaviour
         AkSoundEngine.SetState("GameScreen", "TitleScreen");
         gameActive = false;
         initialTimeLeft = timeLeft;
-        //Debug.Log("initialTime left =" + initialTimeLeft);
         highscoreListAsArrayOfInts = new int[10];
         highscoreListAsArrayOfStrings = new string[10];
         highscore = new Text[10];
@@ -133,7 +132,6 @@ public class GameManager : MonoBehaviour
     //Initializes the game.
     void InitGame()
     {
-        //Debug.Log("InitGame() was called in this scene: " + Application.loadedLevelName, this);
         cleanerScore0 = 0;
         cleanerScore1 = 0;
         cleanerScore2 = 0;
@@ -152,10 +150,10 @@ public class GameManager : MonoBehaviour
         penalty = 0;
         cleanliness = 0;
         newHighScore = 11;
-        gameActive = true;
-        outroIsPlaying = false;
         timeLeft = initialTimeLeft;
         distanceMath = distanceToTravel;
+        outroIsPlaying = false;
+        gameActive = true;
     }
 
     //Game is lost
@@ -167,6 +165,9 @@ public class GameManager : MonoBehaviour
     //End the game.
     public void EndGame()
     {
+        gameEnded = true;
+        gameActive = false;
+
         captainScore = captainScore + (Mathf.RoundToInt(timeLeft) * 400);
         totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
 
@@ -208,8 +209,6 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateHighscore();
-        gameEnded = true;
-        gameActive = false;
         outroIsPlaying = false;
         timeLeftBuffer = timeLeft;
         timeLeft = initialTimeLeft;
@@ -342,32 +341,27 @@ public class GameManager : MonoBehaviour
     {
         //Convert txt file to string.
         highscoreListAsOneString = highscoreList.text;
-        //Debug.Log("Loaded the text file");
 
         //Assign values to the disconnectors used to separate the Highscore string.
         for (int i = 0; i < disconnector.Length; i++)
         {
             disconnector[i] = ", ";
         }
-        //Debug.Log("created disconnector array");
 
         //Split string into an array of strings.
         highscoreListAsArrayOfStrings = highscoreListAsOneString.Split(disconnector, StringSplitOptions.RemoveEmptyEntries);
-        //Debug.Log("seperated the string into an array of strings");
     }
 
     //Compare the TotalScore with the values in the Highscore.txt and update the file if appropriate.
     void UpdateHighscore()
     {
         GetHighscore();
-        //Debug.Log("GetHighscore()");
 
         //Convert every element into an int.
         for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
         {
             highscoreListAsArrayOfInts[i] = Int32.Parse(highscoreListAsArrayOfStrings[i]);
         }
-        //Debug.Log("Converted every element into an int.");
 
         //Compare and update the values.
         for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
@@ -384,14 +378,12 @@ public class GameManager : MonoBehaviour
                 i = highscoreListAsArrayOfInts.Length;
             }
         }
-        //Debug.Log("Compared and updated values");
 
         //Convert elements to strings.
         for (int i = 0; i < highscoreListAsArrayOfInts.Length; i++)
         {
             highscoreListAsArrayOfStrings[i] = highscoreListAsArrayOfInts[i].ToString() + ", ";
         }
-        //Debug.Log("Converted elements to strings.");
 
 
         //Merge strings.
@@ -401,11 +393,9 @@ public class GameManager : MonoBehaviour
         {
             highscoreListAsOneString = highscoreListAsOneString + highscoreListAsArrayOfStrings[i];
         }
-        //Debug.Log("Merged strings");
 
         //Rewrite the textfile.
         File.WriteAllText(Application.dataPath + @"\Persistent Data\Highscore.txt", highscoreListAsOneString);
-        //Debug.Log("Rewritten textfile");
     }
 
     //Check player count

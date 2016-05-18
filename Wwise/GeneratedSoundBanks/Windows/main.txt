@@ -9,6 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2389703494	boost			\Default Work Unit\boost	
 	3071260525	hull_impact			\Default Work Unit\hull_impact	
 	3189472150	stopSFX			\Default Work Unit\stopSFX	
+	3743600447	winPling			\Default Work Unit\winPling	
 	4078655385	playerJoined			\Default Work Unit\playerJoined	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -83,6 +84,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	266433818	InGameBoostMusic	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\InGameBoostMusic_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\inGame\Boost\BoostSnare\InGameBoostMusic		384940
 	279803303	MomHatesYou	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\MomHatesYou_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicManager\Death\MomHatesYou\MomHatesYou		5131704
 	292796889	Grunger 2	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Grunger 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Grunger\Grunger 2		110316
+	330320018	winPling	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\winPling_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Mixer\winPling		268104
 	344995572	Fresh_transistion	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Fresh_transistion_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Fresh_transistion\Fresh_transistion		450864
 	384236896	Scratch_Transition	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Scratch_Transition_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Scratch_Transition\Scratch_Transition		156864
 	384447423	Grunger 1	X:\UnityProjects\SpaceWashersClean\Wwise\.cache\Windows\SFX\Grunger 1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cleaner Mixer\cleanerOw\Grunger\Grunger 1		133364

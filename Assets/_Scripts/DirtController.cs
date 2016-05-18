@@ -24,7 +24,6 @@ public class DirtController : MonoBehaviour {
         alphaPct = (currentAlpha / startAlpha) * 100;
         if (alphaPct < thresholdAlpha)
         {
-            Debug.Log("Threshold reached");
             gameObject.SetActive(false);
         }
     }
@@ -50,17 +49,14 @@ public class DirtController : MonoBehaviour {
 
         if (shortestDistance == distance[0])
         {
-            //Debug.Log("Player1 should get points because it have the shortest distance of: " + distance[0]);
             cleaningPlayer = 0;
         }
         else if (cleanerControllers.Length > 1 && shortestDistance == distance[1])
         {
-           // Debug.Log("Player2 should get points  because it have the shortest distance of: " + distance[1]);
             cleaningPlayer = 1;
         }
         else if(cleanerControllers.Length > 2 && shortestDistance == distance[2])
         {
-           //Debug.Log("Player3 should get points because it have the shortest distance of: " + distance[2])
             cleaningPlayer = 2;
         }
 

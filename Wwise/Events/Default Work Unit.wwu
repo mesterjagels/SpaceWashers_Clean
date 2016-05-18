@@ -162,6 +162,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="winPling" ID="{B818CD54-F51D-443A-8CEB-74AC5DDB13A9}">
+					<ChildrenList>
+						<Action Name="Play" ID="{5BCA83C9-6DE5-479C-874F-194209876783}" ShortID="1049798114" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{AA07E8C2-34D7-476F-A04A-6942279B1E58}" Global="false">
+									<ObjectRef Name="winPling" ID="{723BC953-33BD-4A22-A02E-8C2502B0432D}" WorkUnitID="{B14F266F-D557-4DEF-91A8-FA854E328C8A}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

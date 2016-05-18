@@ -987,6 +987,25 @@
 								</CustomStateList>
 							</StateInfo>
 						</BlendContainer>
+						<Sound Name="winPling" ID="{723BC953-33BD-4A22-A02E-8C2502B0432D}" ShortID="734090950" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C4C5033F-77A1-44B6-9990-5CFD13361353}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DB77002-7E68-4EE1-9733-4FB3EC79E2EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="winPling" ID="{FA8598DE-116A-4F6F-85D2-FC69B34E1839}" ShortID="330320018">
+									<Language>SFX</Language>
+									<AudioFile>winPling.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="winPling" ID="{FA8598DE-116A-4F6F-85D2-FC69B34E1839}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<StateInfo>
 						<StateGroupList>
