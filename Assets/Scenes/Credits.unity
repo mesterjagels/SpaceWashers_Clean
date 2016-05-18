@@ -253,11 +253,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'His royal Cheesyness
+  m_Text: 'Carrier of Cheese
 
     Game and Art Design
 
-    Phillip Ramsby'
+    Philip Ramsby'
 --- !u!222 &997343122
 CanvasRenderer:
   m_ObjectHideFlags: 0
