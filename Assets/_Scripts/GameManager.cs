@@ -546,6 +546,7 @@ public class GameManager : MonoBehaviour
         }
         if (level == 1)
         {
+            InitGame();
             AkSoundEngine.SetState("GameScreen", "InGame");
         }
         if (level == 2)

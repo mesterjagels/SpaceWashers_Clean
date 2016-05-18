@@ -36,7 +36,7 @@ public class TitleScreen : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.O) | arduino.digitalRead(pinBtn1) == 1)
+        if (Input.GetKey(KeyCode.B) | arduino.digitalRead(pinBtn1) == 1)
         {
             loading.SetActive(true);
             Application.LoadLevel(1);

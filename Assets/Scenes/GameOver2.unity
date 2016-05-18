@@ -187,35 +187,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22494290, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -402.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22494290, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -328.85004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22494290, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 201.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22494290, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 76.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22494290, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0.0023696683
       objectReference: {fileID: 0}
     - target: {fileID: 22494290, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0.043680876
       objectReference: {fileID: 0}
     - target: {fileID: 22494290, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.24099527
       objectReference: {fileID: 0}
     - target: {fileID: 22494290, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0.16484994
       objectReference: {fileID: 0}
     - target: {fileID: 22494290, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
       propertyPath: m_Pivot.x
@@ -228,6 +228,62 @@ Prefab:
     - target: {fileID: 11485416, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
       propertyPath: m_Text
       value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461888, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.34989575
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461888, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0000038146973
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461888, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461888, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.68970007
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461888, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461888, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461888, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.045471445
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429604, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415356, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.938
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415356, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.4000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415356, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -2.800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415356, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.3885267
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415356, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415356, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d86fcd162e5d0c4cb922eaee156012f, type: 2}
@@ -348,10 +404,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1385848247}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.20235372, y: 0.8207082}
-  m_AnchorMax: {x: 0.7847846, y: 0.9097082}
-  m_AnchoredPosition: {x: -0.9, y: -0.20000005}
-  m_SizeDelta: {x: -3.9999695, y: -1}
+  m_AnchorMin: {x: 0.12418484, y: 0.58852136}
+  m_AnchorMax: {x: 0.8748483, y: 0.9097082}
+  m_AnchoredPosition: {x: 0, y: -0.3500824}
+  m_SizeDelta: {x: 0, y: -0.69991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &916582758
 MonoBehaviour:
@@ -373,8 +429,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0410ad49c91d744308a3357425d86f3a, type: 3}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: 8454ce3901c94664489fd1f9ea210df8, type: 3}
+    m_FontSize: 51
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -569,7 +625,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -681,10 +736,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1385848247}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.20235372, y: 0.06141631}
-  m_AnchorMax: {x: 0.7716613, y: 0.1534163}
-  m_AnchoredPosition: {x: 1, y: 0.19999981}
-  m_SizeDelta: {x: 1.0000305, y: -1}
+  m_AnchorMin: {x: 0.21469668, y: 0.03063033}
+  m_AnchorMax: {x: 0.78530335, y: 0.15262641}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2065267477
 MonoBehaviour:
@@ -706,8 +761,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0410ad49c91d744308a3357425d86f3a, type: 3}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: 8454ce3901c94664489fd1f9ea210df8, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
