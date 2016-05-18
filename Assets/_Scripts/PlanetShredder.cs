@@ -7,7 +7,6 @@ public class PlanetShredder : MonoBehaviour {
     {
         if (col.gameObject.tag == "Planet")
         {
-          //  Debug.Log("Planet destroyed");
             Destroy(col.gameObject);
         }
     }

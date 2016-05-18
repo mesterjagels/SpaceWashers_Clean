@@ -41,10 +41,6 @@ public class UIProgressPanel : MonoBehaviour
         mom = new Vector3(6.377f, momY, 1.1f);
         spaceShip = new Vector3(6.382f, spaceShipY, 1.1f);
 
-        Debug.Log("Mom"+momY);
-        Debug.Log("Spaceship"+spaceShipY);
-        
-
         spaceShipLocationIndicator.transform.position= spaceShip;
         momLocationIndicator.transform.position = mom;
     }

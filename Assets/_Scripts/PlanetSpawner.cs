@@ -16,7 +16,6 @@ public class PlanetSpawner : MonoBehaviour {
 	
 	IEnumerator Spawn(){
 		while(true){
-            Debug.Log("Planet spawned");
 			Instantiate (planets, new Vector3 (Random.Range (cam.transform.position.x - 20, cam.transform.position.x + 20), cam.transform.position.y - distanceFromCam, 10), Quaternion.identity);
 			yield return new WaitForSeconds (interval);
 		}
