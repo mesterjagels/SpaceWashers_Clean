@@ -55,6 +55,7 @@ public class SpaceshipController : MonoBehaviour
     public float horizontalSpeed;
     public float verticalSpeed;
     private GameObject player1, player2, player3;
+    private bool spaceshipGone = false;
 
     void Start()
     {
@@ -100,16 +101,11 @@ public class SpaceshipController : MonoBehaviour
                                
             }
 
-            if (gameObject.transform.localScale.x == 0)
+            if (gameObject.transform.localScale.x == 0 && spaceshipGone == false)
             {
                 pling.SetActive(true);
-                pling.GetComponent<Animation>().Play();
-                if (pling.GetComponent<AnimationState>().time >= pling.GetComponent<AnimationState>().length)
-                {
-                    pling.SetActive(false);
-                }
                 AkSoundEngine.PostEvent("winPling", gameObject);
-
+                spaceshipGone = true;
             }
         }
     }
