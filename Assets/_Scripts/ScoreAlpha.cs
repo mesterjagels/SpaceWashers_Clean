@@ -46,5 +46,15 @@ public class ScoreAlpha : MonoBehaviour
         }
 
         dirtiness.text = "CLEANLINESS: "+ (100-gameManager.cleanliness).ToString();
+        if(100 - gameManager.cleanliness > 80)
+        {
+            dirtiness.color = new Color(0, 255, 0, 255);
+        } else if (100 - gameManager.cleanliness < 80 && 100 - gameManager.cleanliness > 0)
+        {
+            dirtiness.color = new Color(255, 255, 0, 255);
+        } else if (100 - gameManager.cleanliness < 0)
+        {
+            dirtiness.color = new Color(255, 0, 0, 255);
+        }
     }
 }
