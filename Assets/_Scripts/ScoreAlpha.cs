@@ -21,40 +21,45 @@ public class ScoreAlpha : MonoBehaviour
 
 	void Update ()
     {
-        if(scoreString != gameManager.totalScore.ToString())
+        if(gameManager.gameActive)
         {
-            scoreString = gameManager.totalScore.ToString();
-            //    scoreText.DOText("SCORE: " + scoreString, 0.5f, true, ScrambleMode.Numerals);
-            scoreText.text = "SCORE: " + scoreString;
-        }
-        
-        gameManager.distanceMath = gameManager.distanceToTravel - uvOffset.offset.y;
-        //distanceLeft.text = "DISTANCE LEFT: " + gameManager.distanceMath.ToString();
+            if (scoreString != gameManager.totalScore.ToString())
+            {
+                scoreString = gameManager.totalScore.ToString();
+                //    scoreText.DOText("SCORE: " + scoreString, 0.5f, true, ScrambleMode.Numerals);
+                scoreText.text = "SCORE: " + scoreString;
+            }
 
-        if (gameManager.distanceMath <= 0)
-        {
-            Debug.Log("Distance <= 0");
-            gameManager.EndGame();
-        }
+            gameManager.distanceMath = gameManager.distanceToTravel - uvOffset.offset.y;
+            //distanceLeft.text = "DISTANCE LEFT: " + gameManager.distanceMath.ToString();
 
-        gameManager.timeLeft -= Time.deltaTime;
-        //momReturn.text = "MOM'S HOME IN: " + gameManager.timeLeft;
+            if (gameManager.distanceMath <= 0)
+            {
+                Debug.Log("Distance <= 0");
+                gameManager.EndGame();
+            }
 
-        if (gameManager.timeLeft < 0)
-        {
-            gameManager.GameOver();
-        }
+            gameManager.timeLeft -= Time.deltaTime;
+            //momReturn.text = "MOM'S HOME IN: " + gameManager.timeLeft;
 
-        dirtiness.text = "CLEANLINESS: "+ (100-gameManager.cleanliness).ToString();
-        if(100 - gameManager.cleanliness > 80)
-        {
-            dirtiness.color = new Color(0, 255, 0, 255);
-        } else if (100 - gameManager.cleanliness < 80 && 100 - gameManager.cleanliness > 0)
-        {
-            dirtiness.color = new Color(255, 255, 0, 255);
-        } else if (100 - gameManager.cleanliness < 0)
-        {
-            dirtiness.color = new Color(255, 0, 0, 255);
-        }
+            if (gameManager.timeLeft < 0)
+            {
+                gameManager.GameOver();
+            }
+
+            dirtiness.text = "CLEANLINESS: " + (100 - gameManager.cleanliness).ToString();
+            if (100 - gameManager.cleanliness > 80)
+            {
+                dirtiness.color = new Color(0, 255, 0, 255);
+            }
+            else if (100 - gameManager.cleanliness < 80 && 100 - gameManager.cleanliness > 0)
+            {
+                dirtiness.color = new Color(255, 255, 0, 255);
+            }
+            else if (100 - gameManager.cleanliness < 0)
+            {
+                dirtiness.color = new Color(255, 0, 0, 255);
+            }
+        }   
     }
 }
