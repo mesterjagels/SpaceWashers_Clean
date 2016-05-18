@@ -152,10 +152,10 @@ public class GameManager : MonoBehaviour
         penalty = 0;
         cleanliness = 0;
         newHighScore = 11;
-        gameActive = true;
-        outroIsPlaying = false;
         timeLeft = initialTimeLeft;
         distanceMath = distanceToTravel;
+        outroIsPlaying = false;
+        gameActive = true;
     }
 
     //Game is lost
@@ -167,6 +167,9 @@ public class GameManager : MonoBehaviour
     //End the game.
     public void EndGame()
     {
+        gameEnded = true;
+        gameActive = false;
+
         captainScore = captainScore + (Mathf.RoundToInt(timeLeft) * 400);
         totalScore = cleanerScore0 + cleanerScore1 + cleanerScore2 + captainScore;
 
@@ -208,8 +211,6 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateHighscore();
-        gameEnded = true;
-        gameActive = false;
         outroIsPlaying = false;
         timeLeftBuffer = timeLeft;
         timeLeft = initialTimeLeft;
