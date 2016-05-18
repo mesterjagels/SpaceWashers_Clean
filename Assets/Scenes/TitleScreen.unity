@@ -751,6 +751,7 @@ MonoBehaviour:
   boostSpeed: 100
   leftWind: {fileID: 0}
   rightWind: {fileID: 0}
+  pling: {fileID: 0}
   turnSpeed: 0
   throttleSpeeds: []
   currentGear: 0
@@ -1481,7 +1482,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11463524, guid: d1e8a9c1e5e60684294522319208d095, type: 2}
       propertyPath: distanceToTravel
-      value: 20
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11463524, guid: d1e8a9c1e5e60684294522319208d095, type: 2}
       propertyPath: soapBubblesGrunger
@@ -1839,7 +1840,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
