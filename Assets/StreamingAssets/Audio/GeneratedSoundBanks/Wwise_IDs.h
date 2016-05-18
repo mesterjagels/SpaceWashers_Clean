@@ -24,6 +24,7 @@ namespace AK
         static const AkUniqueID POINTSSCORED = 651793330U;
         static const AkUniqueID STOPSFX = 3189472150U;
         static const AkUniqueID THRUSTERS = 1944582317U;
+        static const AkUniqueID WINPLING = 3743600447U;
     } // namespace EVENTS
 
     namespace STATES

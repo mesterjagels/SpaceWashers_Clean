@@ -10,6 +10,7 @@
 						<ObjectRef Name="thrusters" ID="{4D5E242C-22ED-43C9-B0C1-6F9538D9B30D}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="boost" ID="{F4926B4D-2C5F-4F1A-9CE5-DA1270ADC652}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ow" ID="{9E16994D-D8BC-4962-97EA-19C235D02104}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="winPling" ID="{B818CD54-F51D-443A-8CEB-74AC5DDB13A9}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="hull_impact" ID="{BFB3B05A-ED84-49A9-A340-153D7CA6D9BF}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="GameMusic" ID="{84DA2281-EEE7-4F90-8DD4-99FD5B919EAC}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="stopSFX" ID="{D821F487-8F91-4134-8973-7344B61F8245}" WorkUnitID="{8494795D-16A9-43E5-A126-C7B71D1914C0}" Filter="7" Origin="Manual"/>

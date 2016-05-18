@@ -30,6 +30,7 @@
 				<Event Id="651793330" Name="pointsScored"/>
 				<Event Id="3189472150" Name="stopSFX" MaxAttenuation="0.000000"/>
 				<Event Id="1944582317" Name="thrusters"/>
+				<Event Id="3743600447" Name="winPling"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="20995278" Language="SFX">
@@ -91,6 +92,10 @@
 				<File Id="292796889" Language="SFX">
 					<ShortName>Grunger 2.wav</ShortName>
 					<Path>SFX\Grunger 2_9E69E797.wem</Path>
+				</File>
+				<File Id="330320018" Language="SFX">
+					<ShortName>winPling.wav</ShortName>
+					<Path>SFX\winPling_9E69E797.wem</Path>
 				</File>
 				<File Id="344995572" Language="SFX">
 					<ShortName>Fresh_transistion.wav</ShortName>
